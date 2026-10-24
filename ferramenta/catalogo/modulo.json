@@ -1,0 +1,3601 @@
+{
+ "categoria": "modulo",
+ "nome": "Módulo pronto",
+ "grupo": "Módulos prontos",
+ "explica": "Uma plaquinha pequena já montada de fábrica, com o chip e as peças em volta soldados: você só liga com fios (ou espeta na protoboard), sem soldar nada miúdo. É o jeito mais rápido de testar uma ideia antes de desenhar a placa.",
+ "nome_peca": "",
+ "destaques": [
+  "Tipo",
+  "Tensão"
+ ],
+ "chips": "Tipo",
+ "filtro": {},
+ "sementes": [],
+ "pecas": {
+  "robocore:modulo-bluetooth-hc-05": {
+   "nome": "Bluetooth HC-05",
+   "marca": "genérico",
+   "modelo": "HC-05",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Bluetooth",
+   "descricao": "Com esse módulo bluetooth é possível enviar dados seriais RX/TX de forma wireless até aproximadamente 10m de distância.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "5 V"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/bluetooth/modulo-bluetooth-hc-05",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 103,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1025/images/1025_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-bluetooth-hc-05-compativel",
+     "preco": 30.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/modulo-bluetooth/modulo-bluetooth-hc-05-para-arduino-masterslave-3514.html",
+     "preco": 40.37,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-bluetooth-hc-05.html",
+     "preco": 36.67,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:kit-leitor-rfid-nfc-tags-rfid-chaveiro-cartao-pn532-4764": {
+   "nome": "Leitor NFC PN532 com cartão e tag",
+   "marca": "Usinainfo",
+   "modelo": "PN532",
+   "pacote": "módulo",
+   "tamanho": "86x54x1mm",
+   "montagem": "módulo",
+   "categoria_loja": "Leitores e Tags RFID, NFC e iButton",
+   "descricao": "O Kit Leitor RFID NFC PN532 + Tags RFID trata-se de um kit completo para instalação em sistemas de controle de tráfego pessoas, por exemplo, onde em conjunto com um microcontrolador Arduino pode ser utilizado para aberturas de…",
+   "atributos": {
+    "Tipo": "Comunicação"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/rfid-arduino-e-ibutton/kit-leitor-rfid-nfc-tags-rfid-chaveiro-cartao-pn532-4764.html",
+   "preco": 50.22,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 41,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019341-large_default/kit-leitor-rfid-nfc-tags-rfid-chaveiro-cartao-pn532.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/kit-rfid-pn532-com-cartao-e-tag-nfc",
+     "preco": 54.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:conversor-serial-ttl-para-rs485-2627": {
+   "nome": "Conversor serial para RS485 (fio longo)",
+   "marca": "Usinainfo",
+   "modelo": "RS485",
+   "pacote": "módulo",
+   "tamanho": "44x14mm",
+   "montagem": "módulo",
+   "categoria_loja": "Conversores RS485",
+   "descricao": "Conversor bidirecional de sinais TTL para RS485 com chip MAX485, indicado para comunicação serial diferencial entre microcontroladores e dispositivos RS485.",
+   "atributos": {
+    "Tipo": "Comunicação"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=77",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/conversores-rs485/conversor-serial-ttl-para-rs485-2627.html",
+   "preco": 6.55,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 39,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019824-large_default/conversor-serial-ttl-para-rs485.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/conversor-de-dados-ttl-para-rs485",
+     "preco": 5.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:conversor-de-nivel-logico-33-5v-bidirecional": {
+   "nome": "Conversor de nível lógico 3,3 V ↔ 5 V",
+   "marca": "Eletrogate",
+   "modelo": "Nível lógico 4 canais",
+   "pacote": "módulo",
+   "tamanho": "15mm x 18mm",
+   "montagem": "módulo",
+   "categoria_loja": "Conversores",
+   "descricao": "Com quatro canais bidirecionais, permite interligar sinais lógicos de 3,3 V e 5 V nos dois sentidos, sendo útil na comunicação entre microcontroladores, sensores e módulos que operam com tensões lógicas diferentes.",
+   "atributos": {
+    "Tipo": "Comunicação"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/conversor-de-nivel-logico-33-5v-bidirecional",
+   "preco": 3.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414222ab1026308e.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/conversores-de-sinal/conversor-de-nivel-logico-33-5v-bidirecional-cnl35-3741.html",
+     "preco": 8.25,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:kit-modulo-rfid-mfrc522-1356-mhz": {
+   "nome": "Leitor RFID RC522 com cartão e chaveiro",
+   "marca": "Eletrogate",
+   "modelo": "RC522",
+   "pacote": "módulo",
+   "tamanho": "8,5 x 5,5 x 1,0cm",
+   "montagem": "módulo",
+   "categoria_loja": "RFID",
+   "descricao": "Este Módulo leitor RFID baseado no chip MFRC522 da empresa NXP é altamente utilizado em comunicação sem contato a uma frequência de 13,56MHz.",
+   "atributos": {
+    "Tipo": "Comunicação"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/kit-modulo-rfid-mfrc522-1356-mhz",
+   "preco": 14.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414369a029846ee0.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/leitor-de-cartao-rfid-rc522-1356-mhz.html",
+     "preco": 20.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/rfid/kit-rfid-mfrc522",
+     "preco": 13.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-can-bus-mcp2515-tja1050": {
+   "nome": "CAN bus MCP2515 (rede de carro)",
+   "marca": "Eletrogate",
+   "modelo": "MCP2515",
+   "pacote": "módulo",
+   "tamanho": "40 x 28 x 11,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos Conversores",
+   "descricao": "O módulo CAN BUS MCP2515 é um componente utilizado para comunicação com redes CAN, muito utilizadas no ambiente industrial e automotivo.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-can-bus-mcp2515-tja1050",
+   "preco": 17.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40131832/a91aafe2e1.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/can-bus/modulo-can-bus-mcp2515-xl1050-obdii-para-arduino-4543.html",
+     "preco": 15.95,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-expansor-i2c-pcf8574": {
+   "nome": "Mais 8 pinos pelo I2C (PCF8574)",
+   "marca": "Eletrogate",
+   "modelo": "PCF8574",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Outros Módulos",
+   "descricao": "O Módulo Expansor de Entradas/Saídas PCF8574 é uma excelente solução para quem precisa aumentar o número de pinos digitais disponíveis em microcontroladores como Arduino, ESP32, Raspberry Pi e outros.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "2,5V a 6V (típico 5V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-expansor-i2c-pcf8574",
+   "preco": 12.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/378915773/i2c1-aah6wc6wod.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/shieldsexpansores/expansor-de-portas-i2c-pcf8574-8-bits-5832.html",
+     "preco": 10.89,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-receptor-infravermelho-ir-ky-022": {
+   "nome": "Receptor de controle remoto KY-022",
+   "marca": "Eletrogate",
+   "modelo": "KY-022",
+   "pacote": "módulo",
+   "tamanho": "7,4 x 6,4 x 5.1mm",
+   "montagem": "módulo",
+   "categoria_loja": "Bluetooth & Wireless",
+   "descricao": "O Módulo Receptor Infravermelho IR VS1838B KY-022 é um módulo pronto para acrescentar uma função ao projeto sem exigir que todo o circuito seja desenvolvido do zero.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "2.7 à 5.5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-receptor-infravermelho-ir-ky-022",
+   "preco": 3.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/39321536/6af5ca25bb.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-recepetor-infravermelho-ir-vs1838b-ky-022.html",
+     "preco": 5.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-rf-transmissor-receptor-433mhz": {
+   "nome": "Rádio 433 MHz (transmissor e receptor)",
+   "marca": "Eletrogate",
+   "modelo": "RF 433MHz",
+   "pacote": "módulo",
+   "tamanho": "19 x 19mm",
+   "montagem": "módulo",
+   "categoria_loja": "Rádio Frequência",
+   "descricao": "Componentes básicos para comunicação via rádio frequência, presente em sistemas de alarmes, controle remoto, aquisição de dados e robótica em geral.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "3,5-12v"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-rf-transmissor-receptor-433mhz",
+   "preco": 11.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414392/cf45d6401f.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/transmissores-e-receptores/transmissor-rf-receptor-433mhz-2840.html",
+     "preco": 11.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-transceptor-lora-rfm95w-915mhz-com-antena": {
+   "nome": "Rádio LoRa RFM95W 915 MHz (longo alcance)",
+   "marca": "Eletrogate",
+   "modelo": "LoRa RFM95W",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores e Módulos",
+   "descricao": "Baseado no circuito integrado SX1276, este Módulo é bastante prático para o desenvolvimento de projetos que necessitam de comunicação LoRa.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "1.8 - 3.7V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-transceptor-lora-rfm95w-915mhz-com-antena",
+   "preco": 89.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/168888904/4--14--lygp5hll6t.jpg"
+  },
+  "eletrogate:modulo-wireless-nrf24l01-24ghz-transceiver-rf": {
+   "nome": "Rádio 2,4 GHz nRF24L01",
+   "marca": "Eletrogate",
+   "modelo": "NRF24L01",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Rádio Frequência",
+   "descricao": "Este módulo é uma excelente opção de comunicação Wireless entre dispositivos como Arduino, PIC, Raspberry dentre outros.",
+   "atributos": {
+    "Tipo": "Comunicação"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wireless-nrf24l01-24ghz-transceiver-rf",
+   "preco": 11.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414412877c2ba1eb.jpg"
+  },
+  "bau:modulo-regulador-de-tensao-ams1117-5v-para-33v": {
+   "nome": "Regulador 5 V para 3,3 V AMS1117",
+   "marca": "Importado",
+   "modelo": "AMS1117",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos",
+   "descricao": "O Módulo Regulador de Tensão AMS1117 - 5V para 3,3V pode alimentar circuitos de 3.3V apartir de 5V.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "4.5V ~ 7V"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/produto/modulo-regulador-de-tensao-ams1117-5v-para-33v.html",
+   "preco": 10.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/21642332677c8578a20.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-de-5v-para-33v-ams1117",
+     "preco": 3.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:fonte-ajustavel-para-protoboard-mb102": {
+   "nome": "Fonte para protoboard MB102",
+   "marca": "Eletrogate",
+   "modelo": "MB102",
+   "pacote": "módulo",
+   "tamanho": "50 x 35 x 25 mm aprox.",
+   "montagem": "módulo",
+   "categoria_loja": "Alimentação",
+   "descricao": "Este módulo fornece duas saídas distintas com chave de seleção de tensão 3.3 V ou 5 V.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 7 - 10 V via Plug P4 / 5 V via conector mini-USB; saída 5 V / 3.3 V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/fonte-ajustavel-para-protoboard-mb102",
+   "preco": 18.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/61292181/3278ec0cb8.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/fonte-ajustavel-para-protoboard-mb102.html",
+     "preco": 14.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-carregador-de-baterias-de-litio-tp4056-com-protecao-usb-c": {
+   "nome": "Carregador de lítio TP4056 USB-C com proteção",
+   "marca": "Eletrogate",
+   "modelo": "TP4056",
+   "pacote": "módulo",
+   "tamanho": "aprox. 26 x 17 x 5MM",
+   "montagem": "módulo",
+   "categoria_loja": "Alimentação",
+   "descricao": "Módulo carregador de bateria TP4056 para baterias de lítio, com led indicador de carga e fácil conexão por cabo USB tipo C, possibilitando que as baterias sejam recarregadas sem a necessidade de removê las do circuito.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "3.35 - 6V (recomendada 5V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-carregador-de-baterias-de-litio-tp4056-com-protecao-usb-c",
+   "preco": 4.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/186912248/ccd27f79b0.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/carregador-de-bateria-de-litio-tp4056-com-protecao-usb-tipo-c",
+     "preco": 4.92,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-regulador-de-tensao-step-down-buck-dc-dc-mini-360-3a": {
+   "nome": "Abaixador de tensão Mini-360",
+   "marca": "Eletrogate",
+   "modelo": "Mini-360",
+   "pacote": "módulo",
+   "tamanho": "Aprox. 22.2 x 17.1 x 4.3MM",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos Conversores",
+   "descricao": "Esse módulo semelhante ao LM2596.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 4.75 - 23V; saída 1.0 - 17V (sempre inferior à de entrada)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-step-down-buck-dc-dc-mini-360-3a",
+   "preco": 6.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/62053304/2-nclyrk.jpg"
+  },
+  "eletrogate:modulo-regulador-de-tensao-step-down-lm2596": {
+   "nome": "Abaixador de tensão ajustável LM2596",
+   "marca": "Eletrogate",
+   "modelo": "LM2596",
+   "pacote": "módulo",
+   "tamanho": "50x23mm",
+   "montagem": "módulo",
+   "categoria_loja": "Outros Módulos",
+   "descricao": "O Módulo Regulador de Tensão LM2596 trabalha como um conversor DC DC no modo Step Down, sendo capaz de reduzir uma carga de até 3A com ótima eficiência.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 3,2-40v; saída 1,5-35v (ajustável, entrada deve ser 1,5v maior que a saída)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-step-down-lm2596",
+   "preco": 8.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414384/bd90ed2bf3.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-regulador-de-tensao-lm2596.html",
+     "preco": 10.52,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/regulador-de-tensao/modulo-regulador-de-tensao-ajustavel-lm2596-3a",
+     "preco": 7.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-regulador-de-tensao-step-down-xl4015-5a": {
+   "nome": "Abaixador de tensão forte XL4015 (5 A)",
+   "marca": "Eletrogate",
+   "modelo": "XL4015",
+   "pacote": "módulo",
+   "tamanho": "54 x 23 x 15mm",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos Conversores",
+   "descricao": "O Módulo Regulador de Tensão Step Down XL4015 5A é uma fonte reguladora de tensão do tipo step down, capaz de receber uma tensão na saída e ajustar para um valor tensão fixa menor que a entrada em sua saída, a tensão de entrada é…",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 8-36V; saída 1.25-32V (sempre inferior à de entrada)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-step-down-xl4015-5a",
+   "preco": 15.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33750474/9ce642e20c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/regulador-de-tensao/regulador-de-tensao-xl4015-step-down-saida-125-a-32v-dc-5a-8768.html",
+     "preco": 16.34,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-regulador-de-tensao-step-up-mt3608-micro-usb": {
+   "nome": "Elevador de tensão MT3608 (micro USB)",
+   "marca": "Eletrogate",
+   "modelo": "MT3608",
+   "pacote": "módulo",
+   "tamanho": "17 x 7 x 37MM",
+   "montagem": "módulo",
+   "categoria_loja": "Regulador de Tensão",
+   "descricao": "O Módulo Regulador de Tensão Step Up MT3608, é capaz de converter tensões DC mais baixas em tensões DC mais altas, por exemplo, É possível elevar uma tensão de entrada de 5V DC para 12V DC, este módulo possui eficiência de 91%, o…",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 2V - 24V; saída 2.5 - 28VDC (ajustável)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-step-up-mt3608-micro-usb",
+   "preco": 9.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/196134297/5-071ab18ce5.jpg"
+  },
+  "eletrogate:modulo-regulador-de-tensao-step-up-xl6009e1": {
+   "nome": "Elevador de tensão ajustável XL6009",
+   "marca": "Eletrogate",
+   "modelo": "XL6009",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Alimentação",
+   "descricao": "O módulo regulador de tensão XL6009E1 é a segunda geração da tecnologia de comutação de alta frequência.",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 4 - 32 V; saída 5 - 35 V (sempre superior à de entrada)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-regulador-de-tensao-step-up-xl6009e1",
+   "preco": 10.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/1941422157c1e9f852.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-regulador-de-tensao-step-up-xl6009e1.html",
+     "preco": 14.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-shield-duplo-bateria-18650-para-esp32-v8": {
+   "nome": "Suporte com carregador para 2 baterias 18650",
+   "marca": "Eletrogate",
+   "modelo": "Shield 18650 V8",
+   "pacote": "módulo",
+   "tamanho": "101 x 49 x 17mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Este módulo carregador para duas baterias 18650, pode ser utilizado para alimentar ESP8266, ESP32 , Arduino, Raspberry Pi, sensores e módulos, com capacidade de corrente de até 3A, possui 3 interfaces de saída 3V 1A, e 3…",
+   "atributos": {
+    "Tipo": "Energia",
+    "Tensão": "entrada 5-8V; saídas 3V 1A e 5V 3A"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-shield-duplo-bateria-18650-para-esp32-v8",
+   "preco": 49.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/109269297/f51ce0eb17.jpg"
+  },
+  "usinainfo:modulo-encoder-360-sem-limite-ky-040-5604": {
+   "nome": "Botão giratório (encoder) KY-040",
+   "marca": "Usinainfo",
+   "modelo": "KY-040",
+   "pacote": "módulo",
+   "tamanho": "26x19x28mm",
+   "montagem": "módulo",
+   "categoria_loja": "Potenciômetros e Controles Analógicos",
+   "descricao": "Módulo encoder rotativo KY-040 com giro contínuo de 360°, resolução de 20 pulsos por volta, botão integrado e alimentação de 5V.",
+   "atributos": {
+    "Tipo": "Entrada",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/modulo-potenciometro/modulo-encoder-360-sem-limite-ky-040-5604.html",
+   "preco": 10.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 42,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1031856-large_default/modulo-encoder-360-sem-limite-ky-040.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/encoder-decoder-rotacional-ky-040",
+     "preco": 8.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/encoder-decoder-ky-040-rotacional.html",
+     "preco": 10.98,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-joystick-analogico-para-arduino": {
+   "nome": "Joystick analógico",
+   "marca": "Eletrogate",
+   "modelo": "Joystick",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Robótica",
+   "descricao": "Este Joystick tem seu princípio de funcionamento através do controle de 2 potenciômetros e um botão.",
+   "atributos": {
+    "Tipo": "Entrada"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-joystick-analogico-para-arduino",
+   "preco": 5.4,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414328/b653f88a4b.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/joystick-e-controles-ir/joystick-ky023-3-eixos-2305.html",
+     "preco": 7.65,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/joystick-arduino-3-eixos-ky-023.html",
+     "preco": 8.58,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:sensor-touch-capacitivo-ttp223b": {
+   "nome": "Botão de toque TTP223",
+   "marca": "Eletrogate",
+   "modelo": "TTP223",
+   "pacote": "módulo",
+   "tamanho": "24 x 24 x 7,2mm",
+   "montagem": "módulo",
+   "categoria_loja": "Toque",
+   "descricao": "Este Sensor touch foi baseado no CI TTP223B, um componente capaz de detectar toques.",
+   "atributos": {
+    "Tipo": "Entrada",
+    "Tensão": "2-5,5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-touch-capacitivo-ttp223b",
+   "preco": 4.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414310454e7bb6c8.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-toque-touch-capacitivo-ttp223b.html",
+     "preco": 6.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:teclado-matricial-de-membrana-16-teclas": {
+   "nome": "Teclado de membrana 16 teclas (4x4)",
+   "marca": "Eletrogate",
+   "modelo": "Teclado 16 teclas",
+   "pacote": "módulo",
+   "tamanho": "77,0x70,0x0,8mm",
+   "montagem": "módulo",
+   "categoria_loja": "Toque",
+   "descricao": "Para quem está desenvolvendo um projeto eletrônico e precisa de uma interface prática, econômica e eficiente, esse produto 4x4 é simplesmente perfeito!",
+   "atributos": {
+    "Tipo": "Entrada"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/teclado-matricial-de-membrana-16-teclas",
+   "preco": 7.4,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194143917878a3233b.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/teclado-matricial-de-membrana-16-teclas.html",
+     "preco": 7.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:driver-controlador-para-motor-dc-irf520--2726": {
+   "nome": "Chave MOSFET IRF520 (liga motor, fita LED)",
+   "marca": "Usinainfo",
+   "modelo": "IRF520",
+   "pacote": "módulo",
+   "tamanho": "26x34x20mm",
+   "montagem": "módulo",
+   "categoria_loja": "Driver para Motor",
+   "descricao": "O Driver Controlador para Motor DC - MOSFET IRF520 é uma solução prática e eficiente para quem precisa controlar a velocidade de motores DC, micro bombas, válvulas solenoides e fitas de LED (exceto RGB).",
+   "atributos": {
+    "Tipo": "Liga/desliga",
+    "Tensão": "3.3V a 5V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=86",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/driver-para-motor/driver-controlador-para-motor-dc-irf520--2726.html",
+   "preco": 8.76,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 72,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1027626-large_default/driver-controlador-para-motor-dc-irf520-.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-mosfet-irf520",
+     "preco": 5.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-mosfet-irf520n.html",
+     "preco": 12.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-rele-1-canal-3v-10a-com-borne-kre-para-esp32": {
+   "nome": "Relé 3 V para ESP32, 1 canal",
+   "marca": "Eletrogate",
+   "modelo": "Relé 3V",
+   "pacote": "módulo",
+   "tamanho": "50 x 25 x 17mm",
+   "montagem": "módulo",
+   "categoria_loja": "Relé",
+   "descricao": "Este Módulo relé permite integração com Arduino, ESP32, ESP8266, Raspberry PI e outros.",
+   "atributos": {
+    "Tipo": "Liga/desliga",
+    "Tensão": "3VDC (3.3V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-rele-1-canal-3v-10a-com-borne-kre-para-esp32",
+   "preco": 16.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/86839659/68b45bcd8e.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-rele-3v-com-borne-kre-1-canais.html",
+     "preco": 24.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-rele-1-canal-5v": {
+   "nome": "Relé 5 V, 1 canal",
+   "marca": "Eletrogate",
+   "modelo": "Relé 1 canal 5V",
+   "pacote": "módulo",
+   "tamanho": "43mm (L) x 17mm (C) x 19mm (H)",
+   "montagem": "módulo",
+   "categoria_loja": "Relé",
+   "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
+   "atributos": {
+    "Tipo": "Liga/desliga",
+    "Tensão": "5V DC (VCC e GND)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-rele-1-canal-5v",
+   "preco": 6.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414308/26bd484baf.jpg"
+  },
+  "eletrogate:modulo-rele-2-canais-5v": {
+   "nome": "Relé 5 V, 2 canais",
+   "marca": "Eletrogate",
+   "modelo": "Relé 2 canais 5V",
+   "pacote": "módulo",
+   "tamanho": "51mm x 38mm x 20mm",
+   "montagem": "módulo",
+   "categoria_loja": "Relé",
+   "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
+   "atributos": {
+    "Tipo": "Liga/desliga",
+    "Tensão": "5VDC (VCC e GND)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-rele-2-canais-5v",
+   "preco": 11.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414409/106e8da5c7.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/rele-arduino/modulo-rele-5v-10a-2-canais-com-optoacopladores-2300.html",
+     "preco": 15.02,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-rele-4-canais-5v": {
+   "nome": "Relé 5 V, 4 canais",
+   "marca": "Eletrogate",
+   "modelo": "Relé 4 canais 5V",
+   "pacote": "módulo",
+   "tamanho": "72mm x 54mm x 17mm",
+   "montagem": "módulo",
+   "categoria_loja": "Relé",
+   "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
+   "atributos": {
+    "Tipo": "Liga/desliga",
+    "Tensão": "5 VDC (VCC e GND)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-rele-4-canais-5v",
+   "preco": 22.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414365/0bfaee136d.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/rele-arduino/modulo-rele-5v-10a-4-canais-com-optoacopladores-2534.html",
+     "preco": 29.04,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-rele-5v-4-canais.html",
+     "preco": 27.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-12-leds-rgb-ws2812-anel-50mm": {
+   "nome": "Anel de 12 LEDs coloridos WS2812",
+   "marca": "Eletrogate",
+   "modelo": "WS2812",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores e Módulos",
+   "descricao": "Este anel com 12 leds endereçáveis RGB WS2812, pode ser utilizado em diversos projetos eletrônicos como design, e moda têxtil (junto ao LilyPad), por exemplo.",
+   "atributos": {
+    "Tipo": "Luz"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-12-leds-rgb-ws2812-anel-50mm",
+   "preco": 12.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/211433905/oficial-1-kepqzw.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/anel-de-leds-rgb-x12-ws2812-5050-enderecavel.html",
+     "preco": 24.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-8-leds-rgb-ws2812-barra": {
+   "nome": "Barra de 8 LEDs coloridos WS2812",
+   "marca": "Eletrogate",
+   "modelo": "WS2812",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Outros Módulos",
+   "descricao": "Este módulo com 8 LEDs endereçáveis RGB WS2812 possui a capacidade de formar diversas cores utilizando de três cores primárias (vermelho, verde e azul).",
+   "atributos": {
+    "Tipo": "Luz",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-8-leds-rgb-ws2812-barra",
+   "preco": 6.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/332713595/8bit_3-38b5yl1pq5.webp",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/linha-de-8-leds-rgb-ws2812-5050.html",
+     "preco": 30.43,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/led/modulo-ws2812-led-enderecavel-8-leds",
+     "preco": 9.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-88-leds-rgb-ws2812b-5050": {
+   "nome": "Matriz 8x8 de LEDs coloridos WS2812B",
+   "marca": "Eletrogate",
+   "modelo": "WS2812B",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Outros Módulos",
+   "descricao": "Com o Módulo WS2812 LED RGB é possível criar belos efeitos luminosos com as mais variadas cores e tons, pois esse módulo conta com LED's que podem assumir as 3 cores primárias.",
+   "atributos": {
+    "Tipo": "Luz",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-88-leds-rgb-ws2812b-5050",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/271677816/modulo-88-leds-rgb-ws2812b-5050-3hid1f5fs0.jpg"
+  },
+  "eletrogate:modulo-led-rgb-5mm-ky-016": {
+   "nome": "Módulo LED RGB 5 mm KY-016",
+   "marca": "Eletrogate",
+   "modelo": "KY-016",
+   "pacote": "módulo",
+   "tamanho": "19x15x15mm",
+   "montagem": "módulo",
+   "categoria_loja": "Led",
+   "descricao": "O Módulo Led RGB 5mm é utilizado principalmente no ensino didático de eletrônica, o módulo é composto por um Led rgb transparente de 5mm e uma barra de pinos para fácil ligação do módulo no microcontrolador.",
+   "atributos": {
+    "Tipo": "Luz"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-led-rgb-5mm-ky-016",
+   "preco": 4.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/43964946/8e01771025.jpg"
+  },
+  "usinainfo:modulo-relogio-tempo-real-rtc-com-sensor-de-temperatura-ds3231-4674": {
+   "nome": "Relógio RTC DS3231 (guarda a hora)",
+   "marca": "Usinainfo",
+   "modelo": "DS3231",
+   "pacote": "módulo",
+   "tamanho": "38x22x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos Relógio RTC",
+   "descricao": "O Módulo Relógio Tempo Real RTC DS3231 é um módulo compacto que possui a capacidade de calcular precisamente o tempo, realizando a contagem exata dos segundos, minutos, horas, bem como, dos dias, semanas, meses e anos.",
+   "atributos": {
+    "Tipo": "Memória e relógio",
+    "Tensão": "3,3 a 5V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=417",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/rtc-arduino/modulo-relogio-tempo-real-rtc-com-sensor-de-temperatura-ds3231-4674.html",
+   "preco": 30.64,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 28,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1023973-large_default/modulo-relogio-tempo-real-rtc-com-sensor-de-temperatura-ds3231.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/real-time-clock-rtc-ds3231",
+     "preco": 22.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/real-time-clock-ds3231.html",
+     "preco": 35.46,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-micro-sd-card": {
+   "nome": "Leitor de cartão micro SD",
+   "marca": "Eletrogate",
+   "modelo": "Micro SD",
+   "pacote": "módulo",
+   "tamanho": "42x24x3,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores e Módulos",
+   "descricao": "Este Módulo é um dispositivo eficiente e compácto, desenvolvido especialmente para otimizar o trabalho de projetistas, estudantes e hobistas na confecção de projetos eletrônicos.",
+   "atributos": {
+    "Tipo": "Memória e relógio",
+    "Tensão": "4,5V à 5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-micro-sd-card",
+   "preco": 6.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414243/df1d783327.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/memorias-e-armazenamento/sd-card-para-arduino-leitor-micro-sd-card-2637.html",
+     "preco": 9.59,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "robocore:micro-servo-9g-sg90-towerpro": {
+   "nome": "Micro servo SG90",
+   "marca": "TowerPro",
+   "modelo": "SG90",
+   "pacote": "módulo",
+   "tamanho": "23x12.1x21.4mm",
+   "montagem": "módulo",
+   "categoria_loja": "Atuadores",
+   "descricao": "Este é o 9g SG90 Micro Servo, um dos micro servos de melhor custo x benefício disponíveis.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "4.8 à 6V"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/atuador/micro-servo-9g-sg90-towerpro",
+   "preco": 13.67,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 403,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/788/images/788_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/micro-servo-9g-sg90-towerpro",
+     "preco": 15.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/servo-motores/micro-servo-motor-9g-tower-pro-sg90-180-18kgfcm-original-8575.html",
+     "preco": 33.82,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/micro-servo-9g-sg90-tower-pro.html",
+     "preco": 21.07,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:driver-tb6612fng-duplo-ponte-h-de-motor-dc-ou-passo-4697": {
+   "nome": "Ponte H dupla TB6612FNG (pequena)",
+   "marca": "Usinainfo",
+   "modelo": "TB6612FNG",
+   "pacote": "módulo",
+   "tamanho": "~20x18x3,6mm",
+   "montagem": "módulo",
+   "categoria_loja": "Driver para Motor",
+   "descricao": "O Módulo Duplo Driver Motor TB6612FN é um componente eletrônico altamente tecnológico, desenvolvido para aplicação em projetos eletrônicos que usam como base plataformas de prototipagem, como, por exemplo, Arduino , AVR, AMR,…",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "4,5 V a 13,5 V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=420",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/driver-para-motor/driver-tb6612fng-duplo-ponte-h-de-motor-dc-ou-passo-4697.html",
+   "preco": 17.93,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 57,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1017669-large_default/driver-tb6612fng-duplo-ponte-h-de-motor-dc-ou-passo.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/ponte-h-dupla-com-driver-tb6612fng",
+     "preco": 19.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:servo-driver-16-canais-pca9685-4484": {
+   "nome": "Controlador de 16 servos PCA9685",
+   "marca": "Usinainfo",
+   "modelo": "PCA9685",
+   "pacote": "módulo",
+   "tamanho": "~63x25x14mm",
+   "montagem": "módulo",
+   "categoria_loja": "Driver para Motor",
+   "descricao": "O Servo Driver 16 Canais PCA9685 é um pequeno e funcional módulo eletrônico desenvolvido especialmente para expandir as portas dos microcontroladores, possibilitando a conexão de diversos servos motores.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "3-5VDC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=379",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/driver-para-motor/servo-driver-16-canais-pca9685-4484.html",
+   "preco": 35.86,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 27,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1032375-large_default/servo-driver-16-canais-pca9685.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-pwm-pca9685-i2c-16-canais-para-servo",
+     "preco": 37.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:driver-motor-de-passo-drv8825-dissipador-de-calor-4898": {
+   "nome": "Driver de motor de passo DRV8825",
+   "marca": "Usinainfo",
+   "modelo": "DRV8825",
+   "pacote": "módulo",
+   "tamanho": "20x15x2,5mm; (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Driver para Motor",
+   "descricao": "O Driver Motor de Passo DRV8825 é um módulo controlador de motores de excelente desempenho, empregado especialmente para o controle de microstepping (pequenos passos) de motores bipolares de passo.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "8.2 a 45V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/driver-para-motor/driver-motor-de-passo-drv8825-dissipador-de-calor-4898.html",
+   "preco": 19.98,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 11,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1020235-large_default/driver-motor-de-passo-drv8825-dissipador-de-calor.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/driver-motor-de-passo-drv8825",
+     "preco": 18.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:driver-motor-de-passo-a4988-c-dissipador-de-calor": {
+   "nome": "Driver de motor de passo A4988",
+   "marca": "Eletrogate",
+   "modelo": "A4988",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Drivers",
+   "descricao": "Este driver utiliza o chip A4988 e foi especialmente desenvolvido para controle de pequenos passos (microstepping) para motores de passo bipolares.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "8-35V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/driver-motor-de-passo-a4988-c-dissipador-de-calor",
+   "preco": 15.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414190886a864824.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/driver-para-motor/driver-motor-de-passo-a4988-dissipador-de-calor-3672.html",
+     "preco": 13.64,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/driver-de-motor-de-passo-a4988.html",
+     "preco": 16.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:motor-de-passo-modulo-de-controle-driver-uln2003": {
+   "nome": "Motor de passo 28BYJ-48 com driver ULN2003",
+   "marca": "Eletrogate",
+   "modelo": "ULN2003",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Drivers",
+   "descricao": "Motor de Passo de 5v com 5 vias de alimentação e 4 fases.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "5v"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/motor-de-passo-modulo-de-controle-driver-uln2003",
+   "preco": 18.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414405e3929cd33d.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/motor-de-passo/motor-de-passo-28byj-48-driver-uln2003-2535.html",
+     "preco": 17.33,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/motor-de-passo-drive-uln2003.html",
+     "preco": 19.63,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:ponte-h-dupla-l298n": {
+   "nome": "Ponte H dupla L298N (2 motores)",
+   "marca": "Eletrogate",
+   "modelo": "L298N",
+   "pacote": "módulo",
+   "tamanho": "43 x 43 x 27mm",
+   "montagem": "módulo",
+   "categoria_loja": "Drivers",
+   "descricao": "Este Driver Ponte H é baseado no chip L298N, construído para controlar cargas indutivas como relés, solenoides, motores DC e motores de passo.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "6~35v"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/ponte-h-dupla-l298n",
+   "preco": 17.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414327/9d5c455a216d4dd888354bb5f2c1078c-gpdswd90zv.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/driver-para-motor/modulo-driver-l298n-ponte-h-dupla-5-a-35v-2a-para-motor-dc-e-motor-de-passo-2302.html",
+     "preco": 18.87,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/driver-motor-ponte-h-l298n.html",
+     "preco": 19.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:servo-towerpro-mg996r": {
+   "nome": "Servo forte MG996R (engrenagem de metal)",
+   "marca": "Eletrogate",
+   "modelo": "MG996R",
+   "pacote": "módulo",
+   "tamanho": "40 x 19 x 43mm",
+   "montagem": "módulo",
+   "categoria_loja": "Servo Motor",
+   "descricao": "Para quem está procurando um servo motor de alta performance, compacto e extremamente robusto, destaca-se o Servo Motor MG996R 180° da Tower Pro.",
+   "atributos": {
+    "Tipo": "Motor",
+    "Tensão": "4,8-7,2V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/servo-towerpro-mg996r",
+   "preco": 46.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33972432/7070104fb9.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/servo-motores/servo-motor-mg996r-tower-pro-180-11kgfcm-de-posicao-com-engrenagens-metalicas-4850.html",
+     "preco": 67.98,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340-8770": {
+   "nome": "ESP32 DevKit 30 pinos (USB-C)",
+   "marca": "Usinainfo",
+   "modelo": "ESP32 30 pinos USB-C",
+   "pacote": "módulo",
+   "tamanho": "~54x29x5mm; (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Placa ESP32 DevKit V1 de 30 pinos com ESP-WROOM-32D, USB-C, conversor CH340, 25 GPIO, flash de 4MB, Wi-Fi e Bluetooth 4.2.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "2.2V – 3.6 DC (5V via USB-C)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340-8770.html",
+   "preco": 54.95,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 330,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035737-large_default/esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos-ch340-usb-c",
+     "preco": 42.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "robocore:esp32-cam-esp32-com-camera": {
+   "nome": "ESP32-CAM com câmera OV2640",
+   "marca": "genérico",
+   "modelo": "ESP32-CAM",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "Este é a ESP32-CAM, uma placa muito pequena que une o poderoso módulo ESP32 com uma câmera OV2640 ou OV3660 e um slot para cartão MicroSD.",
+   "atributos": {
+    "Tipo": "Placa"
+   },
+   "datasheet": "https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/esp32-cam-esp32-com-camera",
+   "preco": 79.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 128,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1205/images/1205_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-esp32-cam-com-camera-ov2640-2mp",
+     "preco": 99.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-wifi-esp8266-esp-01-3631": {
+   "nome": "Wi-Fi ESP8266 ESP-01",
+   "marca": "genérico",
+   "modelo": "ESP-01",
+   "pacote": "módulo",
+   "tamanho": "25x14x3mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "Módulo ESP8266 ESP-01 com Wi-Fi 2,4GHz, interface serial e processador de 32 bits.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "3.3V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=275",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp8266/modulo-wifi-esp8266-esp-01-3631.html",
+   "preco": 16.17,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 52,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1017261-large_default/modulo-wifi-esp8266-esp-01.jpg"
+  },
+  "usinainfo:placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c-8732": {
+   "nome": "Nano V3 (compatível com Arduino) USB-C",
+   "marca": "Usinainfo",
+   "modelo": "Nano V3",
+   "pacote": "módulo",
+   "tamanho": "44x18,5x6,4mm (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Placas Arduino Compatível",
+   "descricao": "Nano V3 compatível com Arduino, microcontrolador ATmega328P, conexão USB-C, conversor CH340C e clock de 16MHz.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "7-12V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c-8732.html",
+   "preco": 32.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 50,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033998-large_default/placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/placa-nano-v30-com-conector-usb-tipo-c",
+     "preco": 34.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:placa-pro-micro-atmega32u4-compativel-arduino-3674": {
+   "nome": "Pro Micro ATmega32U4 (compatível com Arduino)",
+   "marca": "genérico",
+   "modelo": "Pro Micro",
+   "pacote": "módulo",
+   "tamanho": "33x18x3mm; (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Placas Arduino Compatível",
+   "descricao": "Pro Micro compacta com ATmega32U4, operação em 5V, clock de 16MHz e conexão Micro USB.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-pro-micro-atmega32u4-compativel-arduino-3674.html",
+   "preco": 69.19,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 38,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019518-large_default/placa-pro-micro-atmega32u4-compativel-arduino.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/arduino-pro-micro-atmega32u4-5v",
+     "preco": 55.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:nodemcu-v3-esp8266-esp-12e-ch340-micro-usb-4420": {
+   "nome": "NodeMCU ESP8266 V3",
+   "marca": "Wemos",
+   "modelo": "ESP8266 NodeMCU V3",
+   "pacote": "módulo",
+   "tamanho": "57x31x5mm (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "NodeMCU V3 com ESP8266 ESP-12E, Wi-Fi, conversor CH340 ou FT232 e conexão Micro USB.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5 ~ 9V DC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1039",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp8266/nodemcu-v3-esp8266-esp-12e-ch340-micro-usb-4420.html",
+   "preco": 36.25,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 24,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035644-large_default/nodemcu-v3-esp8266-esp-12e-ch340-micro-usb.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-wifi-esp8266-nodemcu-v3-lolin",
+     "preco": 29.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-esp8266-nodemcu-esp-12e-com-wifi-v3.html",
+     "preco": 33.2,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102-8437": {
+   "nome": "ESP32 com LoRa e tela OLED (Heltec V3)",
+   "marca": "Heltec",
+   "modelo": "Heltec LoRa 32 V3",
+   "pacote": "módulo",
+   "tamanho": "~47x8mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Heltec WiFi LoRa 32 V3 com ESP32-S3, rádio SX1262 em 868/915MHz, OLED de 0,96”, USB-C, CP2102 e conector para bateria de lítio.",
+   "atributos": {
+    "Tipo": "Placa"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102-8437.html",
+   "preco": 288.86,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 20,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1032933-large_default/heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102.jpg"
+  },
+  "bau:placa-devkitc-1-esp32-s3-n16r8": {
+   "nome": "ESP32-S3 DevKitC-1 N16R8",
+   "marca": "genérico",
+   "modelo": "ESP32-S3 N16R8",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "A DevKitC-1 com ESP32-S3 N16R8 é a placa de referência para desenvolver com o S3 na configuração de maior memória: 16 MB de flash em Quad SPI e 8 MB de PSRAM em Octal SPI.",
+   "atributos": {
+    "Tipo": "Placa"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/placa-devkitc-1-esp32-s3-n16r8",
+   "preco": 150.88,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403421999/_p_l_placa_devkitc-1_esp32-s3_n16r8_-_16mb_flash_-s6vrfiuh5m.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-s3-devkitc-1-n16r8-16mb-flash-com-wifi-e-bluetooth-com-usb-c-9361.html",
+     "preco": 68.93,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:esp32-c3-mini-tipo-c": {
+   "nome": "ESP32-C3 Super Mini",
+   "marca": "Eletrogate",
+   "modelo": "ESP32-C3",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O ESP32-C3 Mini é uma poderosa placa de desenvolvimento baseada no chip ESP32-C3 , que combina conectividade Wi-Fi e Bluetooth 5.0 (BLE) com um desempenho excelente e consumo otimizado.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5V via USB / 3,3V no regulador interno"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/esp32-c3-mini-tipo-c",
+   "preco": 42.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/362806708/_p_l_placa_super_mini_-_esp32_c3_1-8inbgqiu8j.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-c3-super-mini-com-wifi-e-bluetooth-com-usb-c-8967.html",
+     "preco": 31.46,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/placa-super-mini-esp32-c3",
+     "preco": 55.36,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:mega-2560-r3-ch340-cabo-usb-para-arduino": {
+   "nome": "Mega 2560 R3 (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Mega 2560",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O Mega 2560 é a Placa Arduino perfeita para quem procura fazer Projetos mais elaborados, que necessitam de um número maior de entradas e saídas.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mega-2560-r3-ch340-cabo-usb-para-arduino",
+   "preco": 149.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/39925871/3dab8e5d13.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-mega-2560-r3-compativel-arduino-cabo-usb-3629.html",
+     "preco": 185.13,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-wifi-esp32-bluetooth-30-pinos": {
+   "nome": "ESP32 DevKit 30 pinos (micro USB)",
+   "marca": "Eletrogate",
+   "modelo": "ESP32 30 pinos",
+   "pacote": "módulo",
+   "tamanho": "49 x 25,5 x 7 mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O módulo ESP32 É um módulo Wi Fi de alta performance, com um baixíssimo consumo de energia.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "4,5 ~ 9V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos",
+   "preco": 54.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40224659/491fa7b39e.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-nodemcu-iot-com-wifi-e-bluetooth-30-pinos-com-cp2102-5147.html",
+     "preco": 65.78,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-wifi-esp32s-bluetooth-38-pinos": {
+   "nome": "ESP32 DevKit 38 pinos",
+   "marca": "Eletrogate",
+   "modelo": "ESP32s 38 pinos",
+   "pacote": "módulo",
+   "tamanho": "51 x 27.5 x 5MM",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O módulo ESP32 é um módulo Wi Fi de alta performance, com um baixíssimo consumo de energia.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "4.5 - 12VDC (Pino Vin)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wifi-esp32s-bluetooth-38-pinos",
+   "preco": 54.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/27424373/a0a030cedc.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32s-nodemcu-iot-com-wifi-e-bluetooth-38-pinos-com-cp2102-5346.html",
+     "preco": 54.95,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:placa-de-desenvolvimento-stm32f103c8t6-arm-stm32": {
+   "nome": "STM32 Blue Pill (STM32F103C8T6)",
+   "marca": "Eletrogate",
+   "modelo": "STM32F103C8T6",
+   "pacote": "módulo",
+   "tamanho": "5,3 cm x 2,2 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O STM32F103C8T6 é projetado para fornecer uma plataforma de baixo custo, que ainda atenda aos Desenvolvedores mais exigentes.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "2,0 VDC a 3,6 VDC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/placa-de-desenvolvimento-stm32f103c8t6-arm-stm32",
+   "preco": 24.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194141819f8e6d7bc7.jpg"
+  },
+  "eletrogate:pro-mini-atmega328p-5v-16mhz": {
+   "nome": "Pro Mini 5 V (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Pro Mini",
+   "pacote": "módulo",
+   "tamanho": "33 x 18 x 6mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "A Placa Pro Mini é um microcontrolador baseado no ATMega328p que opera a 16MHz e 5V.",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5v"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/pro-mini-atmega328p-5v-16mhz",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414329/pro-mini-atmega328p-5v-16mhz-664e5e78.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-pro-mini-atmega328-compativel-arduino-3107.html",
+     "preco": 34.65,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:raspberry-pi-pico": {
+   "nome": "Raspberry Pi Pico",
+   "marca": "Eletrogate",
+   "modelo": "Raspberry Pi Pico",
+   "pacote": "módulo",
+   "tamanho": "21 x 51.3 x 3.9MM",
+   "montagem": "módulo",
+   "categoria_loja": "Raspberry Pi",
+   "descricao": "A Raspberry Pi Pico é a primeira placa com microcontrolador produzido pela Fundação Raspberry.",
+   "atributos": {
+    "Tipo": "Placa"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/raspberry-pi-pico",
+   "preco": 39.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/139570868/502f5b7913.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placa-raspberry-pi/raspberry-pi-pico-rp2040-com-micro-usb-8372.html",
+     "preco": 76.4,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/raspberry-pi-pico.html",
+     "preco": 45.55,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:uno-r3-smd-ch340": {
+   "nome": "Uno R3 SMD (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Uno R3",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O Arduino Uno SMD é uma versão econômica do mais conhecido Arduino Uno R3 , onde apresenta exatamente a mesma pinagem, bem como performance de funcionamento já que também conta com o Microcontrolador Atmega328 .",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/uno-r3-smd-ch340",
+   "preco": 44.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/34855708/untitled-1-4cj6t8j8h6.jpg"
+  },
+  "eletrogate:wemos-d1-mini-pro-wifi-esp8266": {
+   "nome": "Wemos D1 Mini ESP8266",
+   "marca": "Eletrogate",
+   "modelo": "D1 Mini",
+   "pacote": "módulo",
+   "tamanho": "34,2 x 25,2 x 3,5mm (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "A Placa WeMos D1 Mini, é compatível com o Arduino, mas é controlada pelo módulo ESP8266, oferecendo conectividade Wi Fi nativa, sendo uma ótima opção para projetos IoT (Internet das Coisas).",
+   "atributos": {
+    "Tipo": "Placa"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/wemos-d1-mini-pro-wifi-esp8266",
+   "preco": 32.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/102632531/73bd6984e9.jpg"
+  },
+  "usinainfo:raspberry-pi-pico-w-com-wifi-e-bluetooth-8780": {
+   "nome": "Raspberry Pi Pico W",
+   "marca": "Usinainfo",
+   "modelo": "Raspberry Pi Pico W",
+   "pacote": "módulo",
+   "tamanho": "21mm x 52mm x 4mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placa Raspberry Pi",
+   "descricao": "A Raspberry Pi Pico W com WiFi e Bluetooth mantém as mesmas dimensões e funções de sua antecessora, a Raspberry Pi Pico, mas se destaca ao incorporar tecnologia wireless e Bluetooth diretamente na placa, tornando-a ideal para…",
+   "atributos": {
+    "Tipo": "Placa",
+    "Tensão": "1,8 - 5,5V DC (VSYS)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placa-raspberry-pi/raspberry-pi-pico-w-com-wifi-e-bluetooth-8780.html",
+   "preco": 148.17,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://www.usinainfo.com.br/1034419-large_default/raspberry-pi-pico-w-com-wifi-e-bluetooth.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/raspberry-pi-pico-w",
+     "preco": 81.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:sensor-aht10-de-alta-precisao-para-medir-temperatura-e-umidade-5691": {
+   "nome": "Sensor de temperatura e umidade AHT10",
+   "marca": "genérico",
+   "modelo": "AHT10",
+   "pacote": "módulo",
+   "tamanho": "~15x10x8mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Temperatura",
+   "descricao": "O Sensor AHT10 é um componente de alta precisão desenvolvido especialmente para integração em projetos com microcontroladores, Arduino e Raspberry Pi, por exemplo, vindo a fazer a medição precisa da temperatura e umidade.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "1.8V a 6V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=657",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-temperatura/sensor-aht10-de-alta-precisao-para-medir-temperatura-e-umidade-5691.html",
+   "preco": 16.26,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 80,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1029084-large_default/sensor-aht10-de-alta-precisao-para-medir-temperatura-e-umidade.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-sensor-de-temperatura-e-umidade-de-alta-precisao-aht10",
+     "preco": 11.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:bussola-digital-hmc5883-magnetometro-tres-eixos-gy-273-2641": {
+   "nome": "Bússola digital HMC5883L (GY-273)",
+   "marca": "Usinainfo",
+   "modelo": "HMC5883",
+   "pacote": "módulo",
+   "tamanho": "18,5x13,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Giroscópios e Bússolas Digitais",
+   "descricao": "Módulo GY-273 com magnetômetro HMC5883 de três eixos, comunicação I2C e alimentação de 5V para medição de direção e campo magnético.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "5V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=74",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/giroscopio-e-bussola-digital/bussola-digital-hmc5883-magnetometro-tres-eixos-gy-273-2641.html",
+   "preco": 23.05,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 78,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021620-large_default/bussola-digital-hmc5883-magnetometro-tres-eixos-gy-273.jpg"
+  },
+  "usinainfo:sensor-de-chama-ky-026-fogo-infravermelho-5mm-2642": {
+   "nome": "Sensor de chama (fogo)",
+   "marca": "Usinainfo",
+   "modelo": "KY-026",
+   "pacote": "módulo",
+   "tamanho": "~36x16mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Chama",
+   "descricao": "O sensor de chama KY-026 infravermelho para Arduino é um equipamento eletrônico desenvolvido para alertar o sistema microcontrolador sobre a presença de fogo em determinado ambiente, para que o mesmo possa tomar as ações…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3 - 5,5VDC"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-chama/sensor-de-chama-ky-026-fogo-infravermelho-5mm-2642.html",
+   "preco": 8.73,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 71,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1022220-large_default/sensor-de-chama-ky-026-fogo-infravermelho-5mm.jpg"
+  },
+  "usinainfo:sensor-de-pressao-e-temperatura-bmp280-4902": {
+   "nome": "Sensor de pressão e temperatura BMP280",
+   "marca": "Usinainfo",
+   "modelo": "BMP280",
+   "pacote": "módulo",
+   "tamanho": "15x11x2,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Pressão",
+   "descricao": "O Sensor de Pressão Barométrica e Temperatura BMP280 é um módulo eletrônico capaz de realizar a medição de pressão atmosférica e temperatura.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3.3VDC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=473",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-pressao/sensor-de-pressao-e-temperatura-bmp280-4902.html",
+   "preco": 7.65,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 61,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1023323-large_default/sensor-de-pressao-e-temperatura-bmp280.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/sensor-de-pressao-e-temperatura-bmp280",
+     "preco": 6.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-pressao-e-temperatura-bmp280.html",
+     "preco": 10.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:radar-doppler-rcwl-0516-sensor-de-movimento-por-microondas-5-a-7m-4711": {
+   "nome": "Sensor de presença por radar RCWL-0516",
+   "marca": "Usinainfo",
+   "modelo": "RCWL-0516",
+   "pacote": "módulo",
+   "tamanho": "36x17x1,6mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Movimento",
+   "descricao": "O Radar Doppler RCWL-0516 é um pequeno e compacto sensor de movimento eletrônico que possui como base de funcionamento o efeito de Doppler, o qual é referido como um fenômeno físico observado nas ondas quando emitidas ou…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "4 a 28V DC"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-movimento/radar-doppler-rcwl-0516-sensor-de-movimento-por-microondas-5-a-7m-4711.html",
+   "preco": 8.03,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 44,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1030600-large_default/radar-doppler-rcwl-0516-sensor-de-movimento-por-microondas-5-a-7m.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/sensor-de-presenca-e-movimento-detector-de-microondas-rcwl-0516",
+     "preco": 7.7,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:sensor-de-corrente-acs712-5a-ac-dc-com-efeito-hall-2550": {
+   "nome": "Sensor de corrente ACS712 5 A",
+   "marca": "Usinainfo",
+   "modelo": "ACS712",
+   "pacote": "módulo",
+   "tamanho": "27x12x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Corrente",
+   "descricao": "O Sensor de Corrente ACS712 5A é um componente eletrônico desenvolvido para aplicação em diversos circuitos elétricos.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "5V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=306",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-corrente/sensor-de-corrente-acs712-5a-ac-dc-com-efeito-hall-2550.html",
+   "preco": 10.78,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 41,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1036805-large_default/sensor-de-corrente-acs712-5a-ac-dc-com-efeito-hall.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-corrente-acs712-5a-a-5a.html",
+     "preco": 17.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:sensor-de-fluxo-de-agua-yf-s201-g12-1-30-lmin-2578": {
+   "nome": "Sensor de fluxo de água YF-S201",
+   "marca": "Usinainfo",
+   "modelo": "YF-S201",
+   "pacote": "módulo",
+   "tamanho": "63x35x36mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Fluxo e Vazão",
+   "descricao": "O Sensor de Fluxo de Água 1/2 YF-S201 é um produto altamente tecnológico, desenvolvido para atuar em conjunto com diversas plataformas de prototipagem, sejam elas, Arduino , PIC, AVR, ARM, entre outros.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "DC 3.5V ~ 24V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensores-de-fluxo-e-vazao/sensor-de-fluxo-de-agua-yf-s201-g12-1-30-lmin-2578.html",
+   "preco": 24.3,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 41,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1020193-large_default/sensor-de-fluxo-de-agua-yf-s201-g12-1-30-lmin.jpg"
+  },
+  "usinainfo:modulo-sensor-de-efeito-hall-para-arduino-2633": {
+   "nome": "Sensor de ímã (efeito Hall) A3144",
+   "marca": "Usinainfo",
+   "modelo": "A3144",
+   "pacote": "módulo",
+   "tamanho": "38x14x10mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores Efeito Hall",
+   "descricao": "O sensor de efeito hall é um dispositivo de estado sólido que está se tornando cada vez mais popular, já que pode ser utilizado em diversos tipos de aplicação, tais como, detecção de posição, velocidade ou movimento direcional.",
+   "atributos": {
+    "Tipo": "Sensor"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=78",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-efeito-hall/modulo-sensor-de-efeito-hall-para-arduino-2633.html",
+   "preco": 5.6,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 36,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1015504-large_default/modulo-sensor-de-efeito-hall-para-arduino.jpg"
+  },
+  "usinainfo:detector-de-gas-sensor-de-gas-mq-135-amonia-oxido-nitrico-alcool-benzeno-dioxido-de-carbono-e-fumaca-2964": {
+   "nome": "Sensor de qualidade do ar MQ-135",
+   "marca": "Usinainfo",
+   "modelo": "MQ-135",
+   "pacote": "módulo",
+   "tamanho": "32x20x18mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Gás",
+   "descricao": "O Sensor de Gás MQ-135 / Detector de Gás é um dispositivo de segurança utilizado principalmente no desenvolvimento de projetos eletrônicos, possuindo alta sensibilidade para detecção de Amônia, Óxido Nítrico, Álcool, Benzeno,…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "DC 5V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=151",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-gas/detector-de-gas-sensor-de-gas-mq-135-amonia-oxido-nitrico-alcool-benzeno-dioxido-de-carbono-e-fumaca-2964.html",
+   "preco": 18.12,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 33,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1020816-large_default/detector-de-gas-sensor-de-gas-mq-135-amonia-oxido-nitrico-alcool-benzeno-dioxido-de-carbono-e-fumaca.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/sensor-de-qualidade-do-ar-mq-135",
+     "preco": 19.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:sensor-de-cor-rgb-tcs34725-com-filtro-ir-4984": {
+   "nome": "Sensor de cor TCS34725",
+   "marca": "Usinainfo",
+   "modelo": "TCS34725",
+   "pacote": "módulo",
+   "tamanho": "20x20x3mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Cor",
+   "descricao": "O Sensor de Cor RGB TCS34725 é moderno módulo eletrônico capaz de fazer com maior precisão a identificação de cores que outros sensores.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3.3 a 5V DC"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-cor/sensor-de-cor-rgb-tcs34725-com-filtro-ir-4984.html",
+   "preco": 49.06,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 24,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1023820-large_default/sensor-de-cor-rgb-tcs34725-com-filtro-ir.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-sensor-de-cor-rgb-tcs34725-com-filtro-ir",
+     "preco": 29.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:sensor-de-pressao-umidade-e-temperatura-bme280-de-alta-precisao-33v-4682": {
+   "nome": "Sensor de pressão, umidade e temperatura BME280",
+   "marca": "Usinainfo",
+   "modelo": "BME280",
+   "pacote": "módulo",
+   "tamanho": "15,5x11,5x2,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Pressão",
+   "descricao": "O Sensor de Pressão BME280 é um exclusivo modelo capaz de realizar a medição de pressão atmosférica, umidade e temperatura, também conhecido como barômetro é um módulo digital de alta capacidade e resolução, utilizado nas mais…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "1,8 a 3,6VDC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=429",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-pressao/sensor-de-pressao-umidade-e-temperatura-bme280-de-alta-precisao-33v-4682.html",
+   "preco": 70.31,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 15,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019456-large_default/sensor-de-pressao-umidade-e-temperatura-bme280-de-alta-precisao-33v.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-bme280-versao-compacta-i2c",
+     "preco": 54.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-sensor-de-umidade-e-temperatura-am2302-dht22-40-a-80c-4613": {
+   "nome": "Sensor de temperatura e umidade DHT22",
+   "marca": "Usinainfo",
+   "modelo": "DHT22",
+   "pacote": "módulo",
+   "tamanho": "38x22x8mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Umidade",
+   "descricao": "O Módulo Sensor de Umidade e Temperatura AM2302 DHT22 é um dispositivo eletrônico amplamente utilizado para medir e monitorar os níveis de umidade e temperatura em ambientes diversos.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3 - 5,5VDC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=109",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-umidade/modulo-sensor-de-umidade-e-temperatura-am2302-dht22-40-a-80c-4613.html",
+   "preco": 21.89,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 12,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033844-large_default/modulo-sensor-de-umidade-e-temperatura-am2302-dht22-40-a-80c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-sensor-temperatura-e-umidade-dht22",
+     "preco": 19.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-sensor-de-umidade-e-temperatura-dht22.html",
+     "preco": 31.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:modulo-sensor-de-frequencia-cardiaca-e-oximetro-de-pulso-max30102-8787": {
+   "nome": "Sensor de batimentos e oxímetro MAX30102",
+   "marca": "Usinainfo",
+   "modelo": "MAX30102",
+   "pacote": "módulo",
+   "tamanho": "21x16x3mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Pulso Cardíaco",
+   "descricao": "O Sensor de Frequência Cardíaca e Oxímetro MAX30102 é uma solução completa para monitoramento de sinais vitais, capaz de medir a frequência cardíaca e os níveis de oxigenação no sangue com precisão.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3,3V a 5V DC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1085",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensores-de-pulso-cardiaco/modulo-sensor-de-frequencia-cardiaca-e-oximetro-de-pulso-max30102-8787.html",
+   "preco": 37.29,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 11,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1034804-large_default/modulo-sensor-de-frequencia-cardiaca-e-oximetro-de-pulso-max30102.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/sensor-de-frequencia-cardiaca-oximetro-max30102",
+     "preco": 32.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-frequencia-cardiaca-oximetro-max30102.html",
+     "preco": 26.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:acelerometro-e-giroscopio-3-eixos-6-dof-mpu-6050-gy-521": {
+   "nome": "Acelerômetro e giroscópio MPU-6050",
+   "marca": "Eletrogate",
+   "modelo": "MPU-6050",
+   "pacote": "módulo",
+   "tamanho": "2,1 x 1,6 x 0,3 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Movimento & Proximidade",
+   "descricao": "O Sensor MPU-6050 contém em um único chip um acelerômetro e um giroscópio tipo MEMS.São 3 eixos para o acelerômetro e 3 eixos para o giroscópio, sendo ao todo 6 graus de liberdade (6DOF).Além disso esta placa tem um Sensor de…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3-5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/acelerometro-e-giroscopio-3-eixos-6-dof-mpu-6050-gy-521",
+   "preco": 19.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194141755ad93b4e86.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/acelerometro/sensor-imu-mpu-6050-gy-521-6-eixos-6-dof-com-acelerometro-e-giroscopio-3895.html",
+     "preco": 32.89,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/gy-521-mpu6050-acelerometro-de-3-eixos-e-giroscopio-de-3-eixos.html",
+     "preco": 28.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/sensor-robo/acelerometro-e-giroscopio-mpu6050",
+     "preco": 16.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-conversor-24bit-hx711-p-celula-de-carga": {
+   "nome": "Leitor de balança (célula de carga) HX711",
+   "marca": "Eletrogate",
+   "modelo": "HX711",
+   "pacote": "módulo",
+   "tamanho": "34 x 21 x 4mm (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Conversores",
+   "descricao": "O Módulo conversor e amplificador HX711 de 24 bits, é utilizado para amplificar o sinal de dispositivos como as células de carga, fazendo a interligação entre essas células e o microcontrolador.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "4,8 à 5,5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-conversor-24bit-hx711-p-celula-de-carga",
+   "preco": 8.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/1941407543c44974f6.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/amplificadores-de-sinal/modulo-hx711-conversor-adc-24-bits-para-celula-de-carga-e-sensor-de-peso-2-canais-2818.html",
+     "preco": 7.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-conversor-analogico-digital-adc-ads1115": {
+   "nome": "Leitor de sinal analógico ADS1115",
+   "marca": "Eletrogate",
+   "modelo": "ADS1115",
+   "pacote": "módulo",
+   "tamanho": "18 x 28mm",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos Conversores",
+   "descricao": "Este Módulo Conversor Analógico Digital (ADC) de 4 Canais é uma excelente opção para se utilizar em microcontroladores sem ADC ou quando você precia de um ADC de maior precisão.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "2V a 5,5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-conversor-analogico-digital-adc-ads1115",
+   "preco": 19.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414064c13b26664f.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/conversor-ad-da-arduino/conversor-analogico-digital-ads1115-16-bits-4-canais-adc-8069.html",
+     "preco": 18.43,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-gps-neo-6m-com-antena": {
+   "nome": "GPS NEO-6M com antena",
+   "marca": "Eletrogate",
+   "modelo": "NEO-6M",
+   "pacote": "módulo",
+   "tamanho": "30x23x4mm",
+   "montagem": "módulo",
+   "categoria_loja": "GSM e GPS",
+   "descricao": "Para projetos que precisam de localização precisa, destaca-se esse módulo.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3,3 a 5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-gps-neo-6m-com-antena",
+   "preco": 49.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414182724373a521.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-gps-neo-6m-com-antena.html",
+     "preco": 57.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-seguidor-de-linha-tcrt5000": {
+   "nome": "Sensor seguidor de linha TCRT5000",
+   "marca": "Eletrogate",
+   "modelo": "TCRT5000",
+   "pacote": "módulo",
+   "tamanho": "10.2 x 5.8 x 7mm",
+   "montagem": "módulo",
+   "categoria_loja": "Partes Robóticas",
+   "descricao": "Módulo com Sensor Óptico de reflexão TCRT5000, que possui acoplado um infravermelho (emissor) e um fototransistor (receptor).",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3,3-5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-seguidor-de-linha-tcrt5000",
+   "preco": 7.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414201ead7049044.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensores-de-linha-para-robos/modulo-sensor-reflexivo-infravermelho-tcrt5000-4607.html",
+     "preco": 7.65,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-sensor-de-chuva": {
+   "nome": "Sensor de chuva",
+   "marca": "Eletrogate",
+   "modelo": "Sensor de chuva",
+   "pacote": "módulo",
+   "tamanho": "5x4 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Temperatura & Umidade",
+   "descricao": "Este sensor pode ser usado para monitorar uma variedade de condições climáticas como gotas de chuva ou neve.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3,3-5v"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-chuva",
+   "preco": 7.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414363/modulo-sensor-de-chuva-52ddc958.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensores-de-chuva/sensor-de-chuva-fc37-modulo-de-leitura-2579.html",
+     "preco": 9.95,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-sensor-de-distancia-laser-vl53l0x-gy-530": {
+   "nome": "Sensor de distância a laser VL53L0X",
+   "marca": "Eletrogate",
+   "modelo": "VL53L0X",
+   "pacote": "módulo",
+   "tamanho": "13.1 x 10.4 x 2.7mm",
+   "montagem": "módulo",
+   "categoria_loja": "Movimento & Proximidade",
+   "descricao": "Este Sensor de distância VL53L0X é um diferente de todos que você já viu.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "2.6 - 5.5VDC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-distancia-laser-vl53l0x-gy-530",
+   "preco": 24.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/230213390/laser-767x651yqj.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensores-de-proximidade-e-distancia/sensor-de-distancia-a-laser-vl53l0x-de-alta-precisao-4-a-200cm-4933.html",
+     "preco": 30.69,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-distancia-vl53l0x-de-alta-precisao.html",
+     "preco": 45.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-sensor-de-distancia-ultrassonico-hc-sr04": {
+   "nome": "Sensor de distância ultrassônico HC-SR04",
+   "marca": "Eletrogate",
+   "modelo": "HC-SR04",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores e Módulos",
+   "descricao": "Esse módulo é capaz de medir distâncias de 2cm a 4m com ótima precisão e baixo preço.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-distancia-ultrassonico-hc-sr04",
+   "preco": 10.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194140941c77bec2e9.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-ultrassonico/sensor-ultrassonico-de-distancia-hc-sr04-2295.html",
+     "preco": 10.62,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-distancia-ultrassonico-hc-sr04.html",
+     "preco": 12.22,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/sensor-robo/sensor-de-distancia-ultrassonico-hc-sr04",
+     "preco": 9.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-sensor-de-luminosidade-bh1750-gy-302": {
+   "nome": "Sensor de luz BH1750",
+   "marca": "Eletrogate",
+   "modelo": "BH1750",
+   "pacote": "módulo",
+   "tamanho": "19 x 14 x 3 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Luminosidade",
+   "descricao": "O Módulo GY-302 tem como base o circuito integrado BH1750, que é um Sensor de luminosidade digital com interface I2C.O sensor mede o iluminamento em lux, essa medida tem capacidade de dizer o fluxo luminoso em uma determinada…",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3,3 a 5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-luminosidade-bh1750-gy-302",
+   "preco": 12.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/343785720ce75250d1.jpg"
+  },
+  "eletrogate:modulo-sensor-de-luminosidade-ldr": {
+   "nome": "Sensor de luz com LDR",
+   "marca": "Eletrogate",
+   "modelo": "LDR",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Luminosidade",
+   "descricao": "Este módulo Sensor de luz é baseado em um foto resistor que mede a intensidade da luz ambiente através da variação de sua resistência interna.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3.3-5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-luminosidade-ldr",
+   "preco": 5.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414273/3191e00807.jpg"
+  },
+  "eletrogate:modulo-sensor-de-som-ky-037": {
+   "nome": "Sensor de som KY-037",
+   "marca": "Eletrogate",
+   "modelo": "KY-037",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Som",
+   "descricao": "O objetivo deste sensor é medir a intensidade sonora do ambiente ao seu redor, variando o estado de sua saída digital caso detectado um sinal sonoro.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3.3-5V DC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-som-ky-037",
+   "preco": 6.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414314/6450bf9883.jpg"
+  },
+  "eletrogate:modulo-sensor-de-tensao-0-25v-dc": {
+   "nome": "Sensor de tensão 0 a 25 V",
+   "marca": "Eletrogate",
+   "modelo": "25V",
+   "pacote": "módulo",
+   "tamanho": "25mm×13mm",
+   "montagem": "módulo",
+   "categoria_loja": "Tensão",
+   "descricao": "Sensor baseado no princípio dos divisores de tensão.",
+   "atributos": {
+    "Tipo": "Sensor"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-tensao-0-25v-dc",
+   "preco": 3.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414331/6ac6b80e4a.jpg"
+  },
+  "eletrogate:modulo-sensor-de-umidade-e-temperatura-dht11-cabos": {
+   "nome": "Sensor de temperatura e umidade DHT11",
+   "marca": "Eletrogate",
+   "modelo": "DHT11",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores e Módulos",
+   "descricao": "O DHT11 é um sensor de temperatura e umidade de saída de sinal digital garantindo alta confiabilidade e estabilidade a longo prazo.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3 - 5VDC (5.5VDC máx.)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-sensor-de-umidade-e-temperatura-dht11-cabos",
+   "preco": 10.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/160344751/78a3c779c2.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-de-umidade/modulo-sensor-de-umidade-e-temperatura-dht11-jumpers-2307.html",
+     "preco": 9.24,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:sensor-capacitivo-de-umidade-do-solo-v20-com-regulador": {
+   "nome": "Sensor capacitivo de umidade do solo",
+   "marca": "Eletrogate",
+   "modelo": "Capacitivo solo v2.0",
+   "pacote": "módulo",
+   "tamanho": "22 × 102 x 7MM",
+   "montagem": "módulo",
+   "categoria_loja": "Temperatura & Umidade",
+   "descricao": "Para quem está procurando uma forma prática e eficiente de monitorar a umidade do solo em projetos de automação ou cultivo inteligente, destaca-se um sensor de destaque: esse sensor.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3.3 - 6V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-capacitivo-de-umidade-do-solo-v20-com-regulador",
+   "preco": 9.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/195554571/4-ca7775bd9b.jpg"
+  },
+  "eletrogate:sensor-de-corrente-dc-ina219-i2c": {
+   "nome": "Sensor de corrente e tensão INA219",
+   "marca": "Eletrogate",
+   "modelo": "INA219",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Corrente",
+   "descricao": "Este módulo permite realizar medições de corrente em circuitos com tensão DC entre 0 e 26V.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3 - 5.5VDC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-de-corrente-dc-ina219-i2c",
+   "preco": 13.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/61406114/e3264e3f9a.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-de-tensao/sensor-de-tensao-e-corrente-ina219-de-alta-precisao-4856.html",
+     "preco": 15.18,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/sensor-de-corrente-dc-ina219-i2c.html",
+     "preco": 33.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:sensor-de-gas-mq-2-inflamavel-e-fumaca": {
+   "nome": "Sensor de gás e fumaça MQ-2",
+   "marca": "Eletrogate",
+   "modelo": "MQ-2",
+   "pacote": "módulo",
+   "tamanho": "32 x 20 x 15mm",
+   "montagem": "módulo",
+   "categoria_loja": "Gás",
+   "descricao": "Este sensor de gás inflamável e fumaça MQ-2 é capaz de detectar concentrações de gases combustíveis e fumaça no ar.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-de-gas-mq-2-inflamavel-e-fumaca",
+   "preco": 18.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414372/sensor-de-gas-mq-2-inflamavel-e-fumaca-491202ae.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-de-gas/detector-de-gas-sensor-de-gas-mq-2-para-glp-alcool-gases-inflamaveis-e-fumaca-2536.html",
+     "preco": 16.45,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:sensor-de-movimento-presenca-pir": {
+   "nome": "Sensor de presença PIR",
+   "marca": "Eletrogate",
+   "modelo": "PIR",
+   "pacote": "módulo",
+   "tamanho": "3,2 x 2,4 x 1,8cm",
+   "montagem": "módulo",
+   "categoria_loja": "Movimento & Proximidade",
+   "descricao": "O Sensor de Movimento PIR DYP ME003 consegue Detectar o movimento de objetos que estejam em uma área de até 7 metros!",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "4,5-20V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-de-movimento-presenca-pir",
+   "preco": 11.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414388/sensor-de-movimento-presenca-pir-aea8b3d8.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-de-movimento/sensor-pir-de-movimento-hc-sr501-100-3-a-7m-2634.html",
+     "preco": 12.05,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:sensor-de-obstaculo-reflexivo-infravermelho": {
+   "nome": "Sensor de obstáculo infravermelho",
+   "marca": "Eletrogate",
+   "modelo": "Obstáculo IR",
+   "pacote": "módulo",
+   "tamanho": "32mm x 14mm",
+   "montagem": "módulo",
+   "categoria_loja": "Partes Robóticas",
+   "descricao": "O Módulo Sensor de Obstáculo Reflexivo Infravermelho possui um LED emissor de infravermelho e um fotodiodo, quando algum obstáculo/objeto passa no ângulo de reflexão dentro da distância ajustada, o sensor indica tal situação…",
+   "atributos": {
+    "Tipo": "Sensor"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-de-obstaculo-reflexivo-infravermelho",
+   "preco": 5.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414242d81ffcec7b.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensores-de-linha-para-robos/sensor-de-obstaculo-reflexivo-infravermelho-hw-201-com-ajuste-de-sensibilidade-8379.html",
+     "preco": 6.38,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:sensor-de-temperatura-ds18b20-a-prova-dagua": {
+   "nome": "Sensor de temperatura DS18B20 à prova d'água",
+   "marca": "Eletrogate",
+   "modelo": "DS18B20",
+   "pacote": "módulo",
+   "tamanho": "6 x 50mm",
+   "montagem": "módulo",
+   "categoria_loja": "Temperatura & Umidade",
+   "descricao": "O Sensor de Temperatura DS18B20 a Prova D'água (CI MY18E20) é uma ótima opção para ampliar a capacidade de detecção e monitoramento do projeto.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3-5,5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/sensor-de-temperatura-ds18b20-a-prova-dagua",
+   "preco": 11.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414360586929efad.jpg"
+  },
+  "eletrogate:termopar-tipo-k-0-a-800c-modulo-de-leitura-max6675": {
+   "nome": "Termopar K com leitor MAX6675 (até 800 °C)",
+   "marca": "Eletrogate",
+   "modelo": "MAX6675",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Temperatura & Umidade",
+   "descricao": "Este Kit contém um Termopar Tipo K e um Módulo de Leitura Max6675 que são capazes de realizar medições de temperatuda de 0°C à 800°C.",
+   "atributos": {
+    "Tipo": "Sensor",
+    "Tensão": "3 a 5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/termopar-tipo-k-0-a-800c-modulo-de-leitura-max6675",
+   "preco": 52.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194140725ca174affa.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/sensor-de-temperatura/kit-termopar-tipo-k-0-a-800c-modulo-de-leitura-max6675-3889.html",
+     "preco": 52.72,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:mini-amplificador-de-som-pam8403-estereo-2-canais-3w-3w-com-ajuste-de-volume-4467": {
+   "nome": "Amplificador de som PAM8403",
+   "marca": "Usinainfo",
+   "modelo": "PAM8403",
+   "pacote": "módulo",
+   "tamanho": "28x20x13mm",
+   "montagem": "módulo",
+   "categoria_loja": "Mini Amplificador de Som",
+   "descricao": "A Placa Amplificador de Som 3W + 3W Estéreo PAM8403 é um circuito completo e ideal para quem necessita de um amplificador compacto e eficiente.",
+   "atributos": {
+    "Tipo": "Som",
+    "Tensão": "2,5-5VDC"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/mini-amplificador-de-som/mini-amplificador-de-som-pam8403-estereo-2-canais-3w-3w-com-ajuste-de-volume-4467.html",
+   "preco": 10.95,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 94,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021655-large_default/mini-amplificador-de-som-pam8403-estereo-2-canais-3w-3w-com-ajuste-de-volume.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-amplificador-de-som-estereo-pam8403",
+     "preco": 14.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:microfone-omnidirecional-inmp441-para-projetos-5485": {
+   "nome": "Microfone digital INMP441 (I2S)",
+   "marca": "Usinainfo",
+   "modelo": "INMP441",
+   "pacote": "módulo",
+   "tamanho": "14x14x2mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensores de Som",
+   "descricao": "O Módulo INMP441 é um microfone omnidirecional de alto desempenho que pode ser utilizado em projetos com os mais diversos tipos de microcontroladores, incluindo Arduino e o famoso ESP32 .",
+   "atributos": {
+    "Tipo": "Som",
+    "Tensão": "1,8V a 3,3VDC"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=590",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/sensor-de-som/microfone-omnidirecional-inmp441-para-projetos-5485.html",
+   "preco": 52.36,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 8,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1025826-large_default/microfone-omnidirecional-inmp441-para-projetos.jpg"
+  },
+  "bau:modulo-buzzer-5v-passivo": {
+   "nome": "Módulo buzzer passivo 5 V",
+   "marca": "genérico",
+   "modelo": "Buzzer passivo",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos",
+   "descricao": "O Módulo Buzzer 5V pode ser conectado à porta de I / O digital para a emissão de beep sonoros.",
+   "atributos": {
+    "Tipo": "Som"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/produto/modulo-buzzer-5v-passivo.html",
+   "preco": 5.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/216459210c74d5c57ed.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-buzzer-passivo-5v",
+     "preco": 4.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-buzzer-ativo-5v": {
+   "nome": "Módulo buzzer ativo 5 V",
+   "marca": "Eletrogate",
+   "modelo": "Buzzer ativo",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Audio & Voz",
+   "descricao": "O Módulo Buzzer Ativo é um pequeno alto falante destinado a emitir sinais sonoros a partir do oferecimento de energia DC ao módulo, não variando a frequência de emissão.",
+   "atributos": {
+    "Tipo": "Som",
+    "Tensão": "3.3 a 5V (VCC e GND)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-buzzer-ativo-5v",
+   "preco": 4.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/32829963/38bdc834b0.jpg"
+  },
+  "eletrogate:modulo-mp3-dfplayer-mini": {
+   "nome": "Tocador de MP3 DFPlayer Mini",
+   "marca": "Eletrogate",
+   "modelo": "DFPlayer",
+   "pacote": "módulo",
+   "tamanho": "21 x 20 x 4,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Audio & Voz",
+   "descricao": "O Módulo MP3 DFPlayer Mini é um módulo compacto, de fácil utilização e integração com placas e microcontroladores, podendo ser controlado via interface serial ou através de botões diretamente conectados ao módulo.",
+   "atributos": {
+    "Tipo": "Som",
+    "Tensão": "3.3 a 5VDC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-mp3-dfplayer-mini",
+   "preco": 14.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40592418/e2fddd98b0.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/mp3-arduino/modulo-mp3-para-arduino-dfplayer-mini-mp3-tf-16p-hw-247a-5187.html",
+     "preco": 16.39,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:display-lcd-20x4-i2c-com-fundo-azul-4655": {
+   "nome": "Tela LCD 20x4 com I2C (azul)",
+   "marca": "Wavgat",
+   "modelo": "LCD 20x4 I2C",
+   "pacote": "módulo",
+   "tamanho": "76x25mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display LCD 20x4 com fundo azul, interface I2C e alimentação de 5V.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-20x4-i2c-com-fundo-azul-4655.html",
+   "preco": 43.73,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 86,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019888-large_default/display-lcd-20x4-i2c-com-fundo-azul.jpg"
+  },
+  "usinainfo:modulo-display-tm1637-7-segmentos-4-digitos-vermelho-2943": {
+   "nome": "Display de 4 dígitos TM1637",
+   "marca": "Usinainfo",
+   "modelo": "TM1637",
+   "pacote": "módulo",
+   "tamanho": "41x23x11mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo TM1637 com display vermelho de 7 segmentos e 4 dígitos, alimentação em 3,3V ou 5V e controle simplificado para dados numéricos.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "3,3 ou 5V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-tm1637-7-segmentos-4-digitos-vermelho-2943.html",
+   "preco": 11.55,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 59,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021468-large_default/modulo-display-tm1637-7-segmentos-4-digitos-vermelho.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-tm1637-com-display-de-7-segmentos-4-digitos.html",
+     "preco": 11.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:display-tft-lcd-13-spi-rgb-240x240-st7789-5607": {
+   "nome": "Tela colorida TFT 1,3\" ST7789",
+   "marca": "Wavgat",
+   "modelo": "ST7789",
+   "pacote": "módulo",
+   "tamanho": "39x28x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD RGB de 1,3”, resolução de 240x240 pixels, controlador ST7789 e interface SPI.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "3,3V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-tft-lcd-13-spi-rgb-240x240-st7789-5607.html",
+   "preco": 38.17,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 5,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1028198-large_default/display-tft-lcd-13-spi-rgb-240x240-st7789.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-tft-lcd-1.3-spi-rgb-240x240-st7789",
+     "preco": 42.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-display-led-8-digitos-com-interface-controle-spi-max7219-4416": {
+   "nome": "Display de 8 dígitos com MAX7219",
+   "marca": "Usinainfo",
+   "modelo": "MAX7219",
+   "pacote": "módulo",
+   "tamanho": "82,5x14,9x10,9cm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo com controlador MAX7219, display LED de 8 dígitos e comunicação SPI, indicado para exibir números com controle simplificado por microcontrolador.",
+   "atributos": {
+    "Tipo": "Tela"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-led-8-digitos-com-interface-controle-spi-max7219-4416.html",
+   "preco": 21.23,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 4,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021477-large_default/modulo-display-led-8-digitos-com-interface-controle-spi-max7219.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-display-de-7-segmentos-com-8-digitos-max7219",
+     "preco": 12.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-max7219-com-display-8-digitos.html",
+     "preco": 22.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd-2828": {
+   "nome": "Tela colorida TFT 2,4\" com toque (shield Uno)",
+   "marca": "Wavgat",
+   "modelo": "TFT 2.4 shield",
+   "pacote": "módulo",
+   "tamanho": "50x39mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Shield TFT LCD de 2,4” com tela sensível ao toque e slot para cartão SD, desenvolvido para integração direta com placas Arduino compatíveis.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "3.3 / 5V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd-2828.html",
+   "preco": 89.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 2,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021481-large_default/tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-tft-2-4-touchscreen-shield-para-arduino",
+     "preco": 79.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-tft-24-touchscreen-shield-para-arduino.html",
+     "preco": 93.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-lcd-16x2-i2c-backlight-azul": {
+   "nome": "Tela LCD 16x2 com I2C (azul)",
+   "marca": "Eletrogate",
+   "modelo": "LCD 16x2 I2C",
+   "pacote": "módulo",
+   "tamanho": "80 x 36 x 12mm",
+   "montagem": "módulo",
+   "categoria_loja": "LCD",
+   "descricao": "Display Lcd com 16 colunas por 2 linhas, backlight azul e escrita branca.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-azul",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414150/display-lcd-16x2-i2c-backlight-azul-7ff37942.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-16x2-i2c-com-fundo-azul-5809.html",
+     "preco": 23.05,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-16x2-azul-com-modulo-adaptador-i2c.html",
+     "preco": 45.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-oled-128x32-i2c-azul-0.91": {
+   "nome": "Tela OLED 0,91\" 128x32 I2C",
+   "marca": "Eletrogate",
+   "modelo": "OLED 128x32",
+   "pacote": "módulo",
+   "tamanho": "38 x 12 x 2,5 mm",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Display OLED I2C azul possui alto contraste e excelente nitidez, indicado para projetos compactos operados por bateria já que o display OLED não possui backlight, consequentemente consumindo menos energia para funcionar.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "3,3-5VDC"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-128x32-i2c-azul-0.91",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33752720/f1a5065a19.jpg"
+  },
+  "eletrogate:display-oled-128x64-0.96-i2c-branco": {
+   "nome": "Tela OLED 0,96\" I2C branca",
+   "marca": "Eletrogate",
+   "modelo": "OLED 0.96 I2C",
+   "pacote": "módulo",
+   "tamanho": "30 x 27MM",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Este display oled i2c branco 0.96 polegadas é uma opção muito interessante para quem busca visualizar pouca informação mas ainda com muita nitidez.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "2.2 - 5.5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-128x64-0.96-i2c-branco",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/320283839/xko143856_oled-display-wit-128-x-64-i2c_x-76rqwsodij.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-oled-096-i2c-128x64-branco-5366.html",
+     "preco": 26.73,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-oled-096-i2c-branco.html",
+     "preco": 33.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/display/display-oled-96-i2c-branco",
+     "preco": 22.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-matriz-de-led-8x8-com-max7219": {
+   "nome": "Matriz de LED 8x8 com MAX7219",
+   "marca": "Eletrogate",
+   "modelo": "MAX7219",
+   "pacote": "módulo",
+   "tamanho": "5,0 x 3,2 x 1,5cm",
+   "montagem": "módulo",
+   "categoria_loja": "LED",
+   "descricao": "Este Módulo de matriz de LED é capaz de controlar 8x8 LEDs simultaneamente.",
+   "atributos": {
+    "Tipo": "Tela",
+    "Tensão": "5V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-matriz-de-led-8x8-com-max7219",
+   "preco": 20.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414312263a8de57b.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-matriz-de-led-8x8-com-max7219.html",
+     "preco": 29.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  }
+ }
+}

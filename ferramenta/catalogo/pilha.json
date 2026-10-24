@@ -1,11 +1,11 @@
 {
  "categoria": "pilha",
- "nome": "Suporte de pilha",
+ "nome": "Suporte de pilha e bateria",
  "grupo": "Energia",
- "explica": "Segura a pilha na placa. O + e o − dela viram dois furos.",
+ "explica": "Segura a pilha ou bateria na placa, com pinos pra soldar: o + e o − dela viram dois furos. Escolha pelo tamanho da pilha (a loja chama a AA de 'No. 5'); suportes de AAA e o clipe da bateria de 9 V estão em Porta-pilhas.",
  "destaques": [
   "Battery Type",
-  "Contact Material",
+  "Connector Type",
   "Contact Plating"
  ],
  "chips": "Battery Type",
@@ -21,9 +21,168 @@
   {
    "busca": "CR2032 Plugin",
    "quantos": 10
+  },
+  {
+   "busca": "CR1220 Plugin",
+   "quantos": 4
+  },
+  {
+   "busca": "18650 Plugin",
+   "quantos": 6
+  },
+  {
+   "busca": "BH-AA05",
+   "quantos": 2
   }
  ],
  "pecas": {
+  "C49118397": {
+   "nome": "Suporte de pilha 18650",
+   "marca": "HanElectricity",
+   "modelo": "BH-18650-3",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "-40℃~+80℃ 18650 Battery holder Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+80℃",
+    "Connector Type": "Battery holder",
+    "Battery Type": "18650"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://lcsc.com/product-detail/button-and-strip-battery-connector_hanelectricity-bh-18650-3_C49118397.html",
+   "preco": 0.3507,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 497,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C54952113": {
+   "nome": "Suporte de pilha 18650",
+   "marca": "MYOUNG",
+   "modelo": "BH-18650-A6AJ042",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Connector Type": "Battery holder",
+    "Battery Type": "18650"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C54952113.html",
+   "preco": 1.6807,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 24,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C54952127": {
+   "nome": "Suporte de pilha 18650",
+   "marca": "MYOUNG",
+   "modelo": "BH-18650-A6AJ037",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-10℃~+80℃",
+    "Connector Type": "Battery holder",
+    "Battery Type": "18650"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C54952127.html",
+   "preco": 1.4009,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 10,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C54952114": {
+   "nome": "Suporte de pilha 18650",
+   "marca": "MYOUNG",
+   "modelo": "BH-18650-A6AJ041",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Connector Type": "Battery holder",
+    "Battery Type": "18650"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C54952114.html",
+   "preco": 1.6807,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 6,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C49118396": {
+   "nome": "Suporte de pilha 18650",
+   "marca": "HanElectricity",
+   "modelo": "BH-18650-2",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "-10℃~+100℃ 18650 Battery holder Nickel Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-10℃~+100℃",
+    "Contact Plating": "Nickel",
+    "Connector Type": "Battery holder",
+    "Battery Type": "18650"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://lcsc.com/product-detail/button-and-strip-battery-connector_hanelectricity-bh-18650-2_C49118396.html",
+   "preco": 0.3013,
+   "moeda": "USD",
+   "minimo": 30,
+   "estoque": 4,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C55318134": {
+   "nome": "Suporte de pilha CR1220",
+   "marca": "LAILAN",
+   "modelo": "LAIL-CR1220-DIP180-B01-1BJ",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Contact Plating": "Nickel",
+    "Contact Material": "Phosphor bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR1220"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C55318134.html",
+   "preco": 0.563,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 135,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C5365915": {
    "nome": "Suporte de pilha CR2032",
    "marca": "Shenzhen Kinghelm Elec",
@@ -278,6 +437,30 @@
    "loja": "LCSC",
    "moeda": "USD",
    "montagem": "furo"
+  },
+  "C49118398": {
+   "nome": "Suporte de pilha AA",
+   "marca": "HanElectricity",
+   "modelo": "BH-AA05-1",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "montagem": "furo",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "descricao": "Battery holder Nickel No. 5 Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Contact Plating": "Nickel",
+    "Connector Type": "Battery holder",
+    "Battery Type": "No. 5"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://lcsc.com/product-detail/button-and-strip-battery-connector_hanelectricity-bh-aa05-1_C49118398.html",
+   "preco": 0.671,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 135,
+   "visto": "2026-10-24",
+   "situacao": "ok"
   }
  }
 }
