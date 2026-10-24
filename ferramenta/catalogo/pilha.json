@@ -1,0 +1,283 @@
+{
+ "categoria": "pilha",
+ "nome": "Suporte de pilha",
+ "grupo": "Energia",
+ "explica": "Segura a pilha na placa. O + e o − dela viram dois furos.",
+ "destaques": [
+  "Battery Type",
+  "Contact Material",
+  "Contact Plating"
+ ],
+ "chips": "Battery Type",
+ "filtro": {
+  "montagem": [
+   "furo"
+  ],
+  "atributos": [
+   "Battery Type"
+  ]
+ },
+ "sementes": [
+  {
+   "busca": "CR2032 Plugin",
+   "quantos": 10
+  }
+ ],
+ "pecas": {
+  "C5365915": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "Shenzhen Kinghelm Elec",
+   "modelo": "KH-CR2032-2-1",
+   "pacote": "Plugin",
+   "tamanho": "24,6 × 22,3 mm",
+   "descricao": "-55℃~+105℃ Battery base Brass CR2032 Tin 插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-55℃~+105℃",
+    "Contact Plating": "Tin",
+    "Contact Material": "Brass",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2303011000_Shenzhen-Kinghelm-Elec-KH-CR2032-2-1_C5365915.pdf",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_shenzhen-kinghelm-elec-kh-cr2032-2-1_C5365915.html",
+   "preco": 0.1378,
+   "minimo": 1,
+   "estoque": 10576,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "conferido": {
+    "fonte": "datasheet Kinghelm KH-CR2032-2-1 (rev. F): PCB HOLE LAYOUT marca + no furo do lado da aba (o nosso pino 1) e − no outro; pilha: Energizer CR2032 https://data.energizer.com/pdfs/cr2032.pdf",
+    "nomes": {
+     "1": "+",
+     "2": "−"
+    },
+    "pinos_fixos": {
+     "1": "VBAT",
+     "2": "GND"
+    },
+    "eletrica": {
+     "modelo": "pilha",
+     "mais": "1",
+     "menos": "2",
+     "v": 3.0,
+     "v_min": 2.0,
+     "v_max": 3.3,
+     "mah": 235,
+     "r_interna": 10,
+     "i_testada": 0.0068
+    },
+    "_eletrica": "Energizer CR2032: 3,0 V nominal; 235 mAh até 2,0 V, medidos puxando só 0,19 mA (15 kΩ); o maior consumo testado é o pulso de 400 Ω (~6,8 mA a 2,7 V, 2 s). r_interna ≈ 10 Ω lida no gráfico IR (começo da vida; passa de 20 Ω perto do fim). v_max 3,3 é só o limite do painel: o datasheet não dá a tensão da pilha nova.",
+    "extras": [
+     "Pilha CR2032 de 3 V"
+    ]
+   },
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C48687404": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "Lian Xin Technology",
+   "modelo": "XDBS-CR2032-5",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "-55℃~+85℃ Battery base CR2032 Phosphor bronze Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-55℃~+85℃",
+    "Contact Plating": "Gold",
+    "Contact Material": "Phosphor Bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_lian-xin-technology-xdbs-cr2032-5_C48687404.html",
+   "preco": 0.123,
+   "minimo": 1,
+   "estoque": 9992,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C962133": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "LOTES",
+   "modelo": "AAA-BAT-029-K01",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "Battery base CR2032 插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2012102315_LOTES-AAA-BAT-029-K01_C962133.pdf",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_lotes-aaa-bat-029-k01_C962133.html",
+   "preco": 0.1838,
+   "minimo": 1,
+   "estoque": 3901,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C54973994": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "HOAUC",
+   "modelo": "HYCW-BS-5-1-CR2032",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-55℃~+85℃",
+    "Contact Material": "Phosphor Bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "",
+   "link": "https://www.lcsc.com/product-detail/C54973994.html",
+   "preco": 0.0575,
+   "minimo": 1,
+   "estoque": 583,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C55318149": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "LAILAN",
+   "modelo": "LAIL-CR2032-MO-03",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Contact Plating": "Nickel",
+    "Contact Material": "Phosphor bronze",
+    "Connector Type": "Battery buckle",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "",
+   "link": "https://www.lcsc.com/product-detail/C55318149.html",
+   "preco": 0.2413,
+   "minimo": 1,
+   "estoque": 390,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C54973995": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "HOAUC",
+   "modelo": "HYCW-BS-2-1-CR2032-2",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-55℃~+85℃",
+    "Contact Plating": "Tin",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "",
+   "link": "https://www.lcsc.com/product-detail/C54973995.html",
+   "preco": 0.0691,
+   "minimo": 1,
+   "estoque": 294,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C962134": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "LOTES",
+   "modelo": "AAA-BAT-038-K01",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "Battery base CR2032 Phosphor bronze 插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-",
+    "Contact Material": "Phosphor Bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2012102315_LOTES-AAA-BAT-038-K01_C962134.pdf",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_lotes-aaa-bat-038-k01_C962134.html",
+   "preco": 0.3612,
+   "minimo": 1,
+   "estoque": 89,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C19089120": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "XUNPU",
+   "modelo": "BS-0202-DK-0B",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "-25℃~+85℃ Battery base CR2032 Phosphor bronze Tin Plugin Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Contact Plating": "Tin",
+    "Contact Material": "Phosphor bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2310251801_XUNPU-BS-0202-DK-0B_C19089120.pdf",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_xunpu-bs-0202-dk-0b_C19089120.html",
+   "preco": 0.1598,
+   "minimo": 1,
+   "estoque": 58,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  },
+  "C54973993": {
+   "nome": "Suporte de pilha CR2032",
+   "marca": "HOAUC",
+   "modelo": "HYCW-BS-6-2-CR2032",
+   "pacote": "Plugin",
+   "tamanho": "Plugin",
+   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "atributos": {
+    "Operating Temperature": "-55℃~+85℃",
+    "Contact Plating": "Tin",
+    "Contact Material": "Phosphor bronze",
+    "Connector Type": "Battery base",
+    "Battery Type": "CR2032"
+   },
+   "datasheet": "",
+   "link": "https://www.lcsc.com/product-detail/C54973993.html",
+   "preco": 0.2684,
+   "minimo": 1,
+   "estoque": 26,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "categoria_loja": "Button And Strip Battery Connector",
+   "loja": "LCSC",
+   "moeda": "USD",
+   "montagem": "furo"
+  }
+ }
+}

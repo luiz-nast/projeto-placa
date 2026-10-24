@@ -343,17 +343,17 @@ def opcoes(pasta, ref, online=False):
     if online or not servem(cat):
         if cor:
             busca = f"LED {'3mm' if '3' in (pecas.get(atual) or {}).get('loja', {}).get('pacote', '') else '5mm'} {cor.lower()}"
-        achadas = [i for i in loja.buscar(busca, 30, validade=0 if online else loja.UM_DIA) if catalogo.serve(bloco, i)]
+        achadas = [i for i in loja.buscar(busca, 30, validade=0 if online else loja.UM_DIA) if catalogo.serve(cat, bloco, i)]
         novas = catalogo.adicionar(cat, bloco, sorted(achadas, key=lambda i: -i["estoque"])[:12])
-        catalogo.salvar(cat)
+        catalogo.salvar(cat, [bloco])
     lista = servem(cat)
     for e in lista:
-        e["bloco"] = bloco
         e["escolhida"] = e["codigo"] == atual
         e["conferida"] = bool(e.get("conferido")) or bloco == "resistor"   # resistor: a loja ja diz tudo
         e.pop("conferido", None)
     lista.sort(key=lambda e: (not e["escolhida"], e["situacao"] != "ok", not e["conferida"], -e["estoque"]))
     return {"ref": ref, "bloco": bloco, "busca": busca, "alvo": alvo, "cor": catalogo.CORES.get(cor), "novas": novas,
+            "destaques": cat["categorias"][bloco].get("destaques", []),
             "itens": lista}
 
 

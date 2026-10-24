@@ -192,7 +192,17 @@ svg.mini { width: 100%; height: auto; display: block; border-radius: 8px; backgr
 .chips button { min-height: 30px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--borda); font-family: var(--mono); font-size: 12px; color: #C8CDD2; }
 .chips button[aria-pressed="true"] { background: var(--cobre); border-color: var(--cobre); color: #2A1A05; }
 .procurar { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.catalogo-cartao { gap: 6px; }
+.catalogo-cartao { gap: 6px; text-align: left; font: inherit; }
+.miolo.largo { max-width: 1280px; }
+.cat-corpo { display: grid; grid-template-columns: 210px 1fr; gap: 24px; align-items: start; }
+.cat-lado { position: sticky; top: 0; display: flex; flex-direction: column; gap: 2px; }
+.cat-lado .grupo { margin: 12px 0 4px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sec); }
+.cat-lado button { display: flex; justify-content: space-between; gap: 8px; min-height: 34px; padding: 0 10px; border-radius: 8px; font-size: 13.5px; text-align: left; color: #C8CDD2; }
+.cat-lado button:hover { background: #20252A; }
+.cat-lado button[aria-pressed="true"] { background: var(--ativo); color: var(--texto); }
+.cat-miolo { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.cat-explica { margin: 0; font-size: 14px; color: #C8CDD2; line-height: 1.5; }
+@media (max-width: 760px) { .cat-corpo { grid-template-columns: 1fr; } .cat-lado { position: static; flex-direction: row; flex-wrap: wrap; } .cat-lado .grupo { width: 100%; margin: 6px 0 0; } }
 .inspetor .foto-peca { width: 100%; max-height: 180px; object-fit: contain; background: #F4F4F2; border-radius: 10px; }
 .inspetor .titulo.nome-peca { font-family: inherit; font-size: 19px; font-weight: 600; word-break: normal; }
 
@@ -297,7 +307,7 @@ svg.mini { width: 100%; height: auto; display: block; border-radius: 8px; backgr
 // a bancada so le os arquivos que os scripts escrevem e desenha; nada aqui decide nada
 // sem ?placa= abre a tela de projetos; com ela, a bancada daquela placa
 const PLACA = new URLSearchParams(location.search).get('placa');
-const CATALOGO = !PLACA && new URLSearchParams(location.search).has('catalogo');
+const PECAS = !PLACA && ['pecas', 'catalogo'].some(k => new URLSearchParams(location.search).has(k));
 const BASE = `../placas/${encodeURIComponent(PLACA)}/`;
 
 const S = {
@@ -1085,7 +1095,11 @@ function selosDe(t, m, cotacao) {
 }
 
 async function desenharInicio() {
+  document.querySelectorAll('#abas [data-inicio]').forEach(b => b.setAttribute('aria-pressed', b.dataset.inicio === S.inicio));
+  if (S.inicio === 'pecas') { if ($('#main').dataset.aba !== 'pecas') { $('#main').innerHTML = ''; $('#main').dataset.aba = 'pecas'; S.brutos.inicio = null; } return desenharCatalogo(); }
+  $('#main').dataset.aba = 'projetos';
   const nomes = await listarPlacas();
+  if (S.inicio !== 'projetos') return;
   const placas = await Promise.all(nomes.map(async nome => {
     const base = `../placas/${encodeURIComponent(nome)}/`;
     const [modelo, testes, versoes, cotacao] = await Promise.all(
@@ -1106,33 +1120,32 @@ async function desenharInicio() {
   const html = `<section class="inicio" aria-label="Projetos"><div class="miolo">
     <div><h1>Projetos</h1><span class="sub">${placas.length} ${placas.length === 1 ? 'placa' : 'placas'} em placas/</span></div>
     ${placas.length ? `<div class="cartoes">${cartoes}</div>` : '<p class="vazio">Nenhuma placa em <span class="mono">placas/</span> ainda.</p>'}
-    ${cat ? `<a class="cartao catalogo-cartao" href="?catalogo"><span class="titulo-cartao">Catálogo de peças →</span>
-      <span class="sub">${cat.length} peças da loja · ${cat.filter(e => e.conferido).length} conferidas no datasheet · ${Object.entries(NOMES_BLOCO).map(([b, n]) => `${cat.filter(e => e.bloco === b).length} ${n.toLowerCase()}`).join(', ')}</span></a>` : ''}
+    ${cat ? `<button type="button" class="cartao catalogo-cartao" data-inicio="pecas"><span class="titulo-cartao">Peças →</span>
+      <span class="sub">${cat.length} peças em ${Object.keys(C.dado.categorias).length} categorias · ${cat.filter(conferidaDe).length} prontas pra placa</span></button>` : ''}
   </div></section>`;
   if (html !== S.brutos.inicio) $('#main').innerHTML = S.brutos.inicio = html;   // so troca se mudou (nao engole clique)
 }
 
-// ---------- catalogo: a lista de compras de sempre (ferramenta/catalogo.json) ----------
-const NOMES_BLOCO = { pilha: 'Pilha', botao: 'Botão', resistor: 'Resistor', led: 'LED' };
+// ---------- pecas: a lista de compras de sempre (ferramenta/catalogo/, um arquivo por categoria) ----------
 const CORES_PT = { Red: 'vermelho', 'Orange Red': 'laranja-avermelhado', Orange: 'laranja', Yellow: 'amarelo', 'Yellow Green': 'verde-amarelado',
   Green: 'verde', 'Emerald Green': 'verde', Blue: 'azul', White: 'branco' };
+const MONTAGEM = { furo: 'de furo', 'superfície': 'de superfície', 'módulo': 'módulo pronto' };
 const dia = d => d ? d.slice(8, 10) + '/' + d.slice(5, 7) : '?';
-const ohmsDe = e => { const m = /([\d.]+)\s*([kM]?)Ω/.exec(e.atributos?.Resistance || ''); return m ? +m[1] * ({ k: 1e3, M: 1e6 }[m[2]] || 1) : null; };
+const preco = (v, moeda) => v == null ? '?' : `${moeda === 'BRL' ? 'R$' : 'US$'} ${v < 0.1 ? v.toFixed(4) : v.toFixed(2)}`.replace('.', ',');
+const numeroDe = t => { const m = /^\s*([\d.]+)\s*([pnuµmkM]?)/.exec(t || ''); return m ? +m[1] * ({ p: 1e-12, n: 1e-9, u: 1e-6, 'µ': 1e-6, m: 1e-3, k: 1e3, M: 1e6 }[m[2]] || 1) : null; };
 
-// o que diferencia uma peca da outra do mesmo bloco (atributos da loja)
-const DESTAQUES = { botao: ['Switch Height', 'Operating Force', 'Life'], led: ['Luminous Intensity', 'Viewing Angle', 'Lens Color'],
-  resistor: ['Tolerance', 'Type'], pilha: ['Battery Type', 'Contact Material'] };
-
-// um cartao de peca: o mesmo no carrinho e no catalogo
+// um cartao de peca: o mesmo no carrinho e na aba Pecas
 function cartaoPeca(e, o = {}) {
   const ruim = e.situacao && e.situacao !== 'ok';
-  const extra = (DESTAQUES[e.bloco] || []).map(k => e.atributos?.[k]).filter(v => v && v !== '-');
+  const extra = (o.destaques || []).map(k => e.atributos?.[k]).filter(v => v && v !== '-');
+  const outras = (e.outras_lojas || []).filter(x => /^https:\/\//.test(x.link || ''));
   return `<div class="opcao${o.escolhida ? ' escolhida' : ''}${ruim ? ' ruim' : ''}">
-      <img src="/api/foto?codigo=${encodeURIComponent(e.codigo)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
-      <b>${esc(e.nome)}</b><span class="sub">${esc(e.marca)} · ${esc(e.modelo)} · ${esc(e.codigo)}</span>
-      <span>${esc(e.tamanho)}${extra.length ? ` · ${esc(extra.join(' · '))}` : ''}</span>
-      <span class="sub">${dolar(e.preco)} · ${ruim ? `<span class="aviso">${esc(e.situacao)}</span>` : `${milhar(e.estoque)} em estoque`} · visto ${dia(e.visto)}</span>
-      <span class="sub">${o.conferida ? '✓ datasheet conferido' : 'datasheet ainda não conferido'}</span>
+      <img src="${e.foto && /^https:\/\//.test(e.foto) ? esc(e.foto) : `/api/foto?codigo=${encodeURIComponent(e.codigo)}`}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <b>${esc(e.nome)}</b><span class="sub">${esc(e.marca)} · ${esc(e.modelo)}${e.loja === 'LCSC' || !e.loja ? ` · ${esc(e.codigo)}` : ''}</span>
+      <span>${esc(e.tamanho || '')}${e.montagem ? ` · ${esc(MONTAGEM[e.montagem] || e.montagem)}` : ''}${extra.length ? ` · ${esc(extra.join(' · '))}` : ''}</span>
+      <span class="sub">${preco(e.preco, e.moeda)} na ${esc(e.loja || 'LCSC')} · ${ruim ? `<span class="aviso">${esc(e.situacao)}</span>` : e.estoque != null ? `${milhar(e.estoque)} em estoque` : 'estoque não informado'} · visto ${dia(e.visto)}</span>
+      ${outras.length ? `<span class="sub">também em: ${outras.map(x => `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.loja)}${x.preco != null ? ' ' + preco(x.preco, x.moeda) : ''} ↗</a>`).join(', ')}</span>` : ''}
+      <span class="sub">${o.conferida ? '✓ datasheet conferido' : 'datasheet ainda não conferido'}${/^https:\/\//.test(e.link || '') ? ` · <a href="${esc(e.link)}" target="_blank" rel="noopener">loja ↗</a>` : ''}</span>
       ${o.usos?.length ? `<span class="selo ok">em uso: ${esc(o.usos.join(', '))}</span>` : ''}
       ${o.acao || ''}
     </div>`;
@@ -1146,67 +1159,79 @@ async function postar(caminho, corpo) {
   } catch { return { erro: 'sem resposta do app (ele está aberto?)' }; }
 }
 
-const C = { dado: null, bloco: 'resistor', texto: '', valor: null, cor: null, soEstoque: true, soConferidas: false, todas: false, recado: '', ocupado: false };
+const C = { dado: null, cat: 'tudo', texto: '', chip: null, soEstoque: true, soConferidas: false, soFuro: false, todas: false, recado: '', ocupado: false };
 
 async function carregarCatalogo() {
-  C.dado = await lerDe('/api/catalogo');
+  const d = await lerDe('/api/catalogo');
+  if (d) C.dado = d;
   return C.dado;
 }
 
+const especDe = id => C.dado?.categorias?.[id] || {};
+const conferidaDe = e => !!e.conferido || e.categoria === 'resistor';   // resistor: a loja ja diz tudo
+
 function filtrarCatalogo() {
-  const pecas = Object.entries(C.dado?.pecas || {}).map(([codigo, e]) => ({ codigo, ...e })).filter(e => e.bloco === C.bloco);
-  const t = C.texto.trim().toLowerCase();
-  return pecas.filter(e => (!C.soEstoque || e.situacao === 'ok') && (!C.soConferidas || e.conferido || e.bloco === 'resistor')
-    && (C.valor === null || ohmsDe(e) === C.valor) && (!C.cor || e.atributos?.['Illumination Color'] === C.cor)
-    && (!t || [e.nome, e.modelo, e.marca, e.codigo, e.tamanho, e.descricao].join(' ').toLowerCase().includes(t)))
-    .sort((a, b) => (!!(C.dado.usos[b.codigo]) - !!(C.dado.usos[a.codigo])) || (!!b.conferido - !!a.conferido)
-      || (ohmsDe(a) ?? 0) - (ohmsDe(b) ?? 0) || b.estoque - a.estoque);
+  const t = C.texto.trim().toLowerCase(), chips = especDe(C.cat).chips;
+  return Object.entries(C.dado?.pecas || {}).map(([codigo, e]) => ({ codigo, ...e }))
+    .filter(e => (C.cat === 'tudo' || e.categoria === C.cat) && (!C.soEstoque || e.situacao === 'ok')
+      && (!C.soConferidas || conferidaDe(e)) && (!C.soFuro || e.montagem === 'furo')
+      && (C.chip === null || e.atributos?.[chips] === C.chip)
+      && (!t || [e.nome, e.modelo, e.marca, e.codigo, e.tamanho, e.descricao, especDe(e.categoria).nome].join(' ').toLowerCase().includes(t)))
+    .sort((a, b) => (!!C.dado.usos[b.codigo] - !!C.dado.usos[a.codigo]) || (conferidaDe(b) - conferidaDe(a))
+      || ((numeroDe(a.atributos?.[chips]) ?? 0) - (numeroDe(b.atributos?.[chips]) ?? 0)) || ((b.estoque ?? 0) - (a.estoque ?? 0)));
 }
 
 function desenharCatalogo() {
   const main = $('#main');
   if (!C.dado) { main.innerHTML = '<p class="vazio">Lendo o catálogo…</p>'; return; }
   if (!main.querySelector('.catalogo')) {
-    main.innerHTML = `<section class="inicio catalogo" aria-label="Catálogo de peças"><div class="miolo">
-      <div><h1>Catálogo de peças</h1><span class="sub" id="cat-resumo"></span></div>
-      <p class="sub">A lista de compras de sempre: tudo que a loja diz de cada peça, o dia em que a gente viu, e o que o Claude já conferiu no datasheet. O app procura aqui primeiro; a loja online é o double check.</p>
-      <div class="modos" role="group" aria-label="Bloco" id="cat-blocos"></div>
-      <div class="filtros"><input type="search" id="cat-texto" placeholder="Filtrar: 240, verde, Yageo, 3mm…" autocomplete="off">
-        <label><input type="checkbox" data-cat-toggle="soEstoque"> só com estoque</label>
-        <label><input type="checkbox" data-cat-toggle="soConferidas"> só conferidas</label></div>
-      <div class="chips" id="cat-chips"></div>
-      <div id="cat-recado"></div>
-      <div class="opcoes grande" id="cat-cards"></div>
-      <div class="links" id="cat-acoes"></div>
+    main.innerHTML = `<section class="inicio catalogo" aria-label="Peças"><div class="miolo largo">
+      <div><h1>Peças</h1><span class="sub" id="cat-resumo"></span></div>
+      <div class="cat-corpo"><nav class="cat-lado" id="cat-lado" aria-label="Categorias"></nav>
+        <div class="cat-miolo">
+          <p class="cat-explica" id="cat-explica"></p>
+          <div class="filtros"><input type="search" id="cat-texto" placeholder="Procurar: ESP32, 100nF, verde, 1N4007…" autocomplete="off">
+            <label><input type="checkbox" data-cat-toggle="soEstoque"> com estoque</label>
+            <label><input type="checkbox" data-cat-toggle="soFuro"> só de furo</label>
+            <label><input type="checkbox" data-cat-toggle="soConferidas"> só conferidas</label></div>
+          <div class="chips" id="cat-chips"></div>
+          <div id="cat-recado"></div>
+          <div class="opcoes grande" id="cat-cards"></div>
+          <div class="links" id="cat-acoes"></div>
+        </div></div>
     </div></section>`;
   }
-  const todas = Object.values(C.dado.pecas);
-  $('#cat-resumo').textContent = `${todas.length} peças · ${todas.filter(e => e.conferido).length} conferidas no datasheet · ${todas.filter(e => e.situacao !== 'ok').length} sem estoque ou fora da loja`;
-  $('#cat-blocos').innerHTML = Object.entries(NOMES_BLOCO).map(([b, nome]) =>
-    `<button type="button" data-cat-bloco="${b}" aria-pressed="${C.bloco === b}">${nome} <span class="sub">${todas.filter(e => e.bloco === b).length}</span></button>`).join('');
+  const todas = Object.values(C.dado.pecas), cats = C.dado.categorias;
+  $('#cat-resumo').textContent = `${todas.length} peças em ${Object.keys(cats).length} categorias · ${todas.filter(conferidaDe).length} prontas pra placa (datasheet conferido) · ${new Set(todas.map(e => e.loja || 'LCSC')).size} lojas · a loja online é o double check`;
+  const grupos = {};
+  for (const [id, s] of Object.entries(cats)) (grupos[s.grupo] ||= []).push([id, s]);
+  const conta = id => todas.filter(e => e.categoria === id).length;
+  $('#cat-lado').innerHTML = `<button type="button" data-cat="tudo" aria-pressed="${C.cat === 'tudo'}">Tudo <span class="sub">${todas.length}</span></button>` +
+    Object.entries(grupos).sort().map(([g, lista]) => `<span class="grupo">${esc(g)}</span>` +
+      lista.sort((a, b) => a[1].nome.localeCompare(b[1].nome)).map(([id, s]) =>
+        `<button type="button" data-cat="${esc(id)}" aria-pressed="${C.cat === id}">${esc(s.nome)} <span class="sub">${conta(id)}</span></button>`).join('')).join('');
+  const spec = especDe(C.cat);
+  $('#cat-explica').textContent = C.cat === 'tudo' ? 'Tudo que a gente já viu nas lojas. Escolha uma categoria do lado ou procure por nome, valor ou código.' : (spec.explica || '');
   document.querySelectorAll('[data-cat-toggle]').forEach(el => { el.checked = C[el.dataset.catToggle]; });
-  const doBloco = Object.values(C.dado.pecas).filter(e => e.bloco === C.bloco);
   let chips = '';
-  if (C.bloco === 'resistor') {
-    const valores = [...new Set(doBloco.map(ohmsDe).filter(Boolean))].sort((a, b) => a - b);
-    chips = `<button type="button" data-cat-valor="" aria-pressed="${C.valor === null}">todos</button>` +
-      valores.map(v => `<button type="button" data-cat-valor="${v}" aria-pressed="${C.valor === v}">${ohmsTxt(v)}</button>`).join('');
-  } else if (C.bloco === 'led') {
-    const cores = [...new Set(doBloco.map(e => e.atributos?.['Illumination Color']).filter(Boolean))];
-    chips = `<button type="button" data-cat-cor="" aria-pressed="${!C.cor}">todas</button>` +
-      cores.map(c => `<button type="button" data-cat-cor="${esc(c)}" aria-pressed="${C.cor === c}">${esc(CORES_PT[c] || c)}</button>`).join('');
+  if (spec.chips) {
+    const valores = [...new Set(todas.filter(e => e.categoria === C.cat).map(e => e.atributos?.[spec.chips]).filter(v => v && v !== '-'))]
+      .sort((a, b) => (numeroDe(a) ?? Infinity) - (numeroDe(b) ?? Infinity) || a.localeCompare(b));
+    if (valores.length > 1) chips = `<button type="button" data-cat-chip="" aria-pressed="${C.chip === null}">todos</button>` +
+      valores.map(v => `<button type="button" data-cat-chip="${esc(v)}" aria-pressed="${C.chip === v}">${esc(CORES_PT[v] || v)}</button>`).join('');
   }
   $('#cat-chips').innerHTML = chips;
   $('#cat-recado').innerHTML = C.recado ? `<p class="aviso">${esc(C.recado)}</p>` : '';
   const lista = filtrarCatalogo(), mostra = C.todas ? lista : lista.slice(0, 48);
-  $('#cat-cards').innerHTML = mostra.map(e => cartaoPeca(e, { conferida: !!e.conferido || e.bloco === 'resistor', usos: C.dado.usos[e.codigo],
-      acao: `<button type="button" data-checar="${esc(e.codigo)}" ${C.ocupado ? 'disabled' : ''}>Conferir na loja agora</button>` })).join('')
+  $('#cat-cards').innerHTML = mostra.map(e => cartaoPeca(e, { destaques: especDe(e.categoria).destaques, conferida: conferidaDe(e), usos: C.dado.usos[e.codigo],
+      acao: (e.loja || 'LCSC') === 'LCSC' ? `<button type="button" data-checar="${esc(e.codigo)}" ${C.ocupado ? 'disabled' : ''}>Conferir na loja agora</button>` : '' })).join('')
     || '<span class="vazio-op sub">Nada no catálogo com esse filtro.</span>';
-  const semente = C.dado.sementes?.[C.bloco]?.[0] || '';
+  const semente = spec.sementes?.[0]?.busca || '';
+  const lcsc = mostra.filter(e => (e.loja || 'LCSC') === 'LCSC').slice(0, 60);
   $('#cat-acoes').innerHTML = `${lista.length > mostra.length ? `<button type="button" data-cat-todas>Mostrar todas as ${lista.length}</button>` : ''}
-    <button type="button" data-checar="${esc(mostra.slice(0, 60).map(e => e.codigo).join(','))}" ${C.ocupado || !mostra.length ? 'disabled' : ''}>Conferir estas ${Math.min(60, mostra.length)} na loja agora ↻</button>
-    <span class="procurar"><input type="search" id="cat-busca" value="${esc(semente)}" aria-label="Procurar na loja">
-    <button type="button" data-buscar-loja ${C.ocupado ? 'disabled' : ''}>Procurar mais na loja</button></span>`;
+    <button type="button" data-checar="${esc(lcsc.map(e => e.codigo).join(','))}" ${C.ocupado || !lcsc.length ? 'disabled' : ''}>Conferir estas ${lcsc.length} na loja agora ↻</button>
+    ${C.cat !== 'tudo' ? `<span class="procurar"><input type="search" id="cat-busca" value="${esc(semente)}" aria-label="Procurar na loja">
+    <button type="button" data-buscar-loja ${C.ocupado ? 'disabled' : ''}>Procurar mais na loja</button></span>` : ''}`;
 }
 
 async function acaoCatalogo(caminho, corpo, durante) {
@@ -1264,7 +1289,7 @@ function opcoesHTML(ref) {
   if (!o) return '';
   if (o.carregando) return `<div class="opcoes"><span class="sub">${esc(o.carregando)}</span></div>`;
   if (o.erro) return `<div class="opcoes"><span class="aviso">${esc(o.erro)}</span></div>`;
-  const cards = o.itens.map(i => cartaoPeca(i, { escolhida: i.escolhida, conferida: i.conferida,
+  const cards = o.itens.map(i => cartaoPeca(i, { destaques: o.destaques, escolhida: i.escolhida, conferida: i.conferida,
     acao: i.escolhida ? '<span class="selo ok">no carrinho</span>'
       : `<button type="button" data-escolher="${esc(ref)}" data-codigo="${esc(i.codigo)}" ${S.mexendo || i.situacao !== 'ok' ? 'disabled' : ''}>Escolher</button>` })).join('');
   const filtro = [o.alvo ? `só ${ohmsTxt(o.alvo)}` : '', o.cor ? `só ${o.cor}` : ''].filter(Boolean).join(', ');
@@ -1272,7 +1297,7 @@ function opcoesHTML(ref) {
     ${cards || '<span class="vazio-op sub">O catálogo não tem nenhuma peça pra isso.</span>'}
     <div class="links acoes-op"><button type="button" data-online="${esc(ref)}" ${S.mexendo ? 'disabled' : ''}>Procurar mais na loja ↻</button>
       <button type="button" data-checar-op="${esc(ref)}" ${S.mexendo || !o.itens.length ? 'disabled' : ''}>Conferir o estoque destas agora</button>
-      <a href="?catalogo">Ver o catálogo inteiro →</a></div></div>`;
+      <a href="./?pecas">Ver todas as peças →</a></div></div>`;
 }
 
 function desenharProcesso(main) {
@@ -1579,13 +1604,13 @@ document.addEventListener('click', async e => {
     delete S.opcoes[ref];
     return abrirOpcoes(ref);
   }
-  if (b.dataset.catBloco) { Object.assign(C, { bloco: b.dataset.catBloco, valor: null, cor: null, todas: false }); return desenharCatalogo(); }
-  if (b.dataset.catValor !== undefined) { C.valor = b.dataset.catValor ? +b.dataset.catValor : null; C.todas = false; return desenharCatalogo(); }
-  if (b.dataset.catCor !== undefined) { C.cor = b.dataset.catCor || null; return desenharCatalogo(); }
+  if (b.dataset.inicio) { S.inicio = b.dataset.inicio; history.replaceState(null, '', S.inicio === 'pecas' ? '?pecas' : './'); return desenharInicio(); }
+  if (b.dataset.cat) { Object.assign(C, { cat: b.dataset.cat, chip: null, todas: false }); return desenharCatalogo(); }
+  if (b.dataset.catChip !== undefined) { C.chip = b.dataset.catChip || null; C.todas = false; return desenharCatalogo(); }
   if (b.dataset.catToggle) { C[b.dataset.catToggle] = b.checked; return desenharCatalogo(); }
   if ('catTodas' in b.dataset) { C.todas = true; return desenharCatalogo(); }
   if (b.dataset.checar) return acaoCatalogo('/api/catalogo/checar', { codigos: b.dataset.checar.split(',') }, 'Conferindo na loja agora…');
-  if ('buscarLoja' in b.dataset) return acaoCatalogo('/api/catalogo/buscar', { bloco: C.bloco, texto: $('#cat-busca').value }, 'Procurando na loja…');
+  if ('buscarLoja' in b.dataset) return acaoCatalogo('/api/catalogo/buscar', { bloco: C.cat, texto: $('#cat-busca').value }, 'Procurando na loja…');
   if (b.dataset.escolher) {
     const ref = b.dataset.escolher;
     if (await mexer('escolher', { ref, codigo: b.dataset.codigo }, `Trazendo ${b.dataset.codigo} da loja…`)) delete S.opcoes[ref];
@@ -1691,17 +1716,14 @@ if (PLACA) {
   lerDe('/api/placas').then(api => { S.api = !!api; desenhar(); });
   atualizar();
   setInterval(atualizar, 1000);
-} else if (CATALOGO) {   // o catalogo de pecas: le uma vez; o resto e por clique
-  for (const id of ['abas', 'direita']) $('#' + id).hidden = true;
-  $('#nome').textContent = 'Catálogo de peças';
-  document.title = 'Catálogo · Sianvolt';
-  desenharCatalogo();
-  carregarCatalogo().then(desenharCatalogo);
-} else {   // tela de projetos: some com as abas e relê a lista de vez em quando
-  for (const id of ['voltar', 'abas', 'direita']) $('#' + id).hidden = true;
+} else {   // janela principal: Projetos | Pecas (relê a lista de projetos de vez em quando; as pecas, por clique)
+  for (const id of ['voltar', 'direita']) $('#' + id).hidden = true;
+  $('#abas').innerHTML = '<button type="button" data-inicio="projetos">Projetos</button><button type="button" data-inicio="pecas">Peças</button>';
+  S.inicio = PECAS ? 'pecas' : 'projetos';
   document.title = 'Sianvolt';
+  desenharInicio();
   carregarCatalogo().then(desenharInicio);
-  setInterval(desenharInicio, 5000);
+  setInterval(() => { if (S.inicio === 'projetos') desenharInicio(); }, 5000);
 }
 </script>
 </body>

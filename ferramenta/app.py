@@ -110,7 +110,7 @@ class Bancada(SimpleHTTPRequestHandler):
             pasta = placa(q.get("placa", ""))
             return self.responder(blocos.estado(pasta) if pasta else {"erro": "placa não existe"}, 200 if pasta else 404)
         if url.path == "/api/catalogo":
-            return self.responder({"pecas": catalogo.ler()["pecas"], "usos": usos(), "sementes": catalogo.SEMENTES})
+            return self.responder({**catalogo.ler(), "usos": usos()})
         if url.path == "/api/opcoes":
             pasta = placa(q.get("placa", ""))
             if not pasta:
@@ -149,9 +149,9 @@ class Bancada(SimpleHTTPRequestHandler):
                     resposta = {"ok": True, "conferidas": len(codigos), "mudaram": mudaram}
                 else:
                     bloco, texto = str(corpo.get("bloco", "")), str(corpo.get("texto", "")).strip()[:80]
-                    if bloco not in blocos.BLOCOS or not texto:
-                        return self.responder({"erro": "bloco ou busca inválida"}, 400)
-                    achadas = [i for i in loja.buscar(texto, 30, validade=0) if catalogo.serve(bloco, i)]
+                    if bloco not in cat["categorias"] or not texto:
+                        return self.responder({"erro": "categoria ou busca inválida"}, 400)
+                    achadas = [i for i in loja.buscar(texto, 30, validade=0) if catalogo.serve(cat, bloco, i)]
                     novas = catalogo.adicionar(cat, bloco, sorted(achadas, key=lambda i: -i["estoque"])[:12])
                     resposta = {"ok": True, "achadas": len(achadas), "novas": novas}
                 catalogo.salvar(cat)

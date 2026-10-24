@@ -46,7 +46,9 @@ def pedir(url, dados=None, validade=UM_DIA, binario=False):
         except OSError as e:
             raise SemLoja(f"a loja não respondeu ({e})")
         CACHE.mkdir(parents=True, exist_ok=True)
-        arq.write_bytes(corpo)
+        tmp = arq.with_name(f"{chave}.{time.time_ns()}.tmp")   # varios agentes buscando juntos: grava inteiro ou nada
+        tmp.write_bytes(corpo)
+        tmp.replace(arq)
     return corpo if binario else corpo.decode("utf-8", "replace")
 
 
@@ -230,7 +232,7 @@ def importar(codigo, bloco, pasta):
     cat = catalogo.ler()
     catalogo.adicionar(cat, bloco, [dados])   # toda peca escolhida fica na lista de compras
     cat["pecas"][codigo]["tamanho"] = tipo["loja"]["tamanho"]   # a medida do desenho, quando o pacote nao diz
-    catalogo.salvar(cat)
+    catalogo.salvar(cat, [cat["pecas"][codigo]["categoria"]])
     destino = Path(pasta) / "pecas"
     destino.mkdir(parents=True, exist_ok=True)
     arq = destino / f"{codigo}.json"
