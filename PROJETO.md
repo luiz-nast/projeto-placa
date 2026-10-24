@@ -46,7 +46,8 @@ ferramenta/
   blocos.py           ← objetivo, perguntas, blocos e a conta do brilho (projeto.json)
   loja.py             ← busca peça na JLCPCB, foto e datasheet na LCSC, desenho oficial no EasyEDA
   catalogo.py         ← a lista de compras: encher (da loja), checar (preço e estoque agora), ver
-  catalogo.json       ← a lista: ~300 peças de furo com o que a loja diz, o dia em que viu, a situação e o que o Claude conferiu no datasheet
+  catalogo/           ← a lista: um arquivo por categoria (~90, ~4.500 peças), com como buscar, filtrar e dar nome, e as peças
+  lojas.py            ← preço e estoque das lojas brasileiras (Eletrogate, Baú, Usinainfo, RoboCore), pela página do produto
   biblioteca.py       ← peças de antes da loja e de exemplo: pinos, nomes de gente, modelo elétrico
   circuito.py         ← liga o circuito no papel (corrente contínua: pilha, resistor, LED, chave)
   testar.py           ← bateria de testes → testes.json

@@ -27,7 +27,7 @@ python3 ferramenta/instalar.py   # põe o "Sianvolt" no menu de aplicativos
 
 O app (`ferramenta/app.py`) abre numa janela própria, sem abas, com a lista de projetos. Cada projeto conta a história em 7 passos (objetivo, blocos, carrinho, placa, testes, fábrica, montar); dá pra responder as perguntas, trocar uma peça pelas opções da loja e rodar os testes de lá. Sem instalar: `python3 ferramenta/app.py`.
 
-Peças: a lista de compras de sempre é o `ferramenta/catalogo.json` (~300 peças de furo, com preço, estoque, o dia em que viu e o que já foi conferido no datasheet), visível na tela **Catálogo de peças** do app. A loja online é o double check: `python3 ferramenta/catalogo.py checar` (preço e estoque agora), `python3 ferramenta/loja.py buscar "LED 5mm"` e `python3 ferramenta/loja.py importar C779439 led placas/lanterna`.
+Peças: a lista de compras de sempre é a pasta `ferramenta/catalogo/` (~4.500 peças em ~90 categorias, da LCSC e de lojas brasileiras, com preço, estoque, o dia em que viu, a montagem e o que já foi conferido no datasheet), na aba **Peças** da janela principal do app. A loja online é o double check: `python3 ferramenta/catalogo.py checar` (preço e estoque agora), `python3 ferramenta/loja.py buscar "LED 5mm"` e `python3 ferramenta/loja.py importar C779439 led placas/lanterna`.
 
 O `testar.py` gera `modelo.json`, os Gerbers, o Excellon e a versão, e depois roda 7 etapas: lê o txt, confere peças, confere ligações, liga o circuito no papel (pilha fraca, nominal e nova), regras da fábrica (JLCPCB), relê o Gerber com o `gerbonara` e tira uma foto da placa. O `fabrica.zip` só sai quando tudo passa.
 
