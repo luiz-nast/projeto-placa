@@ -18,7 +18,9 @@ Formato de uma categoria (ferramenta/catalogo/<id>.json):
    "explica": "uma frase de gente: pra que serve",
    "nome_peca": "Capacitor {Capacitance}, {Voltage Rated}",     # {Atributo da loja}, ou {type|Type} (o primeiro que tiver);
                                                                  # pode ser uma lista: vale o primeiro modelo que fechar;
+                                                                 # {@categoria_loja}, {@modelo}, {@marca}: campos da peça;
                                                                  # nenhum fechou, vira "<nome> <modelo>"
+   "traducoes": {"Timers / Clock Oscillators": "Timer"},        # valor da loja -> português, só nesta categoria
    "destaques": ["Capacitance", "Voltage Rated", "Tolerance"],   # o que aparece no cartão
    "chips": "Capacitance",                                       # atributo dos botões de filtro (opcional)
    "filtro": {"montagem": ["furo"],                              # furo | superfície | módulo (sem: qualquer)
@@ -47,7 +49,7 @@ PASTA = Path(__file__).parent / "catalogo"
 E24 = [10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91]
 CORES = {"Red": "vermelho", "Orange Red": "laranja-avermelhado", "Orange": "laranja", "Yellow": "amarelo",
          "Yellow Green": "verde-amarelado", "Green": "verde", "Emerald Green": "verde", "Blue": "azul", "White": "branco"}
-CAMPOS_SPEC = ("categoria", "nome", "grupo", "explica", "nome_peca", "destaques", "chips", "filtro", "sementes")
+CAMPOS_SPEC = ("categoria", "nome", "grupo", "explica", "nome_peca", "destaques", "chips", "traducoes", "filtro", "sementes")
 GRUPOS = ["Passivos", "Semicondutores", "Energia", "Cérebros", "Comunicação", "Sensores", "Luz e som", "Telas",
           "Chaves e botões", "Conectores", "Movimento", "Módulos prontos"]   # a ordem da aba Peças
 # valores da loja em inglês que aparecem em nome e filtro
@@ -171,11 +173,19 @@ def nome_da_peca(cat, categoria, i):
     if categoria in blocos.BLOCOS:   # as categorias que ja montam placa tem nome feito a mao
         return blocos.nome_da_loja(categoria, i)
     spec = cat["categorias"][categoria]
+    traducoes = {**TRADUCOES, **spec.get("traducoes", {})}
+
+    def valor(campo):   # {Atributo|Outro} ou {@campo_da_peca}
+        if campo.startswith("@"):
+            v = i.get({"categoria_loja": "categoria"}.get(campo[1:], campo[1:]))
+            return v if v and v != "-" else None
+        return atributo(i["atributos"], campo)
+
     modelos = spec.get("nome_peca") or []
     for modelo in [modelos] if isinstance(modelos, str) else modelos:
         campos = re.findall(r"\{([^}]+)\}", modelo)
-        if campos and all(atributo(i["atributos"], c) for c in campos):
-            return re.sub(r"\{([^}]+)\}", lambda m: TRADUCOES.get(atributo(i["atributos"], m[1]), atributo(i["atributos"], m[1])), modelo)
+        if campos and all(valor(c) for c in campos):
+            return re.sub(r"\{([^}]+)\}", lambda m: traducoes.get(valor(m[1]), valor(m[1])), modelo)
     return f"{spec['nome']} {i['modelo']}".strip()
 
 
