@@ -67,8 +67,10 @@ TRADUCOES = {**CORES, "Through Hole": "de furo", "Right Angle": "a 90°", "Surfa
              "Side insertion": "encaixe lateral", "N-Channel": "canal N", "P-Channel": "canal P"}
 
 # pacote que comeca assim e de furo (a LCSC escreve de muitos jeitos; 插件 e 弯插 sao "plugin" e "plugin dobrado" em chines)
-FURO = re.compile(r"^(Plugin|Through Hole|插件|弯插|Push-Pull|(C|P|SP|SK)?DIP|SIP|ZIP|Multiwatt|TOP-3|"
-                  r"I?TO-(92|126|220|247|3P|3\b|5\b|18|202)|DO-(35|41|15|27|201|204)|A-405|R-6|HC-49(?!.*SMD)|DT-26|DT-38)", re.I)
+FURO = re.compile(r"^(Plugin|Through Hole|插件|弯插|Push-Pull|(C|P|SP|SK)?DIP|SIP|F?ZIP|Multiwatt|TOP-3|"
+                  r"I?TO-(92|126|220|247|3P|3\b|5\b|05|18|202|39|46|4\b)|DO-(35|41|15|27|201|204)|A-405|R-6|"
+                  r"HC-49(?!.*SMD)|DT-26|DT-38|KBP|KBL|KBJ|KBU|GBU|GBJ|GBP|WOM|WOB|DB(-|$)|CB-5|CB-2-3|PFF)", re.I)
+FIO = ("Housing", "Crimp", "RF Cables", "Dupont wire", "Wire To Wire")   # categorias da loja de coisa que vai no cabo
 
 
 def atributo(at, nome):
@@ -111,7 +113,7 @@ def numero(txt):
 
 def chave(spec, e):
     """ordem dentro da categoria: pelo atributo dos chips (valor), depois mais estoque"""
-    v = e["atributos"].get(spec.get("chips") or "", "")
+    v = atributo(e["atributos"], spec.get("chips") or "") or ""
     return (numero(v) is None, numero(v) or 0, str(v), -(e.get("estoque") or 0))
 
 
@@ -133,9 +135,11 @@ def salvar(cat, so=None):
 
 # ---------- o que serve pra cada categoria ----------
 def montagem(i):
+    if i.get("montagem_manual"):   # a loja nao diz e o Claude viu na pagina (ex: XT60 de placa)
+        return i["montagem_manual"]
     pacote, loja = i["pacote"].strip(), i["categoria"]
     jeito = (i["atributos"].get("Mounting Type") or i["atributos"].get("Mounting Style") or "").lower()
-    if any(p in loja for p in ("Housing", "Crimp")):   # capinha e terminal de cabo
+    if any(p in loja for p in FIO) or i["atributos"].get("Holder Type") == "Free Hanging":   # capinha, cabo, IDC de fio
         return "fio"
     if FURO.match(pacote) or "Through Hole" in loja or "through hole" in jeito or "plug" in jeito:
         return "furo"
@@ -163,7 +167,7 @@ def serve(cat, categoria, i):
         return False
     if any(i["atributos"].get(a) in vs for a, vs in f.get("valores_fora", {}).items()):
         return False
-    if any(not i["atributos"].get(a) or i["atributos"][a] == "-" for a in f.get("atributos", [])):
+    if any(not atributo(i["atributos"], a) for a in f.get("atributos", [])):
         return False
     return all(i["atributos"].get(a) in vs for a, vs in f.get("valores", {}).items())
 
@@ -189,10 +193,19 @@ def nome_da_peca(cat, categoria, i):
     return f"{spec['nome']} {i['modelo']}".strip()
 
 
-def entrada(cat, categoria, i):
+def medida(i):
+    """o tamanho: do pacote ('Plugin,D2.3xL6.5mm'); se ele nao diz, dos atributos Length e Width; senao vazio"""
     import blocos
+    m = blocos.tamanho(i["pacote"])
+    if m and m != i["pacote"].strip():
+        return m
+    c, l = (numero(atributo(i["atributos"], a) or "") for a in ("Length|Length(mm)", "Width|Width(mm)"))
+    return f"{c * 1000:g} × {l * 1000:g} mm".replace(".", ",") if c and l and c < 1 and l < 1 else ""
+
+
+def entrada(cat, categoria, i):
     return {"nome": nome_da_peca(cat, categoria, i), "marca": i["marca"], "modelo": i["modelo"],
-            "pacote": i["pacote"], "tamanho": blocos.tamanho(i["pacote"]), "montagem": montagem(i),
+            "pacote": i["pacote"], "tamanho": medida(i), "montagem": montagem(i),
             "categoria_loja": i["categoria"], "descricao": i["descricao"], "atributos": i["atributos"],
             "datasheet": i["datasheet"], "loja": "LCSC", "link": i["link"], "preco": i["preco"], "moeda": "USD",
             "minimo": i["minimo"], "estoque": i["estoque"], "visto": hoje(), "situacao": "ok"}
@@ -205,10 +218,11 @@ def adicionar(cat, categoria, itens):
         velha = cat["pecas"].get(i["codigo"])
         nova = {**entrada(cat, categoria, i), "categoria": categoria}
         if velha:
-            medida = velha.get("tamanho")
+            tamanho = velha.get("tamanho")
             nova = {**velha, **nova, "categoria": velha["categoria"]}   # quem ja estava numa categoria fica nela
-            if nova["tamanho"] == nova["pacote"] and medida:
-                nova["tamanho"] = medida
+            nova["montagem"] = velha.get("montagem_manual") or nova["montagem"]
+            if not nova["tamanho"] and tamanho and tamanho != nova["pacote"]:   # a medida tirada do desenho fica
+                nova["tamanho"] = tamanho
         else:
             novas += 1
         cat["pecas"][i["codigo"]] = nova
@@ -239,7 +253,7 @@ def checar_outra_loja(e, avisar=print):
     """preco e estoque de uma peca de loja brasileira (e das outras lojas dela), pela pagina do produto"""
     import lojas
     mudou = False
-    for oferta in [e] + e.get("outras_lojas", []):
+    for oferta in ([e] if e.get("link") else []) + e.get("outras_lojas", []):
         if not lojas.nome_da_loja(oferta.get("link", "")):
             continue
         try:
@@ -271,6 +285,8 @@ def checar(cat, codigos=None, avisar=print):
             if checar_outra_loja(e, avisar):
                 mudou.append(codigo)
             continue
+        if e.get("outras_lojas") and checar_outra_loja({"outras_lojas": e["outras_lojas"]}, avisar):   # a placa da LCSC tambem a venda no Brasil
+            mudou.append(codigo)
         try:
             i = loja.ficha(codigo, validade=0)
         except loja.SemLoja as erro:
@@ -292,24 +308,22 @@ def checar(cat, codigos=None, avisar=print):
 
 
 def recalcular(cat, categoria=None):
-    """refaz montagem, nome e tamanho das pecas da LCSC com as regras de agora (sem ir na loja).
-    Nome que o Claude corrigiu a mao (diferente do que a regra da e a regra so da o nome reserva) vira apelido."""
-    import blocos
+    """refaz montagem, nome, tamanho e link das pecas da LCSC com as regras de agora (sem ir na loja).
+    O apelido (nome dado a mao) e a montagem_manual ficam."""
+    import loja
     mudou = 0
     for codigo, e in cat["pecas"].items():
         if (categoria and e["categoria"] != categoria) or e.get("loja", "LCSC") != "LCSC":
             continue
         como_loja = {**e, "codigo": codigo, "categoria": e.get("categoria_loja", "")}
-        nome = nome_da_peca(cat, e["categoria"], como_loja)
-        reserva = f"{cat['categorias'][e['categoria']]['nome']} {e['modelo']}".strip()
-        antes = (e.get("montagem"), e["nome"], e.get("apelido"))
-        if nome == reserva and e["nome"] not in (nome, "") and not e.get("apelido"):
-            e["apelido"] = e["nome"]
-        e["nome"], e["montagem"] = nome, montagem(como_loja)
-        medida = blocos.tamanho(e["pacote"])
-        if medida != e["pacote"] or e.get("tamanho") in (None, "", "-", e["pacote"]):
-            e["tamanho"] = medida if medida not in ("-",) else ""
-        mudou += (e.get("montagem"), e["nome"], e.get("apelido")) != antes
+        antes = (e.get("montagem"), e["nome"], e.get("tamanho"), e.get("link"))
+        e["nome"], e["montagem"] = nome_da_peca(cat, e["categoria"], como_loja), montagem(como_loja)
+        tamanho = medida(como_loja)
+        if tamanho or e.get("tamanho") in (None, "", "-", e["pacote"].strip()):   # sem medida nova, fica a do desenho
+            e["tamanho"] = tamanho
+        if " " in (e.get("link") or ""):   # a JLCPCB as vezes manda o link com espaco, e ele nao abre
+            e["link"] = loja.FICHA.format(codigo)
+        mudou += (e.get("montagem"), e["nome"], e.get("tamanho"), e.get("link")) != antes
     return mudou
 
 
@@ -346,8 +360,9 @@ if __name__ == "__main__":
         print(f"{encher(cat, alvo)} peças novas")
         salvar(cat, [alvo] if alvo else None)
     elif args[:1] == ["checar"]:
-        print(f"{len(checar(cat, args[1:] or None))} mudaram")
-        salvar(cat)
+        codigos = args[1:] or list(cat["pecas"])
+        print(f"{len(checar(cat, codigos))} mudaram")
+        salvar(cat, sorted({cat["pecas"][c]["categoria"] for c in codigos if c in cat["pecas"]}))   # so as categorias tocadas
     elif args[:1] == ["ver"]:
         for c, e in cat["pecas"].items():
             if len(args) < 2 or e["categoria"] == args[1]:

@@ -66,7 +66,7 @@ def item(c):
         "preco": precos[0]["productPrice"] if precos else None,    # US$ por unidade, no menor lote
         "minimo": c.get("minPurchaseNum") or 1,
         "datasheet": c.get("dataManualUrl") or "",
-        "link": c.get("lcscGoodsUrl") or FICHA.format(c["componentCode"]),
+        "link": c["lcscGoodsUrl"] if c.get("lcscGoodsUrl") and " " not in c["lcscGoodsUrl"] else FICHA.format(c["componentCode"]),
         "atributos": {a["attribute_name_en"]: a["attribute_value_name"] for a in c.get("attributes") or []},
     }
 

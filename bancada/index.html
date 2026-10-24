@@ -1132,7 +1132,7 @@ const CORES_PT = { Red: 'vermelho', 'Orange Red': 'laranja-avermelhado', Orange:
 const MONTAGEM = { furo: 'de furo', 'superfície': 'de superfície', 'módulo': 'módulo pronto', fio: 'vai no fio, não na placa', 'não informado': 'montagem não informada' };
 // 'type|Type': o primeiro atributo que a peca tiver (a loja escreve o mesmo atributo de jeitos diferentes)
 const atrib = (e, nome) => (nome || '').split('|').map(n => e.atributos?.[n]).find(v => v && v !== '-');
-const emPt = v => C.dado?.traducoes?.[v] || CORES_PT[v] || v;
+const emPt = (v, cat) => C.dado?.categorias?.[cat]?.traducoes?.[v] || C.dado?.traducoes?.[v] || CORES_PT[v] || v;   // a da categoria vale primeiro
 const dia = d => d ? d.slice(8, 10) + '/' + d.slice(5, 7) : '?';
 const preco = (v, moeda) => v == null ? '?' : `${moeda === 'BRL' ? 'R$' : 'US$'} ${v < 0.1 ? v.toFixed(4) : v.toFixed(2)}`.replace('.', ',');
 const numeroDe = t => { const m = /^\s*([\d.]+)\s*([pnuµmkM]?)/.exec(t || ''); return m ? +m[1] * ({ p: 1e-12, n: 1e-9, u: 1e-6, 'µ': 1e-6, m: 1e-3, k: 1e3, M: 1e6 }[m[2]] || 1) : null; };
@@ -1140,7 +1140,7 @@ const numeroDe = t => { const m = /^\s*([\d.]+)\s*([pnuµmkM]?)/.exec(t || ''); 
 // um cartao de peca: o mesmo no carrinho e na aba Pecas
 function cartaoPeca(e, o = {}) {
   const ruim = e.situacao && e.situacao !== 'ok';
-  const extra = (o.destaques || []).map(k => atrib(e, k)).filter(Boolean).map(emPt);
+  const extra = (o.destaques || []).map(k => atrib(e, k)).filter(Boolean).map(v => emPt(v, e.categoria));
   const outras = (e.outras_lojas || []).filter(x => /^https:\/\//.test(x.link || ''));
   return `<div class="opcao${o.escolhida ? ' escolhida' : ''}${ruim ? ' ruim' : ''}">
       <img src="${e.foto && /^https:\/\//.test(e.foto) ? esc(e.foto) : `/api/foto?codigo=${encodeURIComponent(e.codigo)}`}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
@@ -1221,7 +1221,7 @@ function desenharCatalogo() {
     const valores = [...new Set(todas.filter(e => e.categoria === C.cat).map(e => atrib(e, spec.chips)).filter(Boolean))]
       .sort((a, b) => (numeroDe(a) ?? Infinity) - (numeroDe(b) ?? Infinity) || a.localeCompare(b));
     if (valores.length > 1) chips = `<button type="button" data-cat-chip="" aria-pressed="${C.chip === null}">todos</button>` +
-      valores.map(v => `<button type="button" data-cat-chip="${esc(v)}" aria-pressed="${C.chip === v}">${esc(emPt(v))}${spec.chips === 'Size' && /^[\d.]+$/.test(v) ? '″' : ''}</button>`).join('');
+      valores.map(v => `<button type="button" data-cat-chip="${esc(v)}" aria-pressed="${C.chip === v}">${esc(emPt(v, C.cat))}${spec.chips === 'Size' && /^[\d.]+$/.test(v) ? '″' : ''}</button>`).join('');
   }
   $('#cat-chips').innerHTML = chips;
   $('#cat-recado').innerHTML = C.recado ? `<p class="aviso">${esc(C.recado)}</p>` : '';

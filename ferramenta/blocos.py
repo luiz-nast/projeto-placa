@@ -62,9 +62,13 @@ def numero_com_unidade(txt, unidade):
 def ohms_txt(o):
     if o is None:
         return "?"
+    if o == 0:
+        return "0 Ω (jumper)"
+    if o >= 1e6:
+        return f"{o / 1e6:g} MΩ".replace(".", ",")
     if o >= 1000:
         return f"{o / 1000:g} kΩ".replace(".", ",")
-    return f"{o:g} Ω"
+    return f"{o:g} Ω".replace(".", ",")
 
 
 def watts_txt(w):
@@ -102,12 +106,13 @@ def nome_da_loja(bloco, d):
     at = d["atributos"]
     if bloco == "resistor":
         ohms, w = numero_com_unidade(at.get("Resistance"), "Ω"), numero_com_unidade(at.get("Power(Watts)"), "W")
-        return f"Resistor {ohms_txt(ohms)}, {watts_txt(w)}" if ohms and w else "Resistor"
+        return f"Resistor {ohms_txt(ohms)}, {watts_txt(w)}" if ohms is not None and w else "Resistor"
     if bloco == "led":
         cor = catalogo.CORES.get(at.get("Illumination Color"), "")
         return f"LED {cor} {tamanho(d['pacote'])}".replace("  ", " ").replace(" de diâmetro", "").strip()
     if bloco == "botao":
-        return f"Botão {tamanho(d['pacote'])}"
+        altura = re.sub(r"(\d)\s*mm", r"\1 mm", at["Switch Height"]) if at.get("Switch Height") not in (None, "-") else None
+        return f"Botão {tamanho(d['pacote']) or catalogo.medida(d)}{f', {altura} de altura' if altura else ''}".replace(".", ",").strip()
     if bloco == "pilha":
         tipo = at.get("Battery Type") or at.get("Applicable battery specifications") or ""
         tipo = {"No. 5": "AA", "No. 7": "AAA"}.get(tipo, tipo)   # a loja escreve o nome chines da AA e da AAA
@@ -355,7 +360,12 @@ def opcoes(pasta, ref, online=False):
         e["escolhida"] = e["codigo"] == atual
         e["conferida"] = bool(e.get("conferido")) or bloco == "resistor"   # resistor: a loja ja diz tudo
         e.pop("conferido", None)
-    lista.sort(key=lambda e: (not e["escolhida"], e["situacao"] != "ok", not e["conferida"], -e["estoque"]))
+    if bloco == "botao":   # so o mesmo jeito de pinos da escolhida (o desenho da placa conta com ele)
+        pacote = (pecas.get(atual) or {}).get("loja", {}).get("pacote", "")
+        pinos = re.search(r"\d+P", pacote)
+        lista = [e for e in lista if not pinos or pinos[0] in e["pacote"] or e["codigo"] == atual]
+    potencia = lambda e: numero_com_unidade(e["atributos"].get("Power(Watts)"), "W") or 0   # resistor: o menor que aguenta vem antes
+    lista.sort(key=lambda e: (not e["escolhida"], e["situacao"] != "ok", not e["conferida"], potencia(e), -(e["estoque"] or 0)))
     return {"ref": ref, "bloco": bloco, "busca": busca, "alvo": alvo, "cor": catalogo.CORES.get(cor), "novas": novas,
             "destaques": cat["categorias"][bloco].get("destaques", []),
             "itens": lista}

@@ -15,7 +15,7 @@ LOJAS = {"www.eletrogate.com": ("Eletrogate", 10, "loja_integrada"),
          "www.baudaeletronica.com.br": ("Baú da Eletrônica", 10, "loja_integrada"),
          "www.usinainfo.com.br": ("Usinainfo", 5, "usinainfo"),
          "www.robocore.net": ("RoboCore", 5, "robocore")}
-AGENTE = "sianvolt-catalogo/0.1 (uso pessoal; confere preço e estoque de poucas páginas)"
+AGENTE = "sianvolt-catalogo/0.1 (uso pessoal; confere preco e estoque de poucas paginas)"   # so ASCII: com acento, Eletrogate e Bau respondem 502
 ultima = {}   # host -> quando leu a última página
 
 
