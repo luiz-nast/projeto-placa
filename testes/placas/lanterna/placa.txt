@@ -1,0 +1,11 @@
+# lanterninha de teste, so com pecas da biblioteca (nao depende da loja nem de placas/)
+placa 52 34
+furos cantos 3.2
+peca BT1 pilha_cr2032 20 17
+peca SW1 botao_6x6 43 25
+peca R1 resistor_axial 43 15 100
+peca D1 led_5mm 43 7
+liga BT1.1 SW1.1
+liga SW1.3 R1.1
+liga R1.2 D1.1
+liga D1.2 GND

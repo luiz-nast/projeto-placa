@@ -1,5 +1,5 @@
 # placas feitas com a ferramenta ficam só na máquina
-placas/
+/placas/
 
 .venv/
 __pycache__/
