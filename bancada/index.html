@@ -1129,7 +1129,10 @@ async function desenharInicio() {
 // ---------- pecas: a lista de compras de sempre (ferramenta/catalogo/, um arquivo por categoria) ----------
 const CORES_PT = { Red: 'vermelho', 'Orange Red': 'laranja-avermelhado', Orange: 'laranja', Yellow: 'amarelo', 'Yellow Green': 'verde-amarelado',
   Green: 'verde', 'Emerald Green': 'verde', Blue: 'azul', White: 'branco' };
-const MONTAGEM = { furo: 'de furo', 'superfície': 'de superfície', 'módulo': 'módulo pronto' };
+const MONTAGEM = { furo: 'de furo', 'superfície': 'de superfície', 'módulo': 'módulo pronto', fio: 'vai no fio, não na placa', 'não informado': 'montagem não informada' };
+// 'type|Type': o primeiro atributo que a peca tiver (a loja escreve o mesmo atributo de jeitos diferentes)
+const atrib = (e, nome) => (nome || '').split('|').map(n => e.atributos?.[n]).find(v => v && v !== '-');
+const emPt = v => C.dado?.traducoes?.[v] || CORES_PT[v] || v;
 const dia = d => d ? d.slice(8, 10) + '/' + d.slice(5, 7) : '?';
 const preco = (v, moeda) => v == null ? '?' : `${moeda === 'BRL' ? 'R$' : 'US$'} ${v < 0.1 ? v.toFixed(4) : v.toFixed(2)}`.replace('.', ',');
 const numeroDe = t => { const m = /^\s*([\d.]+)\s*([pnuµmkM]?)/.exec(t || ''); return m ? +m[1] * ({ p: 1e-12, n: 1e-9, u: 1e-6, 'µ': 1e-6, m: 1e-3, k: 1e3, M: 1e6 }[m[2]] || 1) : null; };
@@ -1137,11 +1140,11 @@ const numeroDe = t => { const m = /^\s*([\d.]+)\s*([pnuµmkM]?)/.exec(t || ''); 
 // um cartao de peca: o mesmo no carrinho e na aba Pecas
 function cartaoPeca(e, o = {}) {
   const ruim = e.situacao && e.situacao !== 'ok';
-  const extra = (o.destaques || []).map(k => e.atributos?.[k]).filter(v => v && v !== '-');
+  const extra = (o.destaques || []).map(k => atrib(e, k)).filter(Boolean).map(emPt);
   const outras = (e.outras_lojas || []).filter(x => /^https:\/\//.test(x.link || ''));
   return `<div class="opcao${o.escolhida ? ' escolhida' : ''}${ruim ? ' ruim' : ''}">
       <img src="${e.foto && /^https:\/\//.test(e.foto) ? esc(e.foto) : `/api/foto?codigo=${encodeURIComponent(e.codigo)}`}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
-      <b>${esc(e.nome)}</b><span class="sub">${esc(e.marca)} · ${esc(e.modelo)}${e.loja === 'LCSC' || !e.loja ? ` · ${esc(e.codigo)}` : ''}</span>
+      <b>${esc(e.apelido || e.nome)}</b><span class="sub">${esc(e.marca)} · ${esc(e.modelo)}${e.loja === 'LCSC' || !e.loja ? ` · ${esc(e.codigo)}` : ''}</span>
       <span>${esc(e.tamanho || '')}${e.montagem ? ` · ${esc(MONTAGEM[e.montagem] || e.montagem)}` : ''}${extra.length ? ` · ${esc(extra.join(' · '))}` : ''}</span>
       <span class="sub">${preco(e.preco, e.moeda)} na ${esc(e.loja || 'LCSC')} · ${ruim ? `<span class="aviso">${esc(e.situacao)}</span>` : e.estoque != null ? `${milhar(e.estoque)} em estoque` : 'estoque não informado'} · visto ${dia(e.visto)}</span>
       ${outras.length ? `<span class="sub">também em: ${outras.map(x => `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.loja)}${x.preco != null ? ' ' + preco(x.preco, x.moeda) : ''} ↗</a>`).join(', ')}</span>` : ''}
@@ -1175,10 +1178,10 @@ function filtrarCatalogo() {
   return Object.entries(C.dado?.pecas || {}).map(([codigo, e]) => ({ codigo, ...e }))
     .filter(e => (C.cat === 'tudo' || e.categoria === C.cat) && (!C.soEstoque || e.situacao === 'ok')
       && (!C.soConferidas || conferidaDe(e)) && (!C.soFuro || e.montagem === 'furo')
-      && (C.chip === null || e.atributos?.[chips] === C.chip)
-      && (!t || [e.nome, e.modelo, e.marca, e.codigo, e.tamanho, e.descricao, especDe(e.categoria).nome].join(' ').toLowerCase().includes(t)))
+      && (C.chip === null || atrib(e, chips) === C.chip)
+      && (!t || [e.nome, e.apelido, e.modelo, e.marca, e.codigo, e.tamanho, e.descricao, especDe(e.categoria).nome].join(' ').toLowerCase().includes(t)))
     .sort((a, b) => (!!C.dado.usos[b.codigo] - !!C.dado.usos[a.codigo]) || (conferidaDe(b) - conferidaDe(a))
-      || ((numeroDe(a.atributos?.[chips]) ?? 0) - (numeroDe(b.atributos?.[chips]) ?? 0)) || ((b.estoque ?? 0) - (a.estoque ?? 0)));
+      || ((numeroDe(atrib(a, chips)) ?? 0) - (numeroDe(atrib(b, chips)) ?? 0)) || ((b.estoque ?? 0) - (a.estoque ?? 0)));
 }
 
 function desenharCatalogo() {
@@ -1207,7 +1210,7 @@ function desenharCatalogo() {
   for (const [id, s] of Object.entries(cats)) (grupos[s.grupo] ||= []).push([id, s]);
   const conta = id => todas.filter(e => e.categoria === id).length;
   $('#cat-lado').innerHTML = `<button type="button" data-cat="tudo" aria-pressed="${C.cat === 'tudo'}">Tudo <span class="sub">${todas.length}</span></button>` +
-    Object.entries(grupos).sort().map(([g, lista]) => `<span class="grupo">${esc(g)}</span>` +
+    Object.entries(grupos).sort((a, b) => (C.dado.grupos || []).indexOf(a[0]) - (C.dado.grupos || []).indexOf(b[0])).map(([g, lista]) => `<span class="grupo">${esc(g)}</span>` +
       lista.sort((a, b) => a[1].nome.localeCompare(b[1].nome)).map(([id, s]) =>
         `<button type="button" data-cat="${esc(id)}" aria-pressed="${C.cat === id}">${esc(s.nome)} <span class="sub">${conta(id)}</span></button>`).join('')).join('');
   const spec = especDe(C.cat);
@@ -1215,21 +1218,21 @@ function desenharCatalogo() {
   document.querySelectorAll('[data-cat-toggle]').forEach(el => { el.checked = C[el.dataset.catToggle]; });
   let chips = '';
   if (spec.chips) {
-    const valores = [...new Set(todas.filter(e => e.categoria === C.cat).map(e => e.atributos?.[spec.chips]).filter(v => v && v !== '-'))]
+    const valores = [...new Set(todas.filter(e => e.categoria === C.cat).map(e => atrib(e, spec.chips)).filter(Boolean))]
       .sort((a, b) => (numeroDe(a) ?? Infinity) - (numeroDe(b) ?? Infinity) || a.localeCompare(b));
     if (valores.length > 1) chips = `<button type="button" data-cat-chip="" aria-pressed="${C.chip === null}">todos</button>` +
-      valores.map(v => `<button type="button" data-cat-chip="${esc(v)}" aria-pressed="${C.chip === v}">${esc(CORES_PT[v] || v)}</button>`).join('');
+      valores.map(v => `<button type="button" data-cat-chip="${esc(v)}" aria-pressed="${C.chip === v}">${esc(emPt(v))}${spec.chips === 'Size' && /^[\d.]+$/.test(v) ? '″' : ''}</button>`).join('');
   }
   $('#cat-chips').innerHTML = chips;
   $('#cat-recado').innerHTML = C.recado ? `<p class="aviso">${esc(C.recado)}</p>` : '';
   const lista = filtrarCatalogo(), mostra = C.todas ? lista : lista.slice(0, 48);
   $('#cat-cards').innerHTML = mostra.map(e => cartaoPeca(e, { destaques: especDe(e.categoria).destaques, conferida: conferidaDe(e), usos: C.dado.usos[e.codigo],
-      acao: (e.loja || 'LCSC') === 'LCSC' ? `<button type="button" data-checar="${esc(e.codigo)}" ${C.ocupado ? 'disabled' : ''}>Conferir na loja agora</button>` : '' })).join('')
+      acao: `<button type="button" data-checar="${esc(e.codigo)}" ${C.ocupado ? 'disabled' : ''}>Conferir na loja agora</button>` })).join('')
     || '<span class="vazio-op sub">Nada no catálogo com esse filtro.</span>';
   const semente = spec.sementes?.[0]?.busca || '';
-  const lcsc = mostra.filter(e => (e.loja || 'LCSC') === 'LCSC').slice(0, 60);
+  const conferiveis = mostra.slice(0, 60);
   $('#cat-acoes').innerHTML = `${lista.length > mostra.length ? `<button type="button" data-cat-todas>Mostrar todas as ${lista.length}</button>` : ''}
-    <button type="button" data-checar="${esc(lcsc.map(e => e.codigo).join(','))}" ${C.ocupado || !lcsc.length ? 'disabled' : ''}>Conferir estas ${lcsc.length} na loja agora ↻</button>
+    <button type="button" data-checar="${esc(conferiveis.map(e => e.codigo).join(','))}" ${C.ocupado || !conferiveis.length ? 'disabled' : ''}>Conferir estas ${conferiveis.length} na loja agora ↻</button>
     ${C.cat !== 'tudo' ? `<span class="procurar"><input type="search" id="cat-busca" value="${esc(semente)}" aria-label="Procurar na loja">
     <button type="button" data-buscar-loja ${C.ocupado ? 'disabled' : ''}>Procurar mais na loja</button></span>` : ''}`;
 }
@@ -1238,7 +1241,7 @@ async function acaoCatalogo(caminho, corpo, durante) {
   C.ocupado = true; C.recado = durante; desenharCatalogo();
   const d = await postar(caminho, corpo);
   C.recado = d.erro ? d.erro : caminho.endsWith('checar')
-    ? `Conferi ${d.conferidas} na loja agora${d.mudaram.length ? `: ${d.mudaram.length} mudaram de preço, estoque ou situação` : ', nada mudou'}.`
+    ? `Conferi ${d.conferidas} na loja agora${d.mudaram.length ? `: ${d.mudaram.length} mudaram de preço, estoque ou situação` : ', nada mudou'}.${d.ficaram ? ` ${d.ficaram} de lojas brasileiras ficaram pra depois (elas pedem 10 s entre páginas).` : ''}`
     : `A loja achou ${d.achadas} que servem; ${d.novas} eram novas e entraram no catálogo.`;
   await carregarCatalogo();
   C.ocupado = false; desenharCatalogo();

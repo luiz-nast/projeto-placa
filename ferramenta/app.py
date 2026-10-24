@@ -110,7 +110,7 @@ class Bancada(SimpleHTTPRequestHandler):
             pasta = placa(q.get("placa", ""))
             return self.responder(blocos.estado(pasta) if pasta else {"erro": "placa não existe"}, 200 if pasta else 404)
         if url.path == "/api/catalogo":
-            return self.responder({**catalogo.ler(), "usos": usos()})
+            return self.responder({**catalogo.ler(), "usos": usos(), "grupos": catalogo.GRUPOS, "traducoes": catalogo.TRADUCOES})
         if url.path == "/api/opcoes":
             pasta = placa(q.get("placa", ""))
             if not pasta:
@@ -144,9 +144,12 @@ class Bancada(SimpleHTTPRequestHandler):
             with trava:
                 cat = catalogo.ler()
                 if caminho == "/api/catalogo/checar":
-                    codigos = [c for c in corpo.get("codigos", []) if isinstance(c, str) and c in cat["pecas"]][:60]
-                    mudaram = catalogo.checar(cat, codigos, avisar=lambda *_: None)
-                    resposta = {"ok": True, "conferidas": len(codigos), "mudaram": mudaram}
+                    pedidas = [c for c in corpo.get("codigos", []) if isinstance(c, str) and c in cat["pecas"]]
+                    lcsc = [c for c in pedidas if cat["pecas"][c].get("loja", "LCSC") == "LCSC"][:60]
+                    outras = [c for c in pedidas if c not in lcsc][:3]   # lojas brasileiras pedem 10 s entre paginas
+                    mudaram = catalogo.checar(cat, lcsc + outras, avisar=lambda *_: None)
+                    resposta = {"ok": True, "conferidas": len(lcsc) + len(outras), "mudaram": mudaram,
+                                "ficaram": len(pedidas) - len(lcsc) - len(outras)}
                 else:
                     bloco, texto = str(corpo.get("bloco", "")), str(corpo.get("texto", "")).strip()[:80]
                     if bloco not in cat["categorias"] or not texto:

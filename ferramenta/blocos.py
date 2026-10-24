@@ -78,7 +78,9 @@ def mais_perto(ohms):
 
 
 def tamanho(pacote):
-    """'Plugin,D2.3xL6.5mm' -> 'corpo de 6,5 × 2,3 mm'"""
+    """'Plugin,D2.3xL6.5mm' -> 'corpo de 6,5 × 2,3 mm'; a loja nao diz ('-') -> ''"""
+    if pacote.strip() in ("", "-"):
+        return ""
     num = lambda s: s.replace(".", ",")
     if m := re.search(r"D(\d+(?:\.\d+)?)xL(\d+(?:\.\d+)?)mm", pacote):
         return f"corpo de {num(m[2])} × {num(m[1])} mm"
@@ -91,7 +93,7 @@ def tamanho(pacote):
 
 def de_furo(i):
     """peca de furo passante (a gente solda na mao); SMD fica de fora por enquanto"""
-    return i["pacote"].startswith(("Plugin", "Through Hole")) or "Through Hole" in i["categoria"]
+    return catalogo.montagem(i) == "furo"
 
 
 # ---------- a peca da loja vira um tipo da placa ----------
@@ -107,7 +109,9 @@ def nome_da_loja(bloco, d):
     if bloco == "botao":
         return f"Botão {tamanho(d['pacote'])}"
     if bloco == "pilha":
-        return f"Suporte de pilha {at.get('Battery Type', '')}".strip()
+        tipo = at.get("Battery Type") or at.get("Applicable battery specifications") or ""
+        tipo = {"No. 5": "AA", "No. 7": "AAA"}.get(tipo, tipo)   # a loja escreve o nome chines da AA e da AAA
+        return f"Suporte de pilha {tipo}".strip()
     return BLOCOS[bloco]["nome"]
 
 

@@ -10,21 +10,31 @@ uso: python3 ferramenta/catalogo.py encher [categoria]      (busca as sementes n
      python3 ferramenta/catalogo.py checar [codigo ...]     (preço e estoque na loja agora; sem código, a lista toda)
      python3 ferramenta/catalogo.py ver [categoria]
      python3 ferramenta/catalogo.py limpar <categoria>     (tira da LCSC o que não passa mais no filtro; conferida fica)
+     python3 ferramenta/catalogo.py recalcular [categoria]  (refaz montagem, nome e tamanho com as regras de agora)
      python3 ferramenta/catalogo.py categorias
 
 Formato de uma categoria (ferramenta/catalogo/<id>.json):
   {"categoria": "capacitor", "nome": "Capacitor", "grupo": "Passivos",
    "explica": "uma frase de gente: pra que serve",
-   "nome_peca": "Capacitor {Capacitance}, {Voltage Rated}",     # {Atributo da loja}; faltou um, vira "<nome> <modelo>"
+   "nome_peca": "Capacitor {Capacitance}, {Voltage Rated}",     # {Atributo da loja}, ou {type|Type} (o primeiro que tiver);
+                                                                 # pode ser uma lista: vale o primeiro modelo que fechar;
+                                                                 # nenhum fechou, vira "<nome> <modelo>"
    "destaques": ["Capacitance", "Voltage Rated", "Tolerance"],   # o que aparece no cartão
    "chips": "Capacitance",                                       # atributo dos botões de filtro (opcional)
    "filtro": {"montagem": ["furo"],                              # furo | superfície | módulo (sem: qualquer)
               "categorias_loja": ["Capacitors"],                 # pedaço do nome da categoria na loja (sem: qualquer)
               "pacotes": ["4P"],                                 # pedaço do pacote (sem: qualquer)
+              "pacotes_fora": ["SMD"],                           # pedaço do pacote que não serve
+              "estoque_minimo": 50,                              # menos que isso não entra (sem: 1)
+              "fora": ["C27983454"],                             # códigos barrados (dado da loja errado)
               "atributos": ["Capacitance"],                      # atributos que a peça tem que ter
-              "valores": {"Illumination Color": ["Red", "Blue"]}},  # atributo -> valores aceitos
+              "valores": {"Illumination Color": ["Red", "Blue"]},   # atributo -> valores aceitos
+              "valores_fora": {"Type": ["AMOLED"]}},                # atributo -> valores que não servem
    "sementes": [{"busca": "100nF 50V ceramic", "quantos": 4, "agrupar": "Capacitance"}],
    "pecas": {"C123": {...}}}
+
+Uma peça pode ter "apelido": o nome que o Claude deu à mão quando a loja não diz o que ela é (o encher não mexe).
+Montagem: furo, superfície, módulo (placa pronta), fio (vai no cabo, não na placa) ou "não informado".
 """
 import json
 import re
@@ -38,6 +48,34 @@ E24 = [10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 5
 CORES = {"Red": "vermelho", "Orange Red": "laranja-avermelhado", "Orange": "laranja", "Yellow": "amarelo",
          "Yellow Green": "verde-amarelado", "Green": "verde", "Emerald Green": "verde", "Blue": "azul", "White": "branco"}
 CAMPOS_SPEC = ("categoria", "nome", "grupo", "explica", "nome_peca", "destaques", "chips", "filtro", "sementes")
+GRUPOS = ["Passivos", "Semicondutores", "Energia", "Cérebros", "Comunicação", "Sensores", "Luz e som", "Telas",
+          "Chaves e botões", "Conectores", "Movimento", "Módulos prontos"]   # a ordem da aba Peças
+# valores da loja em inglês que aparecem em nome e filtro
+TRADUCOES = {**CORES, "Through Hole": "de furo", "Right Angle": "a 90°", "Surface Mount, Right Angle": "de superfície a 90°",
+             "Surface Mount,Vertical": "de superfície, reto", "Common Cathode": "catodo comum", "Common Anode": "anodo comum",
+             "Step-down type": "abaixador", "Boost": "elevador", "Buck-Boost": "abaixa e eleva",
+             "Step-down type、Boost": "abaixador e elevador", "Round Hole": "furo redondo", "Square Hole": "furo quadrado",
+             "Phototransistor": "fototransistor", "Charging IC": "carregador", "Protection IC": "proteção",
+             "Charging IC、Protection IC": "carregador e proteção", "Flat Vibration Motor": "de vibração chato (moeda)",
+             "Cylindrical Vibration Motor": "de vibração cilíndrico", "Cylindrical DC Motor": "DC cilíndrico",
+             "Piezoelectric": "piezoelétrico", "Electromagnetic": "eletromagnético", "Double pole single throw": "DPST",
+             "Double pole triple throw": "DP3T", "Double pole four throw": "DP4T", "Water Clear": "lente transparente",
+             "White Frosted Lens": "lente branca fosca", "Battery holder": "suporte", "Battery buckle": "suporte de mola",
+             "Battery base": "base", "Battery clip": "clipe", "9V laminated battery": "bateria de 9 V",
+             "Side insertion": "encaixe lateral", "N-Channel": "canal N", "P-Channel": "canal P"}
+
+# pacote que comeca assim e de furo (a LCSC escreve de muitos jeitos; 插件 e 弯插 sao "plugin" e "plugin dobrado" em chines)
+FURO = re.compile(r"^(Plugin|Through Hole|插件|弯插|Push-Pull|(C|P|SP|SK)?DIP|SIP|ZIP|Multiwatt|TOP-3|"
+                  r"I?TO-(92|126|220|247|3P|3\b|5\b|18|202)|DO-(35|41|15|27|201|204)|A-405|R-6|HC-49(?!.*SMD)|DT-26|DT-38)", re.I)
+
+
+def atributo(at, nome):
+    """o valor do atributo; 'type|Type' = o primeiro que tiver (a loja escreve o mesmo atributo de jeitos diferentes)"""
+    for n in nome.split("|"):
+        v = at.get(n)
+        if v and v != "-":
+            return v
+    return None
 
 
 def ohms_busca(o):
@@ -93,23 +131,35 @@ def salvar(cat, so=None):
 
 # ---------- o que serve pra cada categoria ----------
 def montagem(i):
-    if i["pacote"].startswith(("Plugin", "Through Hole")) or "Through Hole" in i["categoria"]:
+    pacote, loja = i["pacote"].strip(), i["categoria"]
+    jeito = (i["atributos"].get("Mounting Type") or i["atributos"].get("Mounting Style") or "").lower()
+    if any(p in loja for p in ("Housing", "Crimp")):   # capinha e terminal de cabo
+        return "fio"
+    if FURO.match(pacote) or "Through Hole" in loja or "through hole" in jeito or "plug" in jeito:
         return "furo"
-    if any(p in i["categoria"] for p in ("Module", "Development", "Dev Board", "Evaluation")):
+    if re.search(r"\bModules?$|Development|Dev Board|Evaluation|Raspberry Pi", loja) and "Thyristor" not in loja:
         return "módulo"
+    if jeito in ("lead", "lead wire", "wire lead", "solder lug terminal"):
+        return "fio"
+    if pacote in ("", "-"):
+        return "não informado"
     return "superfície"
 
 
 def serve(cat, categoria, i):
     """a peca da loja e do tipo certo, com estoque? (a busca da loja traz de tudo)"""
     f = cat["categorias"][categoria].get("filtro", {})
-    if (i.get("estoque") or 0) <= 0:
+    if (i.get("estoque") or 0) < max(1, f.get("estoque_minimo", 1)) or i.get("codigo") in f.get("fora", []):
         return False
     if f.get("montagem") and montagem(i) not in f["montagem"]:
         return False
     if f.get("categorias_loja") and not any(c.lower() in i["categoria"].lower() for c in f["categorias_loja"]):
         return False
     if f.get("pacotes") and not any(p in i["pacote"] for p in f["pacotes"]):
+        return False
+    if any(p in i["pacote"] for p in f.get("pacotes_fora", [])):
+        return False
+    if any(i["atributos"].get(a) in vs for a, vs in f.get("valores_fora", {}).items()):
         return False
     if any(not i["atributos"].get(a) or i["atributos"][a] == "-" for a in f.get("atributos", [])):
         return False
@@ -121,10 +171,11 @@ def nome_da_peca(cat, categoria, i):
     if categoria in blocos.BLOCOS:   # as categorias que ja montam placa tem nome feito a mao
         return blocos.nome_da_loja(categoria, i)
     spec = cat["categorias"][categoria]
-    modelo = spec.get("nome_peca") or ""
-    campos = re.findall(r"\{([^}]+)\}", modelo)
-    if campos and all(i["atributos"].get(c) and i["atributos"][c] != "-" for c in campos):
-        return re.sub(r"\{([^}]+)\}", lambda m: i["atributos"][m[1]], modelo)
+    modelos = spec.get("nome_peca") or []
+    for modelo in [modelos] if isinstance(modelos, str) else modelos:
+        campos = re.findall(r"\{([^}]+)\}", modelo)
+        if campos and all(atributo(i["atributos"], c) for c in campos):
+            return re.sub(r"\{([^}]+)\}", lambda m: TRADUCOES.get(atributo(i["atributos"], m[1]), atributo(i["atributos"], m[1])), modelo)
     return f"{spec['nome']} {i['modelo']}".strip()
 
 
@@ -174,13 +225,41 @@ def encher(cat, categoria=None, avisar=print):
     return total
 
 
+def checar_outra_loja(e, avisar=print):
+    """preco e estoque de uma peca de loja brasileira (e das outras lojas dela), pela pagina do produto"""
+    import lojas
+    mudou = False
+    for oferta in [e] + e.get("outras_lojas", []):
+        if not lojas.nome_da_loja(oferta.get("link", "")):
+            continue
+        try:
+            d = lojas.ler(oferta["link"])
+        except lojas.SemPagina as erro:
+            avisar(f"{oferta['link']}: {erro}")
+            continue
+        antes = (oferta.get("preco"), oferta.get("estoque"), oferta.get("situacao"))
+        oferta.update(visto=hoje(), estoque=d["estoque"])
+        if d["preco"] is not None:
+            oferta["preco"] = d["preco"]
+        if oferta is e:
+            e["situacao"] = "sem estoque" if d["disponivel"] is False else "ok"
+        mudou |= (oferta.get("preco"), oferta.get("estoque"), oferta.get("situacao")) != antes
+        avisar(f"{oferta['link']}: R$ {oferta.get('preco')}, {'tem' if d['disponivel'] else 'sem estoque' if d['disponivel'] is False else '?'}")
+    return mudou
+
+
 def checar(cat, codigos=None, avisar=print):
-    """preco e estoque agora, direto da LCSC (sem cache); marca 'sem estoque' e 'sumiu'. Peca de outra loja: pula"""
+    """preco e estoque agora, direto da loja (sem cache); marca 'sem estoque' e 'sumiu'.
+    LCSC pela busca da JLCPCB; lojas brasileiras pela pagina do produto, com a pausa que o robots.txt delas pede"""
     import loja
     mudou = []
     for codigo in codigos or list(cat["pecas"]):
         e = cat["pecas"].get(codigo)
-        if not e or e.get("loja", "LCSC") != "LCSC":
+        if not e:
+            continue
+        if e.get("loja", "LCSC") != "LCSC":
+            if checar_outra_loja(e, avisar):
+                mudou.append(codigo)
             continue
         try:
             i = loja.ficha(codigo, validade=0)
@@ -202,13 +281,36 @@ def checar(cat, codigos=None, avisar=print):
     return mudou
 
 
+def recalcular(cat, categoria=None):
+    """refaz montagem, nome e tamanho das pecas da LCSC com as regras de agora (sem ir na loja).
+    Nome que o Claude corrigiu a mao (diferente do que a regra da e a regra so da o nome reserva) vira apelido."""
+    import blocos
+    mudou = 0
+    for codigo, e in cat["pecas"].items():
+        if (categoria and e["categoria"] != categoria) or e.get("loja", "LCSC") != "LCSC":
+            continue
+        como_loja = {**e, "codigo": codigo, "categoria": e.get("categoria_loja", "")}
+        nome = nome_da_peca(cat, e["categoria"], como_loja)
+        reserva = f"{cat['categorias'][e['categoria']]['nome']} {e['modelo']}".strip()
+        antes = (e.get("montagem"), e["nome"], e.get("apelido"))
+        if nome == reserva and e["nome"] not in (nome, "") and not e.get("apelido"):
+            e["apelido"] = e["nome"]
+        e["nome"], e["montagem"] = nome, montagem(como_loja)
+        medida = blocos.tamanho(e["pacote"])
+        if medida != e["pacote"] or e.get("tamanho") in (None, "", "-", e["pacote"]):
+            e["tamanho"] = medida if medida not in ("-",) else ""
+        mudou += (e.get("montagem"), e["nome"], e.get("apelido")) != antes
+    return mudou
+
+
 def limpar(cat, categoria):
     """tira da categoria as pecas da LCSC que nao passam mais no filtro dela (depois de apertar o filtro); conferida fica"""
     fora = []
     for codigo, e in list(cat["pecas"].items()):
         if e["categoria"] != categoria or e.get("loja", "LCSC") != "LCSC" or e.get("conferido"):
             continue
-        como_loja = {**e, "categoria": e.get("categoria_loja", ""), "estoque": e.get("estoque") or 1}   # estoque: sem estoque fica, marcada
+        como_loja = {**e, "codigo": codigo, "categoria": e.get("categoria_loja", ""),
+                     "estoque": max(e.get("estoque") or 0, cat["categorias"][categoria].get("filtro", {}).get("estoque_minimo", 1))}   # sem estoque fica, marcada
         if not serve(cat, categoria, como_loja):
             fora.append(codigo)
             del cat["pecas"][codigo]
@@ -239,8 +341,11 @@ if __name__ == "__main__":
     elif args[:1] == ["ver"]:
         for c, e in cat["pecas"].items():
             if len(args) < 2 or e["categoria"] == args[1]:
-                print(f"{c:>12}  {e['categoria']:12}  {e['nome'][:38]:38}  {e['modelo'][:24]:24}  {e.get('montagem', ''):10}  "
+                print(f"{c:>12}  {e['categoria']:12}  {(e.get('apelido') or e['nome'])[:38]:38}  {e['modelo'][:24]:24}  {e.get('montagem', ''):10}  "
                       f"{e['situacao']:11}  {e.get('estoque') or '':>7}  {'conferido' if e.get('conferido') else ''}")
+    elif args[:1] == ["recalcular"]:
+        print(f"{recalcular(cat, args[1] if len(args) > 1 else None)} peças mudaram")
+        salvar(cat, [args[1]] if len(args) > 1 else None)
     elif args[:1] == ["limpar"] and len(args) == 2 and args[1] in cat["categorias"]:
         fora = limpar(cat, args[1])
         print(f"{len(fora)} peças saíram: {' '.join(fora)}")
