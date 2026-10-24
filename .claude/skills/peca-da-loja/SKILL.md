@@ -38,7 +38,7 @@ ou `blocos.escolher(pasta, ref, codigo, quem)`, que também grava o `projeto.jso
 
 ## O que a loja não diz: conferir no datasheet
 
-Sem `conferido`, a peça fica `pendente`: não liga no papel nem vai pra fábrica. Baixe o PDF pelo `pdfUrl` da página da LCSC e leia as figuras (`pdftoppm`, depois Read na imagem). Escreva em `conferido`, dentro da peça no `catalogo.json`, com a origem em `fonte`/`_eletrica`:
+Sem `conferido`, a peça fica `pendente`: não liga no papel nem vai pra fábrica. Baixe o PDF pelo `pdfUrl` da página da LCSC e leia as figuras (`pdftoppm`, depois Read na imagem). Escreva em `conferido`, dentro da peça, no arquivo da categoria em `ferramenta/catalogo/`, com a origem em `fonte`/`_eletrica`:
 
 | bloco | conferir |
 |---|---|
