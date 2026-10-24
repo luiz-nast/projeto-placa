@@ -25,7 +25,7 @@ O Claude decide só a **intenção** (quais peças, onde, o que liga em quê). C
    ```
 6. Atualize o `AGORA.md` no fim da sessão.
 
-**Nunca diga que terminou sem ter rodado o `testar.py`.** O Sianvolt (`python3 ferramenta/app.py`, ou o atalho "Sianvolt" no menu) se atualiza sozinho; não descreva o progresso no chat, o resumo final basta.
+**Nunca diga que terminou sem ter rodado o `testar.py`.** Mexeu no código da ferramenta (`ferramenta/`, `bancada/`)? Rode também `.venv/bin/python testes/rodar.py`: simulador (com circuitos sorteados e a mesma conta no JS do app), gerador, as 7 etapas com cada defeito, catálogo inteiro, segurança do app e fuzz. O Sianvolt (`python3 ferramenta/app.py`, ou o atalho "Sianvolt" no menu) se atualiza sozinho; não descreva o progresso no chat, o resumo final basta.
 
 ## Simulador
 

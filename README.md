@@ -23,6 +23,7 @@ liga D1.1 GND
 uv venv .venv && uv pip install -r requirements.txt
 .venv/bin/python ferramenta/testar.py placas/estudo
 python3 ferramenta/instalar.py   # põe o "Sianvolt" no menu de aplicativos
+.venv/bin/python testes/rodar.py # a bateria da própria ferramenta (76 testes, ~15 s)
 ```
 
 O app (`ferramenta/app.py`) abre numa janela própria, sem abas, com a lista de projetos. Cada projeto conta a história em 7 passos (objetivo, blocos, carrinho, placa, testes, fábrica, montar); dá pra responder as perguntas, trocar uma peça pelas opções da loja e rodar os testes de lá. Sem instalar: `python3 ferramenta/app.py`.
