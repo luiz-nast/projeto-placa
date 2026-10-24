@@ -2,8 +2,9 @@
  "categoria": "sensor_toque",
  "nome": "Sensor de toque",
  "grupo": "Sensores",
- "explica": "Transforma uma ilha de cobre na placa (até atrás de um plástico fino) num botão de encostar o dedo: o chip percebe o dedo chegando perto e dá 0 ou 1 num pino (TTP223, AT42QT1010) ou lê várias teclas e manda por I2C (MPR121, CAP1188). O ESP32 comum e o S3 já têm pinos de toque (o C3 não), então pra poucas teclas talvez nem precise de chip; a plaquinha TTP223 pronta está em Módulo pronto.",
+ "explica": "Transforma uma ilha de cobre na placa (até atrás de um plástico fino) num botão de encostar o dedo: o chip percebe o dedo chegando perto e dá 0 ou 1 num pino (TTP223, AT42QT1010) ou lê várias teclas e manda por I2C (MPR121, CAP1188). Os com modo trava podem funcionar como interruptor: um toque liga, o outro desliga. O ESP32 comum e o S3 já têm pinos de toque (o C3 não), então pra poucas teclas talvez nem precise de chip; a plaquinha TTP223 pronta está em Módulo pronto.",
  "nome_peca": [
+  "Chip de toque capacitivo, {Number of Channels}, {Whether the Lock}",
   "Chip de toque capacitivo, {Number of Channels}",
   "Chip de toque capacitivo {@modelo}"
  ],
@@ -26,7 +27,10 @@
   "10": "10 teclas",
   "12": "12 teclas",
   "13": "13 teclas",
-  "16": "16 teclas"
+  "16": "16 teclas",
+  "Yes": "com modo trava",
+  "No、Yes": "com modo trava",
+  "No": "sem modo trava"
  },
  "filtro": {
   "categorias_loja": [
@@ -151,7 +155,7 @@
  ],
  "pecas": {
   "C78180": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, sem modo trava",
    "marca": "RONGHE Microelectronics",
    "modelo": "RH6015C",
    "pacote": "SOT-23-6",
@@ -181,7 +185,7 @@
    "situacao": "ok"
   },
   "C42422127": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "TDSEMIC",
    "modelo": "TTP223-BA6-TD",
    "pacote": "SOT-23-6",
@@ -209,7 +213,7 @@
    "situacao": "ok"
   },
   "C485387": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "Sam&wing",
    "modelo": "AM01B",
    "pacote": "SOT-23-6L",
@@ -236,7 +240,7 @@
    "situacao": "ok"
   },
   "C42422128": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "TDSEMIC",
    "modelo": "TTP223-TD",
    "pacote": "SOT-23-6",
@@ -263,7 +267,7 @@
    "situacao": "ok"
   },
   "C2835626": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "Tontek Design Tech",
    "modelo": "TTP233H-HA6",
    "pacote": "SOT-23-6L",
@@ -293,7 +297,7 @@
    "situacao": "ok"
   },
   "C723856": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "Sam&wing",
    "modelo": "AF223",
    "pacote": "SOT-23-6",
@@ -322,7 +326,7 @@
    "situacao": "ok"
   },
   "C963376": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, com modo trava",
    "marca": "JSMSEMI",
    "modelo": "JSM8233",
    "pacote": "SOT-23-6L",
@@ -352,7 +356,7 @@
    "situacao": "ok"
   },
   "C74512": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1010-TSHR",
    "pacote": "SOT-23-6",
@@ -382,7 +386,7 @@
    "situacao": "ok"
   },
   "C112956": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1011-TSHR",
    "pacote": "SOT-23-6",
@@ -442,7 +446,7 @@
    "situacao": "ok"
   },
   "C147908": {
-   "nome": "Chip de toque capacitivo, 1 tecla",
+   "nome": "Chip de toque capacitivo, 1 tecla, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1010-MAHR",
    "pacote": "UDFN-8-EP(2x2)",
@@ -670,7 +674,7 @@
    "situacao": "ok"
   },
   "C144185": {
-   "nome": "Chip de toque capacitivo, 4 teclas",
+   "nome": "Chip de toque capacitivo, 4 teclas, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1040-MMHR",
    "pacote": "VQFN-20-EP(3x3)",
@@ -697,7 +701,7 @@
    "situacao": "ok"
   },
   "C461610": {
-   "nome": "Chip de toque capacitivo, 7 teclas",
+   "nome": "Chip de toque capacitivo, 7 teclas, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1070-SSUR",
    "pacote": "SOIC-14",
@@ -724,7 +728,7 @@
    "situacao": "ok"
   },
   "C144195": {
-   "nome": "Chip de toque capacitivo, 7 teclas",
+   "nome": "Chip de toque capacitivo, 7 teclas, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT1070-MMHR",
    "pacote": "VQFN-20-EP(3x3)",
@@ -897,7 +901,7 @@
    "situacao": "ok"
   },
   "C389618": {
-   "nome": "Chip de toque capacitivo, 12 teclas",
+   "nome": "Chip de toque capacitivo, 12 teclas, sem modo trava",
    "marca": "Sam&wing",
    "modelo": "XW12A",
    "pacote": "SSOP-24-150mil",
@@ -926,7 +930,7 @@
    "situacao": "ok"
   },
   "C614938": {
-   "nome": "Chip de toque capacitivo, 12 teclas",
+   "nome": "Chip de toque capacitivo, 12 teclas, sem modo trava",
    "marca": "Microchip Tech",
    "modelo": "AT42QT2120-SUR",
    "pacote": "SOIC-20-300mil",
@@ -956,7 +960,7 @@
    "situacao": "ok"
   },
   "C914913": {
-   "nome": "Chip de toque capacitivo, 16 teclas",
+   "nome": "Chip de toque capacitivo, 16 teclas, com modo trava",
    "marca": "Infineon/Cypress Semicon",
    "modelo": "CY8CMBR3116-LQXIT",
    "pacote": "QFN-24-EP(4x4)",
@@ -1039,7 +1043,7 @@
    "estoque": 53230,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Chip de toque capacitivo, 1 tecla"
+   "apelido": "Chip de toque capacitivo, 1 tecla, sem modo trava"
   },
   "C2890350": {
    "nome": "Chip de toque capacitivo TTP224C-BSBN",

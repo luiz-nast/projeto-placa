@@ -2,7 +2,7 @@
  "categoria": "conector_idc",
  "nome": "Conector IDC (cabo flat)",
  "grupo": "Conectores",
- "explica": "Conector de duas fileiras no passo de 2,54 mm, com uma capa de plástico em volta e um rasgo que só deixa o cabo entrar de um jeito: é o dos programadores e dos cabos flat. O de placa vai soldado; o de cabo é prensado no cabo flat, sem solda, e não vai na placa (aparece como de superfície porque a loja não diz a montagem dele).",
+ "explica": "Conector de duas fileiras no passo de 2,54 mm, com uma capa de plástico em volta e um rasgo que só deixa o cabo entrar de um jeito: é o dos programadores e dos cabos flat. O de placa vai soldado; o de cabo é prensado no cabo flat, sem solda, e vai no fio, não na placa.",
  "nome_peca": "{Connector Type} {Number of Positions or Pins}, {Holder Type}",
  "destaques": [
   "Number of Positions or Pins",

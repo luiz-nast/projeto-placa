@@ -2,7 +2,7 @@
  "categoria": "conector_rj45",
  "nome": "Conector de rede RJ45",
  "grupo": "Conectores",
- "explica": "A tomada do cabo de rede (Ethernet). Entre o chip de rede (W5500, ENC28J60) e o cabo tem que ter um transformador (os magnetics): o jack com magnetics, como o HR911105A, já traz ele dentro; o sem magnetics pede um à parte. A loja nem sempre diz qual é qual (o nome conta quando a página da loja diz): confira no datasheet antes de escolher.",
+ "explica": "A tomada do cabo de rede (Ethernet). Entre o chip de rede (W5500, ENC28J60) e o cabo tem que ter um transformador (os magnetics): o jack com magnetics, como o HR911105A, já traz ele dentro; o sem magnetics pede um à parte. O nome diz \"com magnetics\" quando a página da loja diz; nos outros, confira no datasheet antes de escolher.",
  "nome_peca": "Jack RJ45 {Mounting Type}, {LED}, {Shielding}",
  "destaques": [
   "Mounting Type",
@@ -16,7 +16,9 @@
   "Non-LED": "sem LED",
   "Shielded": "blindado",
   "Unshielded": "sem blindagem",
-  "Recessed": "embutido"
+  "Recessed": "embutido",
+  "Non-PoE": "sem PoE",
+  "With PoE": "com PoE"
  },
  "filtro": {
   "montagem": [
@@ -33,7 +35,10 @@
    "Connector Type": [
     "RJ45 Jack"
    ]
-  }
+  },
+  "fora": [
+   "C3097717"
+  ]
  },
  "sementes": [
   {
@@ -380,40 +385,6 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C3097717": {
-   "nome": "Jack RJ45 a 90°, sem LED, sem blindagem",
-   "marca": "EVERCOM",
-   "modelo": "5301-8P8C",
-   "pacote": "Push-Pull",
-   "tamanho": "18,05 × 15,2 mm",
-   "montagem": "furo",
-   "categoria_loja": "Ethernet Connectors / Modular Connectors (RJ45 RJ11)",
-   "descricao": "-40℃~+85℃ 1 Gold Harpoon Contact (Plastic) Non-LED Non-PoE Phosphor bronze RJ45 Jack Right Angle Unshielded 弯插 Ethernet Connectors / Modular Connectors (RJ45 RJ11) ROHS",
-   "atributos": {
-    "Operating Temperature": "-40℃~+85℃",
-    "Number of Ports": "1",
-    "Length": "18.05mm",
-    "PoE": "Non-PoE",
-    "Contact Plating": "Gold",
-    "Connector Type": "RJ45 Jack",
-    "Contact Material": "Phosphor Bronze",
-    "Supplementary Features": "Harpoon Contact (Plastic)",
-    "Height": "11.45mm",
-    "LED": "Non-LED",
-    "Shielding": "Unshielded",
-    "Mounting Type": "Right Angle",
-    "Width": "15.2mm"
-   },
-   "datasheet": "https://datasheet.lcsc.com/lcsc/2207051802_EVERCOM-5301-8P8C_C3097717.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C3097717.html",
-   "preco": 0.1153,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 3063,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C54929956": {
    "nome": "Jack RJ45 a 90°, sem LED, blindado",
    "marca": "LXWCONN",
@@ -615,7 +586,8 @@
    "minimo": 1,
    "estoque": 130136,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C12074": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",
@@ -651,7 +623,7 @@
    "estoque": 72259,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Jack RJ45 a 90°, com LED, blindado, com filtro"
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C386757": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",
@@ -756,7 +728,8 @@
    "minimo": 1,
    "estoque": 19162,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C54408": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",
@@ -791,7 +764,8 @@
    "minimo": 1,
    "estoque": 18560,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C138392": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",
@@ -894,7 +868,8 @@
    "minimo": 1,
    "estoque": 5608,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C50933": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",
@@ -928,7 +903,8 @@
    "minimo": 1,
    "estoque": 4454,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Jack RJ45 a 90°, com LED, blindado, com magnetics"
   },
   "C5184934": {
    "nome": "Jack RJ45 a 90°, com LED, blindado",

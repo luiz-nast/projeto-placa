@@ -21,7 +21,9 @@
   "IMU (accelerometer + gyroscope)": "Acelerômetro e giroscópio",
   "Accelerometer": "Acelerômetro",
   "3D Magnetic Sensors": "Bússola (magnetômetro de 3 eixos)",
-  "Accelerometers": "Acelerômetro"
+  "Accelerometers": "Acelerômetro",
+  "±1.6mT、±1.2mT、±8Gs、±4Gs": "±1.6mT",
+  "±8Gs": "±0.8mT"
  },
  "filtro": {
   "categorias_loja": [
@@ -287,7 +289,7 @@
    "situacao": "ok"
   },
   "C404329": {
-   "nome": "Bússola (magnetômetro de 3 eixos), até ±8Gs",
+   "nome": "Bússola (magnetômetro de 3 eixos), até ±0.8mT",
    "marca": "MEMSIC",
    "modelo": "MMC5983MA",
    "pacote": "LGA-16(3x3)",
@@ -451,7 +453,7 @@
    "situacao": "ok"
   },
   "C478483": {
-   "nome": "Bússola (magnetômetro de 3 eixos), até ±1.6mT、±1.2mT、±8Gs、±4Gs",
+   "nome": "Bússola (magnetômetro de 3 eixos), até ±1.6mT",
    "marca": "STMicroelectronics",
    "modelo": "LIS3MDLTR",
    "pacote": "LGA-12(2x2)",

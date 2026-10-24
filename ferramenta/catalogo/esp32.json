@@ -2,13 +2,18 @@
  "categoria": "esp32",
  "nome": "Módulo Wi-Fi",
  "grupo": "Cérebros",
- "explica": "Os ESP32 e ESP8266 em plaquinha pronta de soldar (chip, memória e antena juntos): um cérebro com Wi-Fi, quase todos com Bluetooth (o ESP8266 e o S2 não têm). No modelo, N4/N8/N16 é a flash do programa (4, 8 ou 16 MB), R2/R8 é PSRAM, memória extra pra imagem e som (2 ou 8 MB), U (IE no WROVER) quer dizer antena de fora, num conectorzinho, e H4 é a versão pra alta temperatura (até 105 °C) com 4 MB de flash. Liga em 3,3 V (5 V queima), com fonte que aguente uns 500 mA nos picos; o ESP32 clássico (WROOM-32, WROVER) e o ESP8266 não têm USB: pra gravar, a placa precisa de um conversor USB-serial (como o CH340) e do circuito de auto-reset (2 transistores que mexem no reset e no IO0), enquanto C3, S3 e C6 têm USB próprio.",
+ "explica": "Os ESP32 e ESP8266 em plaquinha pronta de soldar (chip, memória e antena juntos): um cérebro com Wi-Fi, quase todos com Bluetooth (o ESP8266 e o S2 não têm). No modelo, N4/N8/N16 é a flash do programa (4, 8 ou 16 MB), R2/R8 é PSRAM, memória extra pra imagem e som (2 ou 8 MB), U (IE no WROVER) quer dizer antena de fora, num conectorzinho, e H4 é a versão pra alta temperatura (até 105 °C) com 4 MB de flash. Liga em 3,3 V (5 V queima), com fonte que aguente uns 500 mA nos picos; o ESP32 clássico (WROOM-32, WROVER, PICO), o ESP8684 e o ESP8266 não têm USB: pra gravar, a placa precisa de um conversor USB-serial (como o CH340) e do circuito de auto-reset (2 transistores que mexem no reset e no IO0), enquanto C3, C6, S2 e S3 têm USB próprio.",
  "destaques": [
   "Utilized IC / Part",
   "Antenna Type",
   "Voltage - Supply",
   "Operating Temperature"
  ],
+ "traducoes": {
+  "On-board PCB Antenna": "antena na placa",
+  "PCB": "antena na placa",
+  "IPEX interface": "conector de antena (IPEX)"
+ },
  "filtro": {
   "montagem": [
    "módulo",

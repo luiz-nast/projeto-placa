@@ -24,7 +24,8 @@
   "Analog output": "analógico",
   "Differential output": "analógico diferencial",
   "PDM": "digital PDM",
-  "Digital output": "digital"
+  "Digital output": "digital",
+  "-42dB@±3dB": "-42dB (±3dB)"
  },
  "filtro": {
   "categorias_loja": [
@@ -1222,7 +1223,7 @@
    "situacao": "ok"
   },
   "C3273934": {
-   "nome": "Microfone de eletreto 4mm, -42dB@±3dB",
+   "nome": "Microfone de eletreto 4mm, -42dB (±3dB)",
    "marca": "CUI",
    "modelo": "CMEJ-0415-42-LP",
    "pacote": "Plugin,D=4mm",
@@ -1320,7 +1321,7 @@
    "situacao": "ok"
   },
   "C3273888": {
-   "nome": "Microfone de eletreto 6mm, -42dB@±3dB",
+   "nome": "Microfone de eletreto 6mm, -42dB (±3dB)",
    "marca": "CUI",
    "modelo": "CMEJ-0627-42-P",
    "pacote": "Plugin,D=6mm",

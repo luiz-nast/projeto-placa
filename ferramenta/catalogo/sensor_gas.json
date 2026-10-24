@@ -2,10 +2,11 @@
  "categoria": "sensor_gas",
  "nome": "Sensor de gás e qualidade do ar",
  "grupo": "Sensores",
- "explica": "Mede o que tem no ar: CO₂ (o SCD40, o SCD41 e o SCD30 medem gás carbônico de verdade, com luz infravermelha; bom pra saber a hora de abrir a janela), compostos voláteis e cheiros (SGP40, SGP41, AGS10), poeira fina (SPS30, SEN50) e gases perigosos como monóxido de carbono, metano e amônia. Os digitais (I2C) já dão o número pronto; os de gás crus (SY, GMH, MICS) precisam de circuito e calibração, e a maioria tem um aquecedor que gasta bastante corrente e precisa de um tempo ligado antes de medir. Os módulos MQ-2 e MQ-135 estão em Módulo pronto.",
+ "explica": "Mede o que tem no ar: CO₂ (o SCD40, o SCD41 e o SCD30 medem gás carbônico de verdade, com luz infravermelha; bom pra saber a hora de abrir a janela), compostos voláteis e cheiros (SGP40, SGP41, AGS10), poeira fina (SPS30, SEN50 e o Sharp GP2Y1014, que pede 5 V) e gases perigosos como monóxido de carbono, metano e amônia. Os digitais (I2C) já dão o número pronto; os de gás crus (SY, GMH, MICS) precisam de circuito e calibração, e a maioria tem um aquecedor que gasta bastante corrente e precisa de um tempo ligado antes de medir. Os módulos MQ-2 e MQ-135 estão em Módulo pronto.",
  "nome_peca": [
   "Sensor de {Type}, mede {Measurement Range}",
   "Sensor de {Type}",
+  "{Sensor Type}",
   "{@categoria_loja} {@modelo}"
  ],
  "destaques": [
@@ -31,13 +32,15 @@
   "Particulate Matter": "poeira fina (PM)",
   "PM2.5 Sensors": "Sensor de poeira fina (PM2.5)",
   "Gas Sensors": "Sensor de gás",
-  "VOC Sensors": "Sensor de VOC (compostos voláteis)"
+  "VOC Sensors": "Sensor de VOC (compostos voláteis)",
+  "Dust Sensor": "Sensor de poeira"
  },
  "filtro": {
   "categorias_loja": [
    "Gas Sensors",
    "VOC Sensors",
-   "PM2.5 Sensors"
+   "PM2.5 Sensors",
+   "Specialized Sensors"
   ],
   "estoque_minimo": 50,
   "valores_fora": {
@@ -115,6 +118,10 @@
    "busca": "VOC Sensors",
    "quantos": 2,
    "agrupar": "Type"
+  },
+  {
+   "busca": "GP2Y1014",
+   "quantos": 1
   }
  ],
  "pecas": {
@@ -301,6 +308,33 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 1473,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C390729": {
+   "nome": "Sensor de poeira",
+   "marca": "Sharp Microelectronics",
+   "modelo": "GP2Y1014AU0F",
+   "pacote": "-",
+   "tamanho": "",
+   "montagem": "não informado",
+   "categoria_loja": "Specialized Sensors",
+   "descricao": "Dust Sensor - Specialized Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-10℃~+65℃",
+    "Sensor Type": "Dust Sensor",
+    "Voltage - Supply": "4.5V~5.5V",
+    "Features": "-",
+    "Current - Supply": "11mA",
+    "Interface": "-"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1912111437_Sharp-Microelectronics-GP2Y1014AU0F_C390729.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/specialized-sensors_sharp-microelectronics-gp2y1014au0f_C390729.html",
+   "preco": 5.3776,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1000,
    "visto": "2026-10-24",
    "situacao": "ok"
   },

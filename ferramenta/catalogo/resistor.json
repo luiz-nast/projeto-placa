@@ -10,6 +10,14 @@
   "Type"
  ],
  "chips": "Resistance",
+ "traducoes": {
+  "Metal Film Resistor": "filme metálico",
+  "Metal Film Resistors": "filme metálico",
+  "Carbon Film Resistor": "filme de carbono",
+  "Metal Oxide Film Resistor": "óxido metálico",
+  "Wirewound Resistor": "de fio",
+  "Cement Resistor": "cimentado"
+ },
  "filtro": {
   "montagem": [
    "furo"

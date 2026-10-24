@@ -33,12 +33,15 @@
   "Inner pin": "centro macho",
   "Male Pin": "centro macho",
   "RP-SMA-K to IPEX": "IPEX para RP-SMA-K",
-  "IPEX to RP-SMA-K": "IPEX para RP-SMA-K"
+  "IPEX to RP-SMA-K": "IPEX para RP-SMA-K",
+  "2mm": "2 mm",
+  "1.5mm": "1,5 mm"
  },
  "filtro": {
   "montagem": [
    "furo",
    "superfície",
+   "fio",
    "não informado"
   ],
   "categorias_loja": [
@@ -71,7 +74,17 @@
    "C56125972",
    "C55608088",
    "C6321911",
-   "C6321902"
+   "C6321902",
+   "C53278706",
+   "C52766459",
+   "C52766463",
+   "C53278678",
+   "C53278677",
+   "C20617216",
+   "C53278679",
+   "C53278681",
+   "C6321908",
+   "C6321913"
   ]
  },
  "sementes": [
@@ -282,7 +295,7 @@
    "situacao": "ok"
   },
   "C5299419": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "G-Switch",
    "modelo": "GT-RF1125A-01G",
    "pacote": "SMD",
@@ -314,7 +327,7 @@
    "situacao": "ok"
   },
   "C88374": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "HRS(Hirose)",
    "modelo": "U.FL-R-SMT-1(80)",
    "pacote": "SMD",
@@ -345,7 +358,7 @@
    "situacao": "ok"
   },
   "C47986640": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "HanElectricity",
    "modelo": "IPEX-1",
    "pacote": "SMD",
@@ -376,7 +389,7 @@
    "situacao": "ok"
   },
   "C41432125": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "JXTCONN",
    "modelo": "AIPEX-4",
    "pacote": "SMD",
@@ -407,7 +420,7 @@
    "situacao": "ok"
   },
   "C530666": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-IPEX4-2020",
    "pacote": "SMD",
@@ -439,7 +452,7 @@
    "situacao": "ok"
   },
   "C36936657": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "BXCONN",
    "modelo": "IPEX-01",
    "pacote": "SMD",
@@ -469,7 +482,7 @@
    "situacao": "ok"
   },
   "C7429352": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "XUNPU",
    "modelo": "IPEX-001",
    "pacote": "SMD",
@@ -499,7 +512,7 @@
    "situacao": "ok"
   },
   "C41432122": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "JXTCONN",
    "modelo": "AIPEX-1",
    "pacote": "SMD",
@@ -530,7 +543,7 @@
    "situacao": "ok"
   },
   "C18222214": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "SHOU HAN",
    "modelo": "IPEX4-TXZ 214",
    "pacote": "SMD",
@@ -562,7 +575,7 @@
    "situacao": "ok"
   },
   "C2987682": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "ZIISOR",
    "modelo": "IPEX-1",
    "pacote": "SMD",
@@ -592,7 +605,7 @@
    "situacao": "ok"
   },
   "C2987683": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "ZIISOR",
    "modelo": "IPEX-4",
    "pacote": "SMD",
@@ -622,7 +635,7 @@
    "situacao": "ok"
   },
   "C434808": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "HRS(Hirose)",
    "modelo": "U.FL-R-SMT(10)",
    "pacote": "SMD",
@@ -653,7 +666,7 @@
    "situacao": "ok"
   },
   "C7429355": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "XUNPU",
    "modelo": "IPEX-004",
    "pacote": "SMD",
@@ -683,7 +696,7 @@
    "situacao": "ok"
   },
   "C53433123": {
-   "nome": "Conector IPEX de placa, 2mm de diâmetro",
+   "nome": "Conector IPEX de placa, 2 mm de diâmetro",
    "marca": "XUNPU",
    "modelo": "U.FL-IPEX-1",
    "pacote": "SMD",
@@ -713,7 +726,7 @@
    "situacao": "ok"
   },
   "C47986642": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "HanElectricity",
    "modelo": "IPEX-4",
    "pacote": "SMD",
@@ -744,7 +757,7 @@
    "situacao": "ok"
   },
   "C36936659": {
-   "nome": "Conector IPEX de placa, 1.5mm de diâmetro",
+   "nome": "Conector IPEX de placa, 1,5 mm de diâmetro",
    "marca": "BXCONN",
    "modelo": "IPEX-03",
    "pacote": "SMD",
@@ -832,37 +845,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 88,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C53278706": {
-   "nome": "Conector RP-SMA de placa, 6.35mm de diâmetro",
-   "marca": "HenryTech",
-   "modelo": "HL2-RP-SMA-KWE",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "6.35mm",
-    "Rated Voltage (Max)": "1kV",
-    "Number of Ports": "1",
-    "Interface Length/Height": "9.5mm",
-    "Operating Temperature Range": "-55℃~+165℃",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Impedance": "50Ω",
-    "Interface": "Inner pin",
-    "RF Series": "RP-SMA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C53278706.html",
-   "preco": 1.5858,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 56,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -1018,37 +1000,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 3608,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C20617216": {
-   "nome": "Conector SMA de placa, 5.3mm de diâmetro",
-   "marca": "HenryTech",
-   "modelo": "HL-SMA-KWE-02",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "-55℃~+125℃ 1 5.3mm 50Ω 6GHz 8.5mm Board Side Inner Bore SMA 插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "5.3mm",
-    "Number of Ports": "1",
-    "Interface Length/Height": "8.5mm",
-    "Operating Temperature Range": "-55℃~+125℃",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Style": "-",
-    "Impedance": "50Ω",
-    "Interface": "Inner hole",
-    "RF Series": "SMA"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402021505_HenryTech-HL-SMA-KWE-02_C20617216.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/coaxial-connectors-rf_henrytech-hl-sma-kwe-02_C20617216.html",
-   "preco": 0.6072,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 3308,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -1332,35 +1283,6 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C52766459": {
-   "nome": "Conector SMA de placa, 5.2mm de diâmetro",
-   "marca": "Minlenda",
-   "modelo": "MLD-SMA-KWE-L14.5",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "1 14.5mm 5.2mm 50Ω 6GHz Board Side Inner Bore SMA 插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "5.2mm",
-    "Number of Ports": "1",
-    "Interface Length/Height": "14.5mm",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Impedance": "50Ω",
-    "Interface": "Inner hole",
-    "RF Series": "SMA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C52766459.html",
-   "preco": 0.4321,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 399,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C2874830": {
    "nome": "Conector SMA de placa, a 90°, centro fêmea",
    "marca": "HJ Tech",
@@ -1420,97 +1342,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 215,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C52766463": {
-   "nome": "Conector SMA de placa, 5.2mm de diâmetro",
-   "marca": "Minlenda",
-   "modelo": "MLD-SMA-KWE11-L17",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "1 17mm 5.2mm 50Ω 6GHz Board Side Inner Bore SMA 插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "5.2mm",
-    "Number of Ports": "1",
-    "Interface Length/Height": "17mm",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Impedance": "50Ω",
-    "Interface": "Inner hole",
-    "RF Series": "SMA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C52766463.html",
-   "preco": 0.3797,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 214,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C53278678": {
-   "nome": "Conector SMA de placa, 6.35mm de diâmetro",
-   "marca": "HenryTech",
-   "modelo": "HL-SMA-KWE-CJ-02",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "6.35mm",
-    "Rated Voltage (Max)": "750V",
-    "Number of Ports": "1",
-    "Interface Length/Height": "6.2mm",
-    "Operating Temperature Range": "-55℃~+125℃",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Impedance": "50Ω",
-    "Interface": "Inner Bore",
-    "RF Series": "SMA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C53278678.html",
-   "preco": 1.5858,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 200,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C53278677": {
-   "nome": "Conector SMA de placa, 6.35mm de diâmetro",
-   "marca": "HenryTech",
-   "modelo": "HL-SMA-KWE-19-02",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Coaxial Connectors (RF)",
-   "descricao": "插件 Coaxial Connectors (RF) ROHS",
-   "atributos": {
-    "Interface Diameter": "6.35mm",
-    "Rated Voltage (Max)": "750V",
-    "Number of Ports": "1",
-    "Interface Length/Height": "13mm",
-    "Operating Temperature Range": "-55℃~+125℃",
-    "Connector Type": "Board Side",
-    "Frequency": "6GHz",
-    "Impedance": "50Ω",
-    "Interface": "Inner Bore",
-    "RF Series": "SMA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C53278677.html",
-   "preco": 1.1898,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 179,
    "visto": "2026-10-24",
    "situacao": "ok"
   },

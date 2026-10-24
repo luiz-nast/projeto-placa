@@ -11,9 +11,9 @@
   "{@categoria_loja} {@modelo}"
  ],
  "destaques": [
-  "Type",
   "Voltage - Supply",
-  "Data Rate"
+  "Data Rate",
+  "Number of Nodes"
  ],
  "chips": "Type",
  "traducoes": {
@@ -36,7 +36,23 @@
   "Transceiver": "RS-485",
   "CAN Transceiver": "CAN",
   "CAN FD Transceiver": "CAN (e CAN FD)",
-  "CAN Controller": "Controlador CAN"
+  "CAN Controller": "Controlador CAN",
+  "1Mbps": "1 Mbit/s",
+  "64": "até 64 no mesmo par",
+  "200Kbps": "200 kbit/s",
+  "128": "até 128 no mesmo par",
+  "500Kbps": "500 kbit/s",
+  "256": "até 256 no mesmo par",
+  "115.2Kbps": "115,2 kbit/s",
+  "5Mbps": "5 Mbit/s",
+  "8Mbps": "8 Mbit/s",
+  "2Mbps": "2 Mbit/s",
+  "32": "até 32 no mesmo par",
+  "10Mbps": "10 Mbit/s",
+  "12Mbps": "12 Mbit/s",
+  "2.5Mbps": "2,5 Mbit/s",
+  "250Kbps": "250 kbit/s",
+  "14Mbps": "14 Mbit/s"
  },
  "filtro": {
   "categorias_loja": [

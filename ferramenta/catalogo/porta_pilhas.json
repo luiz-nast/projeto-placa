@@ -1,8 +1,8 @@
 {
  "categoria": "porta_pilhas",
- "nome": "Porta-pilhas e clipe de bateria",
+ "nome": "Clipe de pilha e encaixe de 9 V",
  "grupo": "Energia",
- "explica": "Caixinha (porta-pilhas), clipe e encaixe pra pilhas AA, AAA, 18650 e CR2450, e o encaixe da bateria de 9 V, que vai no fio. A loja não diz como cada um se prende ('montagem não informada'), e pelo desenho dela vários vão soldados na placa: olhe a foto antes de escolher. Suporte com pino de furo que a loja garante (CR2032, CR1220, 18650, AA) fica em Suporte de pilha e bateria.",
+ "explica": "Clipe, mola e plaquinha de contato pra montar você mesmo o lugar da pilha (AA, AAA, 18650): ela fica entre um contato no + e outro no −. E o encaixe da bateria de 9 V, que vai na ponta do fio. O cartão diz se cada um é de furo ou de superfície (olhe a foto); suporte inteiro, que já segura a pilha e tem o + e o −, está em Suporte de pilha e bateria.",
  "nome_peca": [
   "{Type} para {Applicable battery specifications}",
   "Porta-pilhas {Applicable battery specifications}"
@@ -23,7 +23,9 @@
   "18650": "bateria 18650",
   "CR2450": "pilha CR2450",
   "CR2025": "pilha CR2025",
-  "9V laminated battery": "bateria de 9 V"
+  "9V laminated battery": "bateria de 9 V",
+  "Battery spring contact": "Mola de contato",
+  "Battery contact plate": "Plaquinha de contato"
  },
  "filtro": {
   "categorias_loja": [
@@ -37,10 +39,10 @@
   ],
   "valores": {
    "Type": [
-    "Battery holder",
-    "Battery buckle",
     "Battery clip",
-    "Battery base"
+    "Battery buckle",
+    "Battery spring contact",
+    "Battery contact plate"
    ]
   },
   "estoque_minimo": 50,
@@ -60,45 +62,46 @@
    "C19184087",
    "C964882",
    "C7525446",
-   "C51885781"
+   "C51885781",
+   "C49215505",
+   "C49215506",
+   "C49215508",
+   "C964806",
+   "C2979177",
+   "C7525429",
+   "C5290181",
+   "C5290180",
+   "C20606793",
+   "C5290189",
+   "C5290193",
+   "C48687366",
+   "C7525438",
+   "C964845"
   ]
  },
  "sementes": [
   {
-   "busca": "BH-AA",
-   "quantos": 6
+   "busca": "MY-AA",
+   "quantos": 3,
+   "agrupar": "Type"
   },
   {
-   "busca": "AA battery",
-   "quantos": 4
+   "busca": "MY-AAA",
+   "quantos": 3,
+   "agrupar": "Type"
   },
   {
-   "busca": "BH-AAA",
-   "quantos": 2
-  },
-  {
-   "busca": "AAA battery",
-   "quantos": 4
-  },
-  {
-   "busca": "18650",
-   "quantos": 6
+   "busca": "MY-18650",
+   "quantos": 3,
+   "agrupar": "Type"
   },
   {
    "busca": "9V battery",
    "quantos": 6
   },
   {
-   "busca": "CR2450 Plugin",
-   "quantos": 3
-  },
-  {
-   "busca": "MY-AA",
-   "quantos": 8
-  },
-  {
-   "busca": "BH-18650",
-   "quantos": 5
+   "busca": "BE-13",
+   "quantos": 6
   }
  ],
  "pecas": {
@@ -133,7 +136,7 @@
    "modelo": "9VBattery copper wire buckle Copper100mm",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "fio",
    "categoria_loja": "Battery connector",
    "descricao": "9V laminated battery Battery buckle Nickel plated - ROHS",
    "atributos": {
@@ -149,7 +152,8 @@
    "minimo": 1,
    "estoque": 1539,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "fio"
   },
   "C70375": {
    "nome": "Encaixe para bateria de 9 V",
@@ -157,7 +161,7 @@
    "modelo": "9V Cable Tie Copper150mm",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "fio",
    "categoria_loja": "Battery connector",
    "descricao": "9V laminated battery Battery buckle Nickel plated - ROHS",
    "atributos": {
@@ -173,7 +177,8 @@
    "minimo": 1,
    "estoque": 442,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "fio"
   },
   "C19184112": {
    "nome": "Encaixe para bateria de 9 V",
@@ -248,13 +253,37 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C19184113": {
+   "nome": "Encaixe para bateria de 9 V",
+   "marca": "MYOUNG",
+   "modelo": "BE-13-020-300",
+   "pacote": "-",
+   "tamanho": "",
+   "montagem": "não informado",
+   "categoria_loja": "Battery connector",
+   "descricao": "9V laminated battery Battery buckle Nickel plated - ROHS",
+   "atributos": {
+    "Type": "Battery buckle",
+    "Applicable battery specifications": "9V laminated battery",
+    "Contact coating": "Nickel plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-BE-13-020-300_C19184113.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-be-13-020-300_C19184113.html",
+   "preco": 0.4255,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 58,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C2979183": {
    "nome": "Clipe para bateria 18650",
    "marca": "MYOUNG",
    "modelo": "MY-18650-01",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "13,1 × 16,0 mm",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
    "descricao": "18650 Battery clip Manganese steel Nickel plated - ROHS",
    "atributos": {
@@ -271,217 +300,68 @@
    "minimo": 1,
    "estoque": 18620,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
-  "C7525438": {
-   "nome": "Encaixe para bateria 18650",
+  "C19184124": {
+   "nome": "Mola de contato para bateria 18650",
    "marca": "MYOUNG",
-   "modelo": "BH-18650-B6AA002",
+   "modelo": "MY-18650-05-J",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
-   "descricao": "-25~85℃ 18650 Battery buckle Gold plating - ROHS",
+   "descricao": "18650 Battery spring contact Nickel plated Phosphor bronze - ROHS",
    "atributos": {
-    "Operating Temperature": "-25~85℃",
-    "Type": "Battery buckle",
-    "Applicable battery specifications": "18650",
-    "Contact coating": "Gold plating"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2308210927_MYOUNG-BH-18650-B6AA002_C7525438.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-18650-b6aa002_C7525438.html",
-   "preco": 1.7069,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 665,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C49215505": {
-   "nome": "Porta-pilhas para bateria 18650",
-   "marca": "MYOUNG",
-   "modelo": "BH-18650-A1BJ033",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
-   "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
-    "Applicable battery specifications": "18650",
-    "Contact coating": "Nickel Plated"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C49215505.html",
-   "preco": 0.5074,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 235,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C49215506": {
-   "nome": "Porta-pilhas para bateria 18650",
-   "marca": "MYOUNG",
-   "modelo": "BH-18650-A1BJ034",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
-   "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
-    "Applicable battery specifications": "18650",
-    "Contact coating": "Nickel Plated"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C49215506.html",
-   "preco": 1.4598,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 166,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C49215508": {
-   "nome": "Porta-pilhas para bateria 18650",
-   "marca": "MYOUNG",
-   "modelo": "BH-18650-A1BJ036",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
-   "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
-    "Applicable battery specifications": "18650",
-    "Contact coating": "Nickel Plated"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C49215508.html",
-   "preco": 1.3387,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 90,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C48687366": {
-   "nome": "Porta-pilhas para bateria 18650",
-   "marca": "MYOUNG",
-   "modelo": "BH-18650-A1BJ024",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
-   "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
-    "Applicable battery specifications": "18650",
-    "Contact coating": "Nickel plating"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-18650-a1bj024_C48687366.html",
-   "preco": 1.4582,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 47,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C964845": {
-   "nome": "Encaixe para pilha CR2450",
-   "marca": "MYOUNG",
-   "modelo": "MY-2450-01",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "Battery buckle CR2450 Nickel plated Phosphor bronze - ROHS",
-   "atributos": {
-    "Type": "Battery buckle",
+    "Type": "Battery spring contact",
     "Contact material": "Phosphor Bronze",
-    "Applicable battery specifications": "CR2450",
+    "Applicable battery specifications": "18650",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2012181809_MYOUNG-MY-2450-01_C964845.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-MY-18650-05-J_C19184124.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-2450-01_C964845.html",
-   "preco": 0.2151,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-18650-05-j_C19184124.html",
+   "preco": 0.1076,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 5381,
+   "estoque": 4263,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
-  "C964806": {
-   "nome": "Base para pilha CR2450",
+  "C19184125": {
+   "nome": "Mola de contato para bateria 18650",
    "marca": "MYOUNG",
-   "modelo": "BS-24-A1AJ004",
+   "modelo": "MY-18650-04-J",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
-   "descricao": "-25~85℃ Battery base CR2450 Nickel plated Phosphor bronze - ROHS",
+   "descricao": "18650 Battery spring contact Nickel plated Phosphor bronze - ROHS",
    "atributos": {
-    "Operating Temperature": "-25~85℃",
+    "Type": "Battery spring contact",
     "Contact material": "Phosphor Bronze",
-    "Type": "Battery base",
-    "Applicable battery specifications": "CR2450",
+    "Applicable battery specifications": "18650",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2012141309_MYOUNG-BS-24-A1AJ004_C964806.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-MY-18650-04-J_C19184125.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bs-24-a1aj004_C964806.html",
-   "preco": 0.3575,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-18650-04-j_C19184125.html",
+   "preco": 0.1495,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 4303,
+   "estoque": 1784,
    "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C2979177": {
-   "nome": "Encaixe para pilha CR2450",
-   "marca": "MYOUNG",
-   "modelo": "MY-2450-02",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-25~85℃ Battery buckle CR2450 Nickel plated Phosphor bronze - ROHS",
-   "atributos": {
-    "Operating Temperature": "-25~85℃",
-    "Type": "Battery buckle",
-    "Contact material": "Phosphor Bronze",
-    "Applicable battery specifications": "CR2450",
-    "Contact coating": "Nickel Plated"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2203021630_MYOUNG-MY-2450-02_C2979177.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-2450-02_C2979177.html",
-   "preco": 0.32,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 1723,
-   "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C2979179": {
    "nome": "Clipe para pilha AA",
    "marca": "MYOUNG",
    "modelo": "MY-AA-04",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "17,4 × 9,3 mm",
+   "montagem": "superfície",
    "categoria_loja": "Battery connector",
    "descricao": "-25~85℃ Battery clip Manganese steel Nickel plated No. 5 - ROHS",
    "atributos": {
@@ -499,117 +379,94 @@
    "minimo": 1,
    "estoque": 17208,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "superfície"
   },
-  "C7525429": {
-   "nome": "Porta-pilhas para pilha AA",
+  "C19184098": {
+   "nome": "Mola de contato para pilha AA",
    "marca": "MYOUNG",
-   "modelo": "BH-AA-A1AJ029",
+   "modelo": "MY-AA-03",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "14,3 × 6,3 mm",
+   "montagem": "superfície",
    "categoria_loja": "Battery connector",
-   "descricao": "-40~85℃ Battery holder Brass Nickel plated No. 5 - ROHS",
+   "descricao": "Battery spring contact Manganese steel Nickel plated No. 5 - ROHS",
    "atributos": {
-    "Operating Temperature": "-40~85℃",
-    "Contact material": "Brass",
-    "Type": "Battery holder",
+    "Contact material": "Manganese Steel",
+    "Type": "Battery spring contact",
     "Applicable battery specifications": "No. 5",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2308210927_MYOUNG-BH-AA-A1AJ029_C7525429.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311081133_MYOUNG-MY-AA-03_C19184098.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj029_C7525429.html",
-   "preco": 0.7365,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aa-03_C19184098.html",
+   "preco": 0.1171,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 2976,
+   "estoque": 2094,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "superfície"
   },
-  "C5290181": {
-   "nome": "Porta-pilhas para pilha AA",
+  "C20606790": {
+   "nome": "Plaquinha de contato para pilha AA",
    "marca": "MYOUNG",
-   "modelo": "BH-AA-A1AJ020",
+   "modelo": "MY-AA-06",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ Battery holder Nickel plated No. 5 - ROHS",
+   "descricao": "Battery contact plate Nickel plated No. 5 Steel - ROHS",
    "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
-    "Applicable battery specifications": "No. 5",
-    "Contact coating": "Nickel Plated"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AA-A1AJ020_C5290181.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj020_C5290181.html",
-   "preco": 0.4615,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 2381,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C5290180": {
-   "nome": "Porta-pilhas para pilha AA",
-   "marca": "MYOUNG",
-   "modelo": "BH-AA-A5BJ012",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Battery connector",
-   "descricao": "-10~100℃ Battery holder Nickel plated No. 5 Steel - ROHS",
-   "atributos": {
-    "Operating Temperature": "-10~100℃",
     "Contact material": "Steel",
-    "Type": "Battery holder",
+    "Type": "Battery contact plate",
     "Applicable battery specifications": "No. 5",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AA-A5BJ012_C5290180.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401121843_MYOUNG-MY-AA-06_C20606790.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a5bj012_C5290180.html",
-   "preco": 0.6072,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aa-06_C20606790.html",
+   "preco": 0.2159,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 1688,
+   "estoque": 1657,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
-  "C20606793": {
-   "nome": "Porta-pilhas para pilha AA",
+  "C20606789": {
+   "nome": "Plaquinha de contato para pilha AA",
    "marca": "MYOUNG",
-   "modelo": "BH-AA-A1AJ025",
+   "modelo": "MY-AA-05",
    "pacote": "-",
    "tamanho": "",
-   "montagem": "não informado",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ Battery holder Nickel plated No. 5 - ROHS",
+   "descricao": "Battery contact plate Nickel plated No. 5 Steel - ROHS",
    "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
+    "Contact material": "Steel",
+    "Type": "Battery contact plate",
     "Applicable battery specifications": "No. 5",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401121843_MYOUNG-BH-AA-A1AJ025_C20606793.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401121843_MYOUNG-MY-AA-05_C20606789.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj025_C20606793.html",
-   "preco": 0.6612,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aa-05_C20606789.html",
+   "preco": 0.1357,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 773,
+   "estoque": 1049,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C2979180": {
    "nome": "Clipe para pilha AA",
    "marca": "MYOUNG",
    "modelo": "MY-AA-07",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "9,7 × 10,6 mm",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
    "descricao": "-25~85℃ Battery clip Manganese steel Nickel plated No. 5 - ROHS",
    "atributos": {
@@ -627,15 +484,16 @@
    "minimo": 1,
    "estoque": 526,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C6937103": {
    "nome": "Clipe para pilha AA",
    "marca": "MYOUNG",
    "modelo": "MY-AA-16-J",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "9,4 × 14,0 mm",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
    "descricao": "Battery clip Nickel plated No. 5 Spring steel - ROHS",
    "atributos": {
@@ -652,15 +510,16 @@
    "minimo": 1,
    "estoque": 108,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C6937104": {
    "nome": "Clipe para pilha AAA",
    "marca": "MYOUNG",
    "modelo": "MY-AAA-19-J",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "11,0 × 12,0 mm",
+   "montagem": "superfície",
    "categoria_loja": "Battery connector",
    "descricao": "Battery clip Nickel plated No. 7 Spring steel - ROHS",
    "atributos": {
@@ -677,15 +536,42 @@
    "minimo": 1,
    "estoque": 5731,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "superfície"
+  },
+  "C6937109": {
+   "nome": "Mola de contato para pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "MY-AAA-07",
+   "pacote": "-",
+   "tamanho": "10,4 × 6,5 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Battery connector",
+   "descricao": "Battery spring contact Nickel plated No. 7 Spring steel - ROHS",
+   "atributos": {
+    "Contact material": "Spring steel",
+    "Type": "Battery spring contact",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2306251029_MYOUNG-MY-AAA-07_C6937109.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aaa-07_C6937109.html",
+   "preco": 0.1239,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 5056,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "superfície"
   },
   "C6937107": {
    "nome": "Clipe para pilha AAA",
    "marca": "MYOUNG",
    "modelo": "MY-AAA-20-J",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "11,0 × 12,0 mm",
+   "montagem": "superfície",
    "categoria_loja": "Battery connector",
    "descricao": "Battery clip Nickel plated No. 7 Spring steel - ROHS",
    "atributos": {
@@ -702,55 +588,134 @@
    "minimo": 1,
    "estoque": 4263,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "superfície"
   },
-  "C5290189": {
-   "nome": "Porta-pilhas para pilha AAA",
+  "C6937110": {
+   "nome": "Mola de contato para pilha AAA",
    "marca": "MYOUNG",
-   "modelo": "BH-AAA-A1AJ001",
+   "modelo": "MY-AAA-22-J",
+   "pacote": "-",
+   "tamanho": "10,4 × 6,5 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Battery connector",
+   "descricao": "Battery spring contact Nickel plated No. 7 Spring steel - ROHS",
+   "atributos": {
+    "Contact material": "Spring steel",
+    "Type": "Battery spring contact",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2306251029_MYOUNG-MY-AAA-22-J_C6937110.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aaa-22-j_C6937110.html",
+   "preco": 0.2035,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 4017,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "superfície"
+  },
+  "C964855": {
+   "nome": "Mola de contato para pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "MY-AAA-01",
+   "pacote": "-",
+   "tamanho": "10,4 × 6,5 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Battery connector",
+   "descricao": "Battery spring contact Manganese steel Nickel plated No. 7 - ROHS",
+   "atributos": {
+    "Contact material": "Manganese Steel",
+    "Type": "Battery spring contact",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2012181809_MYOUNG-MY-AAA-01_C964855.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aaa-01_C964855.html",
+   "preco": 0.1159,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1231,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "superfície"
+  },
+  "C51889749": {
+   "nome": "Plaquinha de contato para pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "MY-AAA-15-J",
+   "pacote": "-",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "Battery contact plate Nickel plated No. 7 Stainless steel - ROHS",
+   "atributos": {
+    "Contact material": "Stainless Steel",
+    "Type": "Battery contact plate",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C51889749.html",
+   "preco": 0.2166,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 927,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C5371791": {
+   "nome": "Plaquinha de contato para pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "MY-AAA-5214",
    "pacote": "-",
    "tamanho": "",
    "montagem": "não informado",
    "categoria_loja": "Battery connector",
-   "descricao": "-10~80℃ Battery holder Nickel plated No. 7 - ROHS",
+   "descricao": "Battery contact plate Nickel plated No. 7 Steel - ROHS",
    "atributos": {
-    "Operating Temperature": "-10~80℃",
-    "Type": "Battery holder",
+    "Contact material": "Steel",
+    "Type": "Battery contact plate",
     "Applicable battery specifications": "No. 7",
-    "Contact coating": "Nickel Plated"
+    "Contact coating": "Nickel plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AAA-A1AJ001_C5290189.pdf",
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404280958_MYOUNG-MY-AAA-5214_C5371791.pdf",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aaa-a1aj001_C5290189.html",
-   "preco": 0.3457,
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-aaa-5214_C5371791.html",
+   "preco": 0.2257,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 2150,
+   "estoque": 859,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C5290193": {
-   "nome": "Porta-pilhas para pilha AAA",
+  "C51889750": {
+   "nome": "Plaquinha de contato para pilha AAA",
    "marca": "MYOUNG",
-   "modelo": "BH-AAA-A1AJ024",
+   "modelo": "MY-AAA-16-J",
    "pacote": "-",
    "tamanho": "",
    "montagem": "não informado",
-   "categoria_loja": "Batter Holder",
-   "descricao": "-10~100℃ Battery holder Nickel plating No. 7 - Batter Holder ROHS",
+   "categoria_loja": "Battery connector",
+   "descricao": "Battery contact plate Nickel plated No. 7 Stainless steel - ROHS",
    "atributos": {
-    "Operating Temperature": "-10~100℃",
-    "Type": "Battery holder",
+    "Contact material": "Stainless Steel",
+    "Type": "Battery contact plate",
     "Applicable battery specifications": "No. 7",
     "Contact coating": "Nickel Plated"
    },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AAA-A1AJ024_C5290193.pdf",
+   "datasheet": "",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aaa-a1aj024_C5290193.html",
-   "preco": 0.2733,
+   "link": "https://www.lcsc.com/product-detail/C51889750.html",
+   "preco": 0.1406,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 1488,
+   "estoque": 825,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -759,8 +724,8 @@
    "marca": "MYOUNG",
    "modelo": "MY-AAA-02",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "9,5 × 10,9 mm",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
    "descricao": "Battery clip Manganese steel Nickel plated No. 7 - ROHS",
    "atributos": {
@@ -777,15 +742,16 @@
    "minimo": 1,
    "estoque": 769,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C2979181": {
    "nome": "Clipe para pilha AAA",
    "marca": "MYOUNG",
    "modelo": "MY-AAA-06",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "17,4 × 9,3 mm",
+   "montagem": "superfície",
    "categoria_loja": "Battery connector",
    "descricao": "-25~85℃ Battery clip Manganese steel Nickel plated No. 7 - ROHS",
    "atributos": {
@@ -803,15 +769,16 @@
    "minimo": 1,
    "estoque": 529,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "superfície"
   },
   "C6937105": {
    "nome": "Clipe para pilha AAA",
    "marca": "MYOUNG",
    "modelo": "MY-AAA-17-J",
    "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
+   "tamanho": "9,5 × 13,4 mm",
+   "montagem": "furo",
    "categoria_loja": "Battery connector",
    "descricao": "Battery clip Nickel plated No. 7 Spring steel - ROHS",
    "atributos": {
@@ -828,7 +795,8 @@
    "minimo": 1,
    "estoque": 322,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   }
  }
 }

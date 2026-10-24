@@ -683,7 +683,8 @@
    "minimo": 1,
    "estoque": 13720,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Fotodiodo de luz ambiente"
   },
   "C841503": {
    "nome": "Sensor de luz ambiente",
@@ -710,7 +711,8 @@
    "minimo": 1,
    "estoque": 12258,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Fotodiodo de luz ambiente"
   },
   "C142526": {
    "nome": "Sensor de luz ambiente I2C, até 6.553klx",
@@ -860,7 +862,8 @@
    "minimo": 1,
    "estoque": 7579,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Fotodiodo de luz ambiente"
   },
   "C125628": {
    "nome": "LDR (fotorresistor) 20kΩ~30kΩ",

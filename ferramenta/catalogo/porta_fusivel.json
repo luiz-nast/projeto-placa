@@ -2,7 +2,7 @@
  "categoria": "porta_fusivel",
  "nome": "Porta-fusível 5×20",
  "grupo": "Conectores",
- "explica": "Segura o fusível de vidro de 5 × 20 mm pra ele ser trocado sem solda quando queimar. O de placa com base (como o BLX-A) vai soldado e alguns têm tampa; o de presilha é só o par de garrinhas, às vezes vendidas uma a uma (precisa de duas, uma em cada ponta); o de painel fica preso na caixa, com a tampa do lado de fora. A corrente e a tensão que ele aguenta têm que ser pelo menos as do fusível.",
+ "explica": "Segura o fusível de vidro de 5 × 20 mm pra ele ser trocado sem solda quando queimar. O de placa com base (como o BLX-A) vai soldado e alguns têm tampa; o de presilha é só o par de garrinhas, às vezes vendidas uma a uma (precisa de duas, uma em cada ponta). A corrente e a tensão que ele aguenta têm que ser pelo menos as do fusível.",
  "nome_peca": [
   "Porta-fusível 5×20 {Fuseholder Type}, {Current Rating}",
   "Porta-fusível 5×20, {Current Rating}",

@@ -2,8 +2,9 @@
  "categoria": "usb_serial",
  "nome": "Conversor USB-serial",
  "grupo": "Comunicação",
- "explica": "Liga a porta USB do computador aos fios de mandar e receber (TX e RX) de um ESP32 ou ATmega: é por ele que você grava o programa e lê o monitor serial. Com dois transistores nos pinos de controle DTR e RTS, ele mesmo aperta o reset e o botão de gravação do ESP32; o CH340G pede um cristal de 12 MHz do lado, os CH340B, C, E, K, N e X não. Cuidado: o ESP32 só aguenta 3,3 V nos pinos, então o chip tem que trabalhar em 3,3 V (o CH340 alimentado em 3,3 V; o CP2102 já é assim).",
+ "explica": "Liga o USB do computador aos fios de mandar e receber (TX e RX) de um ESP32 ou ATmega: é por ele que você grava o programa e lê o monitor serial. Com dois transistores nos pinos de controle DTR e RTS, ele mesmo aperta o reset e o botão de gravação do ESP32 (os da Microchip, MCP2221 e MCP2200, não têm o DTR: aí é apertar os botões à mão); o CH340G pede um cristal de 12 MHz do lado, os CH340B, C, E, K, N e X não. Cuidado: o ESP32 só aguenta 3,3 V nos pinos, então o chip tem que trabalhar em 3,3 V (o CH340 alimentado em 3,3 V; o CP2102 já é assim).",
  "nome_peca": [
+  "{@categoria_loja} {@modelo}, {Number of Channels}, {Voltage - Supply}",
   "{@categoria_loja} {@modelo}, {Voltage - Supply}",
   "{@categoria_loja} {@modelo}"
  ],
@@ -29,7 +30,32 @@
   "4.35V~5.25V": "4,35 a 5,25 V",
   "5V": "5 V",
   "USB Converters": "USB-serial",
-  "USB Conversion Modules": "Módulo USB-serial"
+  "USB Conversion Modules": "Módulo USB-serial",
+  "1": "1 porta",
+  "2": "2 portas",
+  "4": "4 portas",
+  "8": "8 portas",
+  "Transceiver": "USB → serial",
+  "2Mbps": "2 Mbit/s",
+  "1Mbps": "1 Mbit/s",
+  "USB to UART": "USB → serial (UART)",
+  "USB to serial、USB to Parallel": "USB → serial e paralelo",
+  "USB to serial": "USB → serial",
+  "6Mbps": "6 Mbit/s",
+  "3Mbps": "3 Mbit/s",
+  "4Mbps": "4 Mbit/s",
+  "USB to UART、USB to SPI、USB to I2C、USB to JTAG、USB to SWD": "USB → serial (UART), SPI, I2C, JTAG e SWD",
+  "480Mbps": "480 Mbit/s",
+  "115.2Kbps": "115,2 kbit/s",
+  "12Mbps": "12 Mbit/s",
+  "USB to UART、USB to RS232、USB to RS422、USB to RS485": "USB → serial (UART), RS-232, RS-422 e RS-485",
+  "USB to UART、USB to SPI、USB to I2C、USB to JTAG": "USB → serial (UART), SPI, I2C e JTAG",
+  "9Mbps": "9 Mbit/s",
+  "USB to UART、USB to FIFO": "USB → serial (UART) e FIFO",
+  "USB to UART、USB to I2C": "USB → serial (UART) e I2C",
+  "USB to UART、USB to SPI、USB to I2C、USB to printer、USB to parallel port": "USB → serial (UART), SPI, I2C, impressora e porta paralela",
+  "460.8Kbps": "460,8 kbit/s",
+  "1mbps": "1 Mbit/s"
  },
  "filtro": {
   "categorias_loja": [
@@ -388,7 +414,7 @@
    "situacao": "ok"
   },
   "C2977777": {
-   "nome": "USB-serial CH340N, 3,3 V ou 5 V",
+   "nome": "USB-serial CH340N, 1 porta, 3,3 V ou 5 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH340N",
    "pacote": "SOP-8",
@@ -415,7 +441,7 @@
    "situacao": "ok"
   },
   "C109102": {
-   "nome": "USB-serial CP2105-F01-GMR, 1,8 V ou 3 a 3,6 V",
+   "nome": "USB-serial CP2105-F01-GMR, 2 portas, 1,8 V ou 3 a 3,6 V",
    "marca": "SKYWORKS/SILICON LABS",
    "modelo": "CP2105-F01-GMR",
    "pacote": "QFN-24-EP(4x4)",
@@ -560,7 +586,7 @@
    "situacao": "ok"
   },
   "C2841530": {
-   "nome": "USB-serial CH342F, 3,3 V ou 5 V",
+   "nome": "USB-serial CH342F, 2 portas, 3,3 V ou 5 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH342F",
    "pacote": "QFN-24-EP(4x4)",
@@ -589,7 +615,7 @@
    "situacao": "ok"
   },
   "C18221627": {
-   "nome": "USB-serial CH347F, 3 a 3,6 V",
+   "nome": "USB-serial CH347F, 2 portas, 3 a 3,6 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH347F",
    "pacote": "QFN-28(4X4)",
@@ -790,7 +816,7 @@
    "situacao": "ok"
   },
   "C128629": {
-   "nome": "USB-serial FT230XQ-R, 3,3 a 5 V",
+   "nome": "USB-serial FT230XQ-R, 1 porta, 3,3 a 5 V",
    "marca": "FTDI",
    "modelo": "FT230XQ-R",
    "pacote": "QFN-16-EP(4x4)",
@@ -848,7 +874,7 @@
    "situacao": "ok"
   },
   "C132160": {
-   "nome": "USB-serial FT231XS-R, 5 V",
+   "nome": "USB-serial FT231XS-R, 1 porta, 5 V",
    "marca": "FTDI",
    "modelo": "FT231XS-R",
    "pacote": "SSOP-20-150mil",
@@ -906,7 +932,7 @@
    "situacao": "ok"
   },
   "C883294": {
-   "nome": "USB-serial CP2108-B03-GMR, 3 a 3,6 V",
+   "nome": "USB-serial CP2108-B03-GMR, 4 portas, 3 a 3,6 V",
    "marca": "SKYWORKS/SILICON LABS",
    "modelo": "CP2108-B03-GMR",
    "pacote": "QFN-64-EP(9x9)",
@@ -935,7 +961,7 @@
    "situacao": "ok"
   },
   "C2988084": {
-   "nome": "USB-serial CH344Q, 3,3 V",
+   "nome": "USB-serial CH344Q, 4 portas, 3,3 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH344Q",
    "pacote": "LQFP-48(7x7)",
@@ -992,7 +1018,7 @@
    "situacao": "ok"
   },
   "C56742": {
-   "nome": "USB-serial FT4232HL-Reel, 3 a 3,6 V",
+   "nome": "USB-serial FT4232HL-Reel, 4 portas, 3 a 3,6 V",
    "marca": "FTDI",
    "modelo": "FT4232HL-Reel",
    "pacote": "LQFP-64(10x10)",
@@ -1021,7 +1047,7 @@
    "situacao": "ok"
   },
   "C54581988": {
-   "nome": "USB-serial CP2102-GMR(TOKMAS), 3 a 3,6 V ou 4 a 5,5 V",
+   "nome": "USB-serial CP2102-GMR(TOKMAS), 1 porta, 3 a 3,6 V ou 4 a 5,5 V",
    "marca": "Tokmas",
    "modelo": "CP2102-GMR(TOKMAS)",
    "pacote": "QFN-28(5x5)",
@@ -1078,7 +1104,7 @@
    "situacao": "ok"
   },
   "C2979161": {
-   "nome": "USB-serial CH348Q, 3,3 V",
+   "nome": "USB-serial CH348Q, 8 portas, 3,3 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH348Q",
    "pacote": "LQFP-48(7x7)",
@@ -1130,7 +1156,7 @@
    "situacao": "ok"
   },
   "C5122332": {
-   "nome": "USB-serial CH347T, 3 V, 3,3 V ou 3,6 V",
+   "nome": "USB-serial CH347T, 2 portas, 3 V, 3,3 V ou 3,6 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH347T",
    "pacote": "TSSOP-20",
@@ -1237,7 +1263,7 @@
    "situacao": "ok"
   },
   "C27882": {
-   "nome": "USB-serial FT2232HL-REEL, 5 V",
+   "nome": "USB-serial FT2232HL-REEL, 2 portas, 5 V",
    "marca": "FTDI",
    "modelo": "FT2232HL-REEL",
    "pacote": "LQFP-64(10x10)",
@@ -1293,7 +1319,7 @@
    "situacao": "ok"
   },
   "C8938": {
-   "nome": "USB-serial FT2232D-REEL, 4,35 a 5,25 V",
+   "nome": "USB-serial FT2232D-REEL, 2 portas, 4,35 a 5,25 V",
    "marca": "FTDI",
    "modelo": "FT2232D-REEL",
    "pacote": "LQFP-48(7x7)",
@@ -1434,7 +1460,7 @@
    "situacao": "ok"
   },
   "C22439562": {
-   "nome": "USB-serial CH9104L, 3 a 3,6 V",
+   "nome": "USB-serial CH9104L, 4 portas, 3 a 3,6 V",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH9104L",
    "pacote": "LQFP-48(7x7)",

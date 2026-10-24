@@ -2,7 +2,7 @@
  "categoria": "conversor_nivel",
  "nome": "Conversor de nível lógico",
  "grupo": "Comunicação",
- "explica": "Traduz sinal de 3,3 V (o ESP32) pra 5 V e de volta, pra ele conversar com peça de 5 V sem queimar. Num fio de um sentido só: o 74AHCT125 ou 74HCT125 em 5 V sobe o sinal (o clássico pra fita de LED WS2812; o 125 tem 4 canais, o 245 tem 8, o 1G125 tem 1), e o CD4050 em 3,3 V desce. Os TXS e TXB e o BSS138 com 2 resistores servem pros dois sentidos (pro I2C, só TXS, PCA9306 ou BSS138), mas são fracos pra puxar fita de LED ou fio comprido.",
+ "explica": "Traduz sinal de 3,3 V (o ESP32) pra 5 V e de volta, pra ele conversar com peça de 5 V sem queimar. Num fio de um sentido só: o 74AHCT125 ou 74HCT125 alimentado em 5 V sobe o sinal (o clássico pra fita de LED WS2812; o 125 tem 4 canais, o 1G125 tem 1, o 245 tem 8 e um pino que escolhe o sentido), e o CD4050 alimentado em 3,3 V desce. Os TXS, TXB, LSF e PCA9306, e o BSS138 com 2 resistores, servem pros dois sentidos sozinhos (no I2C, só o TXB não serve), mas são fracos pra puxar fita de LED ou fio comprido.",
  "nome_peca": [
   "{@categoria_loja} {@modelo}, {Number of Circuits}, {Voltage - Supply(VCCA)} ↔ {Voltage - Supply(VCCB)}",
   "{@categoria_loja} {@modelo}, {Number of Circuits}",
@@ -12,7 +12,6 @@
  ],
  "destaques": [
   "Channel Type",
-  "Logic Family|Number",
   "Data Rate|Propagation Delay",
   "Voltage - Supply(VCCA)|Voltage - Supply"
  ],
@@ -47,7 +46,29 @@
   "4000 Series": "4000",
   "4000B": "4000",
   "Bidirectional": "dois sentidos",
-  "Unidirectional": "um sentido"
+  "Unidirectional": "um sentido",
+  "70ns@5V,50pF": "atraso de 70 ns",
+  "420Mbps": "420 Mbit/s",
+  "2.9ns@3.3V,50pF": "atraso de 2,9 ns",
+  "24Mbps": "24 Mbit/s",
+  "100Mbps": "100 Mbit/s",
+  "60Mbps": "60 Mbit/s",
+  "3.8ns@3.3V,50pF": "atraso de 3,8 ns",
+  "12ns@4.5V,50pF": "atraso de 12 ns",
+  "14ns@5.5V,50pF": "atraso de 14 ns",
+  "9.5ns@5V,50pF": "atraso de 9,5 ns",
+  "110Mbps": "110 Mbit/s",
+  "11ns@5V,50pF": "atraso de 11 ns",
+  "15ns@4.5V,50pF": "atraso de 15 ns",
+  "6.5ns@5V,15pF": "atraso de 6,5 ns",
+  "5.5ns@5V,15pF": "atraso de 5,5 ns",
+  "18ns@5.5V,50pF": "atraso de 18 ns",
+  "140ns@5V,50pF": "atraso de 140 ns",
+  "1ns@4.5V": "atraso de 1 ns",
+  "4.3ns@5.5V,50pF": "atraso de 4,3 ns",
+  "7.5ns@5V,50pF": "atraso de 7,5 ns",
+  "23ns@5.5V,50pF": "atraso de 23 ns",
+  "15ns@15V,50pF": "atraso de 15 ns"
  },
  "filtro": {
   "categorias_loja": [

@@ -2,7 +2,7 @@
  "categoria": "conector_usb",
  "nome": "Conector USB",
  "grupo": "Conectores",
- "explica": "Onde entra o cabo USB: traz 5 V pra placa e, nos de mais pinos, os dados do computador. No USB-C, o de 6 pinos é só energia e os de 14 e 16 também levam os dados; todos pedem um resistor de 5,1 kΩ de cada pino CC pro GND, senão um carregador USB-C (cabo C nas duas pontas) não manda os 5 V.",
+ "explica": "Onde entra o cabo USB: por ele chegam 5 V e, nos de mais pinos, os dados do computador; no USB-A fêmea é o contrário, a placa é que dá os 5 V pro aparelho ligado nela. No USB-C, o de 6 pinos é só energia e os de 14 e 16 também levam os dados; todos pedem um resistor de 5,1 kΩ de cada pino CC pro GND, senão um carregador USB-C (cabo C nas duas pontas) não manda os 5 V.",
  "nome_peca": "Conector USB {Connector Type} {Number of Contacts}, {Mounting Type}",
  "destaques": [
   "Number of Contacts",

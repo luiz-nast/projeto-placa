@@ -2,8 +2,11 @@
  "categoria": "conector_header_femea",
  "nome": "Barra de pinos fêmea",
  "grupo": "Conectores",
- "explica": "A barra de furinhos que recebe a barra de pinos macho, no passo de 2,54 mm: serve de berço pra módulo (ESP32, Arduino Nano, display) sair e voltar sem solda. No nome, \"de furo\" é a reta (em pé) e \"a 90°\" a deitada; as duas são de furo.",
- "nome_peca": "Barra fêmea {Holes Structure}, {Mounting Type}",
+ "explica": "A barra de furinhos que recebe a barra de pinos macho, no passo de 2,54 mm: serve de berço pra módulo (ESP32, Arduino Nano, display) sair e voltar sem solda. A reta fica em pé e a de 90° deita; as duas são de furo. A altura comum é 8,5 mm; as mais baixas deixam o módulo mais perto da placa.",
+ "nome_peca": [
+  "Barra fêmea {Holes Structure}, {Mounting Type}, {Insulation Height} de altura{Circular Hole / Square Hole}",
+  "Barra fêmea {Holes Structure}, {Mounting Type}{Circular Hole / Square Hole}"
+ ],
  "destaques": [
   "Holes Structure",
   "Mounting Type",
@@ -11,6 +14,19 @@
   "Current Rating"
  ],
  "chips": "Number of Positions",
+ "traducoes": {
+  "Through Hole": "reta",
+  "Square Hole": "",
+  "Round Hole": ", furo redondo",
+  "8.5mm": "8,5 mm",
+  "8.3mm": "8,3 mm",
+  "5mm": "5 mm",
+  "2.5mm": "2,5 mm",
+  "3mm": "3 mm",
+  "Gold": "contato dourado",
+  "Tin": "contato estanhado",
+  "Tin、Gold": "contato estanhado e dourado"
+ },
  "filtro": {
   "categorias_loja": [
    "Female Headers"
@@ -141,7 +157,7 @@
  ],
  "pecas": {
   "C49661": {
-   "nome": "Barra fêmea 1x2P, de furo",
+   "nome": "Barra fêmea 1x2P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*2PFemale",
    "pacote": "Plugin,P=2.54mm",
@@ -178,7 +194,7 @@
    "situacao": "ok"
   },
   "C54876674": {
-   "nome": "Barra fêmea 1x2P, de furo",
+   "nome": "Barra fêmea 1x2P, reta, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "PM2.54-1x2PZZ-H8.5",
    "pacote": "Plugin,P=2.54mm",
@@ -215,7 +231,7 @@
    "situacao": "ok"
   },
   "C55629857": {
-   "nome": "Barra fêmea 1x2P, a 90°",
+   "nome": "Barra fêmea 1x2P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "SH-PM254R-1x2P-H85",
    "pacote": "Push-Pull,P=2.54mm",
@@ -251,7 +267,7 @@
    "situacao": "ok"
   },
   "C54876731": {
-   "nome": "Barra fêmea 1x2P, a 90°",
+   "nome": "Barra fêmea 1x2P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "PM2.54-1x2PWZ-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -288,7 +304,7 @@
    "situacao": "ok"
   },
   "C22373889": {
-   "nome": "Barra fêmea 1x3P, de furo",
+   "nome": "Barra fêmea 1x3P, reta, 8,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x3PZ-02A",
    "pacote": "Plugin,P=2.54mm",
@@ -325,7 +341,7 @@
    "situacao": "ok"
   },
   "C22373927": {
-   "nome": "Barra fêmea 1x3P, a 90°",
+   "nome": "Barra fêmea 1x3P, a 90°, 2,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x3PW-02A",
    "pacote": "Push-Pull,P=2.54mm",
@@ -362,7 +378,7 @@
    "situacao": "ok"
   },
   "C54876732": {
-   "nome": "Barra fêmea 1x3P, a 90°",
+   "nome": "Barra fêmea 1x3P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "PM2.54-1x3PWZ-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -399,7 +415,7 @@
    "situacao": "ok"
   },
   "C42431866": {
-   "nome": "Barra fêmea 1x3P, de furo",
+   "nome": "Barra fêmea 1x3P, reta, 8,5 mm de altura",
    "marca": "JXTCONN",
    "modelo": "PM2.54-1X3P-H85",
    "pacote": "Plugin,P=2.54mm",
@@ -435,7 +451,7 @@
    "situacao": "ok"
   },
   "C2718488": {
-   "nome": "Barra fêmea 1x4P, de furo",
+   "nome": "Barra fêmea 1x4P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*4PFemale",
    "pacote": "Plugin,P=2.54mm",
@@ -471,7 +487,7 @@
    "situacao": "ok"
   },
   "C42163122": {
-   "nome": "Barra fêmea 1x4P, de furo",
+   "nome": "Barra fêmea 1x4P, reta, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-5.0H-1x4PZ-02A",
    "pacote": "Plugin,P=2.54mm",
@@ -508,7 +524,7 @@
    "situacao": "ok"
   },
   "C22373928": {
-   "nome": "Barra fêmea 1x4P, a 90°",
+   "nome": "Barra fêmea 1x4P, a 90°, 2,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x4PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -582,7 +598,7 @@
    "situacao": "ok"
   },
   "C50950": {
-   "nome": "Barra fêmea 1x5P, de furo",
+   "nome": "Barra fêmea 1x5P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*5PFemale",
    "pacote": "Plugin,P=2.54mm",
@@ -617,7 +633,7 @@
    "situacao": "ok"
   },
   "C27985230": {
-   "nome": "Barra fêmea 1x5P, de furo",
+   "nome": "Barra fêmea 1x5P, reta, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-5.0H-1x5PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -654,7 +670,7 @@
    "situacao": "ok"
   },
   "C54876734": {
-   "nome": "Barra fêmea 1x5P, a 90°",
+   "nome": "Barra fêmea 1x5P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "PM2.54-1x5PWZ-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -691,7 +707,7 @@
    "situacao": "ok"
   },
   "C35167": {
-   "nome": "Barra fêmea 1x5P, a 90°",
+   "nome": "Barra fêmea 1x5P, a 90°, 2,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*5PRight Angle Female Header",
    "pacote": "Push-Pull,P=2.54mm",
@@ -725,7 +741,7 @@
    "situacao": "ok"
   },
   "C40877": {
-   "nome": "Barra fêmea 1x6P, de furo",
+   "nome": "Barra fêmea 1x6P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*6PFemale",
    "pacote": "Plugin,P=2.54mm",
@@ -762,7 +778,7 @@
    "situacao": "ok"
   },
   "C27985231": {
-   "nome": "Barra fêmea 1x6P, de furo",
+   "nome": "Barra fêmea 1x6P, reta, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-5.0H-1x6PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -799,7 +815,7 @@
    "situacao": "ok"
   },
   "C239343": {
-   "nome": "Barra fêmea 2x3P, de furo",
+   "nome": "Barra fêmea 2x3P, reta, 8,5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWV-2x3P",
    "pacote": "Plugin,P=2.54mm",
@@ -835,7 +851,7 @@
    "situacao": "ok"
   },
   "C32713304": {
-   "nome": "Barra fêmea 2x3P, de furo",
+   "nome": "Barra fêmea 2x3P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-2x3P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -870,7 +886,7 @@
    "situacao": "ok"
   },
   "C56182": {
-   "nome": "Barra fêmea 2x3P, a 90°",
+   "nome": "Barra fêmea 2x3P, a 90°, 5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*3PRight Angle Female Header",
    "pacote": "Push-Pull,P=2.54mm",
@@ -904,7 +920,7 @@
    "situacao": "ok"
   },
   "C5333425": {
-   "nome": "Barra fêmea 2x3P, a 90°",
+   "nome": "Barra fêmea 2x3P, a 90°, 5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWR-2x3P",
    "pacote": "Push-Pull,P=2.54mm",
@@ -940,7 +956,7 @@
    "situacao": "ok"
   },
   "C54876735": {
-   "nome": "Barra fêmea 1x6P, a 90°",
+   "nome": "Barra fêmea 1x6P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "PM2.54-1x6PWZ-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -977,7 +993,7 @@
    "situacao": "ok"
   },
   "C55629861": {
-   "nome": "Barra fêmea 1x6P, a 90°",
+   "nome": "Barra fêmea 1x6P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "SH-PM254R-1x6P-H85",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1013,7 +1029,7 @@
    "situacao": "ok"
   },
   "C22438157": {
-   "nome": "Barra fêmea 1x7P, de furo",
+   "nome": "Barra fêmea 1x7P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-1x7P ZC-Y",
    "pacote": "Plugin,P=2.54mm",
@@ -1050,7 +1066,7 @@
    "situacao": "ok"
   },
   "C27985232": {
-   "nome": "Barra fêmea 1x7P, de furo",
+   "nome": "Barra fêmea 1x7P, reta, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-5.0H-1x7PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1124,7 +1140,7 @@
    "situacao": "ok"
   },
   "C55629862": {
-   "nome": "Barra fêmea 1x7P, a 90°",
+   "nome": "Barra fêmea 1x7P, a 90°, 8,5 mm de altura",
    "marca": "SHOU HAN",
    "modelo": "SH-PM254R-1x7P-H85",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1160,7 +1176,7 @@
    "situacao": "ok"
   },
   "C27438": {
-   "nome": "Barra fêmea 1x8P, de furo",
+   "nome": "Barra fêmea 1x8P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*8PFemale Environmentally Friendly",
    "pacote": "Plugin,P=2.54mm",
@@ -1195,7 +1211,7 @@
    "situacao": "ok"
   },
   "C239344": {
-   "nome": "Barra fêmea 2x4P, de furo",
+   "nome": "Barra fêmea 2x4P, reta, 8,5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWV-2x4P",
    "pacote": "Plugin,P=2.54mm",
@@ -1231,7 +1247,7 @@
    "situacao": "ok"
   },
   "C42431840": {
-   "nome": "Barra fêmea 1x8P, de furo",
+   "nome": "Barra fêmea 1x8P, reta, 8,5 mm de altura",
    "marca": "JXTCONN",
    "modelo": "PM2.54-1X8PM-H85",
    "pacote": "Plugin,P=2.54mm",
@@ -1267,7 +1283,7 @@
    "situacao": "ok"
   },
   "C32713305": {
-   "nome": "Barra fêmea 2x4P, de furo",
+   "nome": "Barra fêmea 2x4P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-2x4P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -1338,7 +1354,7 @@
    "situacao": "ok"
   },
   "C7529541": {
-   "nome": "Barra fêmea 2x4P, a 90°",
+   "nome": "Barra fêmea 2x4P, a 90°, 5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWR-2x4P",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1374,7 +1390,7 @@
    "situacao": "ok"
   },
   "C22436149": {
-   "nome": "Barra fêmea 1x8P, a 90°",
+   "nome": "Barra fêmea 1x8P, a 90°, 2,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x8PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1448,7 +1464,7 @@
    "situacao": "ok"
   },
   "C32713306": {
-   "nome": "Barra fêmea 2x5P, de furo",
+   "nome": "Barra fêmea 2x5P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-2x5P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -1483,7 +1499,7 @@
    "situacao": "ok"
   },
   "C2905418": {
-   "nome": "Barra fêmea 1x10P, de furo",
+   "nome": "Barra fêmea 1x10P, reta, 8,5 mm de altura",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54FH-1X10P-H8.5",
    "pacote": "Plugin,P=2.54mm",
@@ -1516,7 +1532,7 @@
    "situacao": "ok"
   },
   "C22373931": {
-   "nome": "Barra fêmea 2x5P, a 90°",
+   "nome": "Barra fêmea 2x5P, a 90°, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-2x5PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1553,7 +1569,7 @@
    "situacao": "ok"
   },
   "C27985235": {
-   "nome": "Barra fêmea 2x5P, de furo",
+   "nome": "Barra fêmea 2x5P, reta, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-5.0H-2x5PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1590,7 +1606,7 @@
    "situacao": "ok"
   },
   "C53202182": {
-   "nome": "Barra fêmea 1x10P, de furo",
+   "nome": "Barra fêmea 1x10P, reta, 8,5 mm de altura",
    "marca": "LXWCONN",
    "modelo": "254PM-1x10P-V",
    "pacote": "Plugin,P=2.54mm",
@@ -1625,7 +1641,7 @@
    "situacao": "ok"
   },
   "C5362476": {
-   "nome": "Barra fêmea 2x5P, a 90°",
+   "nome": "Barra fêmea 2x5P, a 90°, 5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWR-2x5P",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1698,7 +1714,7 @@
    "situacao": "ok"
   },
   "C54930105": {
-   "nome": "Barra fêmea 1x10P, a 90°",
+   "nome": "Barra fêmea 1x10P, a 90°, 2,5 mm de altura",
    "marca": "LXWCONN",
    "modelo": "254PM-1x10P-RA-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1731,7 +1747,7 @@
    "situacao": "ok"
   },
   "C2905419": {
-   "nome": "Barra fêmea 1x12P, de furo",
+   "nome": "Barra fêmea 1x12P, reta, 8,5 mm de altura",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54FH-1X12P-H8.5",
    "pacote": "Plugin,P=2.54mm",
@@ -1764,7 +1780,7 @@
    "situacao": "ok"
   },
   "C22373898": {
-   "nome": "Barra fêmea 1x12P, de furo",
+   "nome": "Barra fêmea 1x12P, reta, 8,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x12PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1801,7 +1817,7 @@
    "situacao": "ok"
   },
   "C22436152": {
-   "nome": "Barra fêmea 1x12P, a 90°",
+   "nome": "Barra fêmea 1x12P, a 90°, 2,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x12PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -1838,7 +1854,7 @@
    "situacao": "ok"
   },
   "C41417327": {
-   "nome": "Barra fêmea 1x15P, de furo",
+   "nome": "Barra fêmea 1x15P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-1x15P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -1873,7 +1889,7 @@
    "situacao": "ok"
   },
   "C22373901": {
-   "nome": "Barra fêmea 1x15P, de furo",
+   "nome": "Barra fêmea 1x15P, reta, 8,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x15PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1910,7 +1926,7 @@
    "situacao": "ok"
   },
   "C30734": {
-   "nome": "Barra fêmea 2x8P, de furo",
+   "nome": "Barra fêmea 2x8P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*8PFemale",
    "pacote": "Plugin,P=2.54mm",
@@ -1945,7 +1961,7 @@
    "situacao": "ok"
   },
   "C22373913": {
-   "nome": "Barra fêmea 2x8P, de furo",
+   "nome": "Barra fêmea 2x8P, reta, 8,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-2x8PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1982,7 +1998,7 @@
    "situacao": "ok"
   },
   "C22436155": {
-   "nome": "Barra fêmea 2x8P, a 90°",
+   "nome": "Barra fêmea 2x8P, a 90°, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-2x8PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2019,7 +2035,7 @@
    "situacao": "ok"
   },
   "C54930094": {
-   "nome": "Barra fêmea 2x8P, a 90°",
+   "nome": "Barra fêmea 2x8P, a 90°, 5 mm de altura",
    "marca": "LXWCONN",
    "modelo": "254PM-2x8P-RA-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2053,7 +2069,7 @@
    "situacao": "ok"
   },
   "C2932678": {
-   "nome": "Barra fêmea 1x19P, de furo",
+   "nome": "Barra fêmea 1x19P, reta, 8,5 mm de altura",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54FH-1X19P-H8.5",
    "pacote": "Plugin,P=2.54mm",
@@ -2086,7 +2102,7 @@
    "situacao": "ok"
   },
   "C41417331": {
-   "nome": "Barra fêmea 1x19P, de furo",
+   "nome": "Barra fêmea 1x19P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-1x19P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -2121,7 +2137,7 @@
    "situacao": "ok"
   },
   "C2905423": {
-   "nome": "Barra fêmea 1x20P, de furo",
+   "nome": "Barra fêmea 1x20P, reta, 8,5 mm de altura",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54FH-1X20P-H8.5",
    "pacote": "Plugin,P=2.54mm",
@@ -2154,7 +2170,7 @@
    "situacao": "ok"
   },
   "C5821035": {
-   "nome": "Barra fêmea 2x10P, de furo",
+   "nome": "Barra fêmea 2x10P, reta, 8,5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWV-2x10P",
    "pacote": "Plugin,P=2.54mm",
@@ -2190,7 +2206,7 @@
    "situacao": "ok"
   },
   "C41417335": {
-   "nome": "Barra fêmea 2x10P, de furo",
+   "nome": "Barra fêmea 2x10P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-2x10P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -2225,7 +2241,7 @@
    "situacao": "ok"
   },
   "C41417332": {
-   "nome": "Barra fêmea 1x20P, de furo",
+   "nome": "Barra fêmea 1x20P, reta, 8,5 mm de altura",
    "marca": "hanxia",
    "modelo": "HX PM2.54-1x20P ZC",
    "pacote": "Plugin,P=2.54mm",
@@ -2260,7 +2276,7 @@
    "situacao": "ok"
   },
   "C239361": {
-   "nome": "Barra fêmea 2x10P, a 90°",
+   "nome": "Barra fêmea 2x10P, a 90°, 5 mm de altura",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541HWR-2x10P",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2296,7 +2312,7 @@
    "situacao": "ok"
   },
   "C22436154": {
-   "nome": "Barra fêmea 1x20P, a 90°",
+   "nome": "Barra fêmea 1x20P, a 90°, 2,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x20PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2333,7 +2349,7 @@
    "situacao": "ok"
   },
   "C54930095": {
-   "nome": "Barra fêmea 2x10P, a 90°",
+   "nome": "Barra fêmea 2x10P, a 90°, 5 mm de altura",
    "marca": "LXWCONN",
    "modelo": "254PM-2x10P-RA-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2367,7 +2383,7 @@
    "situacao": "ok"
   },
   "C2932688": {
-   "nome": "Barra fêmea 1x20P, a 90°",
+   "nome": "Barra fêmea 1x20P, a 90°, 8,5 mm de altura",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54FH90-1X20P-H8.5",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2400,7 +2416,7 @@
    "situacao": "ok"
   },
   "C41376161": {
-   "nome": "Barra fêmea 1x22P, de furo",
+   "nome": "Barra fêmea 1x22P, reta, 8,5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-1x22PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -2437,7 +2453,7 @@
    "situacao": "ok"
   },
   "C5124634": {
-   "nome": "Barra fêmea 2x20P, de furo",
+   "nome": "Barra fêmea 2x20P, reta, 8,5 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*20P",
    "pacote": "Plugin,P=2.54mm",
@@ -2472,7 +2488,7 @@
    "situacao": "ok"
   },
   "C22373943": {
-   "nome": "Barra fêmea 2x20P, a 90°",
+   "nome": "Barra fêmea 2x20P, a 90°, 5 mm de altura",
    "marca": "Hong Cheng",
    "modelo": "HC-PM254-8.5H-2x20PW",
    "pacote": "Push-Pull,P=2.54mm",
@@ -2509,7 +2525,7 @@
    "situacao": "ok"
   },
   "C35165": {
-   "nome": "Barra fêmea 2x20P, de furo",
+   "nome": "Barra fêmea 2x20P, reta, 8,3 mm de altura",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*20PFemale longPC104",
    "pacote": "Plugin,P=2.54mm",
@@ -2540,10 +2556,11 @@
    "minimo": 1,
    "estoque": 6250,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Barra fêmea 2x20P, reta, 8,3 mm de altura, pino longo (12,3 mm)"
   },
   "C9811": {
-   "nome": "Barra fêmea 1x40P, de furo",
+   "nome": "Barra fêmea 1x40P, reta, 3 mm de altura, furo redondo",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*40PRound Female Header",
    "pacote": "Plugin,P=2.54mm",
@@ -2615,7 +2632,7 @@
    "situacao": "ok"
   },
   "C54930097": {
-   "nome": "Barra fêmea 2x20P, a 90°",
+   "nome": "Barra fêmea 2x20P, a 90°, 5 mm de altura",
    "marca": "LXWCONN",
    "modelo": "254PM-2x20P-RA-H8.5",
    "pacote": "Push-Pull,P=2.54mm",

@@ -18,7 +18,8 @@
   "Ceramic Tube Fuse": "cerâmico",
   "Square Fuse": "quadrado",
   "Radial Lead Cartridge Fuse": "radial",
-  "Resistor Fuse": "resistor"
+  "Resistor Fuse": "resistor",
+  "125V、250V": "125V/250V"
  },
  "filtro": {
   "montagem": [

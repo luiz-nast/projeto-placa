@@ -84,7 +84,8 @@
    "minimo": 1,
    "estoque": 100,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Bateria recarregável de titanato de lítio 2,4 V, 150 mAh (12,6 × 40,2 mm)"
   },
   "eletrogate:pilha-aa-alfacell-r6p-15v-4-unidades": {
    "nome": "Pilha AA 1,5 V Alfacell (4 unidades)",
@@ -97,7 +98,8 @@
    "descricao": "As pilhas AA de 1,5V da Alfacell são ideais para equipamentos que possuem baixo consumo energético, como relógios, calculadoras, controles diversos e até mesmo robôs e outros projetos desenvolvidos com o Arduino, graças ao seu…",
    "atributos": {
     "nominal voltage": "1.5V",
-    "capacity": "250mAh"
+    "capacity": "250mAh",
+    "Battery Rechargeability": "Non-Rechargeable"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -158,6 +160,30 @@
    "visto": "2026-10-24",
    "situacao": "ok",
    "foto": "https://www.usinainfo.com.br/1019715-large_default/bateria-9v-alcalina-flex.jpg"
+  },
+  "usinainfo:bateria-lr44-ag13-15v-pilha-lr44-flex-kit-com-2-unidades-4635": {
+   "nome": "Pilha botão alcalina LR44 (1,5 V, 2 unidades)",
+   "marca": "Flex",
+   "modelo": "LR44",
+   "pacote": "LR44",
+   "tamanho": "11,5 mm de diâmetro",
+   "montagem": "não informado",
+   "categoria_loja": "Baterias",
+   "descricao": "A Bateria LR44 Flex ou popularmente pilha LR44 alcalina de alta durabilidade, o que aumenta consideravelmente sua vida útil durante as mais diferentes aplicações onde se faça necessária.",
+   "atributos": {
+    "nominal voltage": "1.5V",
+    "Chemical system": "Alkaline"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/baterias/bateria-lr44-ag13-15v-pilha-lr44-flex-kit-com-2-unidades-4635.html",
+   "preco": 3.22,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 44,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033655-large_default/bateria-lr44-ag13-15v-pilha-lr44-flex-kit-com-2-unidades.jpg"
   },
   "usinainfo:bateria-cr2016-3v-de-litio-tipo-moeda-3582": {
    "nome": "Pilha de lítio CR2016 (3 V, moeda de 20 mm)",
@@ -353,7 +379,8 @@
    "minimo": 1,
    "estoque": 350,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Bateria recarregável de titanato de lítio 2,4 V, 0,35 mAh (3,2 × 6,9 mm)"
   },
   "C5154891": {
    "nome": "Bateria 3.7V, 500mAh",
@@ -382,7 +409,8 @@
    "minimo": 1,
    "estoque": 291,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Bateria LiPo de 1 célula 3,7 V, 500 mAh (35 × 25 × 6 mm)"
   },
   "robocore:bateria-lipo-2s-250mah-20c": {
    "nome": "Bateria LiPo 2S 7,4 V 250 mAh (XT60)",
@@ -494,7 +522,8 @@
    "minimo": 1,
    "estoque": 295,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Pilha de lítio-cloreto de tionila 3,6 V, 1200 mAh (14,1 × 25 mm, não recarrega)"
   },
   "C5154874": {
    "nome": "Bateria CR1220-F DIP",
@@ -524,7 +553,8 @@
    "minimo": 1,
    "estoque": 2955,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Pilha de lítio CR1220 com pinos (DIP), 3 V"
   },
   "robocore:bateria-li-ion-18650-3-7v-2600mah": {
    "nome": "Bateria 18650 Li-ion 3,7 V 2600 mAh",
@@ -601,7 +631,7 @@
    "preco": 58.9,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/2164187887df8a8452c.jpg"
@@ -628,7 +658,7 @@
    "preco": 84.9,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/216418780f4b2274528.jpg"

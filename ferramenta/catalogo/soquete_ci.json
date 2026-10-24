@@ -11,6 +11,11 @@
   "Contact Plating"
  ],
  "chips": "Number of Positions",
+ "traducoes": {
+  "7.62mm": "7,62 mm (estreito)",
+  "15.24mm": "15,24 mm (largo)",
+  "Tin": "contato estanhado"
+ },
  "filtro": {
   "categorias_loja": [
    "IC / Transistor Socket"
@@ -59,7 +64,7 @@
  ],
  "pecas": {
   "C2874005": {
-   "nome": "Soquete DIP 4P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 4P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-04-0743",
    "pacote": "DIP-4",
@@ -86,7 +91,7 @@
    "situacao": "ok"
   },
   "C2883585": {
-   "nome": "Soquete DIP 4P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 4P, 7,62 mm (estreito), furo redondo",
    "marca": "XKB Connection",
    "modelo": "X5621WV-2x02-C762D1196-1196",
    "pacote": "DIP-4",
@@ -113,7 +118,7 @@
    "situacao": "ok"
   },
   "C2874006": {
-   "nome": "Soquete DIP 6P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 6P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-06-0743",
    "pacote": "DIP-6",
@@ -140,7 +145,7 @@
    "situacao": "ok"
   },
   "C72117": {
-   "nome": "Soquete DIP 6P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 6P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-06AT1NX-0A2",
    "pacote": "DIP-6",
@@ -168,7 +173,7 @@
    "situacao": "ok"
   },
   "C2874007": {
-   "nome": "Soquete DIP 8P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 8P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-08-0743",
    "pacote": "DIP-8",
@@ -195,7 +200,7 @@
    "situacao": "ok"
   },
   "C72124": {
-   "nome": "Soquete DIP 8P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 8P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-08AT1NX-0A2",
    "pacote": "DIP-8",
@@ -223,7 +228,7 @@
    "situacao": "ok"
   },
   "C72129": {
-   "nome": "Soquete DIP 8P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 8P, 7,62 mm (estreito), furo redondo",
    "marca": "CONNFLY Elec",
    "modelo": "DS1001-01-08BT1NSF6X-JKB",
    "pacote": "DIP-8",
@@ -251,7 +256,7 @@
    "situacao": "ok"
   },
   "C2758341": {
-   "nome": "Soquete DIP 10P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 10P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-10-0743",
    "pacote": "DIP-10",
@@ -278,7 +283,7 @@
    "situacao": "ok"
   },
   "C2684760": {
-   "nome": "Soquete DIP 10P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 10P, 7,62 mm (estreito), furo redondo",
    "marca": "XKB Connection",
    "modelo": "X5621FV-2x05-C762D7430",
    "pacote": "DIP-10",
@@ -306,7 +311,7 @@
    "situacao": "ok"
   },
   "C501332": {
-   "nome": "Soquete DIP 12P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 12P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-12P-1370B",
    "pacote": "DIP-12",
@@ -333,7 +338,7 @@
    "situacao": "ok"
   },
   "C2874008": {
-   "nome": "Soquete DIP 12P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 12P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-12-0743",
    "pacote": "DIP-12",
@@ -360,7 +365,7 @@
    "situacao": "ok"
   },
   "C132508": {
-   "nome": "Soquete DIP 14P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 14P, 7,62 mm (estreito), furo quadrado",
    "marca": "Ckmtw(Shenzhen Cankemeng)",
    "modelo": "Z-ICS0S14P-NG00",
    "pacote": "DIP-14",
@@ -388,7 +393,7 @@
    "situacao": "ok"
   },
   "C72126": {
-   "nome": "Soquete DIP 14P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 14P, 7,62 mm (estreito), furo redondo",
    "marca": "CONNFLY Elec",
    "modelo": "DS1001-01-14BT1NSF6X-JKB",
    "pacote": "DIP-14",
@@ -416,7 +421,7 @@
    "situacao": "ok"
   },
   "C72114": {
-   "nome": "Soquete DIP 14P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 14P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-14AT1NX-0A2",
    "pacote": "DIP-14",
@@ -444,7 +449,7 @@
    "situacao": "ok"
   },
   "C2874009": {
-   "nome": "Soquete DIP 14P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 14P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-14-0743",
    "pacote": "DIP-14",
@@ -471,7 +476,7 @@
    "situacao": "ok"
   },
   "C146580": {
-   "nome": "Soquete DIP 16P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 16P, 7,62 mm (estreito), furo quadrado",
    "marca": "Ckmtw(Shenzhen Cankemeng)",
    "modelo": "Z-ICS0S16P-NG00",
    "pacote": "DIP-16",
@@ -499,7 +504,7 @@
    "situacao": "ok"
   },
   "C72130": {
-   "nome": "Soquete DIP 16P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 16P, 7,62 mm (estreito), furo redondo",
    "marca": "CONNFLY Elec",
    "modelo": "DS1001-01-16BT1NSF6X-JKB",
    "pacote": "DIP-16",
@@ -527,7 +532,7 @@
    "situacao": "ok"
   },
   "C72115": {
-   "nome": "Soquete DIP 16P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 16P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-16AT1NX-0A2",
    "pacote": "DIP-16",
@@ -555,7 +560,7 @@
    "situacao": "ok"
   },
   "C2874010": {
-   "nome": "Soquete DIP 16P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 16P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-16-0743",
    "pacote": "DIP-16",
@@ -582,7 +587,7 @@
    "situacao": "ok"
   },
   "C2874011": {
-   "nome": "Soquete DIP 18P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 18P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-18-0743",
    "pacote": "DIP-18",
@@ -609,7 +614,7 @@
    "situacao": "ok"
   },
   "C2327": {
-   "nome": "Soquete DIP 18P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 18P, 7,62 mm (estreito), furo quadrado",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "IC-18PNarrow",
    "pacote": "DIP-18",
@@ -637,7 +642,7 @@
    "situacao": "ok"
   },
   "C72116": {
-   "nome": "Soquete DIP 18P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 18P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-18AT1NX-0A2",
    "pacote": "DIP-18",
@@ -665,7 +670,7 @@
    "situacao": "ok"
   },
   "C72118": {
-   "nome": "Soquete DIP 20P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 20P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-20AT1NX-0A2",
    "pacote": "DIP-20",
@@ -693,7 +698,7 @@
    "situacao": "ok"
   },
   "C2328": {
-   "nome": "Soquete DIP 20P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 20P, 7,62 mm (estreito), furo quadrado",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "ICSocket-20PNarrow",
    "pacote": "DIP-20",
@@ -721,7 +726,7 @@
    "situacao": "ok"
   },
   "C72127": {
-   "nome": "Soquete DIP 20P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 20P, 7,62 mm (estreito), furo redondo",
    "marca": "CONNFLY Elec",
    "modelo": "DS1001-01-20BT1NSF6S-JKB",
    "pacote": "DIP-20",
@@ -749,7 +754,7 @@
    "situacao": "ok"
   },
   "C2874012": {
-   "nome": "Soquete DIP 20P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 20P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-20-0743",
    "pacote": "DIP-20",
@@ -776,7 +781,7 @@
    "situacao": "ok"
   },
   "C72120": {
-   "nome": "Soquete DIP 24P, 15.24mm, furo quadrado",
+   "nome": "Soquete DIP 24P, 15,24 mm (largo), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-24AT1WX-0A2",
    "pacote": "DIP-24",
@@ -804,7 +809,7 @@
    "situacao": "ok"
   },
   "C2684765": {
-   "nome": "Soquete DIP 24P, 15.24mm, furo redondo",
+   "nome": "Soquete DIP 24P, 15,24 mm (largo), furo redondo",
    "marca": "XKB Connection",
    "modelo": "X5621FV-2x12-C1524D7430",
    "pacote": "DIP-24",
@@ -832,7 +837,7 @@
    "situacao": "ok"
   },
   "C2874015": {
-   "nome": "Soquete DIP 24P, 15.24mm, furo redondo",
+   "nome": "Soquete DIP 24P, 15,24 mm (largo), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-24-0743-P1524",
    "pacote": "DIP-24",
@@ -859,7 +864,7 @@
    "situacao": "ok"
   },
   "C72125": {
-   "nome": "Soquete DIP 28P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 28P, 7,62 mm (estreito), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-28AT1NS-0A2",
    "pacote": "DIP-28",
@@ -887,7 +892,7 @@
    "situacao": "ok"
   },
   "C16653": {
-   "nome": "Soquete DIP 28P, 7.62mm, furo quadrado",
+   "nome": "Soquete DIP 28P, 7,62 mm (estreito), furo quadrado",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "IC-28PNarrow",
    "pacote": "DIP-28",
@@ -915,7 +920,7 @@
    "situacao": "ok"
   },
   "C2874014": {
-   "nome": "Soquete DIP 28P, 7.62mm, furo redondo",
+   "nome": "Soquete DIP 28P, 7,62 mm (estreito), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-28-0743",
    "pacote": "DIP-28",
@@ -942,7 +947,7 @@
    "situacao": "ok"
   },
   "C72121": {
-   "nome": "Soquete DIP 28P, 15.24mm, furo quadrado",
+   "nome": "Soquete DIP 28P, 15,24 mm (largo), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-28AT1WX-0A2",
    "pacote": "DIP-28",
@@ -970,7 +975,7 @@
    "situacao": "ok"
   },
   "C2874017": {
-   "nome": "Soquete DIP 32P, 15.24mm, furo redondo",
+   "nome": "Soquete DIP 32P, 15,24 mm (largo), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-32-0743-P1524",
    "pacote": "DIP-32",
@@ -997,7 +1002,7 @@
    "situacao": "ok"
   },
   "C72122": {
-   "nome": "Soquete DIP 32P, 15.24mm, furo quadrado",
+   "nome": "Soquete DIP 32P, 15,24 mm (largo), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-32AT1WX-0A2",
    "pacote": "DIP-32",
@@ -1025,7 +1030,7 @@
    "situacao": "ok"
   },
   "C2332": {
-   "nome": "Soquete DIP 40P, 15.24mm, furo quadrado",
+   "nome": "Soquete DIP 40P, 15,24 mm (largo), furo quadrado",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "ICSockets-40P",
    "pacote": "DIP-40",
@@ -1053,7 +1058,7 @@
    "situacao": "ok"
   },
   "C72123": {
-   "nome": "Soquete DIP 40P, 15.24mm, furo quadrado",
+   "nome": "Soquete DIP 40P, 15,24 mm (largo), furo quadrado",
    "marca": "CONNFLY Elec",
    "modelo": "DS1009-40AT1WX-0A2",
    "pacote": "DIP-40",
@@ -1081,7 +1086,7 @@
    "situacao": "ok"
   },
   "C2874018": {
-   "nome": "Soquete DIP 40P, 15.24mm, furo redondo",
+   "nome": "Soquete DIP 40P, 15,24 mm (largo), furo redondo",
    "marca": "XFCN",
    "modelo": "IC254V-12-40-0743-P1524",
    "pacote": "DIP-40",

@@ -442,7 +442,8 @@
    "minimo": 1,
    "estoque": 195,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Placa pronta XIAO ESP32-S3"
   },
   "C41882923": {
    "nome": "Placa pronta 102010550",
@@ -570,7 +571,7 @@
    "estoque": 154,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Placa pronta XIAO ESP32-S3"
+   "apelido": "Placa pronta XIAO ESP32-S3 Plus"
   },
   "robocore:placa-uno-r3": {
    "nome": "Uno R3 (compatível com Arduino)",
@@ -696,7 +697,8 @@
      "visto": "2026-10-24",
      "situacao": "sem estoque"
     }
-   ]
+   ],
+   "apelido": "Placa pronta XIAO ESP32-C3"
   },
   "usinainfo:esp32-s3-devkitc-1-n8r2-8mb-flash-com-wifi-e-bluetooth-com-usb-c-8679": {
    "nome": "ESP32-S3 DevKitC-1 N8R2",
@@ -777,7 +779,7 @@
    "estoque": 114,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Placa pronta XIAO nRF52840"
+   "apelido": "Placa pronta XIAO nRF52840 Plus"
   },
   "C20343893": {
    "nome": "Placa pronta 113991115",
@@ -964,6 +966,31 @@
    "situacao": "ok",
    "apelido": "Placa Arduino compacta que encaixa na protoboard (A000005)"
   },
+  "robocore:esp32-oled-bateria-18650": {
+   "nome": "ESP32 com tela OLED e suporte pra bateria 18650",
+   "marca": "RoboCore",
+   "modelo": "ESP32 OLED 18650",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "Esta placa é a junção de 3 produtos: um Módulo ESP32 com Wi-Fi e Bluetooth, um display oLED e um sistema de alimentação e carregamento através de uma bateria Lítio-Ion 18650.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6 dual core) + OLED SSD1306",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2 LE",
+    "Voltage - Supply": "bateria Li-ion 18650 (carrega pelo USB)"
+   },
+   "datasheet": "https://d229kd5ey79jzj.cloudfront.net/1208/ESP32_Datasheet.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/esp32-oled-bateria-18650",
+   "preco": 128.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 60,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1208/images/1208_1_H.png"
+  },
   "C17401557": {
    "nome": "Placa pronta 102010469",
    "marca": "Seeed",
@@ -1084,6 +1111,31 @@
      "situacao": "sem estoque"
     }
    ]
+  },
+  "usinainfo:placa-esp32-cyd-com-display-tft-touch-28-240320-wifi-bluetooth-caneta-e-cabo-8992": {
+   "nome": "ESP32 com tela de toque TFT 2,8\" (CYD, ILI9341)",
+   "marca": "Usinainfo",
+   "modelo": "ESP32 CYD 2,8\" (XH-32S)",
+   "pacote": "módulo",
+   "tamanho": "~50x86x10mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Placa ESP32S XH-32S com tela touch TFT de 2,8” e resolução 240x320.",
+   "atributos": {
+    "Utilized IC / Part": "XH-32S (ESP-WROOM-32) + tela ILI9341 com toque resistivo",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "5 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/placa-esp32-cyd-com-display-tft-touch-28-240320-wifi-bluetooth-caneta-e-cabo-8992.html",
+   "preco": 175.12,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 41,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035016-large_default/placa-esp32-cyd-com-display-tft-touch-28-240320-wifi-bluetooth-caneta-e-cabo.jpg"
   },
   "usinainfo:placa-pro-micro-atmega32u4-compativel-arduino-3674": {
    "nome": "Pro Micro ATmega32U4 (compatível com Arduino)",
@@ -1327,6 +1379,31 @@
    "situacao": "ok",
    "apelido": "Raspberry Pi Pico WH"
   },
+  "usinainfo:ttgo-t-display-esp32-v11-com-tft-114-wifi-bluetooth-usb-c-5839": {
+   "nome": "TTGO T-Display: ESP32 com tela IPS 1,14\" (ST7789V)",
+   "marca": "TTGO",
+   "modelo": "T-Display V1.1",
+   "pacote": "módulo",
+   "tamanho": "51x25x8mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "TTGO T-Display V1.1 com ESP32, display TFT integrado, USB-C, flash de 4MB, Wi-Fi e Bluetooth.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6) + tela ST7789V",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "5 V pelo USB-C, ou bateria de lítio 3,7 V no conector JST de 2 pinos"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=513",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/ttgo-t-display-esp32-v11-com-tft-114-wifi-bluetooth-usb-c-5839.html",
+   "preco": 181.83,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 14,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1014434-large_default/ttgo-t-display-esp32-v11-com-tft-114-wifi-bluetooth-usb-c.jpg"
+  },
   "C20627271": {
    "nome": "Placa pronta ABX00027",
    "marca": "Arduino",
@@ -1372,6 +1449,31 @@
    "visto": "2026-10-24",
    "situacao": "ok",
    "foto": "https://www.usinainfo.com.br/1035734-large_default/esp32-cam-com-camera-ov3660-3mp-ch340-e-programador-usb-c-integrado.jpg"
+  },
+  "usinainfo:esp32-s3-com-tela-tft-19-170x320-wifi-e-bluetooth-9299": {
+   "nome": "ESP32-S3 com tela TFT 1,9\" 170x320 (ST7789)",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-1732S019N",
+   "pacote": "módulo",
+   "tamanho": "~65x33x5mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Placa ESP32-S3 ESP32-1732S019N com tela TFT de 1,9” 170x320, 16MB de flash, 8MB de PSRAM, USB-C, Wi-Fi e Bluetooth.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-S3-WROOM-1-N16R8 + tela ST7789",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth LE",
+    "Voltage - Supply": "5 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-s3-com-tela-tft-19-170x320-wifi-e-bluetooth-9299.html",
+   "preco": 192.39,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 9,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1037246-large_default/esp32-s3-com-tela-tft-19-170x320-wifi-e-bluetooth.jpg"
   },
   "C22392566": {
    "nome": "Placa pronta ABX00092",
@@ -1430,7 +1532,8 @@
    "minimo": 1,
    "estoque": 8,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "NodeMCU ESP8266 (ESP-12F, Ai-Thinker)"
   },
   "C5374683": {
    "nome": "Placa pronta RP2040-LCD-1.28",
@@ -1450,7 +1553,8 @@
    "minimo": 1,
    "estoque": 6,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Placa pronta RP2040 com tela LCD redonda de 1,28\" (Waveshare)"
   },
   "robocore:arduino-uno-r4-minima": {
    "nome": "Arduino Uno R4 Minima (original)",
@@ -1523,7 +1627,8 @@
    "minimo": 1,
    "estoque": 4,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Arduino GIGA R1 WiFi (ABX00063)"
   },
   "C17692831": {
    "nome": "Placa pronta ABX00019",
@@ -1623,7 +1728,7 @@
    "preco": 78.4,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403421983/_1___1_14_2-vx04rne37e.jpg"
@@ -1648,7 +1753,7 @@
    "preco": 99.2,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403422001/_p_l_placa_esp32-s3_zero_-_esp32-s3fh4r2_1-picu8lwfkj.jpg"
@@ -1665,7 +1770,7 @@
    "atributos": {
     "Utilized IC / Part": "ESP32-C3",
     "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE",
-    "Voltage - Supply": "5 V pelo USB-C; pinos em 3,3 V (não tolera 5 V)"
+    "Voltage - Supply": "5 V pelo USB-C (regulador interno pra 3,3 V)"
    },
    "datasheet": "",
    "loja": "Eletrogate",

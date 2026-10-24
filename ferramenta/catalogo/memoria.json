@@ -4,8 +4,8 @@
  "grupo": "Cérebros",
  "explica": "Guarda dados que não se apagam quando a placa desliga, como configurações e leituras de sensor. A EEPROM 24C (I2C, só 2 fios de sinal) guarda pouco e aguenta cerca de 1 milhão de gravações; a flash W25Q (SPI, 4 fios, só 3,3 V) guarda muito mais, pra arquivos e sons; a FRAM grava na hora e aguenta trilhões de gravações. O tamanho vem em bits: 256Kbit são 32 KB.",
  "nome_peca": [
-  "{@categoria_loja} {Interface} de {Memory Size}",
-  "Memória {Interface} de {Memory Size}"
+  "{@categoria_loja} {Interface} de {Memory Size} {@modelo}",
+  "Memória {Interface} de {Memory Size} {@modelo}"
  ],
  "destaques": [
   "Voltage - Supply",
@@ -16,7 +16,14 @@
  "traducoes": {
   "NOR FLASH": "Flash",
   "EEPROM": "EEPROM",
-  "FRAM": "FRAM"
+  "FRAM": "FRAM",
+  "1,000,000 cycles": "1 milhão de gravações",
+  "1 million cycles": "1 milhão de gravações",
+  "2,000,000 Cycles": "2 milhões de gravações",
+  "4,000,000 Cycles": "4 milhões de gravações",
+  "100,000 cycles": "100 mil gravações",
+  "1 Trillion Cycles": "1 trilhão de gravações",
+  "100,000,000,000,000 Cycles": "100 trilhões de gravações"
  },
  "filtro": {
   "categorias_loja": [
@@ -136,7 +143,7 @@
  ],
  "pecas": {
   "C511275": {
-   "nome": "EEPROM SPI de 1Kbit",
+   "nome": "EEPROM SPI de 1Kbit 93LC46B-I/P",
    "marca": "Microchip Tech",
    "modelo": "93LC46B-I/P",
    "pacote": "DIP-8",
@@ -169,7 +176,7 @@
    "situacao": "ok"
   },
   "C1348803": {
-   "nome": "EEPROM SPI de 1Kbit",
+   "nome": "EEPROM SPI de 1Kbit 93C46B/SN",
    "marca": "Microchip Tech",
    "modelo": "93C46B/SN",
    "pacote": "SOIC-8",
@@ -202,7 +209,7 @@
    "situacao": "ok"
   },
   "C7562": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit M24C02-WMN6TP",
    "marca": "STMicroelectronics",
    "modelo": "M24C02-WMN6TP",
    "pacote": "SOIC-8",
@@ -235,7 +242,7 @@
    "situacao": "ok"
   },
   "C83836": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit M24C02-RMN6TP",
    "marca": "STMicroelectronics",
    "modelo": "M24C02-RMN6TP",
    "pacote": "SOIC-8",
@@ -268,7 +275,7 @@
    "situacao": "ok"
   },
   "C6203": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit AT24C02C-SSHM-T",
    "marca": "Microchip Tech",
    "modelo": "AT24C02C-SSHM-T",
    "pacote": "SOIC-8",
@@ -301,7 +308,7 @@
    "situacao": "ok"
   },
   "C34807": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit AT24C02D-SSHM-T",
    "marca": "Microchip Tech",
    "modelo": "AT24C02D-SSHM-T",
    "pacote": "SOIC-8",
@@ -334,7 +341,7 @@
    "situacao": "ok"
   },
   "C18723548": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit 24C02N(XBLW)",
    "marca": "XBLW",
    "modelo": "24C02N(XBLW)",
    "pacote": "DIP-8",
@@ -367,7 +374,7 @@
    "situacao": "ok"
   },
   "C434598": {
-   "nome": "EEPROM SPI de 2Kbit",
+   "nome": "EEPROM SPI de 2Kbit AT93C56N",
    "marca": "HGSEMI",
    "modelo": "AT93C56N",
    "pacote": "DIP-8",
@@ -397,7 +404,7 @@
    "situacao": "ok"
   },
   "C434606": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit AT24C02N",
    "marca": "HGSEMI",
    "modelo": "AT24C02N",
    "pacote": "DIP-8",
@@ -427,7 +434,7 @@
    "situacao": "ok"
   },
   "C8810": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit AT24C02C-PUM",
    "marca": "Microchip Tech",
    "modelo": "AT24C02C-PUM",
    "pacote": "DIP-8",
@@ -460,7 +467,7 @@
    "situacao": "ok"
   },
   "C22469376": {
-   "nome": "EEPROM I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit AT24C02C-PUM-TUDI",
    "marca": "Tudi",
    "modelo": "AT24C02C-PUM-TUDI",
    "pacote": "DIP-8",
@@ -493,7 +500,7 @@
    "situacao": "ok"
   },
   "C434597": {
-   "nome": "EEPROM SPI de 4Kbit",
+   "nome": "EEPROM SPI de 4Kbit AT93C66N",
    "marca": "HGSEMI",
    "modelo": "AT93C66N",
    "pacote": "DIP-8",
@@ -522,7 +529,7 @@
    "situacao": "ok"
   },
   "C434604": {
-   "nome": "EEPROM I2C de 8Kbit",
+   "nome": "EEPROM I2C de 8Kbit AT24C08N",
    "marca": "HGSEMI",
    "modelo": "AT24C08N",
    "pacote": "DIP-8",
@@ -552,7 +559,7 @@
    "situacao": "ok"
   },
   "C31082": {
-   "nome": "FRAM I2C de 16Kbit",
+   "nome": "FRAM I2C de 16Kbit FM24CL16B-GTR",
    "marca": "Infineon/Cypress Semicon",
    "modelo": "FM24CL16B-GTR",
    "pacote": "SOIC-8",
@@ -584,7 +591,7 @@
    "situacao": "ok"
   },
   "C2688461": {
-   "nome": "EEPROM I2C de 16Kbit",
+   "nome": "EEPROM I2C de 16Kbit HG24C16N",
    "marca": "HGSEMI",
    "modelo": "HG24C16N",
    "pacote": "DIP-8",
@@ -617,7 +624,7 @@
    "situacao": "ok"
   },
   "C81193": {
-   "nome": "EEPROM I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit CAT24C32WI-GT3",
    "marca": "onsemi",
    "modelo": "CAT24C32WI-GT3",
    "pacote": "SOIC-8",
@@ -650,7 +657,7 @@
    "situacao": "ok"
   },
   "C434601": {
-   "nome": "EEPROM I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit AT24C32N",
    "marca": "HGSEMI",
    "modelo": "AT24C32N",
    "pacote": "DIP-8",
@@ -683,7 +690,7 @@
    "situacao": "ok"
   },
   "C51026308": {
-   "nome": "EEPROM I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit AT24C32CP165",
    "marca": "GREENMICRO",
    "modelo": "AT24C32CP165",
    "pacote": "DIP-8",
@@ -716,7 +723,7 @@
    "situacao": "ok"
   },
   "C6487": {
-   "nome": "EEPROM I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit AT24C64D-SSHM-T",
    "marca": "Microchip Tech",
    "modelo": "AT24C64D-SSHM-T",
    "pacote": "SOIC-8",
@@ -749,7 +756,7 @@
    "situacao": "ok"
   },
   "C13645": {
-   "nome": "EEPROM I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit CAT24C64WI-GT3",
    "marca": "onsemi",
    "modelo": "CAT24C64WI-GT3",
    "pacote": "SOIC-8",
@@ -782,7 +789,7 @@
    "situacao": "ok"
   },
   "C18723553": {
-   "nome": "EEPROM I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit 24C64N(XBLW)",
    "marca": "XBLW",
    "modelo": "24C64N(XBLW)",
    "pacote": "DIP-8",
@@ -815,7 +822,7 @@
    "situacao": "ok"
   },
   "C462786": {
-   "nome": "EEPROM I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit AT24C64N",
    "marca": "HGSEMI",
    "modelo": "AT24C64N",
    "pacote": "DIP-8",
@@ -848,7 +855,7 @@
    "situacao": "ok"
   },
   "C16472": {
-   "nome": "EEPROM I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit 24LC64-I/P",
    "marca": "Microchip Tech",
    "modelo": "24LC64-I/P",
    "pacote": "DIP-8",
@@ -881,7 +888,7 @@
    "situacao": "ok"
   },
   "C434603": {
-   "nome": "EEPROM I2C de 128Kbit",
+   "nome": "EEPROM I2C de 128Kbit AT24C128N",
    "marca": "HGSEMI",
    "modelo": "AT24C128N",
    "pacote": "DIP-8",
@@ -911,7 +918,7 @@
    "situacao": "ok"
   },
   "C6482": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit AT24C256C-SSHL-T",
    "marca": "Microchip Tech",
    "modelo": "AT24C256C-SSHL-T",
    "pacote": "SOIC-8",
@@ -944,7 +951,7 @@
    "situacao": "ok"
   },
   "C79987": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit CAT24C256WI-GT3",
    "marca": "onsemi",
    "modelo": "CAT24C256WI-GT3",
    "pacote": "SOIC-8",
@@ -977,7 +984,7 @@
    "situacao": "ok"
   },
   "C5458": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit 24LC256T-I/SN",
    "marca": "Microchip Tech",
    "modelo": "24LC256T-I/SN",
    "pacote": "SOIC-8",
@@ -1010,7 +1017,7 @@
    "situacao": "ok"
   },
   "C2987263": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit HX24LC256BDRG",
    "marca": "HANSCHIP semiconductor",
    "modelo": "HX24LC256BDRG",
    "pacote": "SOIC-8",
@@ -1043,7 +1050,7 @@
    "situacao": "ok"
   },
   "C45273903": {
-   "nome": "FRAM I2C de 256Kbit",
+   "nome": "FRAM I2C de 256Kbit MB85RC256VPNF-G-AMERE2",
    "marca": "RAMXEED/FUJITSU",
    "modelo": "MB85RC256VPNF-G-AMERE2",
    "pacote": "SOP-8-150mil",
@@ -1075,7 +1082,7 @@
    "situacao": "ok"
   },
   "C51026307": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit AT24C256CP073",
    "marca": "GREENMICRO",
    "modelo": "AT24C256CP073",
    "pacote": "DIP-8",
@@ -1108,7 +1115,7 @@
    "situacao": "ok"
   },
   "C7432372": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit HG24C256CN",
    "marca": "HGSEMI",
    "modelo": "HG24C256CN",
    "pacote": "DIP-8",
@@ -1141,7 +1148,7 @@
    "situacao": "ok"
   },
   "C434602": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit AT24C256N",
    "marca": "HGSEMI",
    "modelo": "AT24C256N",
    "pacote": "DIP-8",
@@ -1174,7 +1181,7 @@
    "situacao": "ok"
   },
   "C84670": {
-   "nome": "EEPROM SPI de 256Kbit",
+   "nome": "EEPROM SPI de 256Kbit 25LC256-I/SN",
    "marca": "Microchip Tech",
    "modelo": "25LC256-I/SN",
    "pacote": "SOIC-8",
@@ -1207,7 +1214,7 @@
    "situacao": "ok"
   },
   "C615210": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit 24LC256-E/SN",
    "marca": "Microchip Tech",
    "modelo": "24LC256-E/SN",
    "pacote": "SOIC-8",
@@ -1240,7 +1247,7 @@
    "situacao": "ok"
   },
   "C159741": {
-   "nome": "EEPROM SPI de 256Kbit",
+   "nome": "EEPROM SPI de 256Kbit 25LC256T-E/SN",
    "marca": "Microchip Tech",
    "modelo": "25LC256T-E/SN",
    "pacote": "SOIC-8",
@@ -1273,7 +1280,7 @@
    "situacao": "ok"
   },
   "C411624": {
-   "nome": "EEPROM I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit 24LC256-I/P",
    "marca": "Microchip Tech",
    "modelo": "24LC256-I/P",
    "pacote": "PDIP-8",
@@ -1306,7 +1313,7 @@
    "situacao": "ok"
   },
   "C12371": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit AT24C512C-SSHD-T",
    "marca": "Microchip Tech",
    "modelo": "AT24C512C-SSHD-T",
    "pacote": "SOIC-8",
@@ -1339,7 +1346,7 @@
    "situacao": "ok"
   },
   "C79986": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit CAT24C512WI-GT3",
    "marca": "onsemi",
    "modelo": "CAT24C512WI-GT3",
    "pacote": "SOIC-8",
@@ -1372,7 +1379,7 @@
    "situacao": "ok"
   },
   "C52088": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit 24LC512T-I/SN",
    "marca": "Microchip Tech",
    "modelo": "24LC512T-I/SN",
    "pacote": "SOIC-8",
@@ -1405,7 +1412,7 @@
    "situacao": "ok"
   },
   "C18091": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit 24LC512T-I/SM",
    "marca": "Microchip Tech",
    "modelo": "24LC512T-I/SM",
    "pacote": "SOIC-8-208mil",
@@ -1438,7 +1445,7 @@
    "situacao": "ok"
   },
   "C2902482": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit HG24C512N",
    "marca": "HGSEMI",
    "modelo": "HG24C512N",
    "pacote": "DIP-8",
@@ -1471,7 +1478,7 @@
    "situacao": "ok"
   },
   "C41410983": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit 24LC512-I/P-TUDI",
    "marca": "Tudi",
    "modelo": "24LC512-I/P-TUDI",
    "pacote": "DIP-8",
@@ -1504,7 +1511,7 @@
    "situacao": "ok"
   },
   "C42048": {
-   "nome": "EEPROM I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit 24LC512-I/P",
    "marca": "Microchip Tech",
    "modelo": "24LC512-I/P",
    "pacote": "PDIP-8-300mil",
@@ -1537,7 +1544,7 @@
    "situacao": "ok"
   },
   "C613693": {
-   "nome": "EEPROM I2C de 1Mbit",
+   "nome": "EEPROM I2C de 1Mbit 24LC1025-I/P",
    "marca": "Microchip Tech",
    "modelo": "24LC1025-I/P",
    "pacote": "PDIP-8",
@@ -1570,7 +1577,7 @@
    "situacao": "ok"
   },
   "C2456211": {
-   "nome": "Flash SPI de 16Mbit",
+   "nome": "Flash SPI de 16Mbit W25Q16JVSNIQ",
    "marca": "Winbond Elec",
    "modelo": "W25Q16JVSNIQ",
    "pacote": "SOIC-8",
@@ -1603,7 +1610,7 @@
    "situacao": "ok"
   },
   "C179173": {
-   "nome": "Flash SPI de 32Mbit",
+   "nome": "Flash SPI de 32Mbit W25Q32JVSSIQ",
    "marca": "Winbond Elec",
    "modelo": "W25Q32JVSSIQ",
    "pacote": "SOIC-8-208mil",
@@ -1636,7 +1643,7 @@
    "situacao": "ok"
   },
   "C179171": {
-   "nome": "Flash SPI de 64Mbit",
+   "nome": "Flash SPI de 64Mbit W25Q64JVSSIQ",
    "marca": "Winbond Elec",
    "modelo": "W25Q64JVSSIQ",
    "pacote": "SOIC-8-208mil",
@@ -1669,7 +1676,7 @@
    "situacao": "ok"
   },
   "C97521": {
-   "nome": "Flash SPI de 128Mbit",
+   "nome": "Flash SPI de 128Mbit W25Q128JVSIQ",
    "marca": "Winbond Elec",
    "modelo": "W25Q128JVSIQ",
    "pacote": "SOIC-8-208mil",

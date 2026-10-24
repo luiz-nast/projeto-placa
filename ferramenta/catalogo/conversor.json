@@ -4,8 +4,8 @@
  "grupo": "Energia",
  "explica": "Muda a tensão ligando e desligando a corrente milhares ou milhões de vezes por segundo e guardando a energia numa bobina, por isso esquenta bem menos que um regulador linear. O abaixador (step-down) entrega menos do que recebe (12 V → 5 V), o elevador (boost) entrega mais (3,7 V → 5 V) e o que abaixa e eleva faz os dois, mas cada um só funciona dentro da faixa de entrada dele. O chip sozinho precisa de bobina e capacitores em volta (às vezes um diodo); os módulos K78xx e R-78 já vêm prontos, de furo, e entram no lugar de um 7805.",
  "nome_peca": [
-  "{@categoria_loja} {Output Voltage} ({Function}), {Output Current}",
-  "{@categoria_loja} {Output Type} ({Function}), {Output Current}",
+  "{@categoria_loja} {Output Voltage} ({Function}), {Output Current|Output Current(Max)}",
+  "{@categoria_loja} {Output Type} ({Function}), {Output Current|Output Current(Max)}",
   "{@categoria_loja} {Output Voltage} ({Function})",
   "{@categoria_loja} {Output Type} ({Function})",
   "Conversor {Output Voltage} ({Function})"
@@ -14,7 +14,7 @@
   "Function",
   "Output Voltage",
   "Voltage - Supply",
-  "Output Current"
+  "Output Current|Output Current(Max)"
  ],
  "chips": "Function",
  "traducoes": {
@@ -24,7 +24,11 @@
   "Fixed": "fixo",
   "-5V、5V": "5V ou −5V",
   "-12V、12V": "12V ou −12V",
-  "3.168V~3.432V": "3.3V"
+  "3.168V~3.432V": "3.3V",
+  "-300mA、500mA": "500mA (300mA no −5V)",
+  "-300mA、1A": "1A (300mA no −12V)",
+  "-150mA、500mA": "500mA (150mA no −12V)",
+  "Step-down type、Boost": "abaixador ou elevador"
  },
  "filtro": {
   "categorias_loja": [
@@ -135,6 +139,10 @@
   },
   {
    "busca": "MP2307",
+   "quantos": 2
+  },
+  {
+   "busca": "LM2575T",
    "quantos": 2
   }
  ],
@@ -480,7 +488,7 @@
    "situacao": "ok"
   },
   "C2992391": {
-   "nome": "Módulo conversor 5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V (abaixa e eleva), 1A",
    "marca": "YLPTEC",
    "modelo": "K7805-1000R3",
    "pacote": "DIP,11.5x7.6mm",
@@ -518,7 +526,7 @@
    "situacao": "ok"
   },
   "C5369649": {
-   "nome": "Módulo conversor 5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V (abaixa e eleva), 1A",
    "marca": "YLPTEC",
    "modelo": "K7805M-1000R3",
    "pacote": "SIP-3",
@@ -556,7 +564,7 @@
    "situacao": "ok"
   },
   "C2992390": {
-   "nome": "Módulo conversor 5V ou −5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V ou −5V (abaixa e eleva), 500mA (300mA no −5V)",
    "marca": "YLPTEC",
    "modelo": "K7805-500R3",
    "pacote": "DIP,11.5x7.6mm",
@@ -1035,8 +1043,42 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C434580": {
+   "nome": "Conversor 5V (abaixador), 1A",
+   "marca": "HGSEMI",
+   "modelo": "LM2575T-5.0",
+   "pacote": "TO-220-5",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "0℃~+85℃@(TJ) 1 10mA 1A 4.75V~40V 52kHz 5V Buck Buck Built-in Fixed TO-220-5 DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "0℃~+85℃@(TJ)",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "No",
+    "Frequency - Switching": "52kHz",
+    "Output Type": "Fixed",
+    "Voltage - Supply": "4.75V~40V",
+    "Output Current": "1A",
+    "Quiescent Current": "10mA",
+    "Features": "Overcurrent Protection、Cycle-by-cycle current limiting",
+    "Switch tube (built-in/external)": "Built-in",
+    "Topology": "Buck",
+    "Output Voltage": "5V",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_HGSEMI-LM2575T-5-0_C434580.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/dc-dc-converters_hgsemi-lm2575t-5-0_C434580.html",
+   "preco": 0.5712,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 4605,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C22371890": {
-   "nome": "Módulo conversor 5V (abaixador)",
+   "nome": "Módulo conversor 5V (abaixador), 1A",
    "marca": "YLPTEC",
    "modelo": "R-78E5.0-1.0",
    "pacote": "SIP,11.6x7.5mm",
@@ -1108,7 +1150,7 @@
    "situacao": "ok"
   },
   "C18212367": {
-   "nome": "Módulo conversor 5V ou −5V (abaixador)",
+   "nome": "Módulo conversor 5V ou −5V (abaixador), 500mA (300mA no −5V)",
    "marca": "YLPTEC",
    "modelo": "R-78E5.0-0.5",
    "pacote": "SIP,11.5x7.6mm",
@@ -1146,7 +1188,7 @@
    "situacao": "ok"
   },
   "C5369648": {
-   "nome": "Módulo conversor 12V ou −12V (abaixador)",
+   "nome": "Módulo conversor 12V ou −12V (abaixador), 1A (300mA no −12V)",
    "marca": "YLPTEC",
    "modelo": "K7812-1000R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1252,7 +1294,7 @@
    "situacao": "ok"
   },
   "C5369645": {
-   "nome": "Módulo conversor 12V ou −12V (abaixador)",
+   "nome": "Módulo conversor 12V ou −12V (abaixador), 500mA (150mA no −12V)",
    "marca": "YLPTEC",
    "modelo": "K7812-500R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1426,7 +1468,7 @@
    "situacao": "ok"
   },
   "C909661": {
-   "nome": "Módulo conversor 5V (abaixador)",
+   "nome": "Módulo conversor 5V (abaixador), 1A",
    "marca": "DEXU Electronics",
    "modelo": "K7805M-1000R3",
    "pacote": "Plugin",
@@ -1460,6 +1502,40 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 1795,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C7432242": {
+   "nome": "Conversor 15V (abaixador), 2A",
+   "marca": "HGSEMI",
+   "modelo": "LM2575T-15",
+   "pacote": "TO-220-5",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "-40℃~+125℃ 1 15V 2A 40V 52kHz 5mA Buck Buck Fixed TO-220-5 DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+125℃",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "-",
+    "Frequency - Switching": "52kHz",
+    "Output Type": "Fixed",
+    "Voltage - Supply": "40V",
+    "Output Current": "2A",
+    "Quiescent Current": "5mA",
+    "Features": "Overcurrent Protection、Cycle-by-cycle current limiting",
+    "Switch tube (built-in/external)": "-",
+    "Topology": "Buck",
+    "Output Voltage": "15V",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2307141159_HGSEMI-LM2575T-15_C7432242.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/dc-dc-converters_hgsemi-lm2575t-15_C7432242.html",
+   "preco": 0.3846,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1717,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -1498,7 +1574,7 @@
    "situacao": "ok"
   },
   "C5369643": {
-   "nome": "Módulo conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador), 500mA",
    "marca": "YLPTEC",
    "modelo": "K7803-500R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1604,7 +1680,7 @@
    "situacao": "ok"
   },
   "C18212378": {
-   "nome": "Módulo conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador), 2A",
    "marca": "YLPTEC",
    "modelo": "K7803-2000R3",
    "pacote": "SIP,11.5x9mm",
@@ -1642,7 +1718,7 @@
    "situacao": "ok"
   },
   "C5369647": {
-   "nome": "Módulo conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador), 1A",
    "marca": "YLPTEC",
    "modelo": "K7803-1000R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1680,7 +1756,7 @@
    "situacao": "ok"
   },
   "C5180": {
-   "nome": "Conversor 1.25V~38V (abaixador e elevador), 1.5A",
+   "nome": "Conversor 1.25V~38V (abaixador ou elevador), 1.5A",
    "marca": "STMicroelectronics",
    "modelo": "MC34063ECN",
    "pacote": "DIP-8",
@@ -1714,7 +1790,7 @@
    "situacao": "ok"
   },
   "C100023": {
-   "nome": "Conversor ajustável (abaixador e elevador), 1.5A",
+   "nome": "Conversor ajustável (abaixador ou elevador), 1.5A",
    "marca": "Texas Instruments",
    "modelo": "MC34063ADR",
    "pacote": "SOIC-8",
@@ -1748,7 +1824,7 @@
    "situacao": "ok"
   },
   "C32078": {
-   "nome": "Conversor 1.25V~40V (abaixador e elevador), 1.5A",
+   "nome": "Conversor 1.25V~40V (abaixador ou elevador), 1.5A",
    "marca": "onsemi",
    "modelo": "MC34063ADR2G",
    "pacote": "SOIC-8",

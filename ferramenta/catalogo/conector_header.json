@@ -2,8 +2,12 @@
  "categoria": "conector_header",
  "nome": "Barra de pinos macho",
  "grupo": "Conectores",
- "explica": "Fileira de pininhos com 2,54 mm entre um e outro (o mesmo passo da protoboard): é onde encaixa jumper, módulo ou outra placa. No nome, \"de furo\" é a reta, que fica em pé, e \"a 90°\" é a que deita na beira da placa; as duas são de furo.",
- "nome_peca": "Barra de pinos {Pin Structure}, {Mounting Type}",
+ "explica": "Fileira de pininhos com 2,54 mm entre um e outro (o mesmo passo da protoboard): é onde encaixa jumper, módulo ou outra placa. A reta fica em pé e a de 90° deita na beira da placa; as duas são de furo.",
+ "nome_peca": [
+  "Barra de pinos {Pin Structure}, {Mounting Type}{Circluar Pins/Square Pins}, {Supplementary Features}",
+  "Barra de pinos {Pin Structure}, {Mounting Type}{Circluar Pins/Square Pins}",
+  "Barra de pinos {Pin Structure}, {Mounting Type}"
+ ],
  "destaques": [
   "Pin Structure",
   "Mounting Type",
@@ -11,6 +15,14 @@
   "Contact Plating"
  ],
  "chips": "Number of Pins",
+ "traducoes": {
+  "Through Hole": "reta",
+  "Square pin": "",
+  "Pin Header": "",
+  "Round Pin": ", pino redondo",
+  "Double Plastic": "plástico duplo",
+  "Gold": "contato dourado"
+ },
  "filtro": {
   "categorias_loja": [
    "Pin Headers"
@@ -143,7 +155,7 @@
  ],
  "pecas": {
   "C32713268": {
-   "nome": "Barra de pinos 1x2P, de furo",
+   "nome": "Barra de pinos 1x2P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x2P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -219,7 +231,7 @@
    "situacao": "ok"
   },
   "C42431798": {
-   "nome": "Barra de pinos 1x2P, de furo",
+   "nome": "Barra de pinos 1x2P, reta",
    "marca": "JXTCONN",
    "modelo": "PH2.54-1X2P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -293,7 +305,7 @@
    "situacao": "ok"
   },
   "C49257": {
-   "nome": "Barra de pinos 1x3P, de furo",
+   "nome": "Barra de pinos 1x3P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*3PPin",
    "pacote": "Plugin,P=2.54mm",
@@ -330,7 +342,7 @@
    "situacao": "ok"
   },
   "C32713269": {
-   "nome": "Barra de pinos 1x3P, de furo",
+   "nome": "Barra de pinos 1x3P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x3P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -443,7 +455,7 @@
    "situacao": "ok"
   },
   "C32713270": {
-   "nome": "Barra de pinos 1x4P, de furo",
+   "nome": "Barra de pinos 1x4P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x4P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -481,7 +493,7 @@
    "situacao": "ok"
   },
   "C53055674": {
-   "nome": "Barra de pinos 1x4P, de furo",
+   "nome": "Barra de pinos 1x4P, reta",
    "marca": "LXWCONN",
    "modelo": "254PZ-1x4P-V",
    "pacote": "Plugin,P=2.54mm",
@@ -591,7 +603,7 @@
    "situacao": "ok"
   },
   "C32713271": {
-   "nome": "Barra de pinos 1x5P, de furo",
+   "nome": "Barra de pinos 1x5P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x5P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -629,7 +641,7 @@
    "situacao": "ok"
   },
   "C42431835": {
-   "nome": "Barra de pinos 1x5P, de furo",
+   "nome": "Barra de pinos 1x5P, reta",
    "marca": "JXTCONN",
    "modelo": "PH2.54-1X5P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -741,7 +753,7 @@
    "situacao": "ok"
   },
   "C37208": {
-   "nome": "Barra de pinos 1x6P, de furo",
+   "nome": "Barra de pinos 1x6P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1x6PStraight pin",
    "pacote": "Plugin,P=2.54mm",
@@ -779,7 +791,7 @@
    "situacao": "ok"
   },
   "C42431837": {
-   "nome": "Barra de pinos 2x3P, de furo",
+   "nome": "Barra de pinos 2x3P, reta",
    "marca": "JXTCONN",
    "modelo": "PH2.54-2X3P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -816,7 +828,7 @@
    "situacao": "ok"
   },
   "C65114": {
-   "nome": "Barra de pinos 2x3P, de furo",
+   "nome": "Barra de pinos 2x3P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*3PPin",
    "pacote": "Plugin,P=2.54mm",
@@ -853,7 +865,7 @@
    "situacao": "ok"
   },
   "C32713272": {
-   "nome": "Barra de pinos 1x6P, de furo",
+   "nome": "Barra de pinos 1x6P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x6P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1041,7 +1053,7 @@
    "situacao": "ok"
   },
   "C32713273": {
-   "nome": "Barra de pinos 1x7P, de furo",
+   "nome": "Barra de pinos 1x7P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x7P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1079,7 +1091,7 @@
    "situacao": "ok"
   },
   "C54876672": {
-   "nome": "Barra de pinos 1x7P, de furo",
+   "nome": "Barra de pinos 1x7P, reta",
    "marca": "SHOU HAN",
    "modelo": "PZ2.54-1x7PZZ-L11.5",
    "pacote": "Plugin,P=2.54mm",
@@ -1191,7 +1203,7 @@
    "situacao": "ok"
   },
   "C32713277": {
-   "nome": "Barra de pinos 2x4P, de furo",
+   "nome": "Barra de pinos 2x4P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x4P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1229,7 +1241,7 @@
    "situacao": "ok"
   },
   "C32713274": {
-   "nome": "Barra de pinos 1x8P, de furo",
+   "nome": "Barra de pinos 1x8P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-1x8P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1342,7 +1354,7 @@
    "situacao": "ok"
   },
   "C27985200": {
-   "nome": "Barra de pinos 2x4P, de furo",
+   "nome": "Barra de pinos 2x4P, reta",
    "marca": "Hong Cheng",
    "modelo": "HC-PZ254-11.5L-2x4PZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1416,7 +1428,7 @@
    "situacao": "ok"
   },
   "C54876673": {
-   "nome": "Barra de pinos 1x8P, de furo",
+   "nome": "Barra de pinos 1x8P, reta",
    "marca": "SHOU HAN",
    "modelo": "PZ2.54-1x8PZZ-L11.5",
    "pacote": "Plugin,P=2.54mm",
@@ -1526,7 +1538,7 @@
    "situacao": "ok"
   },
   "C32713278": {
-   "nome": "Barra de pinos 2x5P, de furo",
+   "nome": "Barra de pinos 2x5P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x5P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1564,7 +1576,7 @@
    "situacao": "ok"
   },
   "C42431818": {
-   "nome": "Barra de pinos 2x5P, de furo",
+   "nome": "Barra de pinos 2x5P, reta",
    "marca": "JXTCONN",
    "modelo": "PZ2.54-2X5P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -1601,7 +1613,7 @@
    "situacao": "ok"
   },
   "C57369": {
-   "nome": "Barra de pinos 1x10P, de furo",
+   "nome": "Barra de pinos 1x10P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*10PPin",
    "pacote": "Plugin,P=2.54mm",
@@ -1638,7 +1650,7 @@
    "situacao": "ok"
   },
   "C42431810": {
-   "nome": "Barra de pinos 1x10P, de furo",
+   "nome": "Barra de pinos 1x10P, reta",
    "marca": "JXTCONN",
    "modelo": "PH2.54-1X10P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -1713,7 +1725,7 @@
    "situacao": "ok"
   },
   "C32713279": {
-   "nome": "Barra de pinos 2x6P, de furo",
+   "nome": "Barra de pinos 2x6P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x6P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -1826,7 +1838,7 @@
    "situacao": "ok"
   },
   "C225521": {
-   "nome": "Barra de pinos 2x6P, de furo",
+   "nome": "Barra de pinos 2x6P, reta",
    "marca": "CJT(Changjiang Connectors)",
    "modelo": "A2541WV-2x6P",
    "pacote": "Plugin,P=2.54mm",
@@ -1899,7 +1911,7 @@
    "situacao": "ok"
   },
   "C55020594": {
-   "nome": "Barra de pinos 1x12P, de furo",
+   "nome": "Barra de pinos 1x12P, reta",
    "marca": "BXCONN",
    "modelo": "AZ-PZ2.54-V11-1*12P",
    "pacote": "Plugin,P=2.54mm",
@@ -1934,7 +1946,7 @@
    "situacao": "ok"
   },
   "C54803345": {
-   "nome": "Barra de pinos 1x12P, de furo",
+   "nome": "Barra de pinos 1x12P, reta",
    "marca": "JXTCONN",
    "modelo": "JXT-PZ2.54-1X12P-A1",
    "pacote": "Plugin,P=2.54mm",
@@ -2081,7 +2093,7 @@
    "situacao": "ok"
   },
   "C2932704": {
-   "nome": "Barra de pinos 1x15P, de furo",
+   "nome": "Barra de pinos 1x15P, reta",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54PH180-1X15P-L11.5",
    "pacote": "Plugin,P=2.54mm",
@@ -2116,7 +2128,7 @@
    "situacao": "ok"
   },
   "C68234": {
-   "nome": "Barra de pinos 2x8P, de furo",
+   "nome": "Barra de pinos 2x8P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*8PPin",
    "pacote": "Plugin,P=2.54mm",
@@ -2153,7 +2165,7 @@
    "situacao": "ok"
   },
   "C32713281": {
-   "nome": "Barra de pinos 2x8P, de furo",
+   "nome": "Barra de pinos 2x8P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x8P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -2302,7 +2314,7 @@
    "situacao": "ok"
   },
   "C2905491": {
-   "nome": "Barra de pinos 1x16P, de furo",
+   "nome": "Barra de pinos 1x16P, reta",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-2.54PH180-1X16P-L11.5",
    "pacote": "Plugin,P=2.54mm",
@@ -2338,7 +2350,7 @@
    "situacao": "ok"
   },
   "C55020595": {
-   "nome": "Barra de pinos 1x16P, de furo",
+   "nome": "Barra de pinos 1x16P, reta",
    "marca": "BXCONN",
    "modelo": "AZ-PZ2.54-V11-1*16P",
    "pacote": "Plugin,P=2.54mm",
@@ -2373,7 +2385,7 @@
    "situacao": "ok"
   },
   "C50981": {
-   "nome": "Barra de pinos 1x20P, de furo",
+   "nome": "Barra de pinos 1x20P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*20PStraight pin",
    "pacote": "Plugin,P=2.54mm",
@@ -2410,7 +2422,7 @@
    "situacao": "ok"
   },
   "C42431804": {
-   "nome": "Barra de pinos 1x20P, de furo",
+   "nome": "Barra de pinos 1x20P, reta",
    "marca": "JXTCONN",
    "modelo": "PH2.54-1X20P-H25",
    "pacote": "Plugin,P=2.54mm",
@@ -2447,7 +2459,7 @@
    "situacao": "ok"
   },
   "C42372518": {
-   "nome": "Barra de pinos 2x10P, de furo",
+   "nome": "Barra de pinos 2x10P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x10P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -2523,7 +2535,7 @@
    "situacao": "ok"
   },
   "C5383109": {
-   "nome": "Barra de pinos 2x10P, de furo",
+   "nome": "Barra de pinos 2x10P, reta",
    "marca": "HanElectricity",
    "modelo": "2541WV-2x10P",
    "pacote": "Plugin,P=2.54mm",
@@ -2666,7 +2678,7 @@
    "situacao": "ok"
   },
   "C2337": {
-   "nome": "Barra de pinos 1x40P, de furo",
+   "nome": "Barra de pinos 1x40P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*40PStraight pin",
    "pacote": "Plugin,P=2.54mm",
@@ -2741,7 +2753,7 @@
    "situacao": "ok"
   },
   "C9742": {
-   "nome": "Barra de pinos 1x40P, de furo",
+   "nome": "Barra de pinos 1x40P, reta, pino redondo",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-1*40PCircular Pins",
    "pacote": "Plugin,P=2.54mm",
@@ -2815,7 +2827,7 @@
    "situacao": "ok"
   },
   "C25503140": {
-   "nome": "Barra de pinos 2x20P, de furo",
+   "nome": "Barra de pinos 2x20P, reta",
    "marca": "HanElectricity",
    "modelo": "2541WV-2x20P",
    "pacote": "Plugin,P=2.54mm",
@@ -2850,7 +2862,7 @@
    "situacao": "ok"
   },
   "C42372528": {
-   "nome": "Barra de pinos 2x20P, de furo",
+   "nome": "Barra de pinos 2x20P, reta",
    "marca": "hanxia",
    "modelo": "HX PZ2.54-2x20P ZZ",
    "pacote": "Plugin,P=2.54mm",
@@ -2923,7 +2935,7 @@
    "situacao": "ok"
   },
   "C2333": {
-   "nome": "Barra de pinos 2x40P, de furo",
+   "nome": "Barra de pinos 2x40P, reta",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*40PPin",
    "pacote": "Plugin,P=2.54mm",
@@ -2998,7 +3010,7 @@
    "situacao": "ok"
   },
   "C29952": {
-   "nome": "Barra de pinos 2x40P, de furo",
+   "nome": "Barra de pinos 2x40P, reta, plástico duplo",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "2.54-2*40PDouble Plastic19mm",
    "pacote": "Plugin,P=2.54mm",

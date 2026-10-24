@@ -2,7 +2,7 @@
  "categoria": "potenciometro",
  "nome": "Potenciômetro",
  "grupo": "Passivos",
- "explica": "Um resistor com eixo pra girar com a mão (volume, brilho, velocidade). Com as pernas das pontas no + e no GND, a do meio dá uma tensão que vai de 0 até a do +, conforme você gira; no ESP32 use o 3,3 V (nunca o 5 V) e ligue a do meio num pino analógico. Pra isso o certo é o linear de 10 kΩ (marcado B10K; o A é logarítmico, feito pra volume de som), e a loja quase nunca diz qual é: confira no datasheet antes de comprar.",
+ "explica": "Um resistor com eixo pra girar com a mão (volume, brilho, velocidade). Com as pernas das pontas no 3,3 V e no GND, a do meio dá de 0 a 3,3 V conforme você gira: ligue ela num pino analógico do ESP32 (nunca ponha 5 V nas pontas). Pra isso use o linear (marcado B, como o clássico B10K; o A é logarítmico, feito pra volume de som), e a loja quase nunca diz qual é: confira no datasheet antes de comprar.",
  "nome_peca": "Potenciômetro {Resistance}",
  "destaques": [
   "Resistance",
@@ -100,6 +100,11 @@
    "busca": "PDB12",
    "quantos": 1,
    "agrupar": "Resistance"
+  },
+  {
+   "busca": "RV24YN",
+   "quantos": 1,
+   "agrupar": "Resistance"
   }
  ],
  "pecas": {
@@ -152,6 +157,33 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 66,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C127171": {
+   "nome": "Potenciômetro 2kΩ",
+   "marca": "BOCHEN(Chengdu Guosheng Tech)",
+   "modelo": "RV24YN 20S B202",
+   "pacote": "Plugin",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Potentiometers, Variable Resistors",
+   "descricao": "1 1W 2kΩ ±10% ±400ppm/℃ 插件 Potentiometers, Variable Resistors ROHS",
+   "atributos": {
+    "Resistance": "2kΩ",
+    "Power(Watts)": "1W",
+    "Voltage Rating": "-",
+    "Tolerance": "±10%",
+    "Number of Turns": "1",
+    "Temperature Coefficient": "±400ppm/℃"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/potentiometers-variable-resistors_bochen-chengdu-guosheng-tech-rv24yn-20s-b202_C127171.html",
+   "preco": 1.1963,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 46,
    "visto": "2026-10-24",
    "situacao": "ok"
   },

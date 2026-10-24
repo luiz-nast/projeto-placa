@@ -21,7 +21,11 @@
   "TRRRS": "5 contatos (TRRRS)",
   "Right-Angle": "deitado",
   "Straight": "em pé",
-  "Panel Mounting": "de painel"
+  "Panel Mounting": "de painel",
+  "Silver": "contato de prata",
+  "Tin": "contato estanhado",
+  "Gold": "contato dourado",
+  "Tin、Silver": "contato estanhado e de prata"
  },
  "filtro": {
   "montagem": [

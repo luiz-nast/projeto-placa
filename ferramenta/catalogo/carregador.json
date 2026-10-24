@@ -20,7 +20,9 @@
   "Protection IC": "Proteção",
   "Monitoring IC": "Medidor de bateria",
   "2 N-Channel": "Dois MOSFETs canal N",
-  "4.2V、8.4V": "4.2V ou 8.4V"
+  "4.2V、8.4V": "4.2V ou 8.4V",
+  "Charging IC": "Carregador",
+  "Charging IC、Protection IC": "Carregador e proteção"
  },
  "filtro": {
   "categorias_loja": [
@@ -627,7 +629,8 @@
    "minimo": 1,
    "estoque": 4983,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Carregador de lítio 5A (I2C)"
   },
   "C379389": {
    "nome": "Carregador de lítio 2A, para em 4.2V ou 8.4V",

@@ -2,7 +2,7 @@
  "categoria": "ponte_retificadora",
  "nome": "Ponte retificadora",
  "grupo": "Semicondutores",
- "explica": "Quatro diodos num bloco só: a corrente alternada (de um transformador) entra nos dois pinos '~' e sai contínua nos pinos + e −, e o circuito também funciona se a fonte for ligada ao contrário. Ela perde uns 1,5 a 2 V e a saída ainda pulsa, por isso depois dela vai um capacitor eletrolítico grande; escolha uma com corrente e tensão (os números do nome) bem acima das do circuito. As de pernas (KBP, DB, DF, W10M, KBL, GBU) são de furo, mesmo quando o cartão diz 'de superfície'; MB10F, MB6S e ABS10 são as pequenas de superfície.",
+ "explica": "Quatro diodos num bloco só: a corrente alternada (de um transformador) entra nos dois pinos '~' e sai contínua nos pinos + e −, e o circuito também funciona se a fonte for ligada ao contrário. Ela perde uns 1,5 a 2 V e a saída ainda pulsa, por isso depois dela vai um capacitor eletrolítico grande; escolha uma com corrente e tensão (os números do nome) bem acima das do circuito. As de pernas (DB, DF, W10M, KBP, KBL, GBU) são de furo; MB10F, MB6S e ABS10 são as pequenas de superfície.",
  "nome_peca": "Ponte retificadora {Current - Rectified}, {Voltage - DC Reverse(Vr)}",
  "destaques": [
   "Current - Rectified",
@@ -27,7 +27,12 @@
    "Type": [
     "Three-Phase Rectifier"
    ]
-  }
+  },
+  "fora": [
+   "C54447195",
+   "C54447197",
+   "C52750555"
+  ]
  },
  "sementes": [
   {
@@ -440,34 +445,6 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C54447195": {
-   "nome": "Ponte retificadora 1A, 600V",
-   "marca": "TOS",
-   "modelo": "DF06M(XL)",
-   "pacote": "DFM",
-   "tamanho": "",
-   "montagem": "superfície",
-   "categoria_loja": "Bridge Rectifiers",
-   "descricao": "-55℃~+150℃ 1A 1V@0.5A 5uA 600V 80A Single-Phase Rectifier DFM Bridge Rectifiers ROHS",
-   "atributos": {
-    "Voltage - Forward(Vf@If)": "1V@0.5A",
-    "Type": "Single-Phase Rectifier",
-    "Non-Repetitive Peak Forward Surge Current": "80A",
-    "Voltage - DC Reverse(Vr)": "600V",
-    "Operating Junction Temperature Range": "-55℃~+150℃",
-    "Current - Rectified": "1A",
-    "Reverse Leakage Current (Ir)": "5uA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54447195.html",
-   "preco": 0.0426,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 3140,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C350422": {
    "nome": "Ponte retificadora 1A, 1kV",
    "marca": "baocheng(Shandong Baocheng Elec)",
@@ -493,34 +470,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 2566,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C54447197": {
-   "nome": "Ponte retificadora 1A, 1kV",
-   "marca": "TOS",
-   "modelo": "DF10M(XL)",
-   "pacote": "DFM",
-   "tamanho": "",
-   "montagem": "superfície",
-   "categoria_loja": "Bridge Rectifiers",
-   "descricao": "-55℃~+150℃ 1A 1V@0.5A 1kV 5uA 80A Single-Phase Rectifier DFM Bridge Rectifiers ROHS",
-   "atributos": {
-    "Voltage - Forward(Vf@If)": "1V@0.5A",
-    "Type": "Single-Phase Rectifier",
-    "Non-Repetitive Peak Forward Surge Current": "80A",
-    "Voltage - DC Reverse(Vr)": "1kV",
-    "Operating Junction Temperature Range": "-55℃~+150℃",
-    "Current - Rectified": "1A",
-    "Reverse Leakage Current (Ir)": "5uA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54447197.html",
-   "preco": 0.0434,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 2300,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -558,7 +507,7 @@
    "modelo": "DF10M",
    "pacote": "DFM",
    "tamanho": "",
-   "montagem": "superfície",
+   "montagem": "furo",
    "categoria_loja": "Bridge Rectifiers",
    "descricao": "-65℃~+150℃ 1.1V@1A 10uA@1kV 1A 1kV 50A Single-Phase Rectifier DFM Bridge Rectifiers ROHS",
    "atributos": {
@@ -578,7 +527,8 @@
    "minimo": 1,
    "estoque": 601,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C459544": {
    "nome": "Ponte retificadora 1A, 600V",
@@ -586,7 +536,7 @@
    "modelo": "DF06M",
    "pacote": "DFM",
    "tamanho": "",
-   "montagem": "superfície",
+   "montagem": "furo",
    "categoria_loja": "Bridge Rectifiers",
    "descricao": "-65℃~+150℃ 1.1V@1A 10uA@600V 1A 50A 600V Single-Phase Rectifier DFM Bridge Rectifiers ROHS",
    "atributos": {
@@ -606,7 +556,8 @@
    "minimo": 1,
    "estoque": 169,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C2983251": {
    "nome": "Ponte retificadora 1.5A, 1kV",
@@ -800,34 +751,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 2485,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C52750555": {
-   "nome": "Ponte retificadora 2A, 1kV",
-   "marca": "TOS",
-   "modelo": "DB207",
-   "pacote": "DBM",
-   "tamanho": "",
-   "montagem": "superfície",
-   "categoria_loja": "Bridge Rectifiers",
-   "descricao": "-55℃~+150℃ 120A 1V@1A 1kV 2A 5uA Single-Phase Rectifier DBM Bridge Rectifiers ROHS",
-   "atributos": {
-    "Voltage - Forward(Vf@If)": "1V@1A",
-    "Type": "Single-Phase Rectifier",
-    "Non-Repetitive Peak Forward Surge Current": "120A",
-    "Voltage - DC Reverse(Vr)": "1kV",
-    "Operating Junction Temperature Range": "-55℃~+150℃",
-    "Current - Rectified": "2A",
-    "Reverse Leakage Current (Ir)": "5uA"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C52750555.html",
-   "preco": 0.0284,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 2355,
    "visto": "2026-10-24",
    "situacao": "ok"
   },

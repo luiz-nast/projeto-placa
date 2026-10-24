@@ -2,7 +2,7 @@
  "categoria": "modulo",
  "nome": "Módulo pronto",
  "grupo": "Módulos prontos",
- "explica": "Uma plaquinha pequena já montada de fábrica, com o chip e as peças em volta soldados: você só liga com fios (ou espeta na protoboard), sem soldar nada miúdo. É o jeito mais rápido de testar uma ideia antes de desenhar a placa.",
+ "explica": "Uma plaquinha pequena já montada de fábrica, com o chip e as peças em volta soldados: você só liga com fios (ou espeta na protoboard), sem soldar nada miúdo. É o jeito mais rápido de testar uma ideia antes de desenhar a placa. Confira a tensão de cada um: muitos são feitos pra 5 V (Arduino) e o ESP32 trabalha com 3,3 V.",
  "nome_peca": "",
  "destaques": [
   "Tipo",
@@ -105,6 +105,30 @@
    "visto": "2026-10-24",
    "situacao": "ok",
    "foto": "https://www.usinainfo.com.br/1030608-large_default/kit-controle-remoto-infravermelho-receptor-ky-022.jpg"
+  },
+  "usinainfo:modulo-wifi-esp8266-esp-01-3631": {
+   "nome": "Wi-Fi ESP8266 ESP-01",
+   "marca": "genérico",
+   "modelo": "ESP-01",
+   "pacote": "módulo",
+   "tamanho": "25x14x3mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "Módulo ESP8266 ESP-01 com Wi-Fi 2,4GHz, interface serial e processador de 32 bits.",
+   "atributos": {
+    "Tipo": "Comunicação",
+    "Tensão": "3,3 V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=275",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp8266/modulo-wifi-esp8266-esp-01-3631.html",
+   "preco": 16.17,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 52,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1017261-large_default/modulo-wifi-esp8266-esp-01.jpg"
   },
   "usinainfo:kit-leitor-rfid-nfc-tags-rfid-chaveiro-cartao-pn532-4764": {
    "nome": "Leitor NFC PN532 com cartão e tag",
@@ -255,7 +279,7 @@
    "descricao": "O módulo CAN BUS MCP2515 é um componente utilizado para comunicação com redes CAN, muito utilizadas no ambiente industrial e automotivo.",
    "atributos": {
     "Tipo": "Comunicação",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -288,7 +312,7 @@
    "descricao": "O Módulo Expansor de Entradas/Saídas PCF8574 é uma excelente solução para quem precisa aumentar o número de pinos digitais disponíveis em microcontroladores como Arduino, ESP32, Raspberry Pi e outros.",
    "atributos": {
     "Tipo": "Comunicação",
-    "Tensão": "2,5V a 6V (típico 5V)"
+    "Tensão": "2,5 V a 6 V (típico 5 V)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -321,7 +345,7 @@
    "descricao": "O Módulo Receptor Infravermelho IR VS1838B KY-022 é um módulo pronto para acrescentar uma função ao projeto sem exigir que todo o circuito seja desenvolvido do zero.",
    "atributos": {
     "Tipo": "Comunicação",
-    "Tensão": "2.7 à 5.5V DC"
+    "Tensão": "2,7 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -356,7 +380,7 @@
    "descricao": "Componentes básicos para comunicação via rádio frequência, presente em sistemas de alarmes, controle remoto, aquisição de dados e robótica em geral.",
    "atributos": {
     "Tipo": "Comunicação",
-    "Tensão": "3,5-12v"
+    "Tensão": "3,5 a 12 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -389,7 +413,7 @@
    "descricao": "Baseado no circuito integrado SX1276, este Módulo é bastante prático para o desenvolvimento de projetos que necessitam de comunicação LoRa.",
    "atributos": {
     "Tipo": "Comunicação",
-    "Tensão": "1.8 - 3.7V"
+    "Tensão": "1,8 a 3,7 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -503,7 +527,7 @@
    "descricao": "O Módulo Regulador de Tensão AMS1117 - 5V para 3,3V pode alimentar circuitos de 3.3V apartir de 5V.",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "4.5V ~ 7V"
+    "Tensão": "4,5 V a 7 V"
    },
    "datasheet": "",
    "loja": "Baú da Eletrônica",
@@ -537,7 +561,7 @@
    "descricao": "Módulo carregador de bateria TP4056 para baterias de lítio, com led indicador de carga e fácil conexão por cabo USB tipo C, possibilitando que as baterias sejam recarregadas sem a necessidade de removê las do circuito.",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "3.35 - 6V (recomendada 5V)"
+    "Tensão": "3,35 a 6 V (recomendada 5 V)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -571,7 +595,7 @@
    "descricao": "Esse módulo semelhante ao LM2596.",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 4.75 - 23V; saída 1.0 - 17V (sempre inferior à de entrada)"
+    "Tensão": "entrada 4,75 a 23 V; saída 1,0 a 17 V (sempre inferior à de entrada)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -595,7 +619,7 @@
    "descricao": "O Módulo Regulador de Tensão LM2596 trabalha como um conversor DC DC no modo Step Down, sendo capaz de reduzir uma carga de até 3A com ótima eficiência.",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 3,2-40v; saída 1,5-35v (ajustável, entrada deve ser 1,5v maior que a saída)"
+    "Tensão": "entrada 3,2 a 40 V; saída 1,5 a 35 V (ajustável, entrada deve ser 1,5 V maior que a saída)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -637,7 +661,7 @@
    "descricao": "O Módulo Regulador de Tensão Step Down XL4015 5A é uma fonte reguladora de tensão do tipo step down, capaz de receber uma tensão na saída e ajustar para um valor tensão fixa menor que a entrada em sua saída, a tensão de entrada é…",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 8-36V; saída 1.25-32V (sempre inferior à de entrada)"
+    "Tensão": "entrada 8 a 36 V; saída 1,25 a 32 V (sempre inferior à de entrada)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -670,7 +694,7 @@
    "descricao": "O Módulo Regulador de Tensão Step Up MT3608, é capaz de converter tensões DC mais baixas em tensões DC mais altas, por exemplo, É possível elevar uma tensão de entrada de 5V DC para 12V DC, este módulo possui eficiência de 91%, o…",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 2V - 24V; saída 2.5 - 28VDC (ajustável)"
+    "Tensão": "entrada 2 V a 24 V; saída 2,5 a 28 V (ajustável)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -694,7 +718,7 @@
    "descricao": "O módulo regulador de tensão XL6009E1 é a segunda geração da tecnologia de comutação de alta frequência.",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 4 - 32 V; saída 5 - 35 V (sempre superior à de entrada)"
+    "Tensão": "entrada 4 a 32 V; saída 5 a 35 V (sempre superior à de entrada)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -727,7 +751,7 @@
    "descricao": "Este módulo carregador para duas baterias 18650, pode ser utilizado para alimentar ESP8266, ESP32 , Arduino, Raspberry Pi, sensores e módulos, com capacidade de corrente de até 3A, possui 3 interfaces de saída 3V 1A, e 3…",
    "atributos": {
     "Tipo": "Energia",
-    "Tensão": "entrada 5-8V; saídas 3V 1A e 5V 3A"
+    "Tensão": "entrada 5 a 8 V; saídas 3 V 1A e 5 V 3A"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -751,7 +775,7 @@
    "descricao": "Módulo encoder rotativo KY-040 com giro contínuo de 360°, resolução de 20 pulsos por volta, botão integrado e alimentação de 5V.",
    "atributos": {
     "Tipo": "Entrada",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -831,7 +855,7 @@
    "descricao": "Este Sensor touch foi baseado no CI TTP223B, um componente capaz de detectar toques.",
    "atributos": {
     "Tipo": "Entrada",
-    "Tensão": "2-5,5V"
+    "Tensão": "2 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1008,7 +1032,7 @@
    "descricao": "O Driver Controlador para Motor DC - MOSFET IRF520 é uma solução prática e eficiente para quem precisa controlar a velocidade de motores DC, micro bombas, válvulas solenoides e fitas de LED (exceto RGB).",
    "atributos": {
     "Tipo": "Liga/desliga",
-    "Tensão": "3.3V a 5V"
+    "Tensão": "3,3 V a 5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=86",
    "loja": "Usinainfo",
@@ -1050,7 +1074,7 @@
    "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
    "atributos": {
     "Tipo": "Liga/desliga",
-    "Tensão": "5V DC (VCC e GND)"
+    "Tensão": "5 V (VCC e GND)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1074,7 +1098,7 @@
    "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
    "atributos": {
     "Tipo": "Liga/desliga",
-    "Tensão": "5VDC (VCC e GND)"
+    "Tensão": "5 V (VCC e GND)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1107,7 +1131,7 @@
    "descricao": "Este Módulo Relé permite uma integração com uma ampla gama de microcontroladores como Arduino, AVR, PIC, ARM.",
    "atributos": {
     "Tipo": "Liga/desliga",
-    "Tensão": "5 VDC (VCC e GND)"
+    "Tensão": "5 V (VCC e GND)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1214,7 +1238,7 @@
    "descricao": "Este módulo com 8 LEDs endereçáveis RGB WS2812 possui a capacidade de formar diversas cores utilizando de três cores primárias (vermelho, verde e azul).",
    "atributos": {
     "Tipo": "Luz",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1255,7 +1279,7 @@
    "descricao": "Com o Módulo WS2812 LED RGB é possível criar belos efeitos luminosos com as mais variadas cores e tons, pois esse módulo conta com LED's que podem assumir as 3 cores primárias.",
    "atributos": {
     "Tipo": "Luz",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1279,7 +1303,7 @@
    "descricao": "O Módulo Relógio Tempo Real RTC DS3231 é um módulo compacto que possui a capacidade de calcular precisamente o tempo, realizando a contagem exata dos segundos, minutos, horas, bem como, dos dias, semanas, meses e anos.",
    "atributos": {
     "Tipo": "Memória e relógio",
-    "Tensão": "3,3 a 5V"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=417",
    "loja": "Usinainfo",
@@ -1354,7 +1378,7 @@
    "descricao": "Este Módulo é um dispositivo eficiente e compácto, desenvolvido especialmente para otimizar o trabalho de projetistas, estudantes e hobistas na confecção de projetos eletrônicos.",
    "atributos": {
     "Tipo": "Memória e relógio",
-    "Tensão": "4,5V à 5V"
+    "Tensão": "4,5 V a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1421,7 +1445,7 @@
    "descricao": "O Servo Driver 16 Canais PCA9685 é um pequeno e funcional módulo eletrônico desenvolvido especialmente para expandir as portas dos microcontroladores, possibilitando a conexão de diversos servos motores.",
    "atributos": {
     "Tipo": "Motor",
-    "Tensão": "3-5VDC"
+    "Tensão": "3 a 5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=379",
    "loja": "Usinainfo",
@@ -1479,7 +1503,7 @@
    "descricao": "O Driver Motor de Passo DRV8825 é um módulo controlador de motores de excelente desempenho, empregado especialmente para o controle de microstepping (pequenos passos) de motores bipolares de passo.",
    "atributos": {
     "Tipo": "Motor",
-    "Tensão": "8.2 a 45V"
+    "Tensão": "8,2 a 45 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -1513,7 +1537,7 @@
    "descricao": "Este driver utiliza o chip A4988 e foi especialmente desenvolvido para controle de pequenos passos (microstepping) para motores de passo bipolares.",
    "atributos": {
     "Tipo": "Motor",
-    "Tensão": "8-35V"
+    "Tensão": "8 a 35 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1561,7 +1585,7 @@
    "preco": 41.9,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33796561/15-gxhwc4e7dr.jpg"
@@ -1577,7 +1601,7 @@
    "descricao": "Este Driver Ponte H é baseado no chip L298N, construído para controlar cargas indutivas como relés, solenoides, motores DC e motores de passo.",
    "atributos": {
     "Tipo": "Motor",
-    "Tensão": "6~35v"
+    "Tensão": "6 a 35 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -1607,30 +1631,6 @@
     }
    ]
   },
-  "usinainfo:modulo-wifi-esp8266-esp-01-3631": {
-   "nome": "Wi-Fi ESP8266 ESP-01",
-   "marca": "genérico",
-   "modelo": "ESP-01",
-   "pacote": "módulo",
-   "tamanho": "25x14x3mm",
-   "montagem": "módulo",
-   "categoria_loja": "ESP8266",
-   "descricao": "Módulo ESP8266 ESP-01 com Wi-Fi 2,4GHz, interface serial e processador de 32 bits.",
-   "atributos": {
-    "Tipo": "Placa",
-    "Tensão": "3.3V"
-   },
-   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=275",
-   "loja": "Usinainfo",
-   "link": "https://www.usinainfo.com.br/esp8266/modulo-wifi-esp8266-esp-01-3631.html",
-   "preco": 16.17,
-   "moeda": "BRL",
-   "minimo": 1,
-   "estoque": 52,
-   "visto": "2026-10-24",
-   "situacao": "ok",
-   "foto": "https://www.usinainfo.com.br/1017261-large_default/modulo-wifi-esp8266-esp-01.jpg"
-  },
   "usinainfo:sensor-aht10-de-alta-precisao-para-medir-temperatura-e-umidade-5691": {
    "nome": "Sensor de temperatura e umidade AHT10",
    "marca": "genérico",
@@ -1642,7 +1642,7 @@
    "descricao": "O Sensor AHT10 é um componente de alta precisão desenvolvido especialmente para integração em projetos com microcontroladores, Arduino e Raspberry Pi, por exemplo, vindo a fazer a medição precisa da temperatura e umidade.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "1.8V a 6V"
+    "Tensão": "1,8 V a 6 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=657",
    "loja": "Usinainfo",
@@ -1676,7 +1676,7 @@
    "descricao": "Módulo GY-273 com magnetômetro HMC5883 de três eixos, comunicação I2C e alimentação de 5V para medição de direção e campo magnético.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=74",
    "loja": "Usinainfo",
@@ -1700,7 +1700,7 @@
    "descricao": "O sensor de chama KY-026 infravermelho para Arduino é um equipamento eletrônico desenvolvido para alertar o sistema microcontrolador sobre a presença de fogo em determinado ambiente, para que o mesmo possa tomar as ações…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3 - 5,5VDC"
+    "Tensão": "3 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -1724,7 +1724,7 @@
    "descricao": "O Sensor de Pressão Barométrica e Temperatura BMP280 é um módulo eletrônico capaz de realizar a medição de pressão atmosférica e temperatura.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3.3VDC"
+    "Tensão": "3,3 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=473",
    "loja": "Usinainfo",
@@ -1816,7 +1816,7 @@
    "descricao": "O Radar Doppler RCWL-0516 é um pequeno e compacto sensor de movimento eletrônico que possui como base de funcionamento o efeito de Doppler, o qual é referido como um fenômeno físico observado nas ondas quando emitidas ou…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "4 a 28V DC"
+    "Tensão": "4 a 28 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -1850,7 +1850,7 @@
    "descricao": "O Sensor de Corrente ACS712 5A é um componente eletrônico desenvolvido para aplicação em diversos circuitos elétricos.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=306",
    "loja": "Usinainfo",
@@ -1883,7 +1883,7 @@
    "descricao": "O Sensor de Fluxo de Água 1/2 YF-S201 é um produto altamente tecnológico, desenvolvido para atuar em conjunto com diversas plataformas de prototipagem, sejam elas, Arduino , PIC, AVR, ARM, entre outros.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "DC 3.5V ~ 24V"
+    "Tensão": "3,5 V a 24 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -1930,7 +1930,7 @@
    "descricao": "O Sensor de Gás MQ-135 / Detector de Gás é um dispositivo de segurança utilizado principalmente no desenvolvimento de projetos eletrônicos, possuindo alta sensibilidade para detecção de Amônia, Óxido Nítrico, Álcool, Benzeno,…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "DC 5V"
+    "Tensão": "5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=151",
    "loja": "Usinainfo",
@@ -1964,7 +1964,7 @@
    "descricao": "O Sensor de Cor RGB TCS34725 é moderno módulo eletrônico capaz de fazer com maior precisão a identificação de cores que outros sensores.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3.3 a 5V DC"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -1998,7 +1998,7 @@
    "descricao": "O Sensor de Pressão BME280 é um exclusivo modelo capaz de realizar a medição de pressão atmosférica, umidade e temperatura, também conhecido como barômetro é um módulo digital de alta capacidade e resolução, utilizado nas mais…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "1,8 a 3,6VDC"
+    "Tensão": "1,8 a 3,6 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=429",
    "loja": "Usinainfo",
@@ -2032,7 +2032,7 @@
    "descricao": "O Módulo Sensor de Umidade e Temperatura AM2302 DHT22 é um dispositivo eletrônico amplamente utilizado para medir e monitorar os níveis de umidade e temperatura em ambientes diversos.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3 - 5,5VDC"
+    "Tensão": "3 a 5,5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=109",
    "loja": "Usinainfo",
@@ -2073,7 +2073,7 @@
    "descricao": "O Sensor de Frequência Cardíaca e Oxímetro MAX30102 é uma solução completa para monitoramento de sinais vitais, capaz de medir a frequência cardíaca e os níveis de oxigenação no sangue com precisão.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3,3V a 5V DC"
+    "Tensão": "3,3 V a 5 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1085",
    "loja": "Usinainfo",
@@ -2115,7 +2115,7 @@
    "descricao": "O Sensor MPU-6050 contém em um único chip um acelerômetro e um giroscópio tipo MEMS.São 3 eixos para o acelerômetro e 3 eixos para o giroscópio, sendo ao todo 6 graus de liberdade (6DOF).Além disso esta placa tem um Sensor de…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3-5V"
+    "Tensão": "3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2164,7 +2164,7 @@
    "descricao": "O Módulo conversor e amplificador HX711 de 24 bits, é utilizado para amplificar o sinal de dispositivos como as células de carga, fazendo a interligação entre essas células e o microcontrolador.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "4,8 à 5,5V DC"
+    "Tensão": "4,8 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2197,7 +2197,7 @@
    "descricao": "Este Módulo Conversor Analógico Digital (ADC) de 4 Canais é uma excelente opção para se utilizar em microcontroladores sem ADC ou quando você precia de um ADC de maior precisão.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "2V a 5,5V"
+    "Tensão": "2 V a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2230,7 +2230,7 @@
    "descricao": "Módulo com Sensor Óptico de reflexão TCRT5000, que possui acoplado um infravermelho (emissor) e um fototransistor (receptor).",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3,3-5V"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2263,7 +2263,7 @@
    "descricao": "Este sensor pode ser usado para monitorar uma variedade de condições climáticas como gotas de chuva ou neve.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3,3-5v"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2296,7 +2296,7 @@
    "descricao": "Este Sensor de distância VL53L0X é um diferente de todos que você já viu.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "2.6 - 5.5VDC"
+    "Tensão": "2,6 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2336,7 +2336,7 @@
    "descricao": "Esse módulo é capaz de medir distâncias de 2cm a 4m com ótima precisão e baixo preço.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "5V DC"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2383,7 +2383,7 @@
    "descricao": "O Módulo GY-302 tem como base o circuito integrado BH1750, que é um Sensor de luminosidade digital com interface I2C.O sensor mede o iluminamento em lux, essa medida tem capacidade de dizer o fluxo luminoso em uma determinada…",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3,3 a 5V"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2407,7 +2407,7 @@
    "descricao": "Este módulo Sensor de luz é baseado em um foto resistor que mede a intensidade da luz ambiente através da variação de sua resistência interna.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3.3-5V DC"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2431,7 +2431,7 @@
    "descricao": "O objetivo deste sensor é medir a intensidade sonora do ambiente ao seu redor, variando o estado de sua saída digital caso detectado um sinal sonoro.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3.3-5V DC"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2478,7 +2478,7 @@
    "descricao": "O DHT11 é um sensor de temperatura e umidade de saída de sinal digital garantindo alta confiabilidade e estabilidade a longo prazo.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3 - 5VDC (5.5VDC máx.)"
+    "Tensão": "3 a 5 V (5,5 V máx.)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2511,7 +2511,7 @@
    "descricao": "Para quem está procurando uma forma prática e eficiente de monitorar a umidade do solo em projetos de automação ou cultivo inteligente, destaca-se um sensor de destaque: esse sensor.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3.3 - 6V"
+    "Tensão": "3,3 a 6 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2535,7 +2535,7 @@
    "descricao": "Este módulo permite realizar medições de corrente em circuitos com tensão DC entre 0 e 26V.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3 - 5.5VDC"
+    "Tensão": "3 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2576,7 +2576,7 @@
    "descricao": "Este sensor de gás inflamável e fumaça MQ-2 é capaz de detectar concentrações de gases combustíveis e fumaça no ar.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "5V"
+    "Tensão": "5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2609,7 +2609,7 @@
    "descricao": "O Sensor de Movimento PIR DYP ME003 consegue Detectar o movimento de objetos que estejam em uma área de até 7 metros!",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "4,5-20V"
+    "Tensão": "4,5 a 20 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2681,7 +2681,7 @@
    "descricao": "O Sensor de Temperatura DS18B20 a Prova D'água (CI MY18E20) é uma ótima opção para ampliar a capacidade de detecção e monitoramento do projeto.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3-5,5V"
+    "Tensão": "3 a 5,5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2705,7 +2705,7 @@
    "descricao": "Este Kit contém um Termopar Tipo K e um Módulo de Leitura Max6675 que são capazes de realizar medições de temperatuda de 0°C à 800°C.",
    "atributos": {
     "Tipo": "Sensor",
-    "Tensão": "3 a 5V"
+    "Tensão": "3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2738,7 +2738,7 @@
    "descricao": "A Placa Amplificador de Som 3W + 3W Estéreo PAM8403 é um circuito completo e ideal para quem necessita de um amplificador compacto e eficiente.",
    "atributos": {
     "Tipo": "Som",
-    "Tensão": "2,5-5VDC"
+    "Tensão": "2,5 a 5 V"
    },
    "datasheet": "",
    "loja": "Usinainfo",
@@ -2772,7 +2772,7 @@
    "descricao": "O Módulo INMP441 é um microfone omnidirecional de alto desempenho que pode ser utilizado em projetos com os mais diversos tipos de microcontroladores, incluindo Arduino e o famoso ESP32 .",
    "atributos": {
     "Tipo": "Som",
-    "Tensão": "1,8V a 3,3VDC"
+    "Tensão": "1,8 V a 3,3 V"
    },
    "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=590",
    "loja": "Usinainfo",
@@ -2829,7 +2829,7 @@
    "descricao": "O Módulo Buzzer Ativo é um pequeno alto falante destinado a emitir sinais sonoros a partir do oferecimento de energia DC ao módulo, não variando a frequência de emissão.",
    "atributos": {
     "Tipo": "Som",
-    "Tensão": "3.3 a 5V (VCC e GND)"
+    "Tensão": "3,3 a 5 V (VCC e GND)"
    },
    "datasheet": "",
    "loja": "Eletrogate",
@@ -2853,7 +2853,7 @@
    "descricao": "O Módulo MP3 DFPlayer Mini é um módulo compacto, de fácil utilização e integração com placas e microcontroladores, podendo ser controlado via interface serial ou através de botões diretamente conectados ao módulo.",
    "atributos": {
     "Tipo": "Som",
-    "Tensão": "3.3 a 5VDC"
+    "Tensão": "3,3 a 5 V"
    },
    "datasheet": "",
    "loja": "Eletrogate",

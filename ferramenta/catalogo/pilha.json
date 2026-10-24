@@ -2,19 +2,23 @@
  "categoria": "pilha",
  "nome": "Suporte de pilha e bateria",
  "grupo": "Energia",
- "explica": "Segura a pilha ou bateria na placa, com pinos de furo pra soldar: o + e o − dela viram dois furos. Aqui só entra suporte que a loja diz que é de furo; escolha pelo tamanho da pilha (a loja chama a AA de 'No. 5'). Caixinhas e clipes em que a loja não diz como se prendem (os de AAA, por exemplo) e o encaixe da bateria de 9 V, que vai no fio, estão em Porta-pilhas.",
+ "explica": "Segura a pilha ou bateria na placa: vai soldado nela, com pinos de furo, e o + e o − dela viram furos na placa. Escolha pelo tamanho da pilha (CR2032, CR2450, AA, AAA, 18650; alguns levam mais de uma, veja o tamanho no cartão) e lembre que a 18650 é de lítio: recarregar pede carregador e proteção. Clipe avulso e o encaixe da bateria de 9 V, que vai no fio, estão em Clipe de pilha e encaixe de 9 V.",
  "destaques": [
-  "Battery Type",
-  "Connector Type",
-  "Contact Plating"
+  "Battery Type|Applicable battery specifications",
+  "Connector Type|Type",
+  "Contact Plating|Contact coating"
  ],
- "chips": "Battery Type",
+ "chips": "Battery Type|Applicable battery specifications",
+ "traducoes": {
+  "No. 5": "AA",
+  "No. 7": "AAA"
+ },
  "filtro": {
   "montagem": [
    "furo"
   ],
   "atributos": [
-   "Battery Type"
+   "Battery Type|Applicable battery specifications"
   ],
   "estoque_minimo": 50
  },
@@ -61,102 +65,83 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C54952113": {
+  "C49215505": {
    "nome": "Suporte de pilha 18650",
    "marca": "MYOUNG",
-   "modelo": "BH-18650-A6AJ042",
-   "pacote": "Plugin",
-   "tamanho": "",
+   "modelo": "BH-18650-A1BJ033",
+   "pacote": "-",
+   "tamanho": "78,3 × 20,7 mm",
    "montagem": "furo",
-   "categoria_loja": "Button And Strip Battery Connector",
-   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
    "atributos": {
-    "Operating Temperature": "-25℃~+85℃",
-    "Connector Type": "Battery holder",
-    "Battery Type": "18650"
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "18650",
+    "Contact coating": "Nickel Plated"
    },
    "datasheet": "",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54952113.html",
-   "preco": 1.6807,
+   "link": "https://www.lcsc.com/product-detail/C49215505.html",
+   "preco": 0.5074,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 24,
+   "estoque": 235,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
-  "C54952127": {
+  "C49215506": {
    "nome": "Suporte de pilha 18650",
    "marca": "MYOUNG",
-   "modelo": "BH-18650-A6AJ037",
-   "pacote": "Plugin",
-   "tamanho": "",
+   "modelo": "BH-18650-A1BJ034",
+   "pacote": "-",
+   "tamanho": "78,0 × 40,6 mm",
    "montagem": "furo",
-   "categoria_loja": "Button And Strip Battery Connector",
-   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
    "atributos": {
-    "Operating Temperature": "-10℃~+80℃",
-    "Connector Type": "Battery holder",
-    "Battery Type": "18650"
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "18650",
+    "Contact coating": "Nickel Plated"
    },
    "datasheet": "",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54952127.html",
-   "preco": 1.4009,
+   "link": "https://www.lcsc.com/product-detail/C49215506.html",
+   "preco": 1.4598,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 10,
+   "estoque": 166,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
-  "C54952114": {
+  "C49215508": {
    "nome": "Suporte de pilha 18650",
    "marca": "MYOUNG",
-   "modelo": "BH-18650-A6AJ041",
-   "pacote": "Plugin",
-   "tamanho": "",
+   "modelo": "BH-18650-A1BJ036",
+   "pacote": "-",
+   "tamanho": "78,2 × 79,0 mm",
    "montagem": "furo",
-   "categoria_loja": "Button And Strip Battery Connector",
-   "descricao": "插件 Button And Strip Battery Connector ROHS",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ 18650 Battery holder Nickel plated - ROHS",
    "atributos": {
-    "Operating Temperature": "-25℃~+85℃",
-    "Connector Type": "Battery holder",
-    "Battery Type": "18650"
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "18650",
+    "Contact coating": "Nickel Plated"
    },
    "datasheet": "",
    "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54952114.html",
-   "preco": 1.6807,
+   "link": "https://www.lcsc.com/product-detail/C49215508.html",
+   "preco": 1.3387,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 6,
+   "estoque": 90,
    "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C49118396": {
-   "nome": "Suporte de pilha 18650",
-   "marca": "HanElectricity",
-   "modelo": "BH-18650-2",
-   "pacote": "Plugin",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Button And Strip Battery Connector",
-   "descricao": "-10℃~+100℃ 18650 Battery holder Nickel Plugin Button And Strip Battery Connector ROHS",
-   "atributos": {
-    "Operating Temperature": "-10℃~+100℃",
-    "Contact Plating": "Nickel",
-    "Connector Type": "Battery holder",
-    "Battery Type": "18650"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://lcsc.com/product-detail/button-and-strip-battery-connector_hanelectricity-bh-18650-2_C49118396.html",
-   "preco": 0.3013,
-   "moeda": "USD",
-   "minimo": 30,
-   "estoque": 4,
-   "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "montagem_manual": "furo"
   },
   "C55318134": {
    "nome": "Suporte de pilha CR1220",
@@ -241,7 +226,7 @@
    "marca": "Lian Xin Technology",
    "modelo": "XDBS-CR2032-5",
    "pacote": "Plugin",
-   "tamanho": "",
+   "tamanho": "23,1 × 6,0 mm",
    "descricao": "-55℃~+85℃ Battery base CR2032 Phosphor bronze Plugin Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -267,7 +252,7 @@
    "marca": "LOTES",
    "modelo": "AAA-BAT-029-K01",
    "pacote": "Plugin",
-   "tamanho": "",
+   "tamanho": "24,1 × 22,5 mm",
    "descricao": "Battery base CR2032 插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-",
@@ -342,7 +327,7 @@
    "marca": "HOAUC",
    "modelo": "HYCW-BS-2-1-CR2032-2",
    "pacote": "Plugin",
-   "tamanho": "",
+   "tamanho": "26,9 × 28,8 mm",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -367,7 +352,7 @@
    "marca": "LOTES",
    "modelo": "AAA-BAT-038-K01",
    "pacote": "Plugin",
-   "tamanho": "",
+   "tamanho": "23,8 × 6,5 mm",
    "descricao": "Battery base CR2032 Phosphor bronze 插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-",
@@ -392,7 +377,7 @@
    "marca": "XUNPU",
    "modelo": "BS-0202-DK-0B",
    "pacote": "Plugin",
-   "tamanho": "",
+   "tamanho": "24,8 × 22,1 mm",
    "descricao": "-25℃~+85℃ Battery base CR2032 Phosphor bronze Tin Plugin Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-25℃~+85℃",
@@ -439,6 +424,166 @@
    "moeda": "USD",
    "montagem": "furo"
   },
+  "C964806": {
+   "nome": "Suporte de pilha CR2450",
+   "marca": "MYOUNG",
+   "modelo": "BS-24-A1AJ004",
+   "pacote": "-",
+   "tamanho": "29,8 × 26,6 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-25~85℃ Battery base CR2450 Nickel plated Phosphor bronze - ROHS",
+   "atributos": {
+    "Operating Temperature": "-25~85℃",
+    "Contact material": "Phosphor Bronze",
+    "Type": "Battery base",
+    "Applicable battery specifications": "CR2450",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2012141309_MYOUNG-BS-24-A1AJ004_C964806.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bs-24-a1aj004_C964806.html",
+   "preco": 0.3575,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 4303,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C2979177": {
+   "nome": "Suporte de pilha CR2450",
+   "marca": "MYOUNG",
+   "modelo": "MY-2450-02",
+   "pacote": "-",
+   "tamanho": "25,4 × 22,6 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-25~85℃ Battery buckle CR2450 Nickel plated Phosphor bronze - ROHS",
+   "atributos": {
+    "Operating Temperature": "-25~85℃",
+    "Type": "Battery buckle",
+    "Contact material": "Phosphor Bronze",
+    "Applicable battery specifications": "CR2450",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2203021630_MYOUNG-MY-2450-02_C2979177.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-my-2450-02_C2979177.html",
+   "preco": 0.32,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1723,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C7525429": {
+   "nome": "Suporte de pilha AA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AA-A1AJ029",
+   "pacote": "-",
+   "tamanho": "57,7 × 46,5 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-40~85℃ Battery holder Brass Nickel plated No. 5 - ROHS",
+   "atributos": {
+    "Operating Temperature": "-40~85℃",
+    "Contact material": "Brass",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 5",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2308210927_MYOUNG-BH-AA-A1AJ029_C7525429.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj029_C7525429.html",
+   "preco": 0.7365,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2976,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C5290181": {
+   "nome": "Suporte de pilha AA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AA-A1AJ020",
+   "pacote": "-",
+   "tamanho": "56,3 × 16,8 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ Battery holder Nickel plated No. 5 - ROHS",
+   "atributos": {
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 5",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AA-A1AJ020_C5290181.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj020_C5290181.html",
+   "preco": 0.4615,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2381,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C5290180": {
+   "nome": "Suporte de pilha AA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AA-A5BJ012",
+   "pacote": "-",
+   "tamanho": "60,0 × 16,6 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~100℃ Battery holder Nickel plated No. 5 Steel - ROHS",
+   "atributos": {
+    "Operating Temperature": "-10~100℃",
+    "Contact material": "Steel",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 5",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AA-A5BJ012_C5290180.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a5bj012_C5290180.html",
+   "preco": 0.6072,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1688,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C20606793": {
+   "nome": "Suporte de pilha AA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AA-A1AJ025",
+   "pacote": "-",
+   "tamanho": "62,0 × 17,0 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ Battery holder Nickel plated No. 5 - ROHS",
+   "atributos": {
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 5",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401121843_MYOUNG-BH-AA-A1AJ025_C20606793.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aa-a1aj025_C20606793.html",
+   "preco": 0.6612,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 773,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
   "C49118398": {
    "nome": "Suporte de pilha AA",
    "marca": "HanElectricity",
@@ -462,6 +607,58 @@
    "estoque": 135,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "C5290189": {
+   "nome": "Suporte de pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AAA-A1AJ001",
+   "pacote": "-",
+   "tamanho": "49,5 × 12,9 mm",
+   "montagem": "furo",
+   "categoria_loja": "Battery connector",
+   "descricao": "-10~80℃ Battery holder Nickel plated No. 7 - ROHS",
+   "atributos": {
+    "Operating Temperature": "-10~80℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AAA-A1AJ001_C5290189.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aaa-a1aj001_C5290189.html",
+   "preco": 0.3457,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2150,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
+  },
+  "C5290193": {
+   "nome": "Suporte de pilha AAA",
+   "marca": "MYOUNG",
+   "modelo": "BH-AAA-A1AJ024",
+   "pacote": "-",
+   "tamanho": "52,1 × 37,1 mm",
+   "montagem": "furo",
+   "categoria_loja": "Batter Holder",
+   "descricao": "-10~100℃ Battery holder Nickel plating No. 7 - Batter Holder ROHS",
+   "atributos": {
+    "Operating Temperature": "-10~100℃",
+    "Type": "Battery holder",
+    "Applicable battery specifications": "No. 7",
+    "Contact coating": "Nickel Plated"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211291730_MYOUNG-BH-AAA-A1AJ024_C5290193.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/button-and-strip-battery-connector_myoung-bh-aaa-a1aj024_C5290193.html",
+   "preco": 0.2733,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1488,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "montagem_manual": "furo"
   }
  }
 }

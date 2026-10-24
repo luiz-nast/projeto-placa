@@ -4,9 +4,9 @@
  "grupo": "Luz e som",
  "explica": "Pega o sinal fraquinho de som (do ESP32, de um MP3) e dá força pra tocar um alto-falante. Os de classe D (PAM8403, PAM8302, NS4168, MAX98357A) esquentam pouco e vivem bem com bateria de 3,7 a 5 V, e o MAX98357A e o NS4168 recebem o som já digital, pelo I2S do ESP32; os de TO-220 (TDA2030, LM1875) são pra som alto, com fonte de uns 12 V ou mais e dissipador. Na potência, 3Wx2@4Ω quer dizer 3 W em cada um de 2 canais com alto-falante de 4 Ω (menos ohms que isso esquenta e pode queimar o chip), e nos de classe D cada fio do alto-falante vai numa saída do chip, nunca no terra.",
  "nome_peca": [
-  "Amplificador de áudio {Class}, {Speaker Channels}",
-  "Amplificador de áudio, {Speaker Channels}",
-  "Amplificador de áudio {Class}"
+  "Amplificador de áudio {Class} {@modelo}, {Speaker Channels}",
+  "Amplificador de áudio {@modelo}, {Speaker Channels}",
+  "Amplificador de áudio {Class} {@modelo}"
  ],
  "destaques": [
   "Output Power",
@@ -156,7 +156,7 @@
    "situacao": "ok"
   },
   "C85119": {
-   "nome": "Amplificador de áudio, 1 canal",
+   "nome": "Amplificador de áudio LM386G-S08-R, 1 canal",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM386G-S08-R",
    "pacote": "SOP-8",
@@ -189,7 +189,7 @@
    "situacao": "ok"
   },
   "C73296": {
-   "nome": "Amplificador de áudio, 2 canais",
+   "nome": "Amplificador de áudio TDA2822G-S08-R, 2 canais",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "TDA2822G-S08-R",
    "pacote": "SOIC-8",
@@ -222,7 +222,7 @@
    "situacao": "ok"
   },
   "C49246862": {
-   "nome": "Amplificador de áudio, 2 canais",
+   "nome": "Amplificador de áudio TDA2822 (LX), 2 canais",
    "marca": "lingxingic",
    "modelo": "TDA2822 (LX)",
    "pacote": "DIP-8",
@@ -255,7 +255,7 @@
    "situacao": "ok"
   },
   "C20613256": {
-   "nome": "Amplificador de áudio, 2 canais",
+   "nome": "Amplificador de áudio TDA2822N, 2 canais",
    "marca": "HGSEMI",
    "modelo": "TDA2822N",
    "pacote": "DIP-8",
@@ -321,7 +321,7 @@
    "situacao": "ok"
   },
   "C510561": {
-   "nome": "Amplificador de áudio, 1 canal",
+   "nome": "Amplificador de áudio LM386N, 1 canal",
    "marca": "HTC Korea TAEJIN Tech",
    "modelo": "LM386N",
    "pacote": "DIP-8",
@@ -354,7 +354,7 @@
    "situacao": "ok"
   },
   "C7432385": {
-   "nome": "Amplificador de áudio, 1 canal",
+   "nome": "Amplificador de áudio LM386BN-1, 1 canal",
    "marca": "HGSEMI",
    "modelo": "LM386BN-1",
    "pacote": "DIP-8",
@@ -387,7 +387,7 @@
    "situacao": "ok"
   },
   "C7554": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB LM4871MX/NOPB, 1 canal",
    "marca": "Texas Instruments",
    "modelo": "LM4871MX/NOPB",
    "pacote": "SOIC-8",
@@ -420,7 +420,7 @@
    "situacao": "ok"
   },
   "C189960": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB NS8002, 1 canal",
    "marca": "Shenzhen Nsiway Tech",
    "modelo": "NS8002",
    "pacote": "SOP-8",
@@ -453,7 +453,7 @@
    "situacao": "ok"
   },
   "C23573": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB LM386MX-1/NOPB, 1 canal",
    "marca": "Texas Instruments",
    "modelo": "LM386MX-1/NOPB",
    "pacote": "SOIC-8-150mil",
@@ -486,7 +486,7 @@
    "situacao": "ok"
   },
   "C7432196": {
-   "nome": "Amplificador de áudio classe AB",
+   "nome": "Amplificador de áudio classe AB TDA2030TB",
    "marca": "HGSEMI",
    "modelo": "TDA2030TB",
    "pacote": "TO-220B-5",
@@ -519,7 +519,7 @@
    "situacao": "ok"
   },
   "C20612516": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB LM386N(XBLW), 1 canal",
    "marca": "XBLW",
    "modelo": "LM386N(XBLW)",
    "pacote": "DIP-8",
@@ -552,7 +552,7 @@
    "situacao": "ok"
   },
   "C55098814": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB LM4871N-TUDI, 1 canal",
    "marca": "Tudi",
    "modelo": "LM4871N-TUDI",
    "pacote": "DIP-8",
@@ -582,7 +582,7 @@
    "situacao": "ok"
   },
   "C81909": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB TDA2030AL-TB5-T, 1 canal",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "TDA2030AL-TB5-T",
    "pacote": "TO-220B",
@@ -615,7 +615,7 @@
    "situacao": "ok"
   },
   "C51927337": {
-   "nome": "Amplificador de áudio classe AB, 2 canais",
+   "nome": "Amplificador de áudio classe AB TDA2822NBD, 2 canais",
    "marca": "GREENMICRO",
    "modelo": "TDA2822NBD",
    "pacote": "DIP-8",
@@ -648,7 +648,7 @@
    "situacao": "ok"
   },
   "C96009": {
-   "nome": "Amplificador de áudio classe AB, 2 canais",
+   "nome": "Amplificador de áudio classe AB TDA7297, 2 canais",
    "marca": "STMicroelectronics",
    "modelo": "TDA7297",
    "pacote": "Multiwatt-15",
@@ -681,7 +681,7 @@
    "situacao": "ok"
   },
   "C83050": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB TDA2003L-TB5-T, 1 canal",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "TDA2003L-TB5-T",
    "pacote": "TO-220B",
@@ -710,7 +710,7 @@
    "situacao": "ok"
   },
   "C9723": {
-   "nome": "Amplificador de áudio classe AB, 1 canal",
+   "nome": "Amplificador de áudio classe AB LM386N-1/NOPB, 1 canal",
    "marca": "Texas Instruments",
    "modelo": "LM386N-1/NOPB",
    "pacote": "DIP-8",
@@ -743,7 +743,7 @@
    "situacao": "ok"
   },
   "C86270": {
-   "nome": "Amplificador de áudio classe AB ou D, 2 canais",
+   "nome": "Amplificador de áudio classe AB ou D PAM8406DR, 2 canais",
    "marca": "Diodes Incorporated",
    "modelo": "PAM8406DR",
    "pacote": "SOIC-16",
@@ -776,7 +776,7 @@
    "situacao": "ok"
   },
   "C189961": {
-   "nome": "Amplificador de áudio classe D, 1 canal",
+   "nome": "Amplificador de áudio classe D NS4150B, 1 canal",
    "marca": "Shenzhen Nsiway Tech",
    "modelo": "NS4150B",
    "pacote": "MSOP-8",
@@ -809,7 +809,7 @@
    "situacao": "ok"
   },
   "C93112": {
-   "nome": "Amplificador de áudio classe D, 1 canal",
+   "nome": "Amplificador de áudio classe D HT6872, 1 canal",
    "marca": "Jiaxing Heroic Elec Tech",
    "modelo": "HT6872",
    "pacote": "SOP-8",
@@ -842,7 +842,7 @@
    "situacao": "ok"
   },
   "C910544": {
-   "nome": "Amplificador de áudio classe D",
+   "nome": "Amplificador de áudio classe D MAX98357AETE+T",
    "marca": "Analog Devices Inc./Maxim Integrated",
    "modelo": "MAX98357AETE+T",
    "pacote": "TQFN-16-EP(3x3)",
@@ -873,7 +873,7 @@
    "situacao": "ok"
   },
   "C50144": {
-   "nome": "Amplificador de áudio classe D, 2 canais",
+   "nome": "Amplificador de áudio classe D TPA3116D2DADR, 2 canais",
    "marca": "Texas Instruments",
    "modelo": "TPA3116D2DADR",
    "pacote": "HTSSOP-32-6.1mm",
@@ -906,7 +906,7 @@
    "situacao": "ok"
   },
   "C910588": {
-   "nome": "Amplificador de áudio classe D, 1 canal",
+   "nome": "Amplificador de áudio classe D NS4168, 1 canal",
    "marca": "Shenzhen Nsiway Tech",
    "modelo": "NS4168",
    "pacote": "ESOP-8-EP(3.9x4.9x1.27)",
@@ -939,7 +939,7 @@
    "situacao": "ok"
   },
   "C113367": {
-   "nome": "Amplificador de áudio classe D, 1 canal",
+   "nome": "Amplificador de áudio classe D PAM8302AASCR, 1 canal",
    "marca": "Diodes Incorporated",
    "modelo": "PAM8302AASCR",
    "pacote": "MSOP-8",
@@ -972,7 +972,7 @@
    "situacao": "ok"
   },
   "C5122557": {
-   "nome": "Amplificador de áudio classe D, 2 canais",
+   "nome": "Amplificador de áudio classe D PAM8403, 2 canais",
    "marca": "Slkor(SLKORMICRO Elec.)",
    "modelo": "PAM8403",
    "pacote": "SOP-16",
@@ -1005,7 +1005,7 @@
    "situacao": "ok"
   },
   "C17337": {
-   "nome": "Amplificador de áudio classe D, 2 canais",
+   "nome": "Amplificador de áudio classe D PAM8403DR-H, 2 canais",
    "marca": "Diodes Incorporated",
    "modelo": "PAM8403DR-H",
    "pacote": "SOIC-16",
@@ -1038,7 +1038,7 @@
    "situacao": "ok"
   },
   "C30132": {
-   "nome": "Amplificador de áudio classe D, 2 canais",
+   "nome": "Amplificador de áudio classe D TPA3110D2PWPR, 2 canais",
    "marca": "Texas Instruments",
    "modelo": "TPA3110D2PWPR",
    "pacote": "HTSSOP-28-EP",
@@ -1071,7 +1071,7 @@
    "situacao": "ok"
   },
   "C53055751": {
-   "nome": "Amplificador de áudio classe D, 2 canais",
+   "nome": "Amplificador de áudio classe D PAM8403DES, 2 canais",
    "marca": "GREENMICRO",
    "modelo": "PAM8403DES",
    "pacote": "SOP-16",

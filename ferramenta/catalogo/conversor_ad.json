@@ -2,15 +2,16 @@
  "categoria": "conversor_ad",
  "nome": "Conversor analógico-digital (ADC)",
  "grupo": "Cérebros",
- "explica": "Transforma uma tensão (de sensor, potenciômetro ou bateria) num número que o ESP32 lê por poucos fios (I2C, SPI ou um serial de 2 fios), com muito mais precisão que o conversor de dentro do ESP32. Os bits dizem a finura: 12 bits divide a faixa em 4.096 degraus, 24 bits em 16 milhões; o HX711 e o CS1237 são os de balança, feitos pra célula de carga. Cuidado: a tensão na entrada nunca pode passar da alimentação do chip nem ficar abaixo do terra.",
+ "explica": "Transforma uma tensão (de sensor, potenciômetro ou bateria) num número que o ESP32 lê por poucos fios (I2C, SPI ou um serial de 2 fios), mais certinho que o conversor de dentro do ESP32, que erra bastante perto das pontas. Os bits dizem a finura (10 bits divide a faixa em 1.024 degraus, 24 bits em 16 milhões) e a faixa é dada pela referência de tensão, de dentro do chip ou ligada no pino VREF; o HX711 e o CS1237 são os de balança, feitos pra célula de carga. Cuidado: a tensão na entrada nunca pode passar da alimentação do chip nem ficar abaixo do terra.",
  "nome_peca": [
-  "ADC de {Resolution (Bits)|Resolution(Bits)} bits, {number of channels|Number of Channels}, {Interface}",
-  "ADC de {Resolution (Bits)|Resolution(Bits)} bits, {Interface}",
-  "ADC de {number of channels|Number of Channels}, {Interface}"
+  "ADC de {Resolution (Bits)|Resolution(Bits)} bits {@modelo}, {number of channels|Number of Channels}, {Interface}",
+  "ADC de {Resolution (Bits)|Resolution(Bits)} bits {@modelo}, {Interface}",
+  "ADC {@modelo}, {number of channels|Number of Channels}, {Interface}"
  ],
  "destaques": [
   "Voltage - Supply",
-  "Sampling Rate"
+  "Sampling Rate",
+  "Voltage Reference"
  ],
  "chips": "Resolution (Bits)|Resolution(Bits)",
  "traducoes": {
@@ -21,7 +22,10 @@
   "2、4": "2 ou 4 entradas",
   "SPI、Serial Port": "SPI",
   "Serial Port": "serial",
-  "Serial port": "serial"
+  "Serial port": "serial",
+  "Built-in": "referência dentro",
+  "External": "referência de fora",
+  "External、Built-in": "referência dentro ou de fora"
  },
  "filtro": {
   "categorias_loja": [
@@ -102,7 +106,7 @@
  ],
  "pecas": {
   "C2651321": {
-   "nome": "ADC de 10 bits, 8 entradas, SPI",
+   "nome": "ADC de 10 bits MCP3008T-I/SL, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3008T-I/SL",
    "pacote": "SOIC-16",
@@ -140,7 +144,7 @@
    "situacao": "ok"
   },
   "C1520159": {
-   "nome": "ADC de 10 bits, 8 entradas, SPI",
+   "nome": "ADC de 10 bits MCP3008-I/SL, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3008-I/SL",
    "pacote": "SOIC-16",
@@ -178,7 +182,7 @@
    "situacao": "ok"
   },
   "C627067": {
-   "nome": "ADC de 10 bits, 4 entradas, SPI",
+   "nome": "ADC de 10 bits MCP3004T-I/ST, 4 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3004T-I/ST",
    "pacote": "TSSOP-14",
@@ -216,7 +220,7 @@
    "situacao": "ok"
   },
   "C2890491": {
-   "nome": "ADC de 10 bits, 8 entradas, SPI",
+   "nome": "ADC de 10 bits MCP3008-I/P, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3008-I/P",
    "pacote": "PDIP-16",
@@ -254,7 +258,7 @@
    "situacao": "ok"
   },
   "C193969": {
-   "nome": "ADC de 12 bits, 2 entradas, I2C",
+   "nome": "ADC de 12 bits ADS1015IDGSR, 2 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1015IDGSR",
    "pacote": "VSSOP-10-0.5mm",
@@ -291,7 +295,7 @@
    "situacao": "ok"
   },
   "C701605": {
-   "nome": "ADC de 12 bits, 2 entradas, I2C",
+   "nome": "ADC de 12 bits ADS1015BQDGSRQ1, 2 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1015BQDGSRQ1",
    "pacote": "VSSOP-10-0.5mm",
@@ -327,7 +331,7 @@
    "situacao": "ok"
   },
   "C626764": {
-   "nome": "ADC de 12 bits, 8 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3208T-CI/SL, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3208T-CI/SL",
    "pacote": "SOIC-16",
@@ -365,7 +369,7 @@
    "situacao": "ok"
   },
   "C701606": {
-   "nome": "ADC de 12 bits, 2 entradas, I2C",
+   "nome": "ADC de 12 bits ADS1015IDGST, 2 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1015IDGST",
    "pacote": "VSSOP-10-0.5mm",
@@ -403,7 +407,7 @@
    "situacao": "ok"
   },
   "C16939": {
-   "nome": "ADC de 12 bits, 8 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3208-CI/SL, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3208-CI/SL",
    "pacote": "SOIC-16",
@@ -441,7 +445,7 @@
    "situacao": "ok"
   },
   "C637057": {
-   "nome": "ADC de 12 bits, 4 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3204-CI/ST, 4 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3204-CI/ST",
    "pacote": "TSSOP-14",
@@ -479,7 +483,7 @@
    "situacao": "ok"
   },
   "C32816": {
-   "nome": "ADC de 12 bits, 4 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3204-CI/SL, 4 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3204-CI/SL",
    "pacote": "SOIC-14",
@@ -517,7 +521,7 @@
    "situacao": "ok"
   },
   "C2669887": {
-   "nome": "ADC de 12 bits, 4 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3204T-CI/SL, 4 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3204T-CI/SL",
    "pacote": "SOIC-14",
@@ -555,7 +559,7 @@
    "situacao": "ok"
   },
   "C2979740": {
-   "nome": "ADC de 12 bits, 8 entradas, SPI",
+   "nome": "ADC de 12 bits MCP3208-BI/SL, 8 entradas, SPI",
    "marca": "Microchip Tech",
    "modelo": "MCP3208-BI/SL",
    "pacote": "SOIC-16",
@@ -593,7 +597,7 @@
    "situacao": "ok"
   },
   "C55347": {
-   "nome": "ADC de 16 bits, 2 entradas, SPI",
+   "nome": "ADC de 16 bits ADS1118IDGSR, 2 entradas, SPI",
    "marca": "Texas Instruments",
    "modelo": "ADS1118IDGSR",
    "pacote": "VSSOP-10-0.5mm",
@@ -629,7 +633,7 @@
    "situacao": "ok"
   },
   "C37593": {
-   "nome": "ADC de 16 bits, 4 entradas, I2C",
+   "nome": "ADC de 16 bits ADS1115IDGSR, 4 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1115IDGSR",
    "pacote": "VSSOP-10",
@@ -667,7 +671,7 @@
    "situacao": "ok"
   },
   "C2868291": {
-   "nome": "ADC de 16 bits, 2 entradas, I2C",
+   "nome": "ADC de 16 bits ADS1115BQDGSRQ1, 2 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1115BQDGSRQ1",
    "pacote": "VSSOP-10-0.5mm",
@@ -704,7 +708,7 @@
    "situacao": "ok"
   },
   "C701612": {
-   "nome": "ADC de 16 bits, 2 entradas, SPI",
+   "nome": "ADC de 16 bits ADS1118IDGST, 2 entradas, SPI",
    "marca": "Texas Instruments",
    "modelo": "ADS1118IDGST",
    "pacote": "VSSOP-10-0.5mm",
@@ -740,7 +744,7 @@
    "situacao": "ok"
   },
   "C34842333": {
-   "nome": "ADC de 16 bits, 2 entradas, I2C",
+   "nome": "ADC de 16 bits ADS1115LIDGSR, 2 entradas, I2C",
    "marca": "Texas Instruments",
    "modelo": "ADS1115LIDGSR",
    "pacote": "VSSOP-10",
@@ -776,7 +780,7 @@
    "situacao": "ok"
   },
   "C29454": {
-   "nome": "ADC de 18 bits, 1 entrada, I2C",
+   "nome": "ADC de 18 bits MCP3421A0T-E/CH, 1 entrada, I2C",
    "marca": "Microchip Tech",
    "modelo": "MCP3421A0T-E/CH",
    "pacote": "SOT-23-6",
@@ -813,7 +817,7 @@
    "situacao": "ok"
   },
   "C626769": {
-   "nome": "ADC de 18 bits, 4 entradas, I2C",
+   "nome": "ADC de 18 bits MCP3424T-E/SL, 4 entradas, I2C",
    "marca": "Microchip Tech",
    "modelo": "MCP3424T-E/SL",
    "pacote": "SOIC-14",
@@ -848,7 +852,7 @@
    "situacao": "ok"
   },
   "C116032": {
-   "nome": "ADC de 18 bits, 1 entrada, I2C",
+   "nome": "ADC de 18 bits MCP3421A1T-E/CH, 1 entrada, I2C",
    "marca": "Microchip Tech",
    "modelo": "MCP3421A1T-E/CH",
    "pacote": "SOT-23-6",
@@ -886,7 +890,7 @@
    "situacao": "ok"
   },
   "C219880": {
-   "nome": "ADC de 18 bits, 4 entradas, I2C",
+   "nome": "ADC de 18 bits MCP3424-E/ST, 4 entradas, I2C",
    "marca": "Microchip Tech",
    "modelo": "MCP3424-E/ST",
    "pacote": "TSSOP-14",
@@ -921,7 +925,7 @@
    "situacao": "ok"
   },
   "C6705483": {
-   "nome": "ADC de 24 bits, 2 entradas, SPI",
+   "nome": "ADC de 24 bits HX711, 2 entradas, SPI",
    "marca": "Avia Semicon (Xiamen)",
    "modelo": "HX711",
    "pacote": "SOP-16",
@@ -959,7 +963,7 @@
    "situacao": "ok"
   },
   "C77801": {
-   "nome": "ADC de 24 bits, 1 entrada, SPI",
+   "nome": "ADC de 24 bits CS1237-SOP8, 1 entrada, SPI",
    "marca": "CHIPSEA",
    "modelo": "CS1237-SOP8",
    "pacote": "SOP-8",
@@ -996,7 +1000,7 @@
    "situacao": "ok"
   },
   "C48263": {
-   "nome": "ADC de 24 bits, 2 ou 4 entradas, SPI",
+   "nome": "ADC de 24 bits ADS1220IPWR, 2 ou 4 entradas, SPI",
    "marca": "Texas Instruments",
    "modelo": "ADS1220IPWR",
    "pacote": "TSSOP-16",
@@ -1033,7 +1037,7 @@
    "situacao": "ok"
   },
   "C81829": {
-   "nome": "ADC de 24 bits, 2 entradas, SPI",
+   "nome": "ADC de 24 bits CS1238-SOP14, 2 entradas, SPI",
    "marca": "CHIPSEA",
    "modelo": "CS1238-SOP14",
    "pacote": "SOP-14",
@@ -1071,7 +1075,7 @@
    "situacao": "ok"
   },
   "C601080": {
-   "nome": "ADC de 24 bits, 1 entrada, serial",
+   "nome": "ADC de 24 bits TM7711, 1 entrada, serial",
    "marca": "TM(Shenzhen Titan Micro Elec)",
    "modelo": "TM7711",
    "pacote": "SOP-8",
@@ -1108,7 +1112,7 @@
    "situacao": "ok"
   },
   "C43656": {
-   "nome": "ADC de 24 bits, 2 entradas, serial",
+   "nome": "ADC de 24 bits HX711, 2 entradas, serial",
    "marca": "Avia Semicon (Xiamen)",
    "modelo": "HX711",
    "pacote": "SOP-16",
@@ -1146,7 +1150,7 @@
    "situacao": "ok"
   },
   "C27919": {
-   "nome": "ADC de 24 bits, 2 entradas, SPI",
+   "nome": "ADC de 24 bits ADS1232IPWR, 2 entradas, SPI",
    "marca": "Texas Instruments",
    "modelo": "ADS1232IPWR",
    "pacote": "TSSOP-24",
@@ -1183,7 +1187,7 @@
    "situacao": "ok"
   },
   "C78447": {
-   "nome": "ADC de 24 bits, 1 entrada, serial",
+   "nome": "ADC de 24 bits HX710B, 1 entrada, serial",
    "marca": "Avia Semicon (Xiamen)",
    "modelo": "HX710B",
    "pacote": "SOIC-8",
@@ -1220,7 +1224,7 @@
    "situacao": "ok"
   },
   "C1542855": {
-   "nome": "ADC de 24 bits, 2 entradas, SPI",
+   "nome": "ADC de 24 bits ADS1220IPW, 2 entradas, SPI",
    "marca": "Texas Instruments",
    "modelo": "ADS1220IPW",
    "pacote": "TSSOP-16",
@@ -1258,7 +1262,7 @@
    "situacao": "ok"
   },
   "C22767336": {
-   "nome": "ADC de 24 bits, 1 entrada, serial",
+   "nome": "ADC de 24 bits TM7711-DIP8, 1 entrada, serial",
    "marca": "TM(Shenzhen Titan Micro Elec)",
    "modelo": "TM7711-DIP8",
    "pacote": "DIP-8",
@@ -1299,7 +1303,7 @@
    "situacao": "ok"
   },
   "C7464028": {
-   "nome": "ADC de 1 entrada, SPI",
+   "nome": "ADC CS1237-SO, 1 entrada, SPI",
    "marca": "CHIPSEA",
    "modelo": "CS1237-SO",
    "pacote": "SOP-8-150mil",

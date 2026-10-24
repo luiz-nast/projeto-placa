@@ -2,7 +2,7 @@
  "categoria": "conector_jst",
  "nome": "Conector JST",
  "grupo": "Conectores",
- "explica": "Encaixe de fio que só entra de um jeito: a peça de placa vai soldada e a capinha (XHP, PHR, SHR) vai na ponta do fio, com terminais (SXH, SPH, SSH) apertados no fio com alicate de crimpar. XH tem 2,5 mm entre pinos, PH tem 2 mm (o das baterias LiPo pequenas) e SH tem 1 mm: o de 4 vias é o Qwiic / STEMMA QT dos sensores I2C, só de superfície. No nome, \"a 90°\" é o deitado, com o fio entrando pela beira da placa; ele também é de furo.",
+ "explica": "Encaixe de fio que só entra de um jeito: a peça de placa vai soldada e a capinha (XHP, PHR, SHR) vai na ponta do fio, com terminais (SXH, SPH, SSH) apertados com alicate de crimpar. XH tem 2,5 mm entre pinos, PH tem 2 mm (o das baterias LiPo pequenas, mas o lado do + muda de uma marca pra outra: confira antes de ligar) e SH tem 1 mm, o de 4 vias é o Qwiic / STEMMA QT dos sensores I2C, só de superfície. O reto fica em pé, com o fio entrando por cima; o de 90° deita, com o fio entrando pela beira da placa.",
  "nome_peca": [
   "Conector JST {Reference Series} {Pins Structure}, {Mounting Type}",
   "Capinha JST {Reference Series} {Holes Structure}",
@@ -15,7 +15,8 @@
  ],
  "chips": "Reference Series",
  "traducoes": {
-  "SH、APSH": "SH"
+  "SH、APSH": "SH",
+  "Through Hole": "reto"
  },
  "filtro": {
   "categorias_loja": [
@@ -267,7 +268,7 @@
    "situacao": "ok"
   },
   "C131337": {
-   "nome": "Conector JST PH 1x2P, de furo",
+   "nome": "Conector JST PH 1x2P, reto",
    "marca": "JST",
    "modelo": "B2B-PH-K-S(LF)(SN)",
    "pacote": "Plugin,P=2mm",
@@ -308,7 +309,7 @@
    "situacao": "ok"
   },
   "C2319": {
-   "nome": "Conector JST PH 1x2P, de furo",
+   "nome": "Conector JST PH 1x2P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "PH-2A",
    "pacote": "Plugin,P=2mm",
@@ -390,7 +391,7 @@
    "situacao": "ok"
   },
   "C131334": {
-   "nome": "Conector JST PH 1x4P, de furo",
+   "nome": "Conector JST PH 1x4P, reto",
    "marca": "JST",
    "modelo": "B4B-PH-K-S(LF)(SN)",
    "pacote": "Plugin,P=2mm",
@@ -431,7 +432,7 @@
    "situacao": "ok"
   },
   "C157993": {
-   "nome": "Conector JST PH 1x5P, de furo",
+   "nome": "Conector JST PH 1x5P, reto",
    "marca": "JST",
    "modelo": "B5B-PH-K-S(LF)(SN)",
    "pacote": "Plugin,P=2mm",
@@ -472,7 +473,7 @@
    "situacao": "ok"
   },
   "C131339": {
-   "nome": "Conector JST PH 1x3P, de furo",
+   "nome": "Conector JST PH 1x3P, reto",
    "marca": "JST",
    "modelo": "B3B-PH-K-S(LF)(SN)",
    "pacote": "Plugin,P=2mm",
@@ -513,7 +514,7 @@
    "situacao": "ok"
   },
   "C2321": {
-   "nome": "Conector JST PH 1x4P, de furo",
+   "nome": "Conector JST PH 1x4P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "PH-4A",
    "pacote": "Plugin,P=2mm",
@@ -595,7 +596,7 @@
    "situacao": "ok"
   },
   "C2908623": {
-   "nome": "Conector JST PH 1x2P, de furo",
+   "nome": "Conector JST PH 1x2P, reto",
    "marca": "HCTL",
    "modelo": "PH-2A",
    "pacote": "Plugin,P=2mm",
@@ -631,7 +632,7 @@
    "situacao": "ok"
   },
   "C2908624": {
-   "nome": "Conector JST PH 1x3P, de furo",
+   "nome": "Conector JST PH 1x3P, reto",
    "marca": "HCTL",
    "modelo": "PH-3A",
    "pacote": "Plugin,P=2mm",
@@ -815,7 +816,7 @@
    "situacao": "ok"
   },
   "C2979503": {
-   "nome": "Conector JST PH 1x3P, de furo",
+   "nome": "Conector JST PH 1x3P, reto",
    "marca": "HCTL",
    "modelo": "HC-PH-3A-M",
    "pacote": "Plugin,P=2mm",
@@ -855,7 +856,7 @@
    "situacao": "ok"
   },
   "C2908625": {
-   "nome": "Conector JST PH 1x4P, de furo",
+   "nome": "Conector JST PH 1x4P, reto",
    "marca": "HCTL",
    "modelo": "PH-4A",
    "pacote": "Plugin,P=2mm",
@@ -924,7 +925,7 @@
    "situacao": "ok"
   },
   "C2908627": {
-   "nome": "Conector JST PH 1x6P, de furo",
+   "nome": "Conector JST PH 1x6P, reto",
    "marca": "HCTL",
    "modelo": "PH-6A",
    "pacote": "Plugin,P=2mm",
@@ -960,7 +961,7 @@
    "situacao": "ok"
   },
   "C131342": {
-   "nome": "Conector JST PH 1x6P, de furo",
+   "nome": "Conector JST PH 1x6P, reto",
    "marca": "JST",
    "modelo": "B6B-PH-K-S(LF)(SN)",
    "pacote": "Plugin,P=2mm",
@@ -1001,7 +1002,7 @@
    "situacao": "ok"
   },
   "C2322": {
-   "nome": "Conector JST PH 1x5P, de furo",
+   "nome": "Conector JST PH 1x5P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "PH-5A",
    "pacote": "Plugin,P=2mm",
@@ -1668,7 +1669,7 @@
    "situacao": "ok"
   },
   "C20079": {
-   "nome": "Conector JST XH 1x2P, de furo",
+   "nome": "Conector JST XH 1x2P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "XH-2A",
    "pacote": "Plugin,P=2.5mm",
@@ -1709,7 +1710,7 @@
    "situacao": "ok"
   },
   "C2316": {
-   "nome": "Conector JST XH 1x3P, de furo",
+   "nome": "Conector JST XH 1x3P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "XH-3A",
    "pacote": "Plugin,P=2.5mm",
@@ -1750,7 +1751,7 @@
    "situacao": "ok"
   },
   "C37815": {
-   "nome": "Conector JST XH 1x4P, de furo",
+   "nome": "Conector JST XH 1x4P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "XH-4A",
    "pacote": "Plugin,P=2.5mm",
@@ -1791,7 +1792,7 @@
    "situacao": "ok"
   },
   "C2908600": {
-   "nome": "Conector JST XH 1x2P, de furo",
+   "nome": "Conector JST XH 1x2P, reto",
    "marca": "HCTL",
    "modelo": "XH-2A",
    "pacote": "Plugin,P=2.5mm",
@@ -1829,7 +1830,7 @@
    "situacao": "ok"
   },
   "C2908602": {
-   "nome": "Conector JST XH 1x4P, de furo",
+   "nome": "Conector JST XH 1x4P, reto",
    "marca": "HCTL",
    "modelo": "XH-4A",
    "pacote": "Plugin,P=2.5mm",
@@ -1908,7 +1909,7 @@
    "situacao": "ok"
   },
   "C2318": {
-   "nome": "Conector JST XH 1x5P, de furo",
+   "nome": "Conector JST XH 1x5P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "XH-5A",
    "pacote": "Plugin,P=2.5mm",
@@ -2052,7 +2053,7 @@
    "situacao": "ok"
   },
   "C5663": {
-   "nome": "Conector JST XH 1x6P, de furo",
+   "nome": "Conector JST XH 1x6P, reto",
    "marca": "BOOMELE(Boom Precision Elec)",
    "modelo": "XH-6A",
    "pacote": "Plugin,P=2.5mm",
@@ -2175,7 +2176,7 @@
    "situacao": "ok"
   },
   "C2908601": {
-   "nome": "Conector JST XH 1x3P, de furo",
+   "nome": "Conector JST XH 1x3P, reto",
    "marca": "HCTL",
    "modelo": "XH-3A",
    "pacote": "Plugin,P=2.5mm",
@@ -2355,7 +2356,7 @@
    "situacao": "ok"
   },
   "C2908604": {
-   "nome": "Conector JST XH 1x6P, de furo",
+   "nome": "Conector JST XH 1x6P, reto",
    "marca": "HCTL",
    "modelo": "XH-6A",
    "pacote": "Plugin,P=2.5mm",

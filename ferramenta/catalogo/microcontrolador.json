@@ -2,14 +2,19 @@
  "categoria": "microcontrolador",
  "nome": "Microcontrolador",
  "grupo": "Cérebros",
- "explica": "O cérebro da placa: um chip que roda o programa que você grava nele, lê botões e sensores e comanda o resto pelos pinos (motor ou relé, sempre por um transistor ou driver). Os DIP, com duas fileiras de pernas como o ATmega328P do Arduino Uno, são de furo e podem ir num soquete; olhe a tensão: os que vão até 5,5 V ligam direto em 5 V, os que param em 3,6 V pedem 3,3 V.",
- "nome_peca": "Microcontrolador {CPU Core}, {Program Storage Size} pro programa, {Number of I/O} pinos de entrada/saída",
+ "explica": "O cérebro da placa: um chip que roda o programa que você grava nele, lê botões e sensores e comanda o resto pelos pinos (motor ou relé, sempre por um transistor ou driver). Os DIP, com duas fileiras de pernas como o ATmega328P do Arduino Uno, são de furo e podem ir num soquete; olhe a tensão: os que vão até 5,5 V ligam direto em 5 V, os que param em 3,6 V pedem 3,3 V. Os ESP32 soltos (C3, C6, S3, H2) pedem cristal, antena e um circuito de rádio afinado em volta: pra placa feita à mão, prefira o módulo pronto, na categoria Módulo Wi-Fi.",
+ "nome_peca": [
+  "Microcontrolador {CPU Core} {@modelo}, {Program Storage Size} pro programa, {Number of I/O} pinos de entrada/saída"
+ ],
  "destaques": [
   "Core Size",
   "CPU Maximum Speed",
   "Voltage - Supply"
  ],
  "chips": "CPU Core",
+ "traducoes": {
+  "51 Series": "8051"
+ },
  "filtro": {
   "categorias_loja": [
    "Microcontrollers"
@@ -18,6 +23,10 @@
    "CPU Core",
    "Core Size",
    "CPU Maximum Speed"
+  ],
+  "estoque_minimo": 20,
+  "fora": [
+   "C5227835"
   ]
  },
  "sementes": [
@@ -99,10 +108,6 @@
   },
   {
    "busca": "ATTINY1616-SNR",
-   "quantos": 1
-  },
-  {
-   "busca": "AVR64DD28-I/SP",
    "quantos": 1
   },
   {
@@ -228,7 +233,7 @@
  ],
  "pecas": {
   "C8707": {
-   "nome": "Microcontrolador 51 Series, 8KB pro programa, 39 pinos de entrada/saída",
+   "nome": "Microcontrolador 8051 STC89C52RC-40I-LQFP44, 8KB pro programa, 39 pinos de entrada/saída",
    "marca": "STC Micro",
    "modelo": "STC89C52RC-40I-LQFP44",
    "pacote": "LQFP-44(10x10)",
@@ -359,7 +364,7 @@
    "situacao": "ok"
   },
   "C9441": {
-   "nome": "Microcontrolador 51 Series, 8KB pro programa, 32 pinos de entrada/saída",
+   "nome": "Microcontrolador 8051 AT89S52-24PU, 8KB pro programa, 32 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "AT89S52-24PU",
    "pacote": "DIP-40",
@@ -392,7 +397,7 @@
    "situacao": "ok"
   },
   "C89040": {
-   "nome": "Microcontrolador ARM Cortex-M0, 16KB pro programa, 15 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0 STM32F030F4P6TR, 16KB pro programa, 15 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32F030F4P6TR",
    "pacote": "TSSOP-20",
@@ -456,7 +461,7 @@
    "situacao": "ok"
   },
   "C5292059": {
-   "nome": "Microcontrolador ARM Cortex-M0+, 20KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0+ PY32F002AF15P6TU, 20KB pro programa, 18 pinos de entrada/saída",
    "marca": "PUYA",
    "modelo": "PY32F002AF15P6TU",
    "pacote": "TSSOP-20",
@@ -490,7 +495,7 @@
    "situacao": "ok"
   },
   "C529329": {
-   "nome": "Microcontrolador ARM Cortex-M0+, 64KB pro programa, 44 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0+ STM32G030C8T6, 64KB pro programa, 44 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32G030C8T6",
    "pacote": "LQFP-48(7x7)",
@@ -523,7 +528,7 @@
    "situacao": "ok"
   },
   "C966903": {
-   "nome": "Microcontrolador ARM Cortex-M0+, 256KB pro programa, 38 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0+ ATSAMD21G18A-MU, 256KB pro programa, 38 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATSAMD21G18A-MU",
    "pacote": "QFN-48-EP(7x7)",
@@ -558,7 +563,7 @@
    "situacao": "ok"
   },
   "C529331": {
-   "nome": "Microcontrolador ARM Cortex-M0+, 32KB pro programa, 30 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0+ STM32G030K6T6, 32KB pro programa, 30 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32G030K6T6",
    "pacote": "LQFP-32(7x7)",
@@ -591,7 +596,7 @@
    "situacao": "ok"
   },
   "C5456172": {
-   "nome": "Microcontrolador ARM Cortex-M0+, 16KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M0+ STM32C011J4M6, 16KB pro programa, 6 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32C011J4M6",
    "pacote": "SO-8N",
@@ -623,7 +628,7 @@
    "situacao": "ok"
   },
   "C8734": {
-   "nome": "Microcontrolador ARM Cortex-M3, 64KB pro programa, 37 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M3 STM32F103C8T6, 64KB pro programa, 37 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32F103C8T6",
    "pacote": "LQFP-48(7x7)",
@@ -656,7 +661,7 @@
    "situacao": "ok"
   },
   "C77994": {
-   "nome": "Microcontrolador ARM Cortex-M3, 64KB pro programa, 37 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M3 GD32F103C8T6, 64KB pro programa, 37 pinos de entrada/saída",
    "marca": "GigaDevice Semicon Beijing",
    "modelo": "GD32F103C8T6",
    "pacote": "LQFP-48(7x7)",
@@ -769,7 +774,7 @@
    "situacao": "ok"
   },
   "C79861": {
-   "nome": "Microcontrolador ARM Cortex-M4, 256KB pro programa, 36 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M4 STM32F401CCU6, 256KB pro programa, 36 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32F401CCU6",
    "pacote": "UFQFPN-48(7x7)",
@@ -802,7 +807,7 @@
    "situacao": "ok"
   },
   "C2054095": {
-   "nome": "Microcontrolador ARM Cortex-M4, 512KB pro programa, 36 pinos de entrada/saída",
+   "nome": "Microcontrolador ARM Cortex-M4 STM32F411CEU6TR, 512KB pro programa, 36 pinos de entrada/saída",
    "marca": "STMicroelectronics",
    "modelo": "STM32F411CEU6TR",
    "pacote": "UFQFPN-48(7x7)",
@@ -835,7 +840,7 @@
    "situacao": "ok"
   },
   "C14877": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 23 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA328P-AU, 32KB pro programa, 23 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA328P-AU",
    "pacote": "TQFP-32(7x7)",
@@ -869,7 +874,7 @@
    "situacao": "ok"
   },
   "C40382": {
-   "nome": "Microcontrolador AVR, 1KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY13A-SSUR, 1KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY13A-SSUR",
    "pacote": "SOIC-8",
@@ -903,7 +908,7 @@
    "situacao": "ok"
   },
   "C132230": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 27 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA328PB-AU, 32KB pro programa, 27 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA328PB-AU",
    "pacote": "TQFP-32(7x7)",
@@ -937,7 +942,7 @@
    "situacao": "ok"
   },
   "C112161": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 26 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA32U4-MU, 32KB pro programa, 26 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA32U4-MU",
    "pacote": "VQFN-44-EP(7x7)",
@@ -971,7 +976,7 @@
    "situacao": "ok"
   },
   "C2052951": {
-   "nome": "Microcontrolador AVR, 2KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY202-SSNR, 2KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY202-SSNR",
    "pacote": "SOIC-8",
@@ -1005,7 +1010,7 @@
    "situacao": "ok"
   },
   "C1337190": {
-   "nome": "Microcontrolador AVR, 4KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY412-SSNR, 4KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY412-SSNR",
    "pacote": "SOIC-8",
@@ -1040,7 +1045,7 @@
    "situacao": "ok"
   },
   "C44854": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 26 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA32U4-AU, 32KB pro programa, 26 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA32U4-AU",
    "pacote": "QFP-44(10x10)",
@@ -1074,7 +1079,7 @@
    "situacao": "ok"
   },
   "C2052777": {
-   "nome": "Microcontrolador AVR, 256KB pro programa, 86 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA2560-16AUR, 256KB pro programa, 86 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA2560-16AUR",
    "pacote": "TQFP-100(14x14)",
@@ -1108,7 +1113,7 @@
    "situacao": "ok"
   },
   "C189475": {
-   "nome": "Microcontrolador AVR, 48KB pro programa, 41 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA4809-AFR, 48KB pro programa, 41 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA4809-AFR",
    "pacote": "TQFP-48(7x7)",
@@ -1142,7 +1147,7 @@
    "situacao": "ok"
   },
   "C152192": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY85V-10SU, 8KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY85V-10SU",
    "pacote": "SOIC-8-208mil",
@@ -1176,7 +1181,7 @@
    "situacao": "ok"
   },
   "C33901": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 23 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA328P-PU, 32KB pro programa, 23 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA328P-PU",
    "pacote": "DIP-28-300mil",
@@ -1210,7 +1215,7 @@
    "situacao": "ok"
   },
   "C609652": {
-   "nome": "Microcontrolador AVR, 16KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY1616-SNR, 16KB pro programa, 18 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY1616-SNR",
    "pacote": "SOIC-20-300mil",
@@ -1243,7 +1248,7 @@
    "situacao": "ok"
   },
   "C31540447": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY85-20SU, 8KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY85-20SU",
    "pacote": "SOIC-8-208mil",
@@ -1276,7 +1281,7 @@
    "situacao": "ok"
   },
   "C220597": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 12 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY84A-SSUR, 8KB pro programa, 12 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY84A-SSUR",
    "pacote": "SOIC-14",
@@ -1310,7 +1315,7 @@
    "situacao": "ok"
   },
   "C1340034": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 12 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY84A-SSF, 8KB pro programa, 12 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY84A-SSF",
    "pacote": "SOIC-14",
@@ -1344,7 +1349,7 @@
    "situacao": "ok"
   },
   "C94341": {
-   "nome": "Microcontrolador AVR, 1KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY13A-PU, 1KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY13A-PU",
    "pacote": "DIP-8",
@@ -1378,7 +1383,7 @@
    "situacao": "ok"
   },
   "C965497": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY85-20PU, 8KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY85-20PU",
    "pacote": "PDIP-8",
@@ -1412,7 +1417,7 @@
    "situacao": "ok"
   },
   "C3235712": {
-   "nome": "Microcontrolador AVR, 128KB pro programa, 23 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR AVR128DA28T-I/SS, 128KB pro programa, 23 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "AVR128DA28T-I/SS",
    "pacote": "SSOP-28",
@@ -1447,7 +1452,7 @@
    "situacao": "ok"
   },
   "C152181": {
-   "nome": "Microcontrolador AVR, 4KB pro programa, 6 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY45-20PU, 4KB pro programa, 6 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY45-20PU",
    "pacote": "DIP-8",
@@ -1481,7 +1486,7 @@
    "situacao": "ok"
   },
   "C34931": {
-   "nome": "Microcontrolador AVR, 8KB pro programa, 23 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA8A-PU, 8KB pro programa, 23 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA8A-PU",
    "pacote": "DIP-28-300mil",
@@ -1515,7 +1520,7 @@
    "situacao": "ok"
   },
   "C112165": {
-   "nome": "Microcontrolador AVR, 2KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATTINY2313A-PU, 2KB pro programa, 18 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATTINY2313A-PU",
    "pacote": "DIP-20",
@@ -1548,7 +1553,7 @@
    "situacao": "ok"
   },
   "C1337455": {
-   "nome": "Microcontrolador AVR, 32KB pro programa, 23 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA328P-PN, 32KB pro programa, 23 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA328P-PN",
    "pacote": "PDIP-28",
@@ -1582,7 +1587,7 @@
    "situacao": "ok"
   },
   "C1337387": {
-   "nome": "Microcontrolador AVR, 48KB pro programa, 34 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA4809-PF, 48KB pro programa, 34 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA4809-PF",
    "pacote": "PDIP-40",
@@ -1615,7 +1620,7 @@
    "situacao": "ok"
   },
   "C116839": {
-   "nome": "Microcontrolador AVR, 128KB pro programa, 32 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA1284P-PU, 128KB pro programa, 32 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA1284P-PU",
    "pacote": "PDIP-40",
@@ -1649,7 +1654,7 @@
    "situacao": "ok"
   },
   "C30504": {
-   "nome": "Microcontrolador AVR, 16KB pro programa, 32 pinos de entrada/saída",
+   "nome": "Microcontrolador AVR ATMEGA16A-PU, 16KB pro programa, 32 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "ATMEGA16A-PU",
    "pacote": "DIP-40",
@@ -1682,42 +1687,8 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C5227835": {
-   "nome": "Microcontrolador AVR, 64KB pro programa, 22 pinos de entrada/saída",
-   "marca": "Microchip Tech",
-   "modelo": "AVR64DD28-I/SP",
-   "pacote": "SPDIP-28-300mil",
-   "tamanho": "",
-   "montagem": "furo",
-   "categoria_loja": "Microcontrollers (MCU/MPU/SOC)",
-   "descricao": "-40℃~+85℃ 1.8V~5.5V 10bit 12bit 22 24MHz 256Byte 64KB 8 Bit 8KB AVR Built-in FLASH SPDIP-28-300mil Microcontrollers (MCU/MPU/SOC) ROHS",
-   "atributos": {
-    "EEPROM": "256Byte",
-    "Operating Temperature": "-40℃~+85℃",
-    "CPU Maximum Speed": "24MHz",
-    "DAC (Bit)": "10bit",
-    "Program Memory Type": "FLASH",
-    "Program Storage Size": "64KB",
-    "Voltage - Supply": "1.8V~5.5V",
-    "Core Size": "8 Bit",
-    "RAM Size": "8KB",
-    "CPU Core": "AVR",
-    "Number of I/O": "22",
-    "ADC (Bit)": "12bit",
-    "Oscillator Type": "Built-in"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211080330_Microchip-Tech-AVR64DD28-I-SP_C5227835.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/microcontrollers-mcu-mpu-soc_microchip-tech-avr64dd28-i-sp_C5227835.html",
-   "preco": 2.8164,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 6,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C624018": {
-   "nome": "Microcontrolador PIC, 3.5KB pro programa, 5 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC12F683T-I/SN, 3.5KB pro programa, 5 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC12F683T-I/SN",
    "pacote": "SOIC-8",
@@ -1749,7 +1720,7 @@
    "situacao": "ok"
   },
   "C35350": {
-   "nome": "Microcontrolador PIC, 14KB pro programa, 33 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F877A-I/PT, 14KB pro programa, 33 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F877A-I/PT",
    "pacote": "TQFP-44(10x10)",
@@ -1783,7 +1754,7 @@
    "situacao": "ok"
   },
   "C8237": {
-   "nome": "Microcontrolador PIC, 1.75KB pro programa, 5 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC12F675-I/P, 1.75KB pro programa, 5 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC12F675-I/P",
    "pacote": "DIP-8",
@@ -1817,7 +1788,7 @@
    "situacao": "ok"
   },
   "C386311": {
-   "nome": "Microcontrolador PIC, 14KB pro programa, 22 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F876A-I/SP, 14KB pro programa, 22 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F876A-I/SP",
    "pacote": "PDIP-28",
@@ -1851,7 +1822,7 @@
    "situacao": "ok"
   },
   "C21667": {
-   "nome": "Microcontrolador PIC, 32KB pro programa, 35 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC18F4550-I/PT, 32KB pro programa, 35 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC18F4550-I/PT",
    "pacote": "TQFP-44(10x10)",
@@ -1885,7 +1856,7 @@
    "situacao": "ok"
   },
   "C8764": {
-   "nome": "Microcontrolador PIC, 7KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F690-I/P, 7KB pro programa, 18 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F690-I/P",
    "pacote": "DIP-20",
@@ -1919,7 +1890,7 @@
    "situacao": "ok"
   },
   "C648001": {
-   "nome": "Microcontrolador PIC, 32KB pro programa, 35 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC18F4550-I/P, 32KB pro programa, 35 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC18F4550-I/P",
    "pacote": "PDIP-40",
@@ -1953,7 +1924,7 @@
    "situacao": "ok"
   },
   "C81526": {
-   "nome": "Microcontrolador PIC, 3.5KB pro programa, 16 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F628A-I/P, 3.5KB pro programa, 16 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F628A-I/P",
    "pacote": "PDIP-18",
@@ -1986,7 +1957,7 @@
    "situacao": "ok"
   },
   "C10085": {
-   "nome": "Microcontrolador PIC, 7KB pro programa, 16 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F88-I/P, 7KB pro programa, 16 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F88-I/P",
    "pacote": "DIP-18",
@@ -2019,7 +1990,7 @@
    "situacao": "ok"
   },
   "C8766": {
-   "nome": "Microcontrolador PIC, 14KB pro programa, 33 pinos de entrada/saída",
+   "nome": "Microcontrolador PIC PIC16F877A-I/P, 14KB pro programa, 33 pinos de entrada/saída",
    "marca": "Microchip Tech",
    "modelo": "PIC16F877A-I/P",
    "pacote": "DIP-40",
@@ -2053,7 +2024,7 @@
    "situacao": "ok"
   },
   "C2858491": {
-   "nome": "Microcontrolador RISC-V, 4MB pro programa, 22 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V ESP32-C3FH4, 4MB pro programa, 22 pinos de entrada/saída",
    "marca": "Espressif Systems",
    "modelo": "ESP32-C3FH4",
    "pacote": "QFN-32-EP(5x5)",
@@ -2088,7 +2059,7 @@
    "situacao": "ok"
   },
   "C3001172": {
-   "nome": "Microcontrolador RISC-V, 64KB pro programa, 48 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V CH32V203C8T6, 64KB pro programa, 48 pinos de entrada/saída",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH32V203C8T6",
    "pacote": "LQFP-48(7x7)",
@@ -2123,7 +2094,7 @@
    "situacao": "ok"
   },
   "C22470214": {
-   "nome": "Microcontrolador RISC-V, 4MB pro programa, 19 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V ESP32-H2FH4, 4MB pro programa, 19 pinos de entrada/saída",
    "marca": "Espressif Systems",
    "modelo": "ESP32-H2FH4",
    "pacote": "QFN-32(4x4)",
@@ -2193,7 +2164,7 @@
    "situacao": "ok"
   },
   "C5346354": {
-   "nome": "Microcontrolador RISC-V2A, 16KB pro programa, 8 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V2A CH32V003J4M6, 16KB pro programa, 8 pinos de entrada/saída",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH32V003J4M6",
    "pacote": "SOP-8",
@@ -2228,7 +2199,7 @@
    "situacao": "ok"
   },
   "C5187096": {
-   "nome": "Microcontrolador RISC-V2A, 16KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V2A CH32V003F4P6, 16KB pro programa, 18 pinos de entrada/saída",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH32V003F4P6",
    "pacote": "TSSOP-20-175mil",
@@ -2263,7 +2234,7 @@
    "situacao": "ok"
   },
   "C5346357": {
-   "nome": "Microcontrolador RISC-V2A, 16KB pro programa, 14 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V2A CH32V003A4M6, 16KB pro programa, 14 pinos de entrada/saída",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH32V003A4M6",
    "pacote": "SOP-16",
@@ -2298,7 +2269,7 @@
    "situacao": "ok"
   },
   "C5299908": {
-   "nome": "Microcontrolador RISC-V2A, 16KB pro programa, 18 pinos de entrada/saída",
+   "nome": "Microcontrolador RISC-V2A CH32V003F4U6, 16KB pro programa, 18 pinos de entrada/saída",
    "marca": "WCH(Jiangsu Qin Heng)",
    "modelo": "CH32V003F4U6",
    "pacote": "QFN-20(3X3)",
@@ -2333,7 +2304,7 @@
    "situacao": "ok"
   },
   "C2913196": {
-   "nome": "Microcontrolador Xtensa LX7, 8MB pro programa, 45 pinos de entrada/saída",
+   "nome": "Microcontrolador Xtensa LX7 ESP32-S3FN8, 8MB pro programa, 45 pinos de entrada/saída",
    "marca": "Espressif Systems",
    "modelo": "ESP32-S3FN8",
    "pacote": "QFN-56-EP(7x7)",

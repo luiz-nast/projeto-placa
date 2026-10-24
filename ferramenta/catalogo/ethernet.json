@@ -11,7 +11,7 @@
   "Ethernet {@modelo}, {Ethernet Speed Standards}"
  ],
  "destaques": [
-  "Communication Interface|MAC Interface|Interface",
+  "MAC Interface|Communication Interface|Interface",
   "Ethernet Speed Standards|Data Rate",
   "Voltage - Supply"
  ],
@@ -30,7 +30,16 @@
   "SPI、UART、Parallel": "SPI, UART e paralelo",
   "Ethernet conversion module": "Módulo serial ↔ Ethernet",
   "Yes": "completa",
-  "Parallel": "barramento paralelo"
+  "Parallel": "barramento paralelo",
+  "3.3V": "3,3 V",
+  "1.6V~3.6V": "1,6 a 3,6 V",
+  "1.8V~3.3V": "1,8 a 3,3 V",
+  "3V~3.6V": "3 a 3,6 V",
+  "3.2V~3.4V": "3,2 a 3,4 V",
+  "3.15V~3.45V、5V~7V": "3,15 a 3,45 V ou 5 a 7 V",
+  "3V~3.6V、5V~7V": "3 a 3,6 V ou 5 a 7 V",
+  "3.1V~3.6V": "3,1 a 3,6 V",
+  "3.15V~3.45V": "3,15 a 3,45 V"
  },
  "filtro": {
   "categorias_loja": [

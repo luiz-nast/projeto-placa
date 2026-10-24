@@ -19,7 +19,8 @@
   "estoque_minimo": 100,
   "fora": [
    "C19268020",
-   "C19268033"
+   "C19268033",
+   "C54431743"
   ]
  },
  "sementes": [
@@ -926,26 +927,6 @@
    "visto": "2026-10-24",
    "situacao": "ok",
    "apelido": "Conector XT60 fêmea de painel, com abas de fixação"
-  },
-  "C54431743": {
-   "nome": "Conector XT60PT-M",
-   "marca": "Changzhou Amass Elec",
-   "modelo": "XT60PT-M",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Power connector / plug connector",
-   "descricao": "- Power connector / plug connector",
-   "atributos": {},
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54431743.html",
-   "preco": 0.5041,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 317,
-   "visto": "2026-10-24",
-   "situacao": "ok"
   }
  }
 }

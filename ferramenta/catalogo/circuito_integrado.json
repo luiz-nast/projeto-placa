@@ -4,12 +4,14 @@
  "grupo": "Semicondutores",
  "explica": "Um circuito inteiro numa pecinha preta cheia de pernas (o DIP, de furo, que encaixa num soquete), e o nome diz o que cada um faz: o timer 555 pisca e marca tempo, o amplificador operacional aumenta um sinal fraco, o registrador de deslocamento 74HC595 dá mais saídas pro ESP32. Cuidado com a tensão: o ESP32 trabalha em 3,3 V, e um chip ligado em 5 V pode mandar 5 V de volta num pino dele e queimá-lo (no meio vai um conversor de nível, que tem categoria própria).",
  "nome_peca": [
+  "{@categoria_loja} {Logic Type} {@modelo}",
+  "{@categoria_loja} {Function} {@modelo}",
+  "{@categoria_loja} de {Number of Channels} {@modelo}",
   "{@categoria_loja} {@modelo}"
  ],
  "destaques": [
   "Voltage - Supply|Single supply|Single Supply|Dual Supply",
-  "Logic Type|Function",
-  "Output Current"
+  "Output Current|Current - Output Low(IOL)"
  ],
  "traducoes": {
   "555 Timers / Counters": "Timer",
@@ -29,7 +31,25 @@
   "I/O Expanders": "Expansor de pinos",
   "Digital Tube Drivers": "Driver de display",
   "LED Drivers": "Driver de LED",
-  "RS232 ICs": "Conversor RS-232"
+  "RS232 ICs": "Conversor RS-232",
+  "NAND Gate": "NAND",
+  "OR Gate": "OR",
+  "AND Gate": "AND",
+  "Divide-by-10": "decimal",
+  "Binary Counter": "binário",
+  "Serial-to-Parallel": "serial pra paralelo",
+  "Serial-to-Serial or Parallel": "serial pra serial ou paralelo",
+  "Parallel-to-Serial": "paralelo pra serial",
+  "Parallel or Serial to Serial": "paralelo ou serial pra serial",
+  "Set and Reset": "com set e reset",
+  "Reverse function": "com saídas invertidas",
+  "1": "1 canal",
+  "Single-channel": "1 canal",
+  "2": "2 canais",
+  "4": "4 canais",
+  "Four channels": "4 canais",
+  "8": "8 canais",
+  "10": "10 canais"
  },
  "filtro": {
   "pacotes": [
@@ -261,7 +281,7 @@
    "situacao": "ok"
   },
   "C725320": {
-   "nome": "Amplificador operacional LM324N",
+   "nome": "Amplificador operacional de 4 canais LM324N",
    "marca": "HGSEMI",
    "modelo": "LM324N",
    "pacote": "DIP-14",
@@ -325,7 +345,7 @@
    "situacao": "ok"
   },
   "C99439": {
-   "nome": "Comparador LM311N/NOPB",
+   "nome": "Comparador de 1 canal LM311N/NOPB",
    "marca": "Texas Instruments",
    "modelo": "LM311N/NOPB",
    "pacote": "PDIP-8",
@@ -361,7 +381,7 @@
    "situacao": "ok"
   },
   "C96504": {
-   "nome": "Porta lógica CD4093BE",
+   "nome": "Porta lógica NAND CD4093BE",
    "marca": "Texas Instruments",
    "modelo": "CD4093BE",
    "pacote": "DIP-14",
@@ -399,7 +419,7 @@
    "situacao": "ok"
   },
   "C7236": {
-   "nome": "Amplificador operacional (entrada FET) TL072CP",
+   "nome": "Amplificador operacional (entrada FET) de 2 canais TL072CP",
    "marca": "Texas Instruments",
    "modelo": "TL072CP",
    "pacote": "PDIP-8",
@@ -436,7 +456,7 @@
    "situacao": "ok"
   },
   "C22451408": {
-   "nome": "Amplificador operacional UA741CP(XBLW)",
+   "nome": "Amplificador operacional de 1 canal UA741CP(XBLW)",
    "marca": "XBLW",
    "modelo": "UA741CP(XBLW)",
    "pacote": "DIP-8",
@@ -473,7 +493,7 @@
    "situacao": "ok"
   },
   "C5209": {
-   "nome": "Comparador LM393P",
+   "nome": "Comparador de 2 canais LM393P",
    "marca": "Texas Instruments",
    "modelo": "LM393P",
    "pacote": "PDIP-8",
@@ -509,7 +529,7 @@
    "situacao": "ok"
   },
   "C5326": {
-   "nome": "Amplificador operacional NE5532P",
+   "nome": "Amplificador operacional de 2 canais NE5532P",
    "marca": "Texas Instruments",
    "modelo": "NE5532P",
    "pacote": "PDIP-8",
@@ -546,7 +566,7 @@
    "situacao": "ok"
   },
   "C83405": {
-   "nome": "Amplificador operacional LM358N/NOPB",
+   "nome": "Amplificador operacional de 2 canais LM358N/NOPB",
    "marca": "Texas Instruments",
    "modelo": "LM358N/NOPB",
    "pacote": "PDIP-8",
@@ -583,7 +603,7 @@
    "situacao": "ok"
   },
   "C53199171": {
-   "nome": "Driver de LED LM3914-DIP-18",
+   "nome": "Driver de LED de 10 canais LM3914-DIP-18",
    "marca": "DDF",
    "modelo": "LM3914-DIP-18",
    "pacote": "DIP-18",
@@ -652,7 +672,7 @@
    "situacao": "ok"
   },
   "C5203": {
-   "nome": "Chave analógica (multiplexador) CD4066BE",
+   "nome": "Chave analógica (multiplexador) de 4 canais CD4066BE",
    "marca": "Texas Instruments",
    "modelo": "CD4066BE",
    "pacote": "PDIP-14",
@@ -719,7 +739,7 @@
    "situacao": "ok"
   },
   "C2987282": {
-   "nome": "Amplificador operacional NE5532N",
+   "nome": "Amplificador operacional de 2 canais NE5532N",
    "marca": "HGSEMI",
    "modelo": "NE5532N",
    "pacote": "DIP-8",
@@ -756,7 +776,7 @@
    "situacao": "ok"
   },
   "C51898328": {
-   "nome": "Contador CD4017BED",
+   "nome": "Contador decimal CD4017BED",
    "marca": "GREENMICRO",
    "modelo": "CD4017BED",
    "pacote": "DIP-16",
@@ -822,7 +842,7 @@
    "situacao": "ok"
   },
   "C507175": {
-   "nome": "Registrador de deslocamento 74HC595N",
+   "nome": "Registrador de deslocamento serial pra paralelo 74HC595N",
    "marca": "HGSEMI",
    "modelo": "74HC595N",
    "pacote": "DIP-16",
@@ -852,7 +872,7 @@
    "situacao": "ok"
   },
   "C725324": {
-   "nome": "Comparador LM339N",
+   "nome": "Comparador de 4 canais LM339N",
    "marca": "HGSEMI",
    "modelo": "LM339N",
    "pacote": "DIP-14",
@@ -887,7 +907,7 @@
    "situacao": "ok"
   },
   "C5226": {
-   "nome": "Porta lógica CD4011BE",
+   "nome": "Porta lógica NAND CD4011BE",
    "marca": "Texas Instruments",
    "modelo": "CD4011BE",
    "pacote": "DIP-14",
@@ -923,7 +943,7 @@
    "situacao": "ok"
   },
   "C71104": {
-   "nome": "Comparador LM393L-D08-T",
+   "nome": "Comparador de 2 canais LM393L-D08-T",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM393L-D08-T",
    "pacote": "DIP-8",
@@ -958,7 +978,7 @@
    "situacao": "ok"
   },
   "C53155525": {
-   "nome": "Porta lógica HG74HC32N",
+   "nome": "Porta lógica OR HG74HC32N",
    "marca": "HGSEMI",
    "modelo": "HG74HC32N",
    "pacote": "DIP-14",
@@ -996,7 +1016,7 @@
    "situacao": "ok"
   },
   "C71098": {
-   "nome": "Amplificador operacional LM324L-D14-T",
+   "nome": "Amplificador operacional de 4 canais LM324L-D14-T",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM324L-D14-T",
    "pacote": "DIP-14",
@@ -1033,7 +1053,7 @@
    "situacao": "ok"
   },
   "C110329": {
-   "nome": "Amplificador operacional (entrada FET) TL072IP",
+   "nome": "Amplificador operacional (entrada FET) de 2 canais TL072IP",
    "marca": "Texas Instruments",
    "modelo": "TL072IP",
    "pacote": "PDIP-8",
@@ -1070,7 +1090,7 @@
    "situacao": "ok"
   },
   "C18723495": {
-   "nome": "Porta lógica SN74HC00N(XBLW)",
+   "nome": "Porta lógica NAND SN74HC00N(XBLW)",
    "marca": "XBLW",
    "modelo": "SN74HC00N(XBLW)",
    "pacote": "DIP-14",
@@ -1106,7 +1126,7 @@
    "situacao": "ok"
   },
   "C507188": {
-   "nome": "Decodificador 74HC138N",
+   "nome": "Decodificador com saídas invertidas 74HC138N",
    "marca": "HGSEMI",
    "modelo": "74HC138N",
    "pacote": "DIP-16",
@@ -1169,7 +1189,7 @@
    "situacao": "ok"
   },
   "C5200": {
-   "nome": "Chave analógica (multiplexador) CD4051BE",
+   "nome": "Chave analógica (multiplexador) de 8 canais CD4051BE",
    "marca": "Texas Instruments",
    "modelo": "CD4051BE",
    "pacote": "PDIP-16",
@@ -1201,7 +1221,7 @@
    "situacao": "ok"
   },
   "C133542": {
-   "nome": "Amplificador operacional (entrada FET) TL074CN",
+   "nome": "Amplificador operacional (entrada FET) de 4 canais TL074CN",
    "marca": "Texas Instruments",
    "modelo": "TL074CN",
    "pacote": "PDIP-14",
@@ -1298,7 +1318,7 @@
    "situacao": "ok"
   },
   "C5199": {
-   "nome": "Flip-flop CD4013BE",
+   "nome": "Flip-flop com set e reset CD4013BE",
    "marca": "Texas Instruments",
    "modelo": "CD4013BE",
    "pacote": "DIP-14",
@@ -1337,7 +1357,7 @@
    "situacao": "ok"
   },
   "C20613262": {
-   "nome": "Contador CD4017CN",
+   "nome": "Contador decimal CD4017CN",
    "marca": "HGSEMI",
    "modelo": "CD4017CN",
    "pacote": "DIP-16",
@@ -1470,7 +1490,7 @@
    "situacao": "ok"
   },
   "C47148931": {
-   "nome": "Contador CD4060AN",
+   "nome": "Contador binário CD4060AN",
    "marca": "HGSEMI",
    "modelo": "CD4060AN",
    "pacote": "DIP-16",
@@ -1505,7 +1525,7 @@
    "situacao": "ok"
   },
   "C2909": {
-   "nome": "Registrador de deslocamento SN74HC165N",
+   "nome": "Registrador de deslocamento paralelo ou serial pra serial SN74HC165N",
    "marca": "Texas Instruments",
    "modelo": "SN74HC165N",
    "pacote": "DIP-16",
@@ -1601,7 +1621,7 @@
    "situacao": "ok"
   },
   "C5116331": {
-   "nome": "Porta lógica 74HC08N",
+   "nome": "Porta lógica AND 74HC08N",
    "marca": "HGSEMI",
    "modelo": "74HC08N",
    "pacote": "DIP-14",
@@ -1637,7 +1657,7 @@
    "situacao": "ok"
   },
   "C51912176": {
-   "nome": "Contador CD4026BE(XBLW)",
+   "nome": "Contador decimal CD4026BE(XBLW)",
    "marca": "XBLW",
    "modelo": "CD4026BE(XBLW)",
    "pacote": "DIP-16",
@@ -1672,7 +1692,7 @@
    "situacao": "ok"
   },
   "C36533688": {
-   "nome": "Amplificador operacional MCP6004-I/P-TUDI",
+   "nome": "Amplificador operacional de 4 canais MCP6004-I/P-TUDI",
    "marca": "Tudi",
    "modelo": "MCP6004-I/P-TUDI",
    "pacote": "DIP-14",
@@ -1709,7 +1729,7 @@
    "situacao": "ok"
   },
   "C53055899": {
-   "nome": "Amplificador operacional MCP6004-I/P-HX",
+   "nome": "Amplificador operacional de 4 canais MCP6004-I/P-HX",
    "marca": "ZHHXDZ",
    "modelo": "MCP6004-I/P-HX",
    "pacote": "DIP-14",
@@ -1746,7 +1766,7 @@
    "situacao": "ok"
   },
   "C53374683": {
-   "nome": "Porta lógica HG74HC00N",
+   "nome": "Porta lógica NAND HG74HC00N",
    "marca": "HGSEMI",
    "modelo": "HG74HC00N",
    "pacote": "DIP-14",
@@ -1782,7 +1802,7 @@
    "situacao": "ok"
   },
   "C78711": {
-   "nome": "Registrador de deslocamento SN74HC595N",
+   "nome": "Registrador de deslocamento serial pra serial ou paralelo SN74HC595N",
    "marca": "Texas Instruments",
    "modelo": "SN74HC595N",
    "pacote": "DIP-16",
@@ -1818,7 +1838,7 @@
    "situacao": "ok"
   },
   "C5444305": {
-   "nome": "Registrador de deslocamento XD74HC165",
+   "nome": "Registrador de deslocamento paralelo pra serial XD74HC165",
    "marca": "XINLUDA",
    "modelo": "XD74HC165",
    "pacote": "DIP-16",
@@ -1851,7 +1871,7 @@
    "situacao": "ok"
   },
   "C640394": {
-   "nome": "Amplificador operacional MCP6002-I/P",
+   "nome": "Amplificador operacional de 2 canais MCP6002-I/P",
    "marca": "Microchip Tech",
    "modelo": "MCP6002-I/P",
    "pacote": "PDIP-8",
@@ -1888,7 +1908,7 @@
    "situacao": "ok"
   },
   "C5213": {
-   "nome": "Amplificador operacional LM358P",
+   "nome": "Amplificador operacional de 2 canais LM358P",
    "marca": "Texas Instruments",
    "modelo": "LM358P",
    "pacote": "DIP-8",
@@ -1959,7 +1979,7 @@
    "situacao": "ok"
   },
   "C163528": {
-   "nome": "Amplificador operacional LM358AP",
+   "nome": "Amplificador operacional de 2 canais LM358AP",
    "marca": "Texas Instruments",
    "modelo": "LM358AP",
    "pacote": "DIP-8",

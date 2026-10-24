@@ -2,8 +2,12 @@
  "categoria": "motor",
  "nome": "Motor",
  "grupo": "Movimento",
- "explica": "Faz a coisa mexer: o servo vai até um ângulo e para, o de passo anda em passinhos exatos, o DC com redução gira devagar e com força (roda de robô); tem também bomba d'água, ventoinha e o de vibração do celular. Motor puxa mais corrente do que um pino aguenta: o pino só manda o sinal, e a força vem de uma fonte própria por um driver (ponte H, ULN2003, A4988) ou transistor; o servo já tem o driver dentro e só precisa da fonte. Ligue o GND da fonte no GND da placa.",
+ "explica": "Faz a coisa mexer: o servo vai até um ângulo e para, o de passo anda em passinhos exatos, o DC com redução gira devagar e com força (roda de robô); tem também bomba d'água, ventoinha e o de vibração do celular. O pino da placa só dá o sinal: a força vem de uma fonte própria, por um driver (ponte H, ULN2003, A4988) ou um transistor, com o GND da fonte ligado no GND da placa; o servo já tem o driver dentro e só precisa da fonte.",
  "nome_peca": [
+  "Motor {Type} Ø{Diameter (φD)} × {Height}, {Voltage Rating}, {Rated Speed}",
+  "Motor {Type} Ø{Diameter (φD)}, {Voltage Rating}, {Rated Speed}",
+  "Motor {Type} {Length} × {Width} × {Height}, {Voltage Rating}, {Rated Speed}",
+  "Motor {Type} {Voltage Rating}, {Current Rating}, {Rated Speed}",
   "Motor {Type} {Voltage Rating}, {Current Rating}",
   "Motor {Type}"
  ],
@@ -20,6 +24,10 @@
  "filtro": {
   "categorias_loja": [
    "Vibration Motors"
+  ],
+  "estoque_minimo": 50,
+  "fora": [
+   "C22359894"
   ]
  },
  "sementes": [
@@ -70,7 +78,7 @@
  ],
  "pecas": {
   "C2894731": {
-   "nome": "Motor de vibração cilíndrico (DC) 2.7V, 85mA",
+   "nome": "Motor de vibração cilíndrico (DC) 2.7V, 85mA, 14000rpm",
    "marca": "KOTL",
    "modelo": "Z3OC1T8219731",
    "pacote": "-",
@@ -98,7 +106,7 @@
    "situacao": "ok"
   },
   "C41348533": {
-   "nome": "Motor de vibração cilíndrico (DC) 2.7V, 85mA",
+   "nome": "Motor de vibração cilíndrico (DC) 4mm × 3mm × 11mm, 2.7V, 14000rpm",
    "marca": "LEADER",
    "modelo": "LD-SM-430",
    "pacote": "-",
@@ -130,7 +138,7 @@
    "situacao": "ok"
   },
   "C2836756": {
-   "nome": "Motor de vibração cilíndrico (DC) 3V, 90mA",
+   "nome": "Motor de vibração cilíndrico (DC) 3V, 90mA, 10000rpm",
    "marca": "KOTL",
    "modelo": "Z4TH3B0791626",
    "pacote": "-",
@@ -157,90 +165,8 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C2894723": {
-   "nome": "Motor de vibração cilíndrico (DC) 3V, 250mA",
-   "marca": "KOTL",
-   "modelo": "Z7AL2B1690002",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-30℃~+70℃ 12000rpm 250mA 3V CW、CCW Cylindrical DC Motor - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-30℃~+70℃",
-    "Type": "Cylindrical DC Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "12000rpm",
-    "Voltage Rating": "3V",
-    "Current Rating": "250mA"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109081930_KOTL-Z7AL2B1690002_C2894723.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_kotl-z7al2b1690002_C2894723.html",
-   "preco": 2.3713,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 20,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C2894724": {
-   "nome": "Motor de vibração cilíndrico (DC) 3V, 80mA",
-   "marca": "KOTL",
-   "modelo": "Z4TL2B1242655",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-30℃~+70℃ 15000rpm 3V 80mA CW、CCW Cylindrical DC Motor - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-30℃~+70℃",
-    "Type": "Cylindrical DC Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "15000rpm",
-    "Voltage Rating": "3V",
-    "Current Rating": "80mA"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109081930_KOTL-Z4TL2B1242655_C2894724.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_kotl-z4tl2b1242655_C2894724.html",
-   "preco": 1.8656,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 19,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C2894732": {
-   "nome": "Motor de vibração cilíndrico (DC) 1.3V, 80mA",
-   "marca": "KOTL",
-   "modelo": "Z6CL2A008049W",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "fio",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-30℃~+70℃ 1.3V 7500rpm 80mA CW、CCW Cylindrical DC Motor Lead - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-30℃~+70℃",
-    "Type": "Cylindrical DC Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "7500rpm",
-    "Voltage Rating": "1.3V",
-    "Current Rating": "80mA",
-    "Mounting Type": "Lead"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109081930_KOTL-Z6CL2A008049W_C2894732.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_kotl-z6cl2a008049w_C2894732.html",
-   "preco": 1.684,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 4,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C2992359": {
-   "nome": "Motor de vibração cilíndrico 3V, 80mA",
+   "nome": "Motor de vibração cilíndrico 3V, 80mA, 14500rpm",
    "marca": "LEADER",
    "modelo": "LCM04084521-B1",
    "pacote": "-",
@@ -264,34 +190,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 55,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C4153650": {
-   "nome": "Motor de vibração cilíndrico 3V, 80mA",
-   "marca": "LEADER",
-   "modelo": "LCM0408442015",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "fio",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-20℃~+60℃ 15000rpm 3V 80mA CW、CCW Cylindrical Vibration Motor Lead - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-20℃~+60℃",
-    "Type": "Cylindrical Vibration Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "15000rpm",
-    "Voltage Rating": "3V",
-    "Current Rating": "80mA",
-    "Mounting Type": "Lead"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2207151800_LEADER-LCM0408442015_C4153650.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_leader-lcm0408442015_C4153650.html",
-   "preco": 1.049,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 30,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -504,7 +402,7 @@
    "preco": 39.9,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40132377/7bfabf9d04.jpg"
@@ -577,7 +475,7 @@
    ]
   },
   "C2895081": {
-   "nome": "Motor de vibração chato (moeda) 3V, 85mA",
+   "nome": "Motor de vibração chato (moeda) Ø7mm × 2.1mm, 3V, 13500rpm",
    "marca": "LEADER",
    "modelo": "LCM0720A3134F",
    "pacote": "-",
@@ -609,7 +507,7 @@
    "situacao": "ok"
   },
   "C2759984": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm × 2.7mm, 3V, 13500rpm",
    "marca": "LEADER",
    "modelo": "LCM1027A2445F",
    "pacote": "-",
@@ -641,7 +539,7 @@
    "situacao": "ok"
   },
   "C7528806": {
-   "nome": "Motor de vibração chato (moeda) 3V, 70mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm, 3V, 15000rpm",
    "marca": "LEADER",
    "modelo": "LCM1027B3605F",
    "pacote": "-",
@@ -670,7 +568,7 @@
    "situacao": "ok"
   },
   "C2759985": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm, 3V, 13500rpm",
    "marca": "LEADER",
    "modelo": "LCM1034A3039F",
    "pacote": "-",
@@ -699,7 +597,7 @@
    "situacao": "ok"
   },
   "C2891560": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm, 3V, 14500rpm",
    "marca": "LEADER",
    "modelo": "LCM1020A2945F",
    "pacote": "-",
@@ -728,7 +626,7 @@
    "situacao": "ok"
   },
   "C54781113": {
-   "nome": "Motor de vibração chato (moeda) 2.5V, 85mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm, 2.5V, 11500rpm",
    "marca": "LEADER",
    "modelo": "LCM1034S4493F",
    "pacote": "-",
@@ -754,7 +652,7 @@
    "situacao": "ok"
   },
   "C2839832": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) Ø10mm × 3mm, 3V, 13500rpm",
    "marca": "LEADER",
    "modelo": "LCM1030A3097F",
    "pacote": "-",
@@ -786,7 +684,7 @@
    "situacao": "ok"
   },
   "C2759983": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) Ø8mm, 3V, 13000rpm",
    "marca": "LEADER",
    "modelo": "LCM0834A1195F",
    "pacote": "-",
@@ -815,7 +713,7 @@
    "situacao": "ok"
   },
   "C5121589": {
-   "nome": "Motor de vibração chato (moeda) 3.7V, 70mA",
+   "nome": "Motor de vibração chato (moeda) Ø12mm, 3.7V, 11000rpm",
    "marca": "LEADER",
    "modelo": "LCM1234A3319F",
    "pacote": "-",
@@ -843,36 +741,8 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C22359894": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
-   "marca": "LEADER",
-   "modelo": "LCM1027A3670F",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "não informado",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-20℃~+60℃ 10mm 13500rpm 3V 80mA CW,CCW Flat Vibration Motor - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-20℃~+60℃",
-    "Type": "Flat Vibration Motor",
-    "Sense Of Rotation": "CW,CCW",
-    "Rated Speed": "13500rpm",
-    "Diameter (φD)": "10mm",
-    "Voltage Rating": "3V",
-    "Current Rating": "80mA"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403151005_LEADER-LCM1027A3670F_C22359894.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_leader-lcm1027a3670f_C22359894.html",
-   "preco": 0.6857,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 72,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C2942347": {
-   "nome": "Motor de vibração chato (moeda) 3V, 85mA",
+   "nome": "Motor de vibração chato (moeda) Ø7mm, 3V, 13500rpm",
    "marca": "LEADER",
    "modelo": "LCM0720A3176F",
    "pacote": "-",
@@ -896,93 +766,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 50,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C22391990": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
-   "marca": "LEADER",
-   "modelo": "LCM1034A3811F",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "fio",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-20℃~+60℃ 10mm 13500rpm 3V 80mA CW,CCW Flat Vibration Motor Lead - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-20℃~+60℃",
-    "Type": "Flat Vibration Motor",
-    "Sense Of Rotation": "CW,CCW",
-    "Rated Speed": "13500rpm",
-    "Diameter (φD)": "10mm",
-    "Voltage Rating": "3V",
-    "Current Rating": "80mA",
-    "Mounting Type": "Lead"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2405081059_LEADER-LCM1034A3811F_C22391990.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_leader-lcm1034a3811f_C22391990.html",
-   "preco": 0.8167,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 22,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C2682302": {
-   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
-   "marca": "LEADER",
-   "modelo": "LCM0820A2908F",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "fio",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-20℃~+60℃ 15000rpm 3V 80mA 8mm CW、CCW Flat Vibration Motor Lead - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-20℃~+60℃",
-    "Type": "Flat Vibration Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "15000rpm",
-    "Diameter (φD)": "8mm",
-    "Voltage Rating": "3V",
-    "Current Rating": "80mA",
-    "Mounting Type": "Lead"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2106070438_LEADER-LCM0820A2908F_C2682302.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_leader-lcm0820a2908f_C2682302.html",
-   "preco": 1.3174,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 22,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C7424783": {
-   "nome": "Motor de vibração chato (moeda) 3.7V, 100mA",
-   "marca": "LEADER",
-   "modelo": "LCM1234A3523F",
-   "pacote": "-",
-   "tamanho": "",
-   "montagem": "fio",
-   "categoria_loja": "Vibration Motors",
-   "descricao": "-20℃~+70℃ 100mA 11000rpm 12mm 3.7V CW、CCW Flat Vibration Motor Lead - Vibration Motors ROHS",
-   "atributos": {
-    "Operating Temperature": "-20℃~+70℃",
-    "Type": "Flat Vibration Motor",
-    "Sense Of Rotation": "CW、CCW",
-    "Rated Speed": "11000rpm",
-    "Diameter (φD)": "12mm",
-    "Voltage Rating": "3.7V",
-    "Current Rating": "100mA",
-    "Mounting Type": "Lead Wire"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2306261204_LEADER-LCM1234A3523F_C7424783.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/vibration-motors_leader-lcm1234a3523f_C7424783.html",
-   "preco": 1.121,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 20,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -1244,7 +1027,7 @@
    "preco": 64.9,
    "moeda": "BRL",
    "minimo": 1,
-   "estoque": 0,
+   "estoque": null,
    "visto": "2026-10-24",
    "situacao": "sem estoque",
    "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/370715796/510knvp1qsl-5gxhbdd5gu.jpg"

@@ -4,6 +4,7 @@
  "grupo": "Energia",
  "explica": "Recebe uma tensão maior e entrega uma menor e estável, como 5 V ou 3,3 V: a diferença vira calor, a entrada tem que ficar sempre um pouco acima da saída (essa folga mínima é o 'dropout') e vai um capacitor na entrada e outro na saída. Pra bateria de lítio, use os LDO (de pouca folga) que gastam pouquíssimo parados: HT7333, MCP1700, XC6206, ME6211, RT9013; só o HT7333 aguenta mais que uns 6 V na entrada, os outros não vão direto em 9 V ou 12 V. O LM317 e os ADJ você acerta com dois resistores; os negativos (79xx, LM337) dão tensão abaixo do GND, pra fonte simétrica, e têm os pinos em outra ordem.",
  "nome_peca": [
+  "{Output Configuration}{Output Voltage}{Output Type}, {Output Current}",
   "{Output Configuration}{Output Voltage}, {Output Current}",
   "Regulador {Output Voltage}, {Output Current}"
  ],
@@ -16,7 +17,10 @@
  "chips": "Output Voltage",
  "traducoes": {
   "Positive": "Regulador ",
-  "Negative": "Regulador negativo −"
+  "Negative": "Regulador negativo −",
+  "Fixed": "",
+  "Fixed、Adjustable": "",
+  "Adjustable": " ajustável"
  },
  "filtro": {
   "categorias_loja": [
@@ -171,7 +175,7 @@
  ],
  "pecas": {
   "C22147": {
-   "nome": "Regulador 1.2V~37V, 1.5A",
+   "nome": "Regulador 1.2V~37V ajustável, 1.5A",
    "marca": "Jiangsu Changjing Electronics Technology Co., Ltd.",
    "modelo": "LM317",
    "pacote": "TO-220-3",
@@ -204,7 +208,7 @@
    "situacao": "ok"
   },
   "C14502": {
-   "nome": "Regulador 1.2V~37V, 1.5A",
+   "nome": "Regulador 1.2V~37V ajustável, 1.5A",
    "marca": "onsemi",
    "modelo": "LM317BTG",
    "pacote": "TO-220",
@@ -237,7 +241,7 @@
    "situacao": "ok"
   },
   "C27605": {
-   "nome": "Regulador 1.2V~37V, 100mA",
+   "nome": "Regulador 1.2V~37V ajustável, 100mA",
    "marca": "Texas Instruments",
    "modelo": "LM317LZ/NOPB",
    "pacote": "TO-92",
@@ -270,7 +274,7 @@
    "situacao": "ok"
   },
   "C74415": {
-   "nome": "Regulador negativo −1.2V~37V, 1.5A",
+   "nome": "Regulador negativo −1.2V~37V ajustável, 1.5A",
    "marca": "onsemi",
    "modelo": "LM337BTG",
    "pacote": "TO-220AB",
@@ -300,10 +304,11 @@
    "minimo": 1,
    "estoque": 4045,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Regulador negativo ajustável, −1.2V a −37V, 1.5A"
   },
   "C73683": {
-   "nome": "Regulador negativo −1.2V~37V, 1.5A",
+   "nome": "Regulador negativo −1.2V~37V ajustável, 1.5A",
    "marca": "onsemi",
    "modelo": "LM337TG",
    "pacote": "TO-220AB",
@@ -333,10 +338,11 @@
    "minimo": 1,
    "estoque": 2965,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Regulador negativo ajustável, −1.2V a −37V, 1.5A"
   },
   "C347224": {
-   "nome": "Regulador 1.25V~10V, 1A",
+   "nome": "Regulador 1.25V~10V ajustável, 1A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "AMS1117-ADJ",
    "pacote": "SOT-223",
@@ -369,7 +375,7 @@
    "situacao": "ok"
   },
   "C6188": {
-   "nome": "Regulador 1.25V~12V, 1A",
+   "nome": "Regulador 1.25V~12V ajustável, 1A",
    "marca": "Advanced Monolithic Systems",
    "modelo": "AMS1117-ADJ",
    "pacote": "SOT-223",
@@ -402,7 +408,7 @@
    "situacao": "ok"
   },
   "C112537": {
-   "nome": "Regulador 1.25V~32V, 100mA",
+   "nome": "Regulador 1.25V~32V ajustável, 100mA",
    "marca": "Texas Instruments",
    "modelo": "LM317LIPK",
    "pacote": "SOT-89",
@@ -435,7 +441,7 @@
    "situacao": "ok"
   },
   "C68487": {
-   "nome": "Regulador 1.25V~37V, 1.5A",
+   "nome": "Regulador 1.25V~37V ajustável, 1.5A",
    "marca": "Texas Instruments",
    "modelo": "LM317AEMPX/NOPB",
    "pacote": "SOT-223-4",
@@ -468,7 +474,7 @@
    "situacao": "ok"
   },
   "C19651": {
-   "nome": "Regulador 1.3V~37V, 1A",
+   "nome": "Regulador 1.3V~37V ajustável, 1A",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM317G-AA3-R",
    "pacote": "SOT-223",

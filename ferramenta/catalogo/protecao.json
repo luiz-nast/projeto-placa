@@ -2,7 +2,7 @@
  "categoria": "protecao",
  "nome": "Proteção contra surto (TVS e varistor)",
  "grupo": "Semicondutores",
- "explica": "Fica ligada entre os dois fios da entrada (o + e o GND, ou os dois da tomada) sem fazer nada, até chegar um pico de tensão (estática, motor, raio): aí ela conduz e o pico passa por ela em vez de passar pelo circuito. Escolha a tensão do nome igual ou um pouco acima da normal do circuito (TVS 5V no USB; varistor de 175V AC na tomada de 127 V e de 300V AC na de 220 V); quanto maior o pico, mais forte ela é, e o TVS unidirecional tem lado (a faixa vai no +). Ela aguenta pico curto, não tensão errada por muito tempo: ponha um fusível antes dela.",
+ "explica": "Fica ligada entre um fio que vem de fora (o + da entrada, as linhas do USB) e o GND, ou entre os dois fios da tomada, sem fazer nada até chegar um pico de tensão (estática, motor, raio): aí ela conduz e o pico passa por ela, não pelo circuito. Escolha a tensão do nome igual ou um pouco acima da normal do circuito (TVS 5V no USB; varistor de 175V AC na tomada de 127 V e de 300V AC na de 220 V); quanto maior o número do pico (W ou J), mais forte ela é, e o TVS unidirecional tem lado (a faixa vai no +). Ela aguenta pico curto, não tensão errada por muito tempo: ponha um fusível antes dela.",
  "nome_peca": [
   "{Type} {Reverse Stand-Off Voltage (Vrwm)} {Polarity}, pico de {Peak Pulse Power Dissipation (Ppp)}",
   "{Type} {Reverse Stand-Off Voltage (Vrwm)}, pico de {Peak Pulse Power Dissipation (Ppp)}",

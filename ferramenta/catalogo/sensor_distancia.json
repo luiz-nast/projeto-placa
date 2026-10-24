@@ -1227,7 +1227,8 @@
    "minimo": 1,
    "estoque": 200,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor de distância IR, saída analógica"
   },
   "C242186": {
    "nome": "Transdutor de ultrassom 40kHz, emissor e receptor num só",
@@ -1551,7 +1552,8 @@
    "minimo": 1,
    "estoque": 50,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor de distância IR, saída digital (0 ou 1), 80cm"
   },
   "C390727": {
    "nome": "Sensor de distância IR, 2cm~15cm",

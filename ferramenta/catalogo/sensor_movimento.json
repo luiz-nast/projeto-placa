@@ -2,7 +2,7 @@
  "categoria": "sensor_movimento",
  "nome": "Sensor de vibração e inclinação",
  "grupo": "Sensores",
- "explica": "Chavinhas que abrem e fecham um contato quando a placa tomba ou balança, sem precisar de alimentação: as de bolinha (SW-200D, SW-520D, SW-460) dizem se está de pé ou deitada e as de mola (SW-18010P, SW-58010P) percebem uma batida ou tremida. Ligue como um botão (um lado num pino com pull-up, o outro no GND) e ignore uns milissegundos, porque o contato pisca várias vezes. Pra medir a inclinação de verdade, veja IMU.",
+ "explica": "Chavinhas que abrem e fecham um contato quando a placa tomba ou balança, sem precisar de alimentação: as de bolinha (SW-200D, SW-520D, SW-460) dizem se está de pé ou deitada e as de mola (SW-18010P, SW-58010P) percebem uma batida ou tremida. Ligue como um botão: um lado no GND e o outro num pino do ESP32 com o pull-up ligado (o resistor de dentro que deixa o pino em 1 com a chave aberta), e ignore uns milissegundos depois de mudar, porque o contato pisca várias vezes. Pra medir a inclinação de verdade, veja IMU.",
  "nome_peca": [
   "Chave de vibração ou inclinação, Ø {Diameter (φD)}",
   "{@categoria_loja} {@modelo}"

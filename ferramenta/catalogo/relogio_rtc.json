@@ -2,7 +2,7 @@
  "categoria": "relogio_rtc",
  "nome": "Relógio (RTC)",
  "grupo": "Cérebros",
- "explica": "Conta hora e data sozinho e, com uma pilha-moeda (CR2032) no pino de bateria, continua contando com a placa desligada; o ESP32 só pergunta a hora pelo I2C (o DS1302 usa 3 fios próprios). A maioria (DS1307, PCF8563, BM8563, DS1302) pede um cristal de 32,768 kHz do lado e erra alguns segundos por dia; DS3231, RX8025 e SD3078 já têm o cristal dentro, compensam a temperatura e erram poucos minutos por ano. O DS1307 só funciona em 5 V; os outros ligam em 3,3 V, direto no ESP32.",
+ "explica": "Conta hora e data sozinho, e o ESP32 só pergunta pelo I2C (o DS1302 usa 3 fios próprios); com uma pilha-moeda (CR2032) no pino de bateria ele continua contando com a placa desligada, mas PCF8563, BM8563, PCF85063 e DS1337 não têm esse pino (a pilha entra por fora, com dois diodos). DS1307, PCF8563, BM8563 e DS1302 pedem um cristal de 32,768 kHz do lado e erram uns segundos por dia; DS3231, DS3232, RX8025 e SD3078 já têm o cristal dentro, compensam a temperatura e erram poucos minutos por ano. O DS1307 só funciona em 5 V; os outros ligam em 3,3 V, direto no ESP32.",
  "nome_peca": [
   "Relógio {Interface} {@modelo}"
  ],

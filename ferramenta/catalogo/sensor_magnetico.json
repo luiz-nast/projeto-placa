@@ -2,7 +2,7 @@
  "categoria": "sensor_magnetico",
  "nome": "Sensor de ímã (hall e reed)",
  "grupo": "Sensores",
- "explica": "Percebe um ímã chegando perto: porta fechada, volta de roda, ângulo de um eixo. O reed switch fecha sozinho perto do ímã, a chave hall dá 0 ou 1 (as de saída aberta pedem um resistor do pino pro 3,3 V, o pull-up, e a A3144 pede 3,8 V ou mais), o hall linear dá uma tensão que cresce com o ímã (ligado em 5 V ela passa de 3,3 V: use um divisor no ESP32) e o AS5600 lê o ângulo de um ímã girando em cima dele. Pra achar o norte, veja IMU.",
+ "explica": "Percebe um ímã chegando perto: porta fechada, volta de roda, ângulo de um eixo. O reed switch fecha sozinho perto do ímã, a chave hall dá 0 ou 1 (as de saída aberta pedem um resistor do pino pro 3,3 V, o pull-up; a A3144 pede 3,8 V ou mais; a de trava liga com um polo e só desliga com o outro), o hall linear dá uma tensão que cresce com o ímã (ligado em 5 V ela passa de 3,3 V: use um divisor no ESP32) e o AS5600 lê o ângulo de um ímã girando em cima dele. Pra achar o norte, veja IMU.",
  "nome_peca": [
   "{@categoria_loja} {Type}, liga com {Operation Points}",
   "Sensor hall {Type}",
@@ -27,7 +27,8 @@
   "Omnipolar": "omnipolar (qualquer polo)",
   "Bipolar": "bipolar (os dois polos)",
   "Magnetic rotary position sensor": "de ângulo (ímã girando)",
-  "Hall-effect position sensor": "de posição"
+  "Hall-effect position sensor": "de posição",
+  "-6mT~-6Gs、6Gs~6mT": "±0.6mT~±6mT"
  },
  "filtro": {
   "categorias_loja": [
@@ -263,7 +264,8 @@
    "minimo": 1,
    "estoque": 8457,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Chave hall de trava (latch), ±4mT"
   },
   "C126669": {
    "nome": "Sensor hall linear, ±100mT",
@@ -1586,7 +1588,7 @@
    "situacao": "ok"
   },
   "C114366": {
-   "nome": "Chave hall omnipolar (qualquer polo), liga com -6mT~-6Gs、6Gs~6mT",
+   "nome": "Chave hall omnipolar (qualquer polo), liga com ±0.6mT~±6mT",
    "marca": "MST(Magnesensor Tech (MST))",
    "modelo": "MH248EUA",
    "pacote": "TO-92S",

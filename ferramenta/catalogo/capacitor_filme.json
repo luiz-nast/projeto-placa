@@ -2,7 +2,7 @@
  "categoria": "capacitor_filme",
  "nome": "Capacitor de filme",
  "grupo": "Passivos",
- "explica": "Capacitor de plástico (poliéster, o famoso MKT, ou polipropileno): não tem lado certo e o valor dele quase não muda com o calor ou com a tensão, bom pra filtro de som, timer e pra calar o ruído de motor. É maior que o cerâmico do mesmo valor, e a tensão dele tem que ser maior que a do circuito. Os X2 são feitos pra ficar ligados direto entre os dois fios da tomada, filtrando ruído da rede; tomada dá choque, então só com quem sabe.",
+ "explica": "Capacitor de plástico (poliéster, o famoso MKT, ou polipropileno): não tem lado certo e o valor quase não muda com o calor nem com a tensão, bom pra filtro de som, timer e ruído de motor. É maior que o cerâmico do mesmo valor, e a tensão dele tem que passar a do circuito com folga. O X2 é feito pra ficar ligado direto entre os dois fios da tomada, filtrando ruído da rede; tomada dá choque, então só com quem sabe.",
  "nome_peca": [
   "Capacitor {Ratings} {Capacitance}, {Voltage(AC)} AC",
   "Capacitor de {Dielectric Material} {Capacitance}, {Voltage Rating}",
@@ -24,9 +24,9 @@
   "Metallized polypropylene": "polipropileno",
   "Metallized Polypropylene": "polipropileno",
   "聚丙烯膜": "polipropileno",
-  "275V、305V、310V": "275 a 310V",
-  "275V、310V": "275 a 310V",
-  "63V、100V": "63 a 100V",
+  "275V、305V、310V": "275V",
+  "275V、310V": "275V",
+  "63V、100V": "63V",
   "Metallized Polyester、Metallized Polyethylene Terephthalate (PET)": "poliéster"
  },
  "filtro": {
@@ -353,7 +353,7 @@
    "situacao": "ok"
   },
   "C3806377": {
-   "nome": "Capacitor de polipropileno 2.2nF, 63 a 100V",
+   "nome": "Capacitor de polipropileno 2.2nF, 63V",
    "marca": "Vishay Intertech",
    "modelo": "KP1830222011",
    "pacote": "Plugin,P=5mm",
@@ -483,7 +483,7 @@
    "situacao": "ok"
   },
   "C3804442": {
-   "nome": "Capacitor de polipropileno 4.7nF, 63 a 100V",
+   "nome": "Capacitor de polipropileno 4.7nF, 63V",
    "marca": "KEMET",
    "modelo": "PHE426DJ4470JR05",
    "pacote": "Plugin,P=5mm",
@@ -613,7 +613,7 @@
    "situacao": "ok"
   },
   "C489078": {
-   "nome": "Capacitor X2 10nF, 275 a 310V AC",
+   "nome": "Capacitor X2 10nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX103K31C2KN15600",
    "pacote": "Plugin,P=10mm",
@@ -770,7 +770,7 @@
    "situacao": "ok"
   },
   "C46638848": {
-   "nome": "Capacitor X2 47nF, 275 a 310V AC",
+   "nome": "Capacitor X2 47nF, 275V AC",
    "marca": "WALSON",
    "modelo": "C42Q347360P30001",
    "pacote": "Plugin,P=7.5mm",
@@ -823,7 +823,7 @@
    "situacao": "ok"
   },
   "C489073": {
-   "nome": "Capacitor X2 47nF, 275 a 310V AC",
+   "nome": "Capacitor X2 47nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX473K31C2KN15600",
    "pacote": "Plugin,P=10mm",
@@ -954,7 +954,7 @@
    "situacao": "ok"
   },
   "C489079": {
-   "nome": "Capacitor X2 100nF, 275 a 310V AC",
+   "nome": "Capacitor X2 100nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX104K31C3KN15600",
    "pacote": "Plugin,P=10mm",
@@ -981,7 +981,7 @@
    "situacao": "ok"
   },
   "C489085": {
-   "nome": "Capacitor X2 100nF, 275 a 310V AC",
+   "nome": "Capacitor X2 100nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX104K31D2KN15800",
    "pacote": "Plugin,P=15mm",
@@ -1164,7 +1164,7 @@
    "situacao": "ok"
   },
   "C489084": {
-   "nome": "Capacitor X2 220nF, 275 a 310V AC",
+   "nome": "Capacitor X2 220nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX224K31D2KN15800",
    "pacote": "Plugin,P=15mm",
@@ -1191,7 +1191,7 @@
    "situacao": "ok"
   },
   "C504197": {
-   "nome": "Capacitor X2 220nF, 275 a 310V AC",
+   "nome": "Capacitor X2 220nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX224K31C3KN15690",
    "pacote": "Plugin,P=10mm",
@@ -1322,7 +1322,7 @@
    "situacao": "ok"
   },
   "C504201": {
-   "nome": "Capacitor X2 330nF, 275 a 310V AC",
+   "nome": "Capacitor X2 330nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX334K31D2KN15800",
    "pacote": "Plugin,P=15mm",
@@ -1349,7 +1349,7 @@
    "situacao": "ok"
   },
   "C504198": {
-   "nome": "Capacitor X2 330nF, 275 a 310V AC",
+   "nome": "Capacitor X2 330nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX334K31C5KN15600",
    "pacote": "Plugin,P=10mm",
@@ -1480,7 +1480,7 @@
    "situacao": "ok"
   },
   "C489083": {
-   "nome": "Capacitor X2 470nF, 275 a 310V AC",
+   "nome": "Capacitor X2 470nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX474K31D4KN15800",
    "pacote": "Plugin,P=15mm",
@@ -1533,7 +1533,7 @@
    "situacao": "ok"
   },
   "C504203": {
-   "nome": "Capacitor X2 470nF, 275 a 310V AC",
+   "nome": "Capacitor X2 470nF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX474K31D3KN15800",
    "pacote": "Plugin,P=15mm",
@@ -1819,7 +1819,7 @@
    "situacao": "ok"
   },
   "C489089": {
-   "nome": "Capacitor X2 1uF, 275 a 310V AC",
+   "nome": "Capacitor X2 1uF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX105K31E3KN15800",
    "pacote": "Plugin,P=22.5mm",
@@ -1872,7 +1872,7 @@
    "situacao": "ok"
   },
   "C504224": {
-   "nome": "Capacitor X2 1uF, 275 a 310V AC",
+   "nome": "Capacitor X2 1uF, 275V AC",
    "marca": "KNSCHA",
    "modelo": "MPX105K31D5KN15800",
    "pacote": "Plugin,P=15mm",
