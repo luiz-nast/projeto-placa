@@ -4,3 +4,7 @@ placas/
 .venv/
 __pycache__/
 .claude/launch.json
+
+# laboratorio: emuladores e compiladores baixados ficam so na maquina
+laboratorio/.ferramentas/
+laboratorio/**/build/
