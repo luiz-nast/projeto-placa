@@ -45,7 +45,8 @@ ferramenta/
   gerar.py            ← lê placa.txt, escreve modelo.json, Gerbers, Excellon
   blocos.py           ← objetivo, perguntas, blocos e a conta do brilho (projeto.json)
   loja.py             ← busca peça na JLCPCB, foto e datasheet na LCSC, desenho oficial no EasyEDA
-  conferidos.json     ← o que o Claude leu no datasheet de cada peça da loja (polaridade, limites, curvas)
+  catalogo.py         ← a lista de compras: encher (da loja), checar (preço e estoque agora), ver
+  catalogo.json       ← a lista: ~300 peças de furo com o que a loja diz, o dia em que viu, a situação e o que o Claude conferiu no datasheet
   biblioteca.py       ← peças de antes da loja e de exemplo: pinos, nomes de gente, modelo elétrico
   circuito.py         ← liga o circuito no papel (corrente contínua: pilha, resistor, LED, chave)
   testar.py           ← bateria de testes → testes.json
@@ -206,6 +207,8 @@ HTML + JS puro, desenho em SVG (facilita clique, destaque e zoom via viewBox). T
 
 **Processo:** a história do projeto em 7 passos, o caminho de toda placa, pra mostrar pra alguém: **objetivo** (com as perguntas, que o Luiz responde clicando), **blocos** (a cadeia de tipos de peça com o símbolo e o porquê de cada um), **carrinho** (foto, tamanho, preço e estoque de cada peça, a conta do resistor e o Trocar com as opções da loja; escolher troca o `placa.txt` e roda os testes), a **placa** e as versões, os **testes** (com o resumo do Claude e o botão de rodar de novo), a **fábrica** (`fabrica.zip` e, se tiver `fabrica.json`, a cotação com a imagem do site) e **montar e acender**.
 
+**Catálogo de peças** (pela tela inicial): o mundo de opções de cada bloco, com filtro por valor, cor e texto, o que já está em uso, o que já foi conferido no datasheet, e os botões de conferir na loja agora e procurar mais. O Trocar do carrinho lê daqui (na hora, sem internet).
+
 **Topo:** ← projetos · nome do projeto · abas **Processo | Thinking | Projeto | Testes** · status dos testes (✓/✗) · relógio de versões (abre lista; escolher v1/v2 mostra a placa daquela versão; opção "destacar o que mudou").
 
 **Thinking:** o objetivo num card em cima, os requisitos em cards ligados embaixo, cada um com status (ok / falta ligar) e peças. Modo **Simples** e **Detalhado** (mostra os sub-requisitos). "Ver na placa →" abre a peça na aba Projeto. Começar como árvore simples; canvas roteado só depois.
@@ -235,7 +238,7 @@ Cada marco termina com algo que o Luiz vê funcionando, testado pelo Claude.
 5. **Requisitos + aba Thinking** (modo simples primeiro).
 6. **Skill**: `.claude/skills/placa/SKILL.md` com o fluxo, o formato do `placa.txt`, as regras de Gerber/Excellon e "rode testar.py antes de dizer que terminou".
 7. **Placa de estudo de verdade**: biblioteca com valores de datasheet (DevKit, LED, resistor, botão, buzzer), pads passantes nos dois lados pros pinos do DevKit, máscara e serigrafia, regras reais da JLCPCB, `fabrica.zip`. **Encomendar.**
-8. **Ordem nova e loja** (feito em 2026-10-24): objetivo com perguntas, blocos, carrinho com peças da JLCPCB/LCSC e desenho oficial do EasyEDA, conta do brilho, app escolhendo peça.
+8. **Ordem nova e loja** (feito em 2026-10-24): objetivo com perguntas, blocos, carrinho com peças da JLCPCB/LCSC e desenho oficial do EasyEDA, conta do brilho, app escolhendo peça. Depois, o catálogo: a lista de compras de sempre, com a loja como double check.
 9. Depois, se fizer falta: extensão do Chrome pra mandar peça de qualquer loja pro carrinho; peças de superfície (SMD) montadas pela fábrica; MCP pra o Claude consultar a bancada direto.
 
 Fora do escopo por agora: chat embutido no app, simulação elétrica, autoroteamento, mais de 2 camadas.

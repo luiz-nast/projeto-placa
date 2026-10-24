@@ -27,10 +27,10 @@ python3 ferramenta/instalar.py   # põe o "Sianvolt" no menu de aplicativos
 
 O app (`ferramenta/app.py`) abre numa janela própria, sem abas, com a lista de projetos. Cada projeto conta a história em 7 passos (objetivo, blocos, carrinho, placa, testes, fábrica, montar); dá pra responder as perguntas, trocar uma peça pelas opções da loja e rodar os testes de lá. Sem instalar: `python3 ferramenta/app.py`.
 
-Peças: `python3 ferramenta/loja.py buscar "LED 5mm red"` e `python3 ferramenta/loja.py importar C779439 led placas/lanterna`.
+Peças: a lista de compras de sempre é o `ferramenta/catalogo.json` (~300 peças de furo, com preço, estoque, o dia em que viu e o que já foi conferido no datasheet), visível na tela **Catálogo de peças** do app. A loja online é o double check: `python3 ferramenta/catalogo.py checar` (preço e estoque agora), `python3 ferramenta/loja.py buscar "LED 5mm"` e `python3 ferramenta/loja.py importar C779439 led placas/lanterna`.
 
 O `testar.py` gera `modelo.json`, os Gerbers, o Excellon e a versão, e depois roda 7 etapas: lê o txt, confere peças, confere ligações, liga o circuito no papel (pilha fraca, nominal e nova), regras da fábrica (JLCPCB), relê o Gerber com o `gerbonara` e tira uma foto da placa. O `fabrica.zip` só sai quando tudo passa.
 
 O app tem quatro abas: **Processo** (a história do projeto: objetivo, blocos, carrinho, placa, testes, fábrica, montar), **Thinking** (objetivo e requisitos), **Projeto** (a placa, com inspetor e o ▶ que liga o circuito, com painel pra mexer na pilha e no resistor) e **Testes** (as etapas ao vivo).
 
-A especificação inteira está em [PROJETO.md](PROJETO.md). As peças da loja trazem o desenho do EasyEDA; o que a loja não diz (o + do LED, os pinos do botão, as curvas) o Claude lê no datasheet e guarda em `ferramenta/conferidos.json`. As peças do ESP32 da placa de estudo ainda são de exemplo.
+A especificação inteira está em [PROJETO.md](PROJETO.md). As peças da loja trazem o desenho do EasyEDA; o que a loja não diz (o + do LED, os pinos do botão, as curvas) o Claude lê no datasheet e guarda na própria peça, no catálogo. As peças do ESP32 da placa de estudo ainda são de exemplo.

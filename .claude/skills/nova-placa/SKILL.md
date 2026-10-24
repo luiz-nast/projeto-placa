@@ -19,7 +19,7 @@ A cadeia de funções: Energia (pilha) → Liga e desliga (botão) → Freio (re
 
 ## 3. Carrinho (peças de verdade)
 
-Pra cada bloco, uma peça que a loja tem em estoque e que a gente solda na mão (de furo). Siga a skill `peca-da-loja`. O resistor **sai da conta** (`blocos.conta_do_freio`: brilho pedido → corrente pela curva do LED → resistor → valor E24 mais perto) e só é procurado com esse valor.
+Pra cada bloco, uma peça que a loja tem em estoque e que a gente solda na mão (de furo): **primeiro do catálogo** (`ferramenta/catalogo.json`, a lista de compras de sempre), conferida na loja antes de entrar no carrinho. Siga a skill `peca-da-loja`. O resistor **sai da conta** (`blocos.conta_do_freio`: brilho pedido → corrente pela curva do LED → resistor → valor E24 mais perto) e só é procurado com esse valor.
 
 Tudo fica em `placas/<nome>/projeto.json`:
 
