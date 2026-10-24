@@ -14,6 +14,7 @@ from datetime import datetime
 from pathlib import Path
 
 import blocos
+import catalogo
 import circuito
 import gerar
 
@@ -208,6 +209,11 @@ def confere_pecas(ctx):
         detalhe += f" · medidas de exemplo (sem datasheet): {', '.join(exemplo)}"
     for ref, falta in pendente.items():
         detalhe += f" · falta conferir no datasheet de {ref}: {'; '.join(falta)}"
+    lista = catalogo.ler()["pecas"]   # a loja como o catalogo viu da ultima vez
+    for p in pecas:
+        e = lista.get(p["tipo"]) if bib[p["tipo"]].get("loja") else None
+        if e and e["situacao"] != "ok":
+            detalhe += f" · {p['ref']}: {e['situacao']} na loja (visto em {e['visto']})"
     return detalhe
 
 

@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import blocos
+import catalogo
 import loja
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -46,6 +47,17 @@ def placa(nome):
     except (ValueError, OSError):   # nome com byte nulo e afins
         pass
     return None
+
+
+def usos():
+    """codigo -> ["lanterna: R1", ...]: que placa usa cada peca do catalogo"""
+    quem = {}
+    for pasta in sorted(PLACAS.iterdir()) if PLACAS.exists() else []:
+        proj = placa(pasta.name) and blocos.ler_projeto(pasta)
+        for b in (proj or {}).get("blocos", []):
+            if b.get("peca"):
+                quem.setdefault(b["peca"], []).append(f"{pasta.name}: {b['ref']}")
+    return quem
 
 
 def rodar_testes(pasta, frase=None):
@@ -97,12 +109,15 @@ class Bancada(SimpleHTTPRequestHandler):
         if url.path == "/api/projeto":
             pasta = placa(q.get("placa", ""))
             return self.responder(blocos.estado(pasta) if pasta else {"erro": "placa não existe"}, 200 if pasta else 404)
+        if url.path == "/api/catalogo":
+            return self.responder({"pecas": catalogo.ler()["pecas"], "usos": usos(), "sementes": catalogo.SEMENTES})
         if url.path == "/api/opcoes":
             pasta = placa(q.get("placa", ""))
             if not pasta:
                 return self.responder({"erro": "placa não existe"}, 404)
             try:
-                return self.responder(blocos.opcoes(pasta, q.get("ref", "")))
+                with trava:   # pode escrever no catalogo
+                    return self.responder(blocos.opcoes(pasta, q.get("ref", ""), online=q.get("online") == "1"))
             except ValueError as e:
                 return self.responder({"erro": str(e)}, 400)
             except loja.SemLoja as e:
@@ -122,6 +137,27 @@ class Bancada(SimpleHTTPRequestHandler):
         if not self.servido(url):
             return self.responder({"erro": "não existe"}, 404)
         super().do_GET()
+
+    def no_catalogo(self, caminho, corpo):
+        """checar: preco e estoque agora, na loja; buscar: peca nova da loja entra na lista"""
+        try:
+            with trava:
+                cat = catalogo.ler()
+                if caminho == "/api/catalogo/checar":
+                    codigos = [c for c in corpo.get("codigos", []) if isinstance(c, str) and c in cat["pecas"]][:60]
+                    mudaram = catalogo.checar(cat, codigos, avisar=lambda *_: None)
+                    resposta = {"ok": True, "conferidas": len(codigos), "mudaram": mudaram}
+                else:
+                    bloco, texto = str(corpo.get("bloco", "")), str(corpo.get("texto", "")).strip()[:80]
+                    if bloco not in blocos.BLOCOS or not texto:
+                        return self.responder({"erro": "bloco ou busca inválida"}, 400)
+                    achadas = [i for i in loja.buscar(texto, 30, validade=0) if catalogo.serve(bloco, i)]
+                    novas = catalogo.adicionar(cat, bloco, sorted(achadas, key=lambda i: -i["estoque"])[:12])
+                    resposta = {"ok": True, "achadas": len(achadas), "novas": novas}
+                catalogo.salvar(cat)
+        except loja.SemLoja as e:
+            return self.responder({"erro": str(e)}, 502)
+        self.responder(resposta)
 
     def foto(self, codigo):
         """foto da peca na LCSC (fica no cache do loja.py)"""
@@ -146,12 +182,9 @@ class Bancada(SimpleHTTPRequestHandler):
         if self.headers.get("Host") not in HOSTS:
             return self.responder({"erro": "host"}, 403)
         # o cabecalho proprio faz o navegador barrar pedido vindo de outro site
-        if url.path not in ("/api/testar", "/api/escolher", "/api/responder") or self.headers.get("X-Bancada") != "1":
+        if url.path not in ("/api/testar", "/api/escolher", "/api/responder", "/api/catalogo/checar", "/api/catalogo/buscar") \
+                or self.headers.get("X-Bancada") != "1":
             return self.responder({"erro": "não existe"}, 404)
-        nome = parse_qs(url.query).get("placa", [""])[0]
-        pasta = placa(nome)
-        if not pasta:
-            return self.responder({"erro": f"a placa '{nome}' não existe"}, 404)
         try:
             tamanho = int(self.headers.get("Content-Length") or 0)
             corpo = json.loads(self.rfile.read(tamanho) or b"{}") if 0 <= tamanho <= 10_000 else None
@@ -159,6 +192,12 @@ class Bancada(SimpleHTTPRequestHandler):
             corpo = None
         if not isinstance(corpo, dict):
             return self.responder({"erro": "corpo inválido"}, 400)
+        if url.path.startswith("/api/catalogo/"):
+            return self.no_catalogo(url.path, corpo)
+        nome = parse_qs(url.query).get("placa", [""])[0]
+        pasta = placa(nome)
+        if not pasta:
+            return self.responder({"erro": f"a placa '{nome}' não existe"}, 404)
         with trava:   # uma rodada por placa de cada vez; a chave e a pasta de verdade, nao o texto da URL
             ocupada = pasta.name in rodando and rodando[pasta.name].poll() is None
             if url.path == "/api/testar":

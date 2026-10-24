@@ -13,7 +13,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-CONFERIDOS = json.loads((Path(__file__).parent / "conferidos.json").read_text())
+import catalogo
 
 # cada bloco: o que ele faz, em uma frase, e como procurar a peca dele na loja (sempre de furo: a gente solda).
 # a busca da JLCPCB e por palavra exata: "CR2032 Plugin" acha, "CR2032 battery holder through hole" nao
@@ -95,6 +95,22 @@ def de_furo(i):
 
 
 # ---------- a peca da loja vira um tipo da placa ----------
+def nome_da_loja(bloco, d):
+    """nome de gente de uma peca da loja, so com o que a loja diz"""
+    at = d["atributos"]
+    if bloco == "resistor":
+        ohms, w = numero_com_unidade(at.get("Resistance"), "Ω"), numero_com_unidade(at.get("Power(Watts)"), "W")
+        return f"Resistor {ohms_txt(ohms)}, {watts_txt(w)}" if ohms and w else "Resistor"
+    if bloco == "led":
+        cor = catalogo.CORES.get(at.get("Illumination Color"), "")
+        return f"LED {cor} {tamanho(d['pacote'])}".replace("  ", " ").replace(" de diâmetro", "").strip()
+    if bloco == "botao":
+        return f"Botão {tamanho(d['pacote'])}"
+    if bloco == "pilha":
+        return f"Suporte de pilha {at.get('Battery Type', '')}".strip()
+    return BLOCOS[bloco]["nome"]
+
+
 def pad(p):
     if p["forma"] == "C" and abs(p["w"] - p["h"]) < 1e-6:
         return {"forma": "C", "d": p["w"]}
@@ -108,7 +124,7 @@ def tipo_da_loja(bloco, d, des):
     if medida == d["pacote"] and des["corpo"]:   # o pacote nao diz a medida: usa o contorno do desenho
         medida = f"{des['corpo'][0]:.1f} × {des['corpo'][1]:.1f} mm".replace(".", ",")
     tipo = {
-        "nome": b["nome"], "bloco": bloco, "explica": b["explica"],
+        "nome": nome_da_loja(bloco, d), "bloco": bloco, "explica": b["explica"],
         "fonte": f"desenho {des['pacote']} do EasyEDA; ficha LCSC {codigo}; datasheet {d['datasheet']}",
         "corpo": des["corpo"] or [2 * max(abs(p["x"]) + p["w"] / 2 for p in des["pads"]),
                                   2 * max(abs(p["y"]) + p["h"] / 2 for p in des["pads"])],
@@ -125,21 +141,16 @@ def tipo_da_loja(bloco, d, des):
         tipo["valor"] = ohms
         if ohms and w:
             tipo["eletrica"] = {"modelo": "resistor", "potencia_max": w}
-            tipo["nome"] = f"Resistor {ohms_txt(ohms)}, {watts_txt(w)}"
         else:
             tipo["pendente"].append("o valor e a potência do resistor")
     elif bloco == "led":
-        cor = {"Red": "vermelho", "Green": "verde", "Blue": "azul", "Yellow": "amarelo", "White": "branco"}.get(at.get("Illumination Color"), "")
-        tipo["nome"] = f"LED {cor} {tamanho(d['pacote'])}".replace("  ", " ").replace(" de diâmetro", "")
         tipo["nomes"] = {n: {"A": "+", "K": "−"}.get(nome, nome) for n, nome in des["simbolo"].items()}
         tipo["pendente"].append("o + e o −, a corrente máxima e a curva de brilho do LED")
     elif bloco == "botao":
-        tipo["nome"] = f"Botão {tamanho(d['pacote'])}"
         tipo["pendente"].append("quais pinos do botão são o mesmo lado")
     elif bloco == "pilha":
-        tipo["nome"] = f"Suporte de pilha {at.get('Battery Type', '')}".strip()
         tipo["pendente"].append("qual furo é o + e qual pilha vai nele")
-    conferido = CONFERIDOS.get(codigo)
+    conferido = catalogo.conferido(codigo)
     if conferido:   # o que o Claude ja conferiu no datasheet
         for chave in ("nomes", "juntos", "eletrica", "pinos_fixos", "extras"):
             if chave in conferido:
@@ -299,41 +310,51 @@ def estado(pasta):
 
 
 # ---------- o que o app muda ----------
-def opcoes(pasta, ref, quantos=8):
-    """pecas da loja que servem pra esse bloco (de furo, com estoque); resistor so com o valor da conta"""
+def opcoes(pasta, ref, online=False):
+    """o mundo de pecas que servem pra esse bloco: primeiro o catalogo (na hora, sem internet); online=True
+    (ou catalogo sem nada pra esse caso) busca na loja e poe o que achar no catalogo.
+    Resistor so com o valor da conta; LED da mesma cor do escolhido."""
     import loja
     proj = ler_projeto(pasta)
     b = proj and bloco_do_ref(proj, ref)
     if not b:
         raise ValueError(f"{ref} não é um bloco deste projeto")
-    busca, alvo = BLOCOS[b["bloco"]]["busca"], None
-    if b["bloco"] == "resistor":
-        conta = conta_do_projeto(proj, carregar_pecas(pasta))
-        alvo = conta.get("padrao") or (carregar_pecas(pasta).get(b.get("peca")) or {}).get("valor")
+    bloco, atual, pecas = b["bloco"], b.get("peca"), carregar_pecas(pasta)
+    busca, alvo, cor = BLOCOS[bloco]["busca"], None, None
+    if bloco == "resistor":
+        conta = conta_do_projeto(proj, pecas)
+        alvo = conta.get("padrao") or (pecas.get(atual) or {}).get("valor")
         if not alvo:
             raise ValueError("primeiro a conta do brilho: " + ", ".join(conta.get("falta", [])))
-        busca = busca.format(valor=f"{alvo:g}Ω" if alvo < 1000 else f"{alvo / 1000:g}kΩ")
-    itens = [i for i in loja.buscar(busca, 30) if i["estoque"] > 0 and de_furo(i)]
-    if alvo:
-        itens = [i for i in itens if numero_com_unidade(i["atributos"].get("Resistance"), "Ω") == alvo]
-    if "atributo" in BLOCOS[b["bloco"]]:
-        nome, valor = BLOCOS[b["bloco"]]["atributo"]
-        itens = [i for i in itens if i["atributos"].get(nome) == valor]
-    itens.sort(key=lambda i: -i["estoque"])
-    atual = b.get("peca")
-    if atual and alvo in (None, (carregar_pecas(pasta).get(atual) or {}).get("valor")) and all(i["codigo"] != atual for i in itens):
-        try:
-            itens.insert(0, loja.ficha(atual))   # a escolhida aparece mesmo se a busca nao trouxer
-        except loja.SemLoja:
-            pass
-    itens.sort(key=lambda i: i["codigo"] != atual)
-    vistos, saida = set(), []
-    for i in itens:
-        if i["codigo"] not in vistos:
-            vistos.add(i["codigo"])
-            saida.append({**i, "tamanho": tamanho(i["pacote"]), "escolhida": i["codigo"] == b.get("peca"),
-                          "conferida": i["codigo"] in CONFERIDOS or b["bloco"] == "resistor"})   # resistor: a loja ja diz tudo
-    return {"ref": ref, "bloco": b["bloco"], "busca": busca, "alvo": alvo, "itens": saida[:quantos]}
+        busca = busca.format(valor=catalogo.ohms_busca(alvo))
+    if bloco == "led":
+        cor = ((pecas.get(atual) or {}).get("loja", {}).get("atributos") or {}).get("Illumination Color")
+
+    def servem(cat):
+        lista = catalogo.do_bloco(cat, bloco)
+        if alvo:
+            lista = [e for e in lista if numero_com_unidade(e["atributos"].get("Resistance"), "Ω") == alvo]
+        if cor:
+            lista = [e for e in lista if e["atributos"].get("Illumination Color") == cor]
+        return lista
+
+    cat = catalogo.ler()
+    novas = 0
+    if online or not servem(cat):
+        if cor:
+            busca = f"LED {'3mm' if '3' in (pecas.get(atual) or {}).get('loja', {}).get('pacote', '') else '5mm'} {cor.lower()}"
+        achadas = [i for i in loja.buscar(busca, 30, validade=0 if online else loja.UM_DIA) if catalogo.serve(bloco, i)]
+        novas = catalogo.adicionar(cat, bloco, sorted(achadas, key=lambda i: -i["estoque"])[:12])
+        catalogo.salvar(cat)
+    lista = servem(cat)
+    for e in lista:
+        e["bloco"] = bloco
+        e["escolhida"] = e["codigo"] == atual
+        e["conferida"] = bool(e.get("conferido")) or bloco == "resistor"   # resistor: a loja ja diz tudo
+        e.pop("conferido", None)
+    lista.sort(key=lambda e: (not e["escolhida"], e["situacao"] != "ok", not e["conferida"], -e["estoque"]))
+    return {"ref": ref, "bloco": bloco, "busca": busca, "alvo": alvo, "cor": catalogo.CORES.get(cor), "novas": novas,
+            "itens": lista}
 
 
 def trocar_no_txt(pasta, ref, codigo, nome):

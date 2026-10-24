@@ -32,7 +32,7 @@ def pedir(url, dados=None, validade=UM_DIA, binario=False):
     """GET (ou POST com json) com cache em disco; o desenho e a foto de uma peca nao mudam, a busca vale um dia"""
     chave = hashlib.sha1((url + json.dumps(dados or "")).encode()).hexdigest()
     arq = CACHE / chave
-    if arq.exists() and (validade is None or time.time() - arq.stat().st_mtime < validade):
+    if arq.exists() and (validade is None or time.time() - arq.stat().st_mtime < validade):   # validade 0 = sempre pergunta
         corpo = arq.read_bytes()
     else:
         req = urllib.request.Request(url, data=json.dumps(dados).encode() if dados else None,
@@ -69,8 +69,8 @@ def item(c):
     }
 
 
-def buscar(texto, quantos=10):
-    resposta = pedir(BUSCA, {"keyword": texto, "currentPage": 1, "pageSize": quantos})
+def buscar(texto, quantos=10, validade=UM_DIA):
+    resposta = pedir(BUSCA, {"keyword": texto, "currentPage": 1, "pageSize": quantos}, validade=validade)
     try:
         lista = json.loads(resposta)["data"]["componentPageInfo"]["list"] or []
     except (ValueError, KeyError, TypeError):
@@ -78,9 +78,9 @@ def buscar(texto, quantos=10):
     return [item(c) for c in lista]
 
 
-def ficha(codigo):
-    """a peca pelo codigo da LCSC (C119304)"""
-    achados = [i for i in buscar(codigo, 5) if i["codigo"] == codigo]
+def ficha(codigo, validade=UM_DIA):
+    """a peca pelo codigo da LCSC (C119304); validade=0 pergunta pra loja agora"""
+    achados = [i for i in buscar(codigo, 5, validade) if i["codigo"] == codigo]
     if not achados:
         raise SemLoja(f"{codigo} não está na loja")
     return achados[0]
@@ -226,6 +226,11 @@ def importar(codigo, bloco, pasta):
     if pag["pdf"]:
         dados["datasheet"] = pag["pdf"]   # o link direto do pdf (o da busca as vezes e uma pagina)
     tipo = blocos.tipo_da_loja(bloco, dados, des)
+    import catalogo
+    cat = catalogo.ler()
+    catalogo.adicionar(cat, bloco, [dados])   # toda peca escolhida fica na lista de compras
+    cat["pecas"][codigo]["tamanho"] = tipo["loja"]["tamanho"]   # a medida do desenho, quando o pacote nao diz
+    catalogo.salvar(cat)
     destino = Path(pasta) / "pecas"
     destino.mkdir(parents=True, exist_ok=True)
     arq = destino / f"{codigo}.json"
