@@ -60,7 +60,8 @@ liga D1.1 GND               # vai até o pino de GND mais perto
 
 - Os pinos de uma peça da loja são os do desenho oficial: veja os `nomes` em `placas/<nome>/pecas/<codigo>.json` antes de ligar (no LED `C779439` o + é o pino **2**).
 
-- Trilha é linha reta, 0,3 mm. Se duas cruzarem ou passarem perto de um pad, a etapa 3 acusa **curto**: mude a posição das peças (ou escolha outro pino) até a linha reta ficar limpa.
+- Trilha de 0,3 mm. O roteador (`gerar.rotear`) tenta a reta; se algo de outra net está no caminho, desvia em L ou Z e, se precisar, passa pro outro lado da placa por uma via (furo 0,4, anel 0,8, coberta pela máscara), sempre a 0,25 mm do cobre das outras nets e a 0,5 mm da borda e dos furos de fixação. Pad de superfície só tem cobre em cima. Nada coube: fica a reta e a etapa 3 acusa o curto; aí mude as peças de lugar.
+- A etapa 3 também para quando uma peça sai da placa, um pino encosta no furo de fixação ou os corpos de duas peças se sobrepõem.
 - Uma ligação entre nets com nome diferente (GND com 3V3) é erro.
 
 ## requisitos.md

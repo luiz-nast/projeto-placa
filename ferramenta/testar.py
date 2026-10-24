@@ -16,6 +16,7 @@ from pathlib import Path
 import blocos
 import catalogo
 import circuito
+import geometria
 import gerar
 
 # regras da fabrica: https://jlcpcb.com/capabilities/pcb-capabilities (1-2 camadas, 1 oz, lido em 2026-10-23)
@@ -68,88 +69,54 @@ def ligar(modelo, pilha="v", apertadas=True):
     return circuito.resolver(modelo, {"pilha": pilhas, "chave": chaves})
 
 
-# geometria do cobre: cada coisa e um "miolo" (segmentos ou retangulo) mais um raio em volta
+# geometria do cobre (geometria.py): cada coisa e um "miolo" (segmentos ou retangulo) mais um raio em volta,
+# e fica em uma camada ou nas duas (pad de furo e via atravessam a placa)
+AMBOS = frozenset({"cima", "baixo"})
+
+
 def cobres(modelo):
-    """(nome, net, miolo, raio); miolo = ("seg", a, b) ou ("ret", x0, y0, x1, y1)"""
+    """(nome, net, miolo, raio, lados); miolo = ("seg", a, b) ou ("ret", x0, y0, x1, y1)"""
     lista = []
     for peca in modelo["pecas"]:
         for p in peca["pinos"]:
             nome = f"{peca['ref']}.{p['n']}"
-            net = p["net"] or nome   # pino solto e uma net sozinho
-            if p["pad"]["forma"] == "C":
-                lista.append((nome, net, ("seg", (p["x"], p["y"]), (p["x"], p["y"])), p["pad"]["d"] / 2))
-            elif p["pad"]["forma"] == "O":   # oblongo: segmento no meio, raio = metade do lado curto
-                w, h = p["pad"]["w"], p["pad"]["h"]
-                meio = abs(w - h) / 2
-                a, b = ((p["x"] - meio, p["y"]), (p["x"] + meio, p["y"])) if w >= h else ((p["x"], p["y"] - meio), (p["x"], p["y"] + meio))
-                lista.append((nome, net, ("seg", a, b), min(w, h) / 2))
-            else:
-                w, h = p["pad"]["w"] / 2, p["pad"]["h"] / 2
-                lista.append((nome, net, ("ret", p["x"] - w, p["y"] - h, p["x"] + w, p["y"] + h), 0))
+            miolo, raio = geometria.do_pad(p["x"], p["y"], p["pad"])
+            lista.append((nome, p["net"] or nome, miolo, raio, AMBOS if p["furo"] else frozenset({"cima"})))   # pino solto e net sozinho
     for t in modelo["trilhas"]:
         nome = f"trilha {t['de']} → {t['ate']}"
-        lista.append((nome, t["net"], ("seg", (t["x1"], t["y1"]), (t["x2"], t["y2"])), t["largura"] / 2))
+        lista.append((nome, t["net"], ("seg", (t["x1"], t["y1"]), (t["x2"], t["y2"])), t["largura"] / 2,
+                      frozenset({t.get("lado", "cima")})))
+    for v in modelo.get("vias", []):
+        lista.append((f"via {v['de']} → {v['ate']}", v["net"], ("seg", (v["x"], v["y"]), (v["x"], v["y"])), v["d"] / 2, AMBOS))
     return lista
 
 
-def dist_ponto_seg(p, a, b):
-    dx, dy = b[0] - a[0], b[1] - a[1]
-    t = 0 if dx == dy == 0 else max(0, min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / (dx * dx + dy * dy)))
-    return math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dy)
-
-
-def cruza(a, b, c, d):
-    def lado(p, q, r):
-        return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
-    return lado(a, b, c) * lado(a, b, d) < 0 and lado(c, d, a) * lado(c, d, b) < 0
-
-
-def dist_seg_seg(a, b, c, d):
-    if cruza(a, b, c, d):
-        return 0
-    return min(dist_ponto_seg(a, c, d), dist_ponto_seg(b, c, d), dist_ponto_seg(c, a, b), dist_ponto_seg(d, a, b))
-
-
-def segmentos(miolo):
-    if miolo[0] == "seg":
-        return [(miolo[1], miolo[2])]
-    _, x0, y0, x1, y1 = miolo
-    q = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
-    return [(q[i], q[(i + 1) % 4]) for i in range(4)]
-
-
-def dentro(p, miolo):
-    return miolo[0] == "ret" and miolo[1] <= p[0] <= miolo[3] and miolo[2] <= p[1] <= miolo[4]
-
-
-def distancia(c1, c2):
-    """distancia entre as bordas de dois cobres (negativa = um entra no outro)"""
-    (m1, r1), (m2, r2) = c1, c2
-    s1, s2 = segmentos(m1), segmentos(m2)
-    if any(dentro(s[0], m2) for s in s1) or any(dentro(s[0], m1) for s in s2):
-        d = 0
-    else:
-        d = min(dist_seg_seg(a, b, c, e) for a, b in s1 for c, e in s2)
-    return d - r1 - r2
-
-
-def caixa(miolo, raio):
-    pts = [p for s in segmentos(miolo) for p in s]
-    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
-    return min(xs) - raio, min(ys) - raio, max(xs) + raio, max(ys) + raio
+dist_ponto_seg, cruza, dist_seg_seg = geometria.dist_ponto_seg, geometria.cruza, geometria.dist_seg_seg
+segmentos, dentro, distancia, caixa = geometria.segmentos, geometria.dentro, geometria.distancia, geometria.caixa
 
 
 def pares_perto(modelo, limite):
-    """pares de cobre de nets diferentes mais perto que `limite` (o pior primeiro)"""
+    """pares de cobre de nets diferentes, na mesma camada, mais perto que `limite` (o pior primeiro)"""
     cs = cobres(modelo)
     achados = []
-    for i, (n1, net1, m1, r1) in enumerate(cs):
-        for n2, net2, m2, r2 in cs[i + 1:]:
-            if net1 != net2:
+    for i, (n1, net1, m1, r1, l1) in enumerate(cs):
+        for n2, net2, m2, r2, l2 in cs[i + 1:]:
+            if net1 != net2 and l1 & l2:
                 d = distancia((m1, r1), (m2, r2))
                 if d < limite:
                     achados.append((d, n1, n2))
     return sorted(achados)
+
+
+def corpos_encostados(modelo, folga=0.05):
+    """pares de peças cujos corpos se sobrepõem (uma em cima da outra na placa); corpo redondo é círculo"""
+    def corpo(p):
+        c = p["corpo"]
+        if c["redondo"]:
+            return ("circ", p["x"], p["y"], min(c["w"], c["h"]) / 2)
+        return ("ret", p["x"] - c["w"] / 2, p["y"] - c["h"] / 2, p["x"] + c["w"] / 2, p["y"] + c["h"] / 2)
+    ps = modelo["pecas"]
+    return [(a["ref"], b["ref"]) for i, a in enumerate(ps) for b in ps[i + 1:] if geometria.sobrepoe(corpo(a), corpo(b), folga)]
 
 
 def refs(*nomes):
@@ -241,6 +208,28 @@ def confere_ligacoes(ctx):
         raise Falhou(f"{' e '.join(sem)} sem ligação", sem, "sem ligação")
     if solto:
         raise Falhou(f"pino solto: {', '.join(solto)}", refs(*solto), "pino solto")
+    w, h = modelo["placa"]["w"], modelo["placa"]["h"]
+    fora = []   # pad que sai da placa: nenhuma trilha chega nele, e a fábrica corta ele fora
+    for peca in modelo["pecas"]:
+        for p in peca["pinos"]:
+            x0, y0, x1, y1 = caixa(*geometria.do_pad(p["x"], p["y"], p["pad"]))
+            if x0 < 0 or y0 < 0 or x1 > w or y1 > h:
+                fora.append(peca["ref"])
+                break
+    if fora:
+        raise Falhou(f"{' e '.join(fora)} {'saem' if len(fora) > 1 else 'sai'} da placa: tem pino fora do contorno de "
+                     f"{mm(w).replace(',00', '')} × {mm(h).replace(',00', '')} mm", fora, "fora da placa")
+    for peca in modelo["pecas"]:   # pad em cima do furo de fixacao: o parafuso passa no meio do cobre
+        for p in peca["pinos"]:
+            for f in modelo["furos"]:
+                if distancia(geometria.do_pad(p["x"], p["y"], p["pad"]), (("seg", (f["x"], f["y"]), (f["x"], f["y"])), f["d"] / 2)) < 0:
+                    raise Falhou(f"{peca['ref']} está em cima do furo de fixação: o pino {p['nome'] or p['n']} encosta no furo",
+                                 [peca["ref"]], "em cima do furo")
+    encostados = corpos_encostados(modelo)
+    if encostados:
+        a, b = encostados[0]
+        mais = f" (e mais {len(encostados) - 1})" if len(encostados) > 1 else ""
+        raise Falhou(f"{a} está em cima de {b}: os corpos das peças se encostam{mais}", [a, b], "uma em cima da outra")
     for peca in modelo["pecas"]:   # resistor, LED, pilha: os dois pinos na mesma net = a peca esta em curto
         if len(peca["pinos"]) == 2 and peca["pinos"][0]["net"] and peca["pinos"][0]["net"] == peca["pinos"][1]["net"]:
             raise Falhou(f"{peca['ref']} em curto: os dois pinos estão na net {peca['pinos'][0]['net']}", [peca["ref"]], "curto")
@@ -330,6 +319,13 @@ def regras_fabrica(ctx):
             anel = (menor - p["furo"]) / 2
             if anel < ANEL_MIN:
                 problemas.append((f"anel de {nome} com {mm(anel)} mm (mínimo {mm(ANEL_MIN)})", [peca["ref"]], "anel fino"))
+    for v in modelo.get("vias", []):
+        nome = f"via {v['de']}–{v['ate']}"
+        furos_pad.append((nome, v["x"], v["y"], v["furo"]))
+        if not FURO_MIN <= v["furo"] <= FURO_MAX:
+            problemas.append((f"{nome} com furo de {mm(v['furo'])} mm", refs(v["de"], v["ate"]), "furo"))
+        if (v["d"] - v["furo"]) / 2 < ANEL_MIN:
+            problemas.append((f"anel da {nome} com {mm((v['d'] - v['furo']) / 2)} mm (mínimo {mm(ANEL_MIN)})", refs(v["de"], v["ate"]), "anel fino"))
     for i, (n1, x1, y1, d1) in enumerate(furos_pad):
         for n2, x2, y2, d2 in furos_pad[i + 1:]:
             vao = math.hypot(x1 - x2, y1 - y2) - d1 / 2 - d2 / 2
@@ -341,7 +337,7 @@ def regras_fabrica(ctx):
         r = f["d"] / 2
         if f["x"] - r < 0 or f["y"] - r < 0 or f["x"] + r > w or f["y"] + r > h:
             problemas.append(("furo de fixação fora da placa", [], ""))
-    for nome, _, miolo, raio in cobres(modelo):
+    for nome, _, miolo, raio, _ in cobres(modelo):
         x0, y0, x1, y1 = caixa(miolo, raio)
         folga = min(x0, y0, w - x1, h - y1)
         if folga < BORDA_MIN:
@@ -350,9 +346,11 @@ def regras_fabrica(ctx):
             d = distancia((miolo, raio), (("seg", (f["x"], f["y"]), (f["x"], f["y"])), f["d"] / 2))
             if d < BORDA_MIN:
                 problemas.append((f"{nome} a {mm(d)} mm do furo de fixação (mínimo {mm(BORDA_MIN)})", refs(nome), "perto do furo"))
-    pads = [(n, m, r) for n, _, m, r in cobres(modelo) if not n.startswith("trilha")]
-    for i, (n1, m1, r1) in enumerate(pads):
-        for n2, m2, r2 in pads[i + 1:]:
+    pads = [(n, m, r, l) for n, _, m, r, l in cobres(modelo) if not n.startswith(("trilha", "via"))]   # via fica coberta pela mascara
+    for i, (n1, m1, r1, l1) in enumerate(pads):
+        for n2, m2, r2, l2 in pads[i + 1:]:
+            if not l1 & l2:
+                continue
             d = distancia((m1, r1), (m2, r2))
             if 0 < d < PONTE_MIN:
                 problemas.append((f"máscara entre {n1} e {n2} com {mm(d)} mm (mínimo {mm(PONTE_MIN)})", refs(n1, n2), "máscara"))

@@ -268,6 +268,8 @@ svg.mini { width: 100%; height: auto; display: block; border-radius: 8px; backgr
 .corpo.da-loja { stroke: none; }
 .silk { fill: none; stroke: #F4F4F2; stroke-width: 0.15; stroke-linejoin: round; pointer-events: none; }
 .trilha { stroke: var(--cobre); stroke-linecap: round; fill: none; }
+.trilha.baixo { stroke: #6FA8DC; }   /* embaixo da placa: azul, por baixo das de cima */
+.via { fill: var(--cobre); pointer-events: none; }
 .pad { fill: var(--cobre); }
 .broca { fill: var(--area); pointer-events: none; }
 .ref { fill: #F4F4F2; font-family: var(--mono); pointer-events: none; }
@@ -616,14 +618,18 @@ function placaSVG(m, o = {}) {
       s += `<polyline class="silk${apaga(null, p.ref)}" points="${traco.map(([dx, dy]) => `${(p.x + dx).toFixed(3)},${Y(p.y + dy).toFixed(3)}`).join(' ')}"/>`;
     }
   }
-  m.trilhas.forEach((t, i) => {
-    s += `<line class="trilha${apaga(t.net, null)}" x1="${t.x1}" y1="${Y(t.y1)}" x2="${t.x2}" y2="${Y(t.y2)}" stroke-width="${t.largura}"${alvo('trilha:' + i)}/>`;
+  const ordem = m.trilhas.map((t, i) => [t, i]).sort((a, b) => (a[0].lado === 'baixo' ? 0 : 1) - (b[0].lado === 'baixo' ? 0 : 1));   // as de baixo primeiro
+  ordem.forEach(([t, i]) => {
+    s += `<line class="trilha${t.lado === 'baixo' ? ' baixo' : ''}${apaga(t.net, null)}" x1="${t.x1}" y1="${Y(t.y1)}" x2="${t.x2}" y2="${Y(t.y2)}" stroke-width="${t.largura}"${alvo('trilha:' + i)}/>`;
     const i_t = o.sim ? correnteNaTrilha(m, o.sim, t) : 0;
     if (Math.abs(i_t) > 1e-6) {   // bolinhas andando no sentido da corrente, mais rapido com mais corrente
       const dur = Math.min(3, Math.max(0.2, 15 / (Math.abs(i_t) * 1000)));
       s += `<line class="fluxo" x1="${t.x1}" y1="${Y(t.y1)}" x2="${t.x2}" y2="${Y(t.y2)}" stroke-width="${t.largura * 0.55}" style="--dur:${dur.toFixed(2)}s;animation-direction:${i_t > 0 ? 'normal' : 'reverse'}"/>`;
     }
   });
+  for (const v of m.vias || []) {
+    s += `<circle class="via${apaga(v.net, null)}" cx="${v.x}" cy="${Y(v.y)}" r="${v.d / 2}"/><circle class="broca${apaga(v.net, null)}" cx="${v.x}" cy="${Y(v.y)}" r="${v.furo / 2}"/>`;
+  }
   for (const p of m.pecas) {
     for (const pino of p.pinos) {
       const a = alvo(`pino:${p.ref}.${pino.n}`), cl = `pad${pinoApagado(p, pino)}`;
@@ -974,8 +980,8 @@ function inspecionar(m, sel, sim) {
     const comp = Math.hypot(t.x2 - t.x1, t.y2 - t.y1);
     const i_t = sim ? correnteNaTrilha(m, sim, t) : null;
     return { tipo: 'Trilha', titulo: `${nomePino(m, t.de)} → ${nomePino(m, t.ate)}`, linha: t.linha,
-      linhas: [['Net', t.net], ['Largura', `${mm(t.largura)} mm`], ['Comprimento', `${mm(comp, 1)} mm`]],
-      explica: 'Um caminho de cobre na placa: é o fio que liga um pino no outro. Por enquanto sai sempre em linha reta.',
+      linhas: [['Net', t.net], ['Lado', t.lado === 'baixo' ? 'embaixo da placa (azul)' : 'em cima'], ['Largura', `${mm(t.largura)} mm`], ['Comprimento', `${mm(comp, 1)} mm`]],
+      explica: 'Um caminho de cobre na placa: é o fio que liga um pino no outro. Sai reto quando dá; quando outra coisa está no caminho, desvia, ou passa pro outro lado da placa por uma via (o furinho de cobre) e volta.',
       agora: i_t === null ? '' : (Math.abs(i_t) > 1e-6 ? `agora: ${mA(Math.abs(i_t))} mA passando` : 'agora: nada passando') };
   }
   if (sel.k === 'furo') {
@@ -1372,7 +1378,7 @@ function desenharProcesso(main) {
   const versoes = [...S.versoes].reverse();
   const forafora = pj ? pj.blocos.filter(b => b.peca && b.na_placa === false).map(b => b.ref) : [];
   const p4 = m ? passo(4, forafora.length ? 'falha' : 'ok', 'Placa', `<div class="placa-resumo">${miniatura(m)}<div style="display:flex;flex-direction:column;gap:10px">
-      <span class="sub mono">${mm(m.placa.w, 0)} × ${mm(m.placa.h, 0)} mm · ${m.pecas.length} peças · ${m.trilhas.length} trilhas</span>
+      <span class="sub mono">${mm(m.placa.w, 0)} × ${mm(m.placa.h, 0)} mm · ${m.pecas.length} peças · ${new Set(m.trilhas.map(t => t.de + '>' + t.ate)).size} ligações${m.vias?.length ? ` · ${m.vias.length} vias` : ''}</span>
       ${forafora.length ? `<span class="aviso">A placa ainda usa a peça antiga de ${esc(forafora.join(', '))}.</span>` : ''}
       <ol class="versoes-lista">${versoes.map(v => `<li><span class="mono">v${v.v}</span> ${esc(v.frase)} <span class="sub">· ${esc(v.quando)}</span></li>`).join('')}</ol>
       <button type="button" class="link" data-aba="projeto">Abrir a placa →</button></div></div>`)

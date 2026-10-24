@@ -89,7 +89,7 @@ class Fuzz(unittest.TestCase):
         for k in range(20):
             texto = LANTERNA
             for ref in ("SW1", "R1", "D1"):
-                x, y = round(rnd.uniform(30, 49), 1), round(rnd.uniform(3, 31), 1)
+                x, y = round(rnd.uniform(37, 48), 1), round(rnd.uniform(4, 30), 1)   # fora do corpo da pilha
                 texto = re.sub(rf"(peca {ref} \S+) [\d.]+ [\d.]+", rf"\1 {x} {y}", texto)
             texto = re.sub(r"(peca R1 resistor_axial [\d.]+ [\d.]+) \S+", rf"\1 {rnd.choice(['22', '47', '100', '1k', '10k'])}", texto)
             pasta = copia()

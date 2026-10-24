@@ -73,14 +73,24 @@ class CadaDefeitoNaSuaEtapa(unittest.TestCase):
     def test_pino_solto_para_na_3(self):
         self.confere(3, "pino solto", {"liga D1.2 GND\n": ""}, rotulo="pino solto")
 
-    def test_pecas_encostadas_dao_curto_na_3(self):
-        self.confere(3, "curto", {"D1 led_5mm 43 7": "D1 led_5mm 43 15"})
+    def test_peca_em_cima_de_outra_para_na_3(self):
+        self.confere(3, "em cima de", {"D1 led_5mm 43 7": "D1 led_5mm 43 15"}, rotulo="uma em cima da outra")
+
+    def test_pinos_de_pecas_diferentes_encostados_dao_curto_na_3(self):
+        # o LED do lado do resistor, sem os corpos se tocarem, mas o pino − do LED em cima do lado 2 do resistor
+        self.confere(3, "curto", {"D1 led_5mm 43 7": "D1 led_5mm 49.3 15"})
+
+    def test_peca_fora_da_placa_para_na_3(self):
+        self.confere(3, "sai da placa", {"R1 resistor_axial 43 15": "R1 resistor_axial 47.7 15"}, rotulo="fora da placa")
+
+    def test_pino_em_cima_do_furo_de_fixacao_para_na_3(self):
+        self.confere(3, "em cima do furo de fixação", {"R1 resistor_axial 43 15": "R1 resistor_axial 43.5 4.6"}, rotulo="em cima do furo")
 
     def test_led_queima_para_na_4(self):
         self.confere(4, "queima", {"43 15 100": "43 15 10"}, rotulo="queima")
 
     def test_peca_na_borda_para_na_5(self):
-        self.confere(5, "da borda", {"R1 resistor_axial 43 15": "R1 resistor_axial 47 15"}, rotulo="perto da borda")
+        self.confere(5, "da borda", {"R1 resistor_axial 43 15": "R1 resistor_axial 46 15"}, rotulo="perto da borda")
 
     def test_requisito_quebrado_aparece_sem_parar_a_rodada(self):
         req = "# Objetivo: x\n## R1 Botão dos dois lados\npecas: SW1\nverifica: separado BT1.1 SW1.1\n"

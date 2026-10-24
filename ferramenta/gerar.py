@@ -11,11 +11,16 @@ from datetime import datetime
 from pathlib import Path
 
 import blocos
+import geometria
 from biblioteca import BIBLIOTECA
 from letras import tracos
 
 BORDA_FURO = 3.5   # furos de fixacao a 3,5 mm das bordas
 TRILHA = 0.3       # largura das trilhas, mm
+VIA_FURO = 0.4     # via (o furinho que leva a trilha de um lado pro outro): furo e cobre em volta. JLCPCB: furo de via
+VIA_PAD = 0.8      # a partir de 0,3 mm; o anel de 0,2 mm passa nos 0,18 mm das nossas regras
+FOLGA_ROTA = 0.25  # o roteador deixa mais que o mínimo da fábrica (0,10) entre cobres de nets diferentes
+BORDA_ROTA = 0.5   # e mais que o mínimo (0,2) até a borda e os furos de fixação
 CONTORNO = 0.1     # largura da linha do contorno, mm
 # serigrafia, pelas regras da JLCPCB (https://jlcpcb.com/capabilities/pcb-capabilities, lido em 2026-10-23)
 SILK = 0.15        # linha (>= 0,15 mm)
@@ -233,7 +238,7 @@ def montar(lido, bib=BIBLIOTECA):
         perto = [p for p in fora if firme(p, net)] or fora
         return min(perto, key=lambda p: (pinos[p]["x"] - de["x"]) ** 2 + (pinos[p]["y"] - de["y"]) ** 2)
 
-    trilhas = []
+    conexoes = []
     for lg in lido["ligas"]:
         a, b = ponto(lg["de"], lg["ate"]), ponto(lg["ate"], lg["de"])
         if a is None or b is None:
@@ -242,9 +247,7 @@ def montar(lido, bib=BIBLIOTECA):
         if "ja" in (a, b):
             continue
         ilha[raiz_ilha(a)] = raiz_ilha(b)
-        trilhas.append({"de": a, "ate": b, "x1": pinos[a]["x"], "y1": pinos[a]["y"],
-                        "x2": pinos[b]["x"], "y2": pinos[b]["y"], "largura": TRILHA,
-                        "net": pinos[a]["net"], "linha": lg["linha"]})
+        conexoes.append((a, b, lg["linha"]))
 
     w, h = lido["placa"]["w"], lido["placa"]["h"]
     furos = []
@@ -252,6 +255,7 @@ def montar(lido, bib=BIBLIOTECA):
         b = BORDA_FURO
         for x, y in ((b, b), (w - b, b), (b, h - b), (w - b, h - b)):
             furos.append({"x": r(x), "y": r(y), "d": f["d"], "linha": f["linha"]})
+    trilhas, vias = rotear(conexoes, pinos, furos, w, h)
 
     # fabrica.zip so sai quando toda medida veio de datasheet (nenhum numero inventado vai pra fabrica)
     exemplo = [p["ref"] for p in pecas if p["exemplo"]]
@@ -264,11 +268,121 @@ def montar(lido, bib=BIBLIOTECA):
     falta = [p["ref"] for p in pecas if not p["eletrica"]]
     sem_valor = [p["ref"] for p in pecas if p["eletrica"] and p["eletrica"]["modelo"] == "resistor" and p["valor"] is None]
     soltos = [p["ref"] for p in pecas if p["eletrica"] and any(q["net"] is None for q in p["pinos"])]
-    return {"placa": lido["placa"], "pecas": pecas, "trilhas": trilhas, "furos": furos,
+    return {"placa": lido["placa"], "pecas": pecas, "trilhas": trilhas, "vias": vias, "furos": furos,
             "fabrica": {"pronta": not exemplo and not pendente, "falta_datasheet": exemplo, "falta_conferir": pendente},
             "simulacao": {"pode": not falta and not sem_valor and not soltos, "falta_modelo": falta,
                           "sem_valor": sem_valor, "soltos": soltos},
             "compras": compras, "linhas": lido["linhas"]}
+
+
+# 3b. roteador: o caminho de cada trilha
+LADOS = ("cima", "baixo")
+
+
+def caminhos(pa, pb, la, lb):
+    """caminhos candidatos de pa a pb: [(segmentos [(p, q, lado)], vias [ponto])], do mais curto pro mais longo.
+    la/lb: os lados onde cada ponta tem cobre (pad de superficie so em cima). Trocar de lado custa uma via."""
+    (x1, y1), (x2, y2) = pa, pb
+    cands = []
+
+    def poe(pontos, lados):
+        segs = [(p, q, l) for p, q, l in zip(pontos, pontos[1:], lados) if p != q]
+        if not segs or segs[0][2] not in la or segs[-1][2] not in lb:
+            return
+        vias = [s[1] for s, t in zip(segs, segs[1:]) if s[2] != t[2]]
+        comprimento = sum(math.dist(p, q) * (1.02 if l == "baixo" else 1) for p, q, l in segs)   # empate: em cima ganha
+        cands.append((comprimento + 4 * len(vias), segs, vias))
+
+    for l in LADOS:
+        poe([pa, pb], [l])
+    for canto in ((x2, y1), (x1, y2)):
+        for l1 in LADOS:
+            for l2 in LADOS:
+                poe([pa, canto, pb], [l1, l2])
+    passo = [-9, -7, -5, -3, -1.5, 1.5, 3, 5, 7, 9]
+    xs = [x1 + (x2 - x1) * k for k in (0.25, 0.5, 0.75)] + [min(x1, x2) + d for d in passo if d < 0] + [max(x1, x2) + d for d in passo if d > 0]
+    ys = [y1 + (y2 - y1) * k for k in (0.25, 0.5, 0.75)] + [min(y1, y2) + d for d in passo if d < 0] + [max(y1, y2) + d for d in passo if d > 0]
+    for l1 in LADOS:
+        for l2 in LADOS:
+            for l3 in LADOS:
+                for xm in xs:
+                    poe([pa, (xm, y1), (xm, y2), pb], [l1, l2, l3])
+                for ym in ys:
+                    poe([pa, (x1, ym), (x2, ym), pb], [l1, l2, l3])
+    cands.sort(key=lambda c: c[0])
+    return [(segs, vias) for _, segs, vias in cands]
+
+
+def rotear(conexoes, pinos, furos_fix, w, h, tentativas=4):
+    """conexoes: [(pino a, pino b, linha do txt)]. Pra cada uma, o caminho mais curto (reta, L ou Z, em cima, embaixo
+    ou trocando de lado por via) que passa longe do cobre das outras nets, da borda e dos furos. Se alguma nao coube,
+    ela vai pro comeco da fila e tenta de novo; fica a tentativa com menos falhas. Falhou mesmo: fica a reta em cima,
+    e a etapa 3 acusa o curto. Devolve (trilhas, vias); cada trilha e um segmento de uma camada."""
+    ordem, melhor = list(conexoes), None
+    for _ in range(tentativas):
+        trilhas, vias, falhas = rotear_uma_vez(ordem, pinos, furos_fix, w, h)
+        if melhor is None or len(falhas) < len(melhor[2]):
+            melhor = (trilhas, vias, falhas)
+        if not falhas:
+            break
+        ordem = falhas + [c for c in ordem if c not in falhas]
+    trilhas, vias, _ = melhor
+    posicao = {c[:2]: i for i, c in enumerate(conexoes)}   # a ordem do txt de volta (a frase das versoes e o app contam com ela)
+    trilhas.sort(key=lambda t: posicao[(t["de"], t["ate"])])
+    return trilhas, vias
+
+
+def rotear_uma_vez(conexoes, pinos, furos_fix, w, h):
+    obst = {l: [] for l in LADOS}   # lado -> [(net, miolo, raio)]
+    for nome, p in pinos.items():
+        miolo, raio = geometria.do_pad(p["x"], p["y"], p["pad"])
+        for l in (LADOS if p["furo"] else ("cima",)):
+            obst[l].append((p["net"] or nome, miolo, raio))
+    furos = [((p["x"], p["y"]), p["furo"] / 2) for p in pinos.values() if p["furo"]]
+    fixos = [((f["x"], f["y"]), f["d"] / 2) for f in furos_fix]
+
+    def dentro_da_placa(pts, raio):
+        return all(BORDA_ROTA + raio <= x <= w - BORDA_ROTA - raio and BORDA_ROTA + raio <= y <= h - BORDA_ROTA - raio for x, y in pts)
+
+    def seg_livre(net, p, q, lado):
+        c = (("seg", p, q), TRILHA / 2)
+        if not dentro_da_placa((p, q), TRILHA / 2):
+            return False
+        if any(geometria.dist_ponto_seg(f, p, q) - rf - TRILHA / 2 < BORDA_ROTA for f, rf in fixos):
+            return False
+        return all(n == net or geometria.distancia(c, (m, rr)) >= FOLGA_ROTA for n, m, rr in obst[lado])
+
+    def via_livre(net, ponto):
+        c = (("seg", ponto, ponto), VIA_PAD / 2)
+        if not dentro_da_placa((ponto,), VIA_PAD / 2):
+            return False
+        if any(math.dist(ponto, f) - rf - VIA_PAD / 2 < BORDA_ROTA for f, rf in fixos):
+            return False
+        if any(math.dist(ponto, f) - rf - VIA_FURO / 2 < 0.5 for f, rf in furos):   # furo com furo (fábrica: 0,45)
+            return False
+        return all(n == net or geometria.distancia(c, (m, rr)) >= FOLGA_ROTA for l in LADOS for n, m, rr in obst[l])
+
+    trilhas, vias, falhas = [], [], []
+    for conexao in conexoes:
+        a, b, linha = conexao
+        pa, pb, net = (pinos[a]["x"], pinos[a]["y"]), (pinos[b]["x"], pinos[b]["y"]), pinos[a]["net"]
+        la = LADOS if pinos[a]["furo"] else ("cima",)
+        lb = LADOS if pinos[b]["furo"] else ("cima",)
+        escolhido = next(((segs, vs) for segs, vs in caminhos(pa, pb, la, lb)
+                          if all(seg_livre(net, p, q, l) for p, q, l in segs) and all(via_livre(net, v) for v in vs)), None)
+        if escolhido is None:
+            falhas.append(conexao)
+            escolhido = ([(pa, pb, "cima")], [])
+        for p, q, l in escolhido[0]:
+            trilhas.append({"de": a, "ate": b, "x1": r(p[0]), "y1": r(p[1]), "x2": r(q[0]), "y2": r(q[1]), "largura": TRILHA,
+                            "net": net, "linha": linha, "lado": l})
+            obst[l].append((net, ("seg", p, q), TRILHA / 2))
+        for v in escolhido[1]:
+            vias.append({"x": r(v[0]), "y": r(v[1]), "d": VIA_PAD, "furo": VIA_FURO, "net": net, "de": a, "ate": b, "linha": linha})
+            for l in LADOS:
+                obst[l].append((net, ("seg", v, v), VIA_PAD / 2))
+            furos.append((v, VIA_FURO / 2))
+    return trilhas, vias, falhas
 
 
 # 4. Gerber (RS-274X): coordenadas em milionesimos de mm
@@ -328,14 +442,16 @@ def cobre(modelo, lado):
     g = Gerber("Copper,L1,Top" if lado == "cima" else "Copper,L2,Bot")
     for p in pads(modelo, lado):
         g.carimba(p["pad"], p["x"], p["y"])
-    if lado == "cima":
-        for t in modelo["trilhas"]:
+    for v in modelo.get("vias", []):
+        g.carimba({"forma": "C", "d": v["d"]}, v["x"], v["y"])
+    for t in modelo["trilhas"]:
+        if t.get("lado", "cima") == lado:
             g.risca(t["largura"], [(t["x1"], t["y1"]), (t["x2"], t["y2"])])
     return g.texto()
 
 
 def mascara(modelo, lado):
-    """buraco na mascara do tamanho do pad (JLCPCB abre 1:1)"""
+    """buraco na mascara do tamanho do pad (JLCPCB abre 1:1); a via fica coberta"""
     g = Gerber("Soldermask,Top" if lado == "cima" else "Soldermask,Bot")
     for p in pads(modelo, lado):
         g.carimba(p["pad"], p["x"], p["y"])
@@ -374,7 +490,7 @@ def serigrafia(modelo):
     g = Gerber("Legend,Top")
     w, h = modelo["placa"]["w"], modelo["placa"]["h"]
     obstaculos = [(p["x"], p["y"], p["pad"]) for p in pads(modelo, "cima")]
-    obstaculos += [(f["x"], f["y"], {"forma": "C", "d": f["d"]}) for f in modelo["furos"]]
+    obstaculos += [(f["x"], f["y"], {"forma": "C", "d": f["d"]}) for f in modelo["furos"] + modelo.get("vias", [])]
 
     def linha(largura, pontos):
         for a, b in zip(pontos, pontos[1:] or pontos):
@@ -418,7 +534,8 @@ def excellon(furos, cobre):
 
 def furos_com_cobre(modelo):
     return [{"x": p["x"], "y": p["y"], "d": p["furo"]}
-            for peca in modelo["pecas"] for p in peca["pinos"] if p["furo"]]
+            for peca in modelo["pecas"] for p in peca["pinos"] if p["furo"]] + \
+           [{"x": v["x"], "y": v["y"], "d": v["furo"]} for v in modelo.get("vias", [])]
 
 
 def escrever(modelo, saida):

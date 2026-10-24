@@ -1,4 +1,5 @@
 """o gerador (gerar.py): o que o placa.txt aceita e recusa, as nets, e o formato dos arquivos de fábrica"""
+import math
 import re
 import tempfile
 import unittest
@@ -143,6 +144,90 @@ class ArquivosDeFabrica(unittest.TestCase):
             warnings.simplefilter("always")
             LayerStack.open_dir(self.saida, autoguess=False, overrides=testar.MAPA_GERBER)
         self.assertEqual(avisos, [])
+
+
+class Roteador(unittest.TestCase):
+    """o caminho das trilhas: reta quando dá, desvio (L, Z) ou troca de camada por via quando não dá"""
+
+    def pino(self, x, y, net, furo=0.8, d=1.6):
+        return {"x": x, "y": y, "net": net, "furo": furo, "pad": {"forma": "C", "d": d}}
+
+    def folga_minima(self, trilhas, vias, pinos):
+        import geometria
+        menor = 99
+        for t in trilhas:
+            c = (("seg", (t["x1"], t["y1"]), (t["x2"], t["y2"])), t["largura"] / 2)
+            for nome, p in pinos.items():
+                if p["net"] != t["net"] and (p["furo"] or t["lado"] == "cima"):
+                    menor = min(menor, geometria.distancia(c, geometria.do_pad(p["x"], p["y"], p["pad"])))
+        return menor
+
+    def test_lanterninha_continua_reta_e_em_cima(self):
+        m = modelo(LANTERNA)
+        self.assertEqual([(t["de"], t["ate"], t["lado"]) for t in m["trilhas"]],
+                         [("BT1.1", "SW1.1", "cima"), ("SW1.3", "R1.1", "cima"), ("R1.2", "D1.1", "cima"), ("D1.2", "BT1.2", "cima")])
+        self.assertEqual(m["vias"], [])
+
+    def test_pad_de_furo_no_caminho_faz_desviar(self):
+        pinos = {"A.1": self.pino(5, 10, "N1"), "B.1": self.pino(25, 10, "N1"), "X.1": self.pino(15, 10, "N2", d=2)}
+        trilhas, vias = gerar.rotear([("A.1", "B.1", 1)], pinos, [], 30, 20)
+        self.assertGreater(len(trilhas), 1)
+        self.assertGreaterEqual(self.folga_minima(trilhas, vias, pinos), gerar.FOLGA_ROTA - 1e-9)
+        self.assertEqual((trilhas[0]["x1"], trilhas[0]["y1"]), (5, 10))
+        self.assertEqual((trilhas[-1]["x2"], trilhas[-1]["y2"]), (25, 10))
+
+    def test_pad_de_superficie_no_caminho_passa_por_baixo(self):
+        pinos = {"A.1": self.pino(5, 10, "N1"), "B.1": self.pino(25, 10, "N1"), "X.1": self.pino(15, 10, "N2", furo=None, d=2)}
+        trilhas, vias = gerar.rotear([("A.1", "B.1", 1)], pinos, [], 30, 20)
+        self.assertEqual([(t["lado"], t["y1"], t["y2"]) for t in trilhas], [("baixo", 10, 10)], "reta por baixo, sem via")
+
+    def test_ponta_de_superficie_nao_comeca_embaixo(self):
+        pinos = {"A.1": self.pino(5, 10, "N1", furo=None), "B.1": self.pino(25, 10, "N1"), "X.1": self.pino(15, 10, "N2", furo=None, d=2)}
+        trilhas, vias = gerar.rotear([("A.1", "B.1", 1)], pinos, [], 30, 20)
+        self.assertEqual(trilhas[0]["lado"], "cima")
+        self.assertGreaterEqual(self.folga_minima(trilhas, vias, pinos), gerar.FOLGA_ROTA - 1e-9)
+        for v in vias:
+            self.assertGreaterEqual(math.dist((v["x"], v["y"]), (15, 10)), 1 + gerar.VIA_PAD / 2)
+
+    def test_parede_sem_saida_fica_a_reta(self):
+        pinos = {"A.1": self.pino(5, 10, "N1"), "B.1": self.pino(25, 10, "N1")}
+        for i, y in enumerate(range(0, 21)):   # uma parede de pads de outra net de cima a baixo
+            pinos[f"X.{i}"] = self.pino(15, y, "N2", d=1.4)
+        trilhas, _, falhas = gerar.rotear_uma_vez([("A.1", "B.1", 1)], pinos, [], 30, 20)
+        self.assertEqual(len(falhas), 1)
+        self.assertEqual([(t["x1"], t["x2"], t["lado"]) for t in trilhas], [(5, 25, "cima")])
+
+    def test_parede_de_superficie_faz_trocar_de_lado_e_o_gerber_mostra(self):
+        # A e B são de superfície (só têm cobre em cima) e uma parede de pads de superfície fecha o lado de cima inteiro:
+        # o único caminho é descer por uma via, passar por baixo da parede e subir por outra
+        linhas = ["placa 30 20", "peca A resistor 5 10", "peca B resistor 25 10", "liga A.2 B.1"]
+        linhas += [f"peca W{i} resistor 15 {1.5 + 1.6 * i:.1f}" for i in range(11)]
+        m = modelo("\n".join(linhas))
+        self.assertEqual(len(m["vias"]), 2)
+        self.assertEqual([t["lado"] for t in m["trilhas"]][0], "cima")
+        self.assertEqual([t["lado"] for t in m["trilhas"]][-1], "cima")
+        self.assertIn("baixo", [t["lado"] for t in m["trilhas"]])
+        import testar
+        self.assertEqual(testar.pares_perto(m, testar.ESPACO_MIN), [], "nada perto demais em nenhuma camada")
+        saida = Path(tempfile.mkdtemp(prefix="sianvolt-via-"))
+        gerar.escrever(m, saida)
+        embaixo = (saida / "placa-B_Cu.gbr").read_text()
+        self.assertGreaterEqual(embaixo.count("D01*"), sum(1 for t in m["trilhas"] if t["lado"] == "baixo"))
+        furos = (saida / "placa-PTH.drl").read_text()
+        for v in m["vias"]:
+            self.assertIn(f"X{v['x']:.3f}Y{v['y']:.3f}", furos)
+            self.assertIn(f"X{round(v['x'] * 1e6)}Y{round(v['y'] * 1e6)}D03", embaixo)
+            self.assertNotIn(f"X{round(v['x'] * 1e6)}Y{round(v['y'] * 1e6)}D03", (saida / "placa-F_Mask.gbr").read_text(),
+                             "via fica coberta pela máscara")
+        try:
+            from gerbonara import LayerStack
+            import warnings
+            with warnings.catch_warnings(record=True) as avisos:
+                warnings.simplefilter("always")
+                LayerStack.open_dir(saida, autoguess=False, overrides=testar.MAPA_GERBER)
+            self.assertEqual(avisos, [])
+        except ImportError:
+            pass
 
 
 class Versoes(unittest.TestCase):
