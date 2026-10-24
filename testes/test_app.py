@@ -6,7 +6,7 @@ import unittest
 from functools import partial
 from http.server import ThreadingHTTPServer
 
-from apoio import RAIZ
+from apoio import PLACAS, RAIZ
 import app
 
 HOST = "127.0.0.1:8765"   # o app confere o cabeçalho Host; a porta de verdade aqui é outra
@@ -15,6 +15,7 @@ HOST = "127.0.0.1:8765"   # o app confere o cabeçalho Host; a porta de verdade 
 class App(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        cls.placas_de_verdade, app.PLACAS = app.PLACAS, PLACAS   # só a placa de teste (o clone limpo não tem placas/)
         cls.servidor = ThreadingHTTPServer(("127.0.0.1", 0), partial(app.Bancada, directory=str(RAIZ)))
         cls.porta = cls.servidor.server_address[1]
         threading.Thread(target=cls.servidor.serve_forever, daemon=True).start()
@@ -22,6 +23,7 @@ class App(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.servidor.shutdown()
+        app.PLACAS = cls.placas_de_verdade
 
     def pedir(self, metodo, caminho, corpo=None, cabecalhos=None):
         c = http.client.HTTPConnection("127.0.0.1", self.porta, timeout=20)
@@ -43,6 +45,7 @@ class App(unittest.TestCase):
         status, texto = self.pedir("GET", "/api/placas")
         self.assertEqual(status, 200)
         self.assertEqual(json.loads(texto)["raiz"], str(RAIZ))
+        self.assertEqual(json.loads(texto)["placas"], ["lanterna"])
         status, texto = self.pedir("GET", "/api/catalogo")
         d = json.loads(texto)
         self.assertGreater(len(d["pecas"]), 1000)
