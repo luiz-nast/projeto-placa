@@ -2,18 +2,43 @@
  "categoria": "driver_motor",
  "nome": "Driver de motor",
  "grupo": "Movimento",
- "explica": "O pino do microcontrolador só dá uns miliampères; o driver recebe esse comando fraco e liga o motor na fonte, com força. A ponte H (L293D, TB6612, DRV8833) gira o motor nos dois sentidos e também move motor de passo; o ULN2003/ULN2803 só liga e desliga, bom pra relé e pro motor de passo 28BYJ-48; o A4988 e o TMC2209 são só pra motor de passo.",
- "destaques": [
-  "Output Current",
-  "Voltage - Supply",
-  "Motor Drive Voltage(Vm)",
-  "Current - Collector(Ic)"
+ "explica": "O pino do microcontrolador só dá uns miliampères; o driver recebe esse comando fraco e liga o motor na fonte, com força (o motor nunca tira força do pino nem do 3,3 V do ESP32). A ponte H (L293D, L298N, TB6612, DRV8833, DRV8871) gira motor DC nos dois sentidos; o ULN2003/ULN2803 só liga e desliga (relé, solenoide, o motor de passo 28BYJ-48); A4988, DRV8825, TMC2208 e TMC2209 são só pra motor de passo, comandados por pulsos (STEP/DIR). O PCA9685 não liga motor: ele faz 16 sinais PWM pelo I2C pra comandar servos (que já têm driver dentro) ou LEDs.",
+ "nome_peca": [
+  "Controlador {Dimming} de {Number of Channels} canais {@modelo}",
+  "Driver Darlington de {number of channels} canais {@modelo}",
+  "Driver de motor de passo {@modelo}, micropasso até 1/{Step Resolution}",
+  "Ponte H {Number of H-bridges} {@modelo}",
+  "{@categoria_loja} {@modelo}"
  ],
+ "destaques": [
+  "Output Current|Current - Collector(Ic)",
+  "Motor Drive Voltage(Vm)|Voltage - Supply|Collector - Emitter Voltage VCEO|Voltage - Input(DC)"
+ ],
+ "traducoes": {
+  "Brushed DC Motor Drivers": "Ponte H pra motor DC",
+  "Stepper Motor Driver": "Driver de motor",
+  "Darlington Transistor Arrays": "Driver Darlington",
+  "LED Drivers": "Controlador PWM",
+  "Seven channels": "7",
+  "Eight channels": "8",
+  "1": "simples",
+  "2": "dupla",
+  "1、2、4、8、16": "16",
+  "256、2、4、8、16、32": "256",
+  "256、8、16、32、64": "256"
+ },
  "filtro": {
   "categorias_loja": [
    "Brushed DC Motor Drivers",
    "Stepper Motor Driver",
-   "Darlington Transistor Arrays"
+   "Darlington Transistor Arrays",
+   "LED Drivers"
+  ],
+  "estoque_minimo": 50,
+  "fora": [
+   "C3019541",
+   "C54823939",
+   "C73285"
   ]
  },
  "sementes": [
@@ -100,15 +125,23 @@
   {
    "busca": "TB67H450",
    "quantos": 2
+  },
+  {
+   "busca": "PCA9685",
+   "quantos": 2
+  },
+  {
+   "busca": "RZ7899",
+   "quantos": 1
   }
  ],
  "pecas": {
   "C7512": {
-   "nome": "Driver de motor ULN2003ADR",
+   "nome": "Driver Darlington de 7 canais ULN2003ADR",
    "marca": "Texas Instruments",
    "modelo": "ULN2003ADR",
    "pacote": "SOIC-16",
-   "tamanho": "SOIC-16",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "1.7V 15pF 30V 500mA 50V 50uA 50uA Seven channels SOIC-16 Darlington Transistor Arrays ROHS",
@@ -138,11 +171,11 @@
    "situacao": "ok"
   },
   "C482013": {
-   "nome": "Driver de motor ULN2003A",
+   "nome": "Driver Darlington de 7 canais ULN2003A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "ULN2003A",
    "pacote": "SOP-16",
-   "tamanho": "SOP-16",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-40℃~+85℃ 0.93mA 100uA 15pF 20uA 30V 50V Seven channels SOP-16 Darlington Transistor Arrays ROHS",
@@ -172,11 +205,11 @@
    "situacao": "ok"
   },
   "C845537": {
-   "nome": "Driver de motor ULN2803A",
+   "nome": "Driver Darlington de 8 canais ULN2803A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "ULN2803A",
    "pacote": "SOP-18-300mil",
-   "tamanho": "SOP-18-300mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-40℃~+85℃ 0.93mA 100uA 15pF 20uA 30V 500mA 50V 8 SOP-18-300mil Darlington Transistor Arrays ROHS",
@@ -206,11 +239,11 @@
    "situacao": "ok"
   },
   "C88308": {
-   "nome": "Driver de motor TC118S",
+   "nome": "Ponte H simples TC118S",
    "marca": "Shenzhen Fuman Elec",
    "modelo": "TC118S",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+85℃ 1 1.5A 1.6Ω 10uA 2.4V~7.2V 2.5A Yes SOP-8 Brushed DC Motor Drivers ROHS",
@@ -237,11 +270,11 @@
    "situacao": "ok"
   },
   "C86590": {
-   "nome": "Driver de motor DRV8870DDAR",
+   "nome": "Ponte H simples DRV8870DDAR",
    "marca": "Texas Instruments",
    "modelo": "DRV8870DDAR",
    "pacote": "HSOP-8-EP",
-   "tamanho": "HSOP-8-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-40℃~+125℃ 1 10uA 3.6A 565mΩ Yes HSOP-8-EP Brushed DC Motor Drivers ROHS",
@@ -268,11 +301,11 @@
    "situacao": "ok"
   },
   "C513306": {
-   "nome": "Driver de motor L9110S",
+   "nome": "Ponte H pra motor DC L9110S",
    "marca": "Mixic",
    "modelo": "L9110S",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+80℃ 100nA 2.5A 3V~9V SOP-8 Brushed DC Motor Drivers ROHS",
@@ -299,11 +332,11 @@
    "situacao": "ok"
   },
   "C545417": {
-   "nome": "Driver de motor TB67H450FNG,EL",
+   "nome": "Ponte H simples TB67H450FNG,EL",
    "marca": "TOSHIBA",
    "modelo": "TB67H450FNG,EL",
    "pacote": "HSOP-8-EP",
-   "tamanho": "HSOP-8-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-40℃~+85℃ 1 1uA 3A 4.5V~44V 600mΩ Yes HSOP-8-EP Brushed DC Motor Drivers ROHS",
@@ -329,12 +362,43 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C22462553": {
+   "nome": "Ponte H simples RZ7899-MS",
+   "marca": "MSKSEMI",
+   "modelo": "RZ7899-MS",
+   "pacote": "SOP-8",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "Brushed DC Motor Drivers",
+   "descricao": "-25℃~+85℃ 1 1mA 3V~30V 6A 80mΩ Current sensing/regulation function、Active braking function Yes SOP-8 Brushed DC Motor Drivers ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Number of H-bridges": "1",
+    "Technology": "Yes",
+    "Voltage - Supply": "3V~30V",
+    "Output Current": "6A",
+    "Features": "Current sensing/regulation function、Active braking function",
+    "Quiescent Current(Iq)": "1mA",
+    "RDS(on)": "80mΩ",
+    "Interface": "-",
+    "Peak Current": "-"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2406211358_MSKSEMI-RZ7899-MS_C22462553.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/brushed-dc-motor-drivers_msksemi-rz7899-ms_C22462553.html",
+   "preco": 0.6006,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 26389,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C50506": {
-   "nome": "Driver de motor DRV8833PWPR",
+   "nome": "Ponte H dupla DRV8833PWPR",
    "marca": "Texas Instruments",
    "modelo": "DRV8833PWPR",
    "pacote": "TSSOP-16-EP",
-   "tamanho": "TSSOP-16-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+85℃ 1.5A 2 2.7V~10.8V 360mΩ Bipolar Driver Yes TSSOP-16-EP Stepper Motor Driver ROHS",
@@ -362,11 +426,11 @@
    "situacao": "ok"
   },
   "C2758014": {
-   "nome": "Driver de motor ULN2803",
+   "nome": "Driver Darlington de 8 canais ULN2803",
    "marca": "Shanghai Siproin Microelectronics",
    "modelo": "ULN2803",
    "pacote": "SOP-18-300mil",
-   "tamanho": "SOP-18-300mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-20℃~+70℃ 1.7V 100uA 15pF 30V 500mA 50V 65uA 8 SOP-18-300mil Darlington Transistor Arrays ROHS",
@@ -396,11 +460,11 @@
    "situacao": "ok"
   },
   "C38437": {
-   "nome": "Driver de motor A4988SETTR-T",
+   "nome": "Driver de motor de passo A4988SETTR-T, micropasso até 1/16",
    "marca": "Allegro MicroSystems, LLC",
    "modelo": "A4988SETTR-T",
    "pacote": "WQFN-28-EP(5x5)",
-   "tamanho": "WQFN-28-EP(5x5)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-20℃~+85℃ 1、2、4、8、16 2 2A 320mΩ 3V~5.5V Bipolar Driver STEP/DIR Yes WQFN-28-EP(5x5) Stepper Motor Driver ROHS",
@@ -428,11 +492,11 @@
    "situacao": "ok"
   },
   "C115944": {
-   "nome": "Driver de motor TMC2208-LA-T",
+   "nome": "Driver de motor de passo TMC2208-LA-T, micropasso até 1/256",
    "marca": "TRINAMIC Motion Control GmbH",
    "modelo": "TMC2208-LA-T",
    "pacote": "QFN-28-EP(5x5)",
-   "tamanho": "QFN-28-EP(5x5)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+125℃ 1.4A 2 256、2、4、8、16、32 4.75V~36V 4.75V~36V 570mΩ Bipolar Driver Overcurrent Protection、Short-Circuit  Protection、Over temperature protection、Under-voltage lockout、Motor step-out prevention function、Built-in charge pump STEP/DIR、UART Yes QFN-28-EP(5x5) Stepper Motor Driver ROHS",
@@ -464,7 +528,7 @@
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "L9110S",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-30℃~+85℃ 2.2V~6.5V 200mA Bipolar Driver Yes SOP-8 Stepper Motor Driver ROHS",
@@ -492,11 +556,11 @@
    "situacao": "ok"
   },
   "C81582": {
-   "nome": "Driver de motor DRV8825PWPR",
+   "nome": "Driver de motor de passo DRV8825PWPR, micropasso até 1/32",
    "marca": "Texas Instruments",
    "modelo": "DRV8825PWPR",
    "pacote": "HTSSOP-28-EP",
-   "tamanho": "HTSSOP-28-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+85℃ 2 2.5A 200mΩ 32 8.2V~45V Bipolar Driver STEP/DIR Yes HTSSOP-28-EP Stepper Motor Driver ROHS",
@@ -524,11 +588,11 @@
    "situacao": "ok"
   },
   "C2150710": {
-   "nome": "Driver de motor TMC2209-LA-T",
+   "nome": "Driver de motor de passo TMC2209-LA-T, micropasso até 1/256",
    "marca": "TRINAMIC Motion Control GmbH",
    "modelo": "TMC2209-LA-T",
    "pacote": "QFN-28-EP(5x5)",
-   "tamanho": "QFN-28-EP(5x5)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+125℃ 2 256、8、16、32、64 2A 340mΩ 4.75V~29V 4.75V~29V Bipolar Driver Overcurrent Protection、Short-Circuit  Protection、Over temperature protection、Under-voltage lockout、Motor step-out prevention function、Built-in charge pump、Thermal warning STEP/DIR、UART Yes QFN-28-EP(5x5) Stepper Motor Driver ROHS",
@@ -560,7 +624,7 @@
    "marca": "LANKE",
    "modelo": "L9110S",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-20℃~+85℃ 2.5V~12V 500mA SOP-8 Stepper Motor Driver ROHS",
@@ -588,11 +652,11 @@
    "situacao": "ok"
   },
   "C725348": {
-   "nome": "Driver de motor L9110SM/TR",
+   "nome": "Ponte H pra motor DC L9110SM/TR",
    "marca": "HGSEMI",
    "modelo": "L9110SM/TR",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+80℃ 1.5A 100nA 2.3V~12V 800mA Yes SOP-8 Brushed DC Motor Drivers ROHS",
@@ -619,11 +683,11 @@
    "situacao": "ok"
   },
   "C2932785": {
-   "nome": "Driver de motor TB67H450FNG(O,EL)",
+   "nome": "Ponte H simples TB67H450FNG(O,EL)",
    "marca": "TOSHIBA",
    "modelo": "TB67H450FNG(O,EL)",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-40℃~+85℃ 1 1uA 3A 4.5V~44V 600mΩ Yes SOP-8 Brushed DC Motor Drivers ROHS",
@@ -650,11 +714,11 @@
    "situacao": "ok"
   },
   "C75864": {
-   "nome": "Driver de motor DRV8871DDAR",
+   "nome": "Ponte H simples DRV8871DDAR",
    "marca": "Texas Instruments",
    "modelo": "DRV8871DDAR",
    "pacote": "SO-8-EP",
-   "tamanho": "SO-8-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-40℃~+125℃ 1 10uA 3.6A 565mΩ PWM Yes SO-8-EP Brushed DC Motor Drivers ROHS",
@@ -680,12 +744,43 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C2678753": {
+   "nome": "Controlador PWM de 16 canais PCA9685PW,118",
+   "marca": "NXP Semicon",
+   "modelo": "PCA9685PW,118",
+   "pacote": "TSSOP-28",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "LED Drivers",
+   "descricao": "-40℃~+85℃ 100kHz~1MHz 16 2.3V~5.5V 25mA 5.5V Built-in PWM TSSOP-28 LED Drivers ROHS",
+   "atributos": {
+    "Type": "-",
+    "Number of Channels": "16",
+    "Voltage - Input(DC)": "2.3V~5.5V",
+    "Frequency - Switching": "100kHz~1MHz",
+    "Output Current": "25mA",
+    "Dimming": "PWM",
+    "Features": "-",
+    "Switch Tube (Built-In/External)": "Built-in",
+    "Output Voltage": "5.5V",
+    "Operating temperature": "-40℃~+85℃"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2405281434_NXP-Semicon-PCA9685PW-118_C2678753.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/led-drivers_nxp-semicon-pca9685pw-118_C2678753.html",
+   "preco": 3.3352,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 5469,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C55566425": {
    "nome": "Driver de motor DRV8833RTYR-JSM",
    "marca": "JSMSEMI",
    "modelo": "DRV8833RTYR-JSM",
    "pacote": "QFN-16(4x4)",
-   "tamanho": "QFN-16(4x4)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "QFN-16(4x4) Stepper Motor Driver ROHS",
@@ -701,11 +796,11 @@
    "situacao": "ok"
   },
   "C88224": {
-   "nome": "Driver de motor TB6612FNG(O,C,8,EL",
+   "nome": "Ponte H dupla TB6612FNG(O,C,8,EL",
    "marca": "TOSHIBA",
    "modelo": "TB6612FNG(O,C,8,EL",
    "pacote": "SSOP-24-208mil",
-   "tamanho": "SSOP-24-208mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+85℃ 1A 1uA 2 2.7V~5.5V 3.2A 500mΩ Yes SSOP-24-208mil Brushed DC Motor Drivers ROHS",
@@ -732,11 +827,11 @@
    "situacao": "ok"
   },
   "C93000": {
-   "nome": "Driver de motor ULN2003A",
+   "nome": "Driver Darlington de 7 canais ULN2003A",
    "marca": "STMicroelectronics",
    "modelo": "ULN2003A",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-40℃~+85℃ 0.82mA 1.7V 15pF 30V 500mA 50V 50uA 65uA Seven channels DIP-16 Darlington Transistor Arrays ROHS",
@@ -763,15 +858,14 @@
    "minimo": 1,
    "estoque": 3363,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado ULN2003A"
+   "situacao": "ok"
   },
   "C154936": {
-   "nome": "Driver de motor DRV8833RTYR",
+   "nome": "Ponte H dupla DRV8833RTYR",
    "marca": "Texas Instruments",
    "modelo": "DRV8833RTYR",
    "pacote": "QFN-16-EP(4x4)",
-   "tamanho": "QFN-16-EP(4x4)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+85℃ 1.5A 2 2.7V~10.8V 2.7V~10.8V 360mΩ Bipolar Driver Yes QFN-16-EP(4x4) Stepper Motor Driver ROHS",
@@ -799,11 +893,11 @@
    "situacao": "ok"
   },
   "C141517": {
-   "nome": "Driver de motor TB6612FNG(O,C,8,EL",
+   "nome": "Ponte H dupla TB6612FNG(O,C,8,EL",
    "marca": "TOSHIBA",
    "modelo": "TB6612FNG(O,C,8,EL",
    "pacote": "SSOP-24",
-   "tamanho": "SSOP-24",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+85℃ 1A 1uA 2 2.7V~5.5V 3.2A 500mΩ Interleaved conduction protection、Active braking function Yes SSOP-24 Brushed DC Motor Drivers ROHS",
@@ -830,11 +924,11 @@
    "situacao": "ok"
   },
   "C2973803": {
-   "nome": "Driver de motor L293DDM/TR",
+   "nome": "Ponte H pra motor DC L293DDM/TR",
    "marca": "HGSEMI",
    "modelo": "L293DDM/TR",
    "pacote": "SOP-20",
-   "tamanho": "SOP-20",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+85℃ 1.2A 4.5V~36V 4mA 600mA SOP-20 Brushed DC Motor Drivers ROHS",
@@ -861,11 +955,11 @@
    "situacao": "ok"
   },
   "C75528": {
-   "nome": "Driver de motor ULN2803G-D18-T",
+   "nome": "Driver Darlington de 8 canais ULN2803G-D18-T",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "ULN2803G-D18-T",
    "pacote": "DIP-18",
-   "tamanho": "DIP-18",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-40℃~+85℃ 0.93mA 15pF 2V 30V 50uA 65uA 8 DIP-18 Darlington Transistor Arrays ROHS",
@@ -892,15 +986,14 @@
    "minimo": 1,
    "estoque": 1536,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado ULN2803G-D18-T"
+   "situacao": "ok"
   },
   "C90448": {
-   "nome": "Driver de motor ULN2003AN",
+   "nome": "Driver Darlington de 7 canais ULN2003AN",
    "marca": "Texas Instruments",
    "modelo": "ULN2003AN",
    "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "0.93mA 1.7V 15pF 30V 50uA 50uA 65uA Seven channels PDIP-16 Darlington Transistor Arrays ROHS",
@@ -927,15 +1020,14 @@
    "minimo": 1,
    "estoque": 1479,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado ULN2003AN"
+   "situacao": "ok"
   },
   "C434589": {
-   "nome": "Driver de motor L298N",
+   "nome": "Ponte H dupla L298N",
    "marca": "HGSEMI",
    "modelo": "L298N",
    "pacote": "Multiwatt-15",
-   "tamanho": "Multiwatt-15",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-25℃~+130℃ 2 2A 4.5V~7V Bipolar Driver Overcurrent Protection、Over temperature protection Yes Multiwatt-15 Stepper Motor Driver ROHS",
@@ -960,15 +1052,14 @@
    "minimo": 1,
    "estoque": 1009,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado L298N"
+   "situacao": "ok"
   },
   "C12340": {
-   "nome": "Driver de motor L293D",
+   "nome": "Ponte H dupla L293D",
    "marca": "STMicroelectronics",
    "modelo": "L293D",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-40℃~+150℃ 1.2A 2 4.5V~36V 4mA 600mA DIP-16 Brushed DC Motor Drivers ROHS",
@@ -992,15 +1083,14 @@
    "minimo": 1,
    "estoque": 930,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado L293D"
+   "situacao": "ok"
   },
   "C21610": {
-   "nome": "Driver de motor L293DD013TR",
+   "nome": "Ponte H dupla L293DD013TR",
    "marca": "STMicroelectronics",
    "modelo": "L293DD013TR",
    "pacote": "SOIC-20-300mil",
-   "tamanho": "SOIC-20-300mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "1.2A 2 4.5V~36V 4mA 600mA No SOIC-20-300mil Brushed DC Motor Drivers ROHS",
@@ -1027,11 +1117,11 @@
    "situacao": "ok"
   },
   "C18723576": {
-   "nome": "Driver de motor L298N(XBLW)",
+   "nome": "Ponte H dupla L298N(XBLW)",
    "marca": "XBLW",
    "modelo": "L298N(XBLW)",
    "pacote": "ZIP-15",
-   "tamanho": "ZIP-15",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-25℃~+120℃ 2 4.5V~46V 4.8V~46V 4A Bipolar Driver Parallel Yes ZIP-15 Stepper Motor Driver ROHS",
@@ -1056,15 +1146,14 @@
    "minimo": 1,
    "estoque": 917,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado L298N(XBLW)"
+   "situacao": "ok"
   },
   "C701147": {
    "nome": "Driver de motor SN754410NE",
    "marca": "Texas Instruments",
    "modelo": "SN754410NE",
    "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+85℃ 1A 4.5V~36V 4.5V~5.5V Bipolar Driver Over temperature protection、Dead-time / shoot-through protection PDIP-16 Stepper Motor Driver ROHS",
@@ -1087,12 +1176,43 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C92206": {
+   "nome": "Controlador PWM de 16 canais PCA9685PW/Q900,118",
+   "marca": "NXP Semicon",
+   "modelo": "PCA9685PW/Q900,118",
+   "pacote": "TSSOP-28",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "LED Drivers",
+   "descricao": "-40℃~+85℃ 16 2.3V~5.5V 200Hz 25mA 5.5V Built-in PWM TSSOP-28 LED Drivers ROHS",
+   "atributos": {
+    "Type": "-",
+    "Number of Channels": "16",
+    "Frequency - Switching": "200Hz",
+    "Voltage - Input(DC)": "2.3V~5.5V",
+    "Output Current": "25mA",
+    "Dimming": "PWM",
+    "Features": "-",
+    "Switch Tube (Built-In/External)": "Built-in",
+    "Output Voltage": "5.5V",
+    "Operating temperature": "-40℃~+85℃"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2405281434_NXP-Semicon-PCA9685PW-Q900-118_C92206.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/led-drivers_nxp-semicon-pca9685pw-q900-118_C92206.html",
+   "preco": 3.6625,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 790,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C434590": {
-   "nome": "Driver de motor L293DN",
+   "nome": "Ponte H dupla L293DN",
    "marca": "HGSEMI",
    "modelo": "L293DN",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Brushed DC Motor Drivers",
    "descricao": "-20℃~+85℃ 1.2A 2 4.5V~36V 4mA 600mA DIP-16 Brushed DC Motor Drivers ROHS",
@@ -1116,15 +1236,14 @@
    "minimo": 1,
    "estoque": 783,
    "visto": "2026-10-24",
-   "situacao": "ok",
-   "apelido": "Circuito integrado L293DN"
+   "situacao": "ok"
   },
   "C55223928": {
    "nome": "Driver de motor L298N-HX",
    "marca": "ZHHXDZ",
    "modelo": "L298N-HX",
    "pacote": "Multiwatt-15",
-   "tamanho": "Multiwatt-15",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "Multiwatt-15 Stepper Motor Driver ROHS",
@@ -1140,11 +1259,11 @@
    "situacao": "ok"
   },
   "C112203": {
-   "nome": "Driver de motor ULN2003A-DIP16",
+   "nome": "Driver Darlington de 7 canais ULN2003A-DIP16",
    "marca": "Mixic",
    "modelo": "ULN2003A-DIP16",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Darlington Transistor Arrays",
    "descricao": "-40℃~+85℃ 1.4V 100uA 15pF 30V 500mA 50V 50uA Seven channels DIP-16 Darlington Transistor Arrays ROHS",
@@ -1174,11 +1293,11 @@
    "situacao": "ok"
   },
   "C19922": {
-   "nome": "Driver de motor L298N",
+   "nome": "Ponte H dupla L298N",
    "marca": "STMicroelectronics",
    "modelo": "L298N",
    "pacote": "MultiwAtt-15",
-   "tamanho": "MultiwAtt-15",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-25℃~+130℃ 2 2A 4.5V~7V Bipolar Driver MultiwAtt-15 Stepper Motor Driver ROHS",
@@ -1205,41 +1324,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C54823939": {
-   "nome": "Driver de motor A4988SETTR-T(TOKMAS)",
-   "marca": "Tokmas",
-   "modelo": "A4988SETTR-T(TOKMAS)",
-   "pacote": "QFN-28(5x5)",
-   "tamanho": "QFN-28(5x5)",
-   "montagem": "superfície",
-   "categoria_loja": "Stepper Motor Driver",
-   "descricao": "QFN-28(5x5) Stepper Motor Driver ROHS",
-   "atributos": {
-    "Number of H-bridges": "2",
-    "Technology": "-",
-    "Step Resolution": "-",
-    "Output Current": "1.6A",
-    "Features": "-",
-    "Drive Type": "Bipolar Driver",
-    "Control Voltage": "3V~5.5V",
-    "Interface": "-"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C54823939.html",
-   "preco": 0.9165,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 302,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C18723575": {
    "nome": "Driver de motor L293D(XBLW)",
    "marca": "XBLW",
    "modelo": "L293D(XBLW)",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+150℃ 1.2Ω 4.5V~36V 600mA No Over temperature protection DIP-16 Stepper Motor Driver ROHS",
@@ -1271,7 +1361,7 @@
    "marca": "XINLUDA",
    "modelo": "XD293-16",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "-40℃~+85℃ 4.5V~32V 500mA Yes DIP-16 Stepper Motor Driver ROHS",
@@ -1303,7 +1393,7 @@
    "marca": "MSKSEMI",
    "modelo": "L293DNE(MS)",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Stepper Motor Driver",
    "descricao": "4.5V~36V 600mA Yes DIP-16 Stepper Motor Driver ROHS",
@@ -1327,69 +1417,6 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 132,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C73285": {
-   "nome": "Driver de motor ULN2003L-D16-T",
-   "marca": "UTC(Unisonic Tech)",
-   "modelo": "ULN2003L-D16-T",
-   "pacote": "DIP-16",
-   "tamanho": "DIP-16",
-   "montagem": "furo",
-   "categoria_loja": "Darlington Transistor Arrays",
-   "descricao": "-40℃~+85℃ 0.4mA 15pF 2V 30V 50V 50uA 65uA Seven channels DIP-16 Darlington Transistor Arrays ROHS",
-   "atributos": {
-    "Input Current(off)": "65uA",
-    "Operating Temperature": "-40℃~+85℃",
-    "Type": "BJT",
-    "Collector - Emitter Voltage VCEO": "50V",
-    "Voltage - Input(Max)": "30V",
-    "Current - Collector(Ic)": "500mA",
-    "Output Leakage Current(Icex)": "50uA",
-    "Vce Saturation(VCE(sat))": "1.3V",
-    "number of channels": "Seven channels",
-    "Input Current(on)": "0.4mA",
-    "Input Capacitiance(Ci)": "15pF",
-    "Reverse Leakage Current (Ir)": "50uA",
-    "Voltage - Forward(Vf)": "2V"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UTC-Unisonic-Tech-ULN2003L-D16-T_C73285.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/darlington-transistor-arrays_utc-unisonic-tech-uln2003l-d16-t_C73285.html",
-   "preco": 0.2774,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 27,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
-  "C3019541": {
-   "nome": "Driver de motor HT2803ANZ",
-   "marca": "HTCSEMI",
-   "modelo": "HT2803ANZ",
-   "pacote": "DIP-18",
-   "tamanho": "DIP-18",
-   "montagem": "furo",
-   "categoria_loja": "Darlington Transistor Arrays",
-   "descricao": "-40℃~+85℃ 0.93mA 1.3V@500um,350mA 15pF 2V 50uA 50uA 8 DIP-18 Darlington Transistor Arrays ROHS",
-   "atributos": {
-    "Operating Temperature": "-40℃~+85℃",
-    "Output Leakage Current(Icex)": "50uA",
-    "Vce Saturation(VCE(sat))": "1.3V@500um,350mA",
-    "number of channels": "8",
-    "Input Current(on)": "0.93mA",
-    "Input Capacitiance(Ci)": "15pF",
-    "Reverse Leakage Current (Ir)": "50uA",
-    "Voltage - Forward(Vf)": "2V"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2205301745_HTCSEMI-HT2803ANZ_C3019541.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/darlington-transistor-arrays_htcsemi-ht2803anz_C3019541.html",
-   "preco": 0.4304,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 12,
    "visto": "2026-10-24",
    "situacao": "ok"
   }

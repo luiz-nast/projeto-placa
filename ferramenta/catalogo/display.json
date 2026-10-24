@@ -2,15 +2,19 @@
  "categoria": "display",
  "nome": "Display",
  "grupo": "Telas",
- "explica": "Uma telinha pra mostrar texto, números e desenhos. A OLED acende cada pontinho sozinha (fundo preto, muito contraste) e a LCD/TFT usa luz de fundo; a maioria conversa com o microcontrolador por poucos fios (I2C ou SPI).",
+ "explica": "Uma telinha pra mostrar texto, números e desenhos. O painel cru (só o vidro, com uma fita flexível chamada FPC) é difícil: precisa de conector minúsculo e peças em volta; a tela em placa já vem pronta, com pinos, e liga com 4 fios (I2C: VCC, GND, SDA e SCL) ou uns 7 (SPI). A OLED acende cada ponto sozinha (fundo preto, muito contraste) e a LCD/TFT usa luz de fundo; antes de ligar no ESP32, veja se a tela aceita 3,3 V.",
  "nome_peca": "Display {Size}\" {Dot Pixels}, {Controller Type}",
  "destaques": [
   "Interface",
   "Voltage - Supply",
   "Display Color",
-  "Display Range"
+  "Dot Pixels"
  ],
  "chips": "Size",
+ "traducoes": {
+  "Blue background white text": "letra branca em fundo azul",
+  "Yellow green background blue text": "letra azul em fundo verde-amarelo"
+ },
  "filtro": {
   "categorias_loja": [
    "OLED Display",
@@ -188,6 +192,34 @@
    "estoque": 2893,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "eletrogate:display-oled-128x32-i2c-azul-0.91": {
+   "nome": "Tela OLED 0,91\" 128x32 I2C",
+   "marca": "Eletrogate",
+   "modelo": "OLED 128x32",
+   "pacote": "módulo",
+   "tamanho": "38 x 12 x 2,5 mm",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Display OLED I2C azul possui alto contraste e excelente nitidez, indicado para projetos compactos operados por bateria já que o display OLED não possui backlight, consequentemente consumindo menos energia para funcionar.",
+   "atributos": {
+    "Size": "0.91",
+    "Interface": "I2C",
+    "Voltage - Supply": "3,3 a 5 V",
+    "Display Color": "Blue",
+    "Dot Pixels": "128x32",
+    "Controller Type": "SSD1306"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-128x32-i2c-azul-0.91",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33752720/f1a5065a19.jpg"
   },
   "C5248080": {
    "nome": "Display 0.96\" 128x64, SSD1315 chip",
@@ -370,12 +402,39 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "usinainfo:display-oled-096-spi-128x64-branco-2831": {
+   "nome": "Tela OLED 0,96\" SPI branca",
+   "marca": "Wavgat",
+   "modelo": "OLED 0.96 SPI",
+   "pacote": "módulo",
+   "tamanho": "28x28x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display OLED branco de 0,96”, resolução de 128x64 pixels e comunicação SPI.",
+   "atributos": {
+    "Size": "0.96",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 a 5 V",
+    "Display Color": "White",
+    "Dot Pixels": "128x64"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-oled-096-spi-128x64-branco-2831.html",
+   "preco": 32.86,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 18,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021227-large_default/display-oled-096-spi-128x64-branco.jpg"
+  },
   "C2890611": {
    "nome": "Display 0.96\" 64x128, CH1115 chip",
    "marca": "Newvisio",
    "modelo": "N096-6428TSWMG01-H13",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "OLED Display",
    "descricao": "-40℃~+85℃ 0.96 10.86x21.74mm 120cd/m2 64x128 CH1115 chip Passive (PMOLED) White - OLED Display ROHS",
@@ -400,6 +459,162 @@
    "estoque": 14,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "eletrogate:display-oled-0-96-i2c-azul": {
+   "nome": "Tela OLED 0,96\" I2C azul",
+   "marca": "Eletrogate",
+   "modelo": "OLED 0.96 I2C azul",
+   "pacote": "módulo",
+   "tamanho": "30 x 27mm",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Para quem está desenvolvendo projetos de eletrônica, com certeza já percebeu que uma das melhores formas de apresentar informações de forma clara e profissional é utilizando um display.",
+   "atributos": {
+    "Size": "0.96",
+    "Interface": "I2C",
+    "Voltage - Supply": "3 a 5 V",
+    "Display Color": "Blue",
+    "Dot Pixels": "128x64",
+    "Controller Type": "SSD1306"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-0-96-i2c-azul",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414096/display-oled-0-96-i2c-azul-86597419.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-oled-096-i2c-azul.html",
+     "preco": 32.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-oled-128x64-0.96-i2c-branco": {
+   "nome": "Tela OLED 0,96\" I2C branca",
+   "marca": "Eletrogate",
+   "modelo": "OLED 0.96 I2C",
+   "pacote": "módulo",
+   "tamanho": "30 x 27MM",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Este display oled i2c branco 0.96 polegadas é uma opção muito interessante para quem busca visualizar pouca informação mas ainda com muita nitidez.",
+   "atributos": {
+    "Size": "0.96",
+    "Interface": "I2C",
+    "Voltage - Supply": "2,2 a 5,5 V",
+    "Display Color": "White",
+    "Dot Pixels": "128x64",
+    "Controller Type": "SSD1306"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-128x64-0.96-i2c-branco",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/320283839/xko143856_oled-display-wit-128-x-64-i2c_x-76rqwsodij.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-oled-096-i2c-128x64-branco-5366.html",
+     "preco": 26.73,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-oled-096-i2c-branco.html",
+     "preco": 33.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/display/display-oled-96-i2c-branco",
+     "preco": 22.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:display-oled-128x64-096-i2c-azulamarelo": {
+   "nome": "Tela OLED 0,96\" I2C azul e amarela",
+   "marca": "Eletrogate",
+   "modelo": "OLED 0.96 I2C azul/amarelo",
+   "pacote": "módulo",
+   "tamanho": "30 x 27MM",
+   "montagem": "módulo",
+   "categoria_loja": "OLED",
+   "descricao": "Este display oled i2c azul amarelo 0.96 polegadas é uma opção muito interessante para quem busca visualizar pouca informação mas ainda com muita nitidez.",
+   "atributos": {
+    "Size": "0.96",
+    "Interface": "I2C",
+    "Voltage - Supply": "2,2 a 5,5 V",
+    "Display Color": "azul e amarelo",
+    "Dot Pixels": "128x64",
+    "Controller Type": "SSD1306"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-oled-128x64-096-i2c-azulamarelo",
+   "preco": 28.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/61767182/15c70d9108-mmz9x81eyv.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-oled-096-i2c-azul-e-amarelo.html",
+     "preco": 33.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:display-tft-colorido-ips-096-80x160-spi-com-st7735s-9309": {
+   "nome": "Tela colorida IPS 0,96\" ST7735S",
+   "marca": "Usinainfo",
+   "modelo": "IPS 0.96 ST7735S",
+   "pacote": "módulo",
+   "tamanho": "24x30x3,5mm (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD IPS 0.96\" colorido com resolução 80x160, interface SPI e controlador ST7735S.",
+   "atributos": {
+    "Size": "0.96",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 V (não aceita 5 V)",
+    "Display Color": "colorida",
+    "Dot Pixels": "80x160",
+    "Controller Type": "ST7735S"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-tft-colorido-ips-096-80x160-spi-com-st7735s-9309.html",
+   "preco": 32.98,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://www.usinainfo.com.br/1037490-large_default/display-tft-colorido-ips-096-80x160-spi-com-st7735s.jpg"
   },
   "C5123574": {
    "nome": "Display 0.99\" 160x40, GC9D01 chip",
@@ -458,6 +673,33 @@
    "estoque": 525,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "robocore:display-ips-1-28-redondo-rgb": {
+   "nome": "Tela redonda IPS 1,28\"",
+   "marca": "genérico",
+   "modelo": "IPS 1.28 redondo",
+   "pacote": "módulo",
+   "tamanho": "45.5 x 48 x 11.5",
+   "montagem": "módulo",
+   "categoria_loja": "Displays",
+   "descricao": "Display ideal para fazer aplicações do tipo smart watch, é colorido e com ótimo contraste.",
+   "atributos": {
+    "Size": "1.28",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 V (não use 5 V)",
+    "Display Color": "colorida",
+    "Dot Pixels": "240x240"
+   },
+   "datasheet": "https://d229kd5ey79jzj.cloudfront.net/3083/GC9A01A.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/display/display-ips-1-28-redondo-rgb",
+   "preco": 39.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3083/images/3083_1_H.png"
   },
   "C7465997": {
    "nome": "Display 1.3\" 128x64, SH1106 chip",
@@ -576,6 +818,71 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "usinainfo:display-tft-lcd-13-spi-rgb-240x240-st7789-5607": {
+   "nome": "Tela colorida TFT 1,3\" ST7789",
+   "marca": "Wavgat",
+   "modelo": "ST7789",
+   "pacote": "módulo",
+   "tamanho": "39x28x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD RGB de 1,3”, resolução de 240x240 pixels, controlador ST7789 e interface SPI.",
+   "atributos": {
+    "Size": "1.3",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "240x240",
+    "Controller Type": "ST7789"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-tft-lcd-13-spi-rgb-240x240-st7789-5607.html",
+   "preco": 38.17,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 5,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1028198-large_default/display-tft-lcd-13-spi-rgb-240x240-st7789.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-tft-lcd-1.3-spi-rgb-240x240-st7789",
+     "preco": 42.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-lcd-tft-144-128128": {
+   "nome": "Tela colorida TFT 1,44\" 128x128",
+   "marca": "Eletrogate",
+   "modelo": "TFT 1.44",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "LCD",
+   "descricao": "Com este display você poderá adicionar cor e movimento ao projeto, com resolução de 128×128 pixels permitindo que você crie animações, gráficos, texto e muito mais!",
+   "atributos": {
+    "Size": "1.44",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "128x128"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-lcd-tft-144-128128",
+   "preco": 109.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/155007523/9341ee8702.jpg"
+  },
   "C7465999": {
    "nome": "Display 1.54\" 128x64, SSD1309 chip",
    "marca": "HS",
@@ -666,6 +973,52 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "usinainfo:display-lcd-nokia-5110-84x48-pixels-2739": {
+   "nome": "Tela Nokia 5110 (84x48)",
+   "marca": "Wavgat",
+   "modelo": "DN5110",
+   "pacote": "módulo",
+   "tamanho": "45x45x13mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display LCD Nokia 5110 de 1,6”, resolução de 84x48 pixels, controlador PCD8544 e interface serial.",
+   "atributos": {
+    "Size": "1.6",
+    "Interface": "serial",
+    "Voltage - Supply": "3,3 V",
+    "Display Color": "preto em fundo branco",
+    "Dot Pixels": "84x48",
+    "Controller Type": "PCD8544"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=140",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-nokia-5110-84x48-pixels-2739.html",
+   "preco": 52.6,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 27,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1030563-large_default/display-lcd-nokia-5110-84x48-pixels.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-nokia-5110-azul",
+     "preco": 39.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-nokia-5110-para-arduino.html",
+     "preco": 52.29,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
   "C5329585": {
    "nome": "Display 1.77\" 160x128, ST7735",
    "marca": "HS",
@@ -748,6 +1101,62 @@
    "estoque": 61,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "usinainfo:display-tft-lcd-18-spi-128x160-com-slot-sd-9224": {
+   "nome": "Tela colorida TFT 1,8\" ST7735 com leitor de cartão SD",
+   "marca": "Usinainfo",
+   "modelo": "MSP1803",
+   "pacote": "módulo",
+   "tamanho": "~58x35x8mm (sem contar os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD de 1,8”, resolução de 128x160 pixels, interface SPI e slot para cartão SD, indicado para gráficos coloridos em projetos compactos.",
+   "atributos": {
+    "Size": "1.8",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 a 5 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "128x160",
+    "Controller Type": "ST7735"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-tft-lcd-18-spi-128x160-com-slot-sd-9224.html",
+   "preco": 42.41,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 30,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1036732-large_default/display-tft-lcd-18-spi-128x160-com-slot-sd.jpg"
+  },
+  "usinainfo:display-tft-lcd-18-spi-128x160-st7735s-com-encoder-rotativo-ec11-9329": {
+   "nome": "Tela colorida TFT 1,8\" ST7735S com botão giratório",
+   "marca": "Usinainfo",
+   "modelo": "TFT 1.8 ST7735S + EC11",
+   "pacote": "módulo",
+   "tamanho": "79x43x4mm (Sem contar o encoder)",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos e Comunicação",
+   "descricao": "Display TFT LCD 1.8\" com interface SPI, resolução 128x160, controlador ST7735S e encoder rotativo EC11 com botão para menus e ajustes em projetos eletrônicos.",
+   "atributos": {
+    "Size": "1.8",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 a 5 V; pinos em 3,3 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "128x160",
+    "Controller Type": "ST7735S"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/modulos-para-arduino/display-tft-lcd-18-spi-128x160-st7735s-com-encoder-rotativo-ec11-9329.html",
+   "preco": 87.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 9,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1037561-large_default/display-tft-lcd-18-spi-128x160-st7735s-com-encoder-rotativo-ec11.jpg"
   },
   "C359940": {
    "nome": "Display 1.8\" 160x128, ST7735S chip",
@@ -914,6 +1323,34 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "eletrogate:display-tft-rgb-20-240x320-st7789v": {
+   "nome": "Tela colorida TFT 2,0\" ST7789V",
+   "marca": "Eletrogate",
+   "modelo": "TFT 2.0 ST7789V",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Displays",
+   "descricao": "O Display TFT RGB 240x320 com driver ST7789V é uma excelente opção para projetos que exigem uma interface gráfica colorida, nítida e de alto desempenho.",
+   "atributos": {
+    "Size": "2",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "240x320",
+    "Controller Type": "ST7789V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-tft-rgb-20-240x320-st7789v",
+   "preco": 64.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/379031508/br-11134207-7r98o-m6sladwlnw4n1f-5qbd2jjx3q.jpg"
+  },
   "C5123570": {
    "nome": "Display 2.23\" 128x32, SSD1305 chip",
    "marca": "Newvisio",
@@ -1027,6 +1464,104 @@
    "estoque": 21,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "usinainfo:display-tft-lcd-24-spi-320x240-st7789-com-encoder-rotativo-ec11-9330": {
+   "nome": "Tela colorida TFT 2,4\" ST7789 com botão giratório",
+   "marca": "Usinainfo",
+   "modelo": "TFT 2.4 ST7789 + EC11",
+   "pacote": "módulo",
+   "tamanho": "91x44x4mm (Sem contar o encoder)",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD 2.4\" com interface SPI, resolução 320x240, controlador ST7789 e encoder rotativo EC11 com botão para menus, ajustes e interfaces em projetos eletrônicos.",
+   "atributos": {
+    "Size": "2.4",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 a 5 V; pinos em 3,3 V",
+    "Display Color": "colorida",
+    "Dot Pixels": "320x240",
+    "Controller Type": "ST7789"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-tft-lcd-24-spi-320x240-st7789-com-encoder-rotativo-ec11-9330.html",
+   "preco": 114.95,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 9,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1037565-large_default/display-tft-lcd-24-spi-320x240-st7789-com-encoder-rotativo-ec11.jpg"
+  },
+  "usinainfo:tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd-2828": {
+   "nome": "Tela colorida TFT 2,4\" com toque (shield Uno)",
+   "marca": "Wavgat",
+   "modelo": "TFT 2.4 shield",
+   "pacote": "módulo",
+   "tamanho": "50x39mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Shield TFT LCD de 2,4” com tela sensível ao toque e slot para cartão SD, desenvolvido para integração direta com placas Arduino compatíveis.",
+   "atributos": {
+    "Size": "2.4",
+    "Interface": "shield pro Uno (pinos 5 a 13 e A0 a A3)",
+    "Voltage - Supply": "3,3 / 5 V",
+    "Display Color": "colorida, com toque"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd-2828.html",
+   "preco": 89.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 2,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021481-large_default/tft-lcd-24-shield-para-arduino-touch-screen-com-slot-sd.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-tft-2-4-touchscreen-shield-para-arduino",
+     "preco": 79.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-tft-24-touchscreen-shield-para-arduino.html",
+     "preco": 93.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-serial-touch-24-320240-ihm-nextion": {
+   "nome": "Tela com toque Nextion 2,4\" (serial)",
+   "marca": "Eletrogate",
+   "modelo": "Nextion 2.4",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "LCD",
+   "descricao": "O Display Serial Touch 2.4″ 320×240 IHM Nextion é a interface ideal para os projetos!",
+   "atributos": {
+    "Size": "2.4",
+    "Interface": "serial (TX e RX)",
+    "Voltage - Supply": "5 V",
+    "Display Color": "colorida, com toque"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-serial-touch-24-320240-ihm-nextion",
+   "preco": 299.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/66837589/2835cfde5f.jpg"
   },
   "C7466000": {
    "nome": "Display 2.42\" 128x64, SSD1309 chip",
@@ -1178,7 +1713,7 @@
    "marca": "HS",
    "modelo": "HS28QI084RX",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "LCD Screen",
    "descricao": "-20℃~+70℃ 12 o'clock 2.8 320x240 43.2x57.6mm ILI9341V chip - LCD Screen ROHS",
@@ -1335,6 +1870,61 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "usinainfo:tft-lcd-35-shield-para-arduino-touch-screen-com-slot-sd-2944": {
+   "nome": "Tela colorida TFT 3,5\" com toque (shield pro Uno)",
+   "marca": "Wavgat",
+   "modelo": "TFT 3.5 shield",
+   "pacote": "módulo",
+   "tamanho": "86x56mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Shield TFT LCD de 3,5” com tela sensível ao toque e slot para cartão SD, destinado à criação de interfaces gráficas em placas Arduino compatíveis.",
+   "atributos": {
+    "Size": "3.5",
+    "Interface": "shield pro Uno",
+    "Voltage - Supply": "3,3 / 5 V",
+    "Display Color": "colorida, com toque",
+    "Dot Pixels": "320x480"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/tft-lcd-35-shield-para-arduino-touch-screen-com-slot-sd-2944.html",
+   "preco": 175.78,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 23,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1017133-large_default/tft-lcd-35-shield-para-arduino-touch-screen-com-slot-sd.jpg"
+  },
+  "usinainfo:tft-lcd-35-spi-touch-screen-com-slot-sd-8570": {
+   "nome": "Tela colorida TFT 3,5\" SPI com toque e leitor SD",
+   "marca": "Usinainfo",
+   "modelo": "TFT 3.5 ILI9488",
+   "pacote": "módulo",
+   "tamanho": "56,5 x 98 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display TFT LCD de 3,5” com interface SPI, tela touch e slot para cartão SD, destinado à criação de interfaces gráficas em projetos eletrônicos.",
+   "atributos": {
+    "Size": "3.5",
+    "Interface": "SPI",
+    "Voltage - Supply": "3,3 a 5 V; pinos em 3,3 V (não aceita 5 V)",
+    "Display Color": "colorida, com toque",
+    "Dot Pixels": "480x320",
+    "Controller Type": "ILI9488"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/tft-lcd-35-spi-touch-screen-com-slot-sd-8570.html",
+   "preco": 131.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 3,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1032421-large_default/tft-lcd-35-spi-touch-screen-com-slot-sd.jpg"
+  },
   "C5139771": {
    "nome": "Display 4.4\" 192x64, ST7525",
    "marca": "HS",
@@ -1389,6 +1979,560 @@
    "estoque": 3,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "robocore:lcd-16x2-5v-branco-no-azul": {
+   "nome": "Tela LCD 16x2 sem I2C (azul)",
+   "marca": "genérico",
+   "modelo": "LCD 16x2",
+   "pacote": "módulo",
+   "tamanho": "8,0 x 3,6 x 0,9 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays",
+   "descricao": "Este é um display LCD de 16 caracteres por 2 linhas, que funciona com 5 V.",
+   "atributos": {
+    "Voltage - Supply": "5 V",
+    "Display Color": "Blue background white text"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/display/lcd-16x2-5v-branco-no-azul",
+   "preco": 14.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 184,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/165/images/165_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-16x2-com-backlight-azul",
+     "preco": 15.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-16x2-com-fundo-azul-2304.html",
+     "preco": 20.35,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-16x2-azul.html",
+     "preco": 20.86,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:modulo-adaptador-i2c-iic-conversor-para-lcd-16x2-e-20x4--2773": {
+   "nome": "Adaptador I2C pra tela LCD 16x2 e 20x4",
+   "marca": "Usinainfo",
+   "modelo": "PCF8574T",
+   "pacote": "módulo",
+   "tamanho": "42x20x15mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Adaptador I2C com PCF8574T ou HLF8574T para displays LCD 16x2 e 20x4.",
+   "atributos": {
+    "Interface": "I2C",
+    "Voltage - Supply": "5 V",
+    "Controller Type": "PCF8574T ou HLF8574T"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=89",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-adaptador-i2c-iic-conversor-para-lcd-16x2-e-20x4--2773.html",
+   "preco": 8.67,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 151,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033899-large_default/modulo-adaptador-i2c-iic-conversor-para-lcd-16x2-e-20x4-.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-serial-i2c-para-display-lcd",
+     "preco": 8.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/display/modulo-i2c-para-display-lcd",
+     "preco": 6.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-adaptador-i2c-para-display-lcd.html",
+     "preco": 9.1,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:display-lcd-128x64-pixels-com-fundo-azul-2832": {
+   "nome": "Tela LCD gráfica 128x64 ST7920",
+   "marca": "Wavgat",
+   "modelo": "LCD 128x64 ST7920",
+   "pacote": "módulo",
+   "tamanho": "93x70mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display LCD gráfico de 128x64 pixels, fundo azul, caracteres brancos e alimentação de 5V.",
+   "atributos": {
+    "Voltage - Supply": "5 V",
+    "Display Color": "Blue background white text",
+    "Dot Pixels": "128x64",
+    "Controller Type": "ST7920"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=555",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-128x64-pixels-com-fundo-azul-2832.html",
+   "preco": 76.97,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 117,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019816-large_default/display-lcd-128x64-pixels-com-fundo-azul.jpg",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/display/display-grafico-128x64",
+     "preco": 89.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-grafico-128x64-backlight-azul",
+     "preco": 89.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-grafico-128x64-azul.html",
+     "preco": 94.94,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:display-lcd-20x4-i2c-com-fundo-azul-4655": {
+   "nome": "Tela LCD 20x4 com I2C (azul)",
+   "marca": "Wavgat",
+   "modelo": "LCD 20x4 I2C",
+   "pacote": "módulo",
+   "tamanho": "76x25mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display LCD 20x4 com fundo azul, interface I2C e alimentação de 5V.",
+   "atributos": {
+    "Interface": "I2C",
+    "Voltage - Supply": "5 V",
+    "Display Color": "Blue background white text"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-20x4-i2c-com-fundo-azul-4655.html",
+   "preco": 43.73,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 86,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019888-large_default/display-lcd-20x4-i2c-com-fundo-azul.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-20x4-azul-com-modulo-adaptador-i2c.html",
+     "preco": 60.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-20x4-com-backlight-azul",
+     "preco": 51.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-display-tm1637-7-segmentos-4-digitos-vermelho-2943": {
+   "nome": "Display de 4 dígitos TM1637",
+   "marca": "Usinainfo",
+   "modelo": "TM1637",
+   "pacote": "módulo",
+   "tamanho": "41x23x11mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo TM1637 com display vermelho de 7 segmentos e 4 dígitos, alimentação em 3,3V ou 5V e controle simplificado para dados numéricos.",
+   "atributos": {
+    "Voltage - Supply": "3,3 ou 5 V",
+    "Display Color": "Red",
+    "Controller Type": "TM1637"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-tm1637-7-segmentos-4-digitos-vermelho-2943.html",
+   "preco": 11.55,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 59,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021468-large_default/modulo-display-tm1637-7-segmentos-4-digitos-vermelho.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-tm1637-com-display-de-7-segmentos-4-digitos.html",
+     "preco": 11.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-display-de-7-segmentos-com-4-digitos",
+     "preco": 9.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:display-lcd-16x2-i2c-com-fundo-verde-5700": {
+   "nome": "Tela LCD 16x2 com I2C (verde)",
+   "marca": "Wavgat",
+   "modelo": "LCD 16x2 I2C verde",
+   "pacote": "módulo",
+   "tamanho": "80x36x17mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Display LCD 16x2 com fundo verde, interface I2C, alimentação de 5V e endereço 0x27 ou 0x3F para exibir textos usando menos conexões.",
+   "atributos": {
+    "Interface": "I2C (endereço 0x27 ou 0x3F)",
+    "Voltage - Supply": "5 V",
+    "Display Color": "letra preta em fundo verde"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-16x2-i2c-com-fundo-verde-5700.html",
+   "preco": 20.35,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 28,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033776-large_default/display-lcd-16x2-i2c-com-fundo-verde.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-verde",
+     "preco": 25.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-16x2-verde-com-modulo-adaptador-i2c.html",
+     "preco": 33.86,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-display-14-segmentos-4-digitos-i2c-ht16k33-9284": {
+   "nome": "Display de 4 dígitos de 14 segmentos HT16K33 (I2C)",
+   "marca": "Usinainfo",
+   "modelo": "HT16K33",
+   "pacote": "módulo",
+   "tamanho": "28x51x12mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo com display de 14 segmentos, 4 dígitos e controlador HT16K33, usando interface I2C para exibir números e caracteres alfanuméricos.",
+   "atributos": {
+    "Interface": "I2C (endereço 0x70)",
+    "Voltage - Supply": "4,5 a 5 V",
+    "Display Color": "Red",
+    "Controller Type": "HT16K33"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1223",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-14-segmentos-4-digitos-i2c-ht16k33-9284.html",
+   "preco": 43.97,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 18,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1037116-large_default/modulo-display-14-segmentos-4-digitos-i2c-ht16k33.jpg"
+  },
+  "robocore:lcd-20x4-5v-branco-no-azul": {
+   "nome": "Tela LCD 20x4 sem I2C (azul)",
+   "marca": "genérico",
+   "modelo": "LCD 20x4",
+   "pacote": "módulo",
+   "tamanho": "10 x 6,2 x 1 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays",
+   "descricao": "Este é um display LCD de 20 caracteres por 4 linhas, que funciona com 5 V.",
+   "atributos": {
+    "Voltage - Supply": "5 V",
+    "Display Color": "Blue background white text"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/display/lcd-20x4-5v-branco-no-azul",
+   "preco": 39.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 10,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/493/images/493_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-20x4-com-fundo-azul-2727.html",
+     "preco": 43.78,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-20x4-azul.html",
+     "preco": 49.26,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-display-led-8-digitos-com-interface-controle-spi-max7219-4416": {
+   "nome": "Display de 8 dígitos com MAX7219",
+   "marca": "Usinainfo",
+   "modelo": "MAX7219",
+   "pacote": "módulo",
+   "tamanho": "82,5x14,9x10,9cm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo com controlador MAX7219, display LED de 8 dígitos e comunicação SPI, indicado para exibir números com controle simplificado por microcontrolador.",
+   "atributos": {
+    "Interface": "SPI",
+    "Controller Type": "MAX7219"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-led-8-digitos-com-interface-controle-spi-max7219-4416.html",
+   "preco": 21.23,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 4,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021477-large_default/modulo-display-led-8-digitos-com-interface-controle-spi-max7219.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-display-de-7-segmentos-com-8-digitos-max7219",
+     "preco": 12.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-max7219-com-display-8-digitos.html",
+     "preco": 22.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:modulo-display-7-segmentos-tm1638-com-8-leds-e-8-push-buttons-2625": {
+   "nome": "Display de 8 dígitos TM1638 com 8 botões e 8 LEDs",
+   "marca": "Usinainfo",
+   "modelo": "TM1638",
+   "pacote": "módulo",
+   "tamanho": "76,5x50x10mm",
+   "montagem": "módulo",
+   "categoria_loja": "Displays e Telas",
+   "descricao": "Módulo TM1638 com display de 8 dígitos, 8 LEDs e 8 botões, reunindo visualização e comandos em uma interface compacta para microcontroladores.",
+   "atributos": {
+    "Interface": "serial de 3 fios (DIO, CLK, STB)",
+    "Voltage - Supply": "5 V",
+    "Display Color": "Red",
+    "Controller Type": "TM1638"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=87",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/display-arduino/modulo-display-7-segmentos-tm1638-com-8-leds-e-8-push-buttons-2625.html",
+   "preco": 21.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 3,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1016973-large_default/modulo-display-7-segmentos-tm1638-com-8-leds-e-8-push-buttons.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-tm1638-com-display-7-segmentos-8-digitos",
+     "preco": 18.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-display-de-7-segmentos-8-digitos-tm1638.html",
+     "preco": 40.05,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "bau:modulo-matriz-de-led-8x32-com-max7219": {
+   "nome": "4 matrizes de LED 8x8 com MAX7219 (painel 8x32)",
+   "marca": "Importado",
+   "modelo": "MAX7219 8x32",
+   "pacote": "módulo",
+   "tamanho": "12,8 x 3,2 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Módulos",
+   "descricao": "O Módulo Matriz de LED 8x32 é formado por quatro matrizes de LED 8x8 montadas lado a lado na mesma placa, cada uma com seu próprio driver MAX7219 já ligado em cascata.",
+   "atributos": {
+    "Voltage - Supply": "5 V",
+    "Display Color": "Red",
+    "Dot Pixels": "8x32",
+    "Controller Type": "4x MAX7219"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/modulo-matriz-de-led-8x32-com-max7219",
+   "preco": 39.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/402639800/6098e3c970554f79b690b81bd69569de-wo2eetmh3y.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/led-arduino/modulo-matriz-de-led-8x32-vermelho-slim-max7219-8563.html",
+     "preco": 46.97,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-4-matrizes-de-led-8x8-com-max7219",
+     "preco": 48.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:display-lcd-16x2-i2c-backlight-azul": {
+   "nome": "Tela LCD 16x2 com I2C (azul)",
+   "marca": "Eletrogate",
+   "modelo": "LCD 16x2 I2C",
+   "pacote": "módulo",
+   "tamanho": "80 x 36 x 12mm",
+   "montagem": "módulo",
+   "categoria_loja": "LCD",
+   "descricao": "Display Lcd com 16 colunas por 2 linhas, backlight azul e escrita branca.",
+   "atributos": {
+    "Interface": "I2C",
+    "Voltage - Supply": "5 V",
+    "Display Color": "Blue background white text"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-azul",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414150/display-lcd-16x2-i2c-backlight-azul-7ff37942.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/display-arduino/display-lcd-16x2-i2c-com-fundo-azul-5809.html",
+     "preco": 23.05,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/display-lcd-16x2-azul-com-modulo-adaptador-i2c.html",
+     "preco": 45.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-matriz-de-led-8x8-com-max7219": {
+   "nome": "Matriz de LED 8x8 com MAX7219",
+   "marca": "Eletrogate",
+   "modelo": "MAX7219",
+   "pacote": "módulo",
+   "tamanho": "5,0 x 3,2 x 1,5cm",
+   "montagem": "módulo",
+   "categoria_loja": "LED",
+   "descricao": "Este Módulo de matriz de LED é capaz de controlar 8x8 LEDs simultaneamente.",
+   "atributos": {
+    "Voltage - Supply": "5 V",
+    "Display Color": "Red",
+    "Dot Pixels": "8x8",
+    "Controller Type": "MAX7219"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-matriz-de-led-8x8-com-max7219",
+   "preco": 20.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414312263a8de57b.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-matriz-de-led-8x8-com-max7219.html",
+     "preco": 29.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/led-arduino/modulo-matriz-de-led-8x8-vermelho-max7219-jumpers-2315.html",
+     "preco": 19.95,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
   }
  }
 }

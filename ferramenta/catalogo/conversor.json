@@ -2,8 +2,14 @@
  "categoria": "conversor",
  "nome": "Conversor de tensão (chaveado)",
  "grupo": "Energia",
- "explica": "Muda a tensão ligando e desligando a corrente milhares ou milhões de vezes por segundo e guardando a energia numa bobina, por isso esquenta bem menos que um regulador linear. 'Step-down' abaixa (12 V → 5 V), 'Boost' sobe (3,7 V → 5 V) e 'Buck-Boost' pode sair acima ou abaixo da entrada, mas cada um só funciona dentro da faixa de entrada dele ('Voltage - Supply'). O chip sozinho precisa de bobina e capacitores em volta (e às vezes um diodo); os módulos K78xx e R-78 já vêm prontos e foram feitos pra entrar no lugar de um 7805.",
- "nome_peca": "Conversor {Output Voltage} ({Function})",
+ "explica": "Muda a tensão ligando e desligando a corrente milhares ou milhões de vezes por segundo e guardando a energia numa bobina, por isso esquenta bem menos que um regulador linear. O abaixador (step-down) entrega menos do que recebe (12 V → 5 V), o elevador (boost) entrega mais (3,7 V → 5 V) e o que abaixa e eleva faz os dois, mas cada um só funciona dentro da faixa de entrada dele. O chip sozinho precisa de bobina e capacitores em volta (às vezes um diodo); os módulos K78xx e R-78 já vêm prontos, de furo, e entram no lugar de um 7805.",
+ "nome_peca": [
+  "{@categoria_loja} {Output Voltage} ({Function}), {Output Current}",
+  "{@categoria_loja} {Output Type} ({Function}), {Output Current}",
+  "{@categoria_loja} {Output Voltage} ({Function})",
+  "{@categoria_loja} {Output Type} ({Function})",
+  "Conversor {Output Voltage} ({Function})"
+ ],
  "destaques": [
   "Function",
   "Output Voltage",
@@ -11,6 +17,15 @@
   "Output Current"
  ],
  "chips": "Function",
+ "traducoes": {
+  "DC-DC Converters": "Conversor",
+  "DC-DC Power Modules": "Módulo conversor",
+  "Adjustable": "ajustável",
+  "Fixed": "fixo",
+  "-5V、5V": "5V ou −5V",
+  "-12V、12V": "12V ou −12V",
+  "3.168V~3.432V": "3.3V"
+ },
  "filtro": {
   "categorias_loja": [
    "DC-DC Converters",
@@ -18,7 +33,8 @@
   ],
   "atributos": [
    "Function"
-  ]
+  ],
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -112,15 +128,23 @@
   {
    "busca": "TPS63020",
    "quantos": 1
+  },
+  {
+   "busca": "SY8089",
+   "quantos": 2
+  },
+  {
+   "busca": "MP2307",
+   "quantos": 2
   }
  ],
  "pecas": {
   "C78162": {
-   "nome": "Conversor de tensão (chaveado) SX1308",
+   "nome": "Conversor ajustável (elevador), 2A",
    "marca": "SX(Shenzhen Suosemi Tech)",
    "modelo": "SX1308",
    "pacote": "SOT-23-6",
-   "tamanho": "SOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 1 1.2MHz 100uA 2A 2V~24V Adjustable Boost Boost Built-in No SOT-23-6 DC-DC Converters ROHS",
@@ -150,11 +174,11 @@
    "situacao": "ok"
   },
   "C84817": {
-   "nome": "Conversor 600mV~28V (elevador)",
+   "nome": "Conversor 600mV~28V (elevador), 2A",
    "marca": "XI'AN Aerosemi Tech",
    "modelo": "MT3608",
    "pacote": "SOT-23-6",
-   "tamanho": "SOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 1 1.2MHz 100uA、1.6mA 2A 2V~24V Adjustable Boost Boost Built-in No SOT-23-6 DC-DC Converters ROHS",
@@ -184,11 +208,11 @@
    "situacao": "ok"
   },
   "C19189893": {
-   "nome": "Conversor de tensão (chaveado) MT3608B",
+   "nome": "Conversor ajustável (elevador), 4A",
    "marca": "XI'AN Aerosemi Tech",
    "modelo": "MT3608B",
    "pacote": "SOT-23-6",
-   "tamanho": "SOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 1 1.2MHz 2.5V~24V 4A 70uA Adjustable Boost Boost Built-in No SOT-23-6 DC-DC Converters ROHS",
@@ -218,11 +242,11 @@
    "situacao": "ok"
   },
   "C2932326": {
-   "nome": "Conversor 600mV~20V (elevador)",
+   "nome": "Conversor 600mV~20V (elevador), 2.5A",
    "marca": "XI'AN Aerosemi Tech",
    "modelo": "MT3608L",
    "pacote": "SOT-23-6",
-   "tamanho": "SOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃@(TA) 1 1.2MHz 100uA 2.2V~16V 2.5A Adjustable Boost Boost Built-in No SOT-23-6 DC-DC Converters ROHS",
@@ -252,11 +276,11 @@
    "situacao": "ok"
   },
   "C919459": {
-   "nome": "Conversor 2.2V~5.5V (elevador)",
+   "nome": "Conversor 2.2V~5.5V (elevador), 3A",
    "marca": "Texas Instruments",
    "modelo": "TPS61023DRLR",
    "pacote": "SOT-563",
-   "tamanho": "SOT-563",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 1MHz 2.2V~5.5V 3A 3uA 500mV~5.5V Adjustable Boost Boost Built-in Overcurrent Protection、Light load efficient mode、Load disconnect Yes SOT-563 DC-DC Converters ROHS",
@@ -286,11 +310,11 @@
    "situacao": "ok"
   },
   "C5122561": {
-   "nome": "Conversor de tensão (chaveado) LM2577S-ADJ",
+   "nome": "Conversor ajustável (elevador), 3A",
    "marca": "Slkor(SLKORMICRO Elec.)",
    "modelo": "LM2577S-ADJ",
    "pacote": "TO-263",
-   "tamanho": "TO-263",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 3.5V~40V 3A 52kHz Adjustable Boost Boost、Flyback、Forward Built-in No TO-263 DC-DC Converters ROHS",
@@ -320,11 +344,11 @@
    "situacao": "ok"
   },
   "C1852149": {
-   "nome": "Conversor 2.2V~5.5V (elevador)",
+   "nome": "Conversor 2.2V~5.5V (elevador), 3A",
    "marca": "Texas Instruments",
    "modelo": "TPS61023DRLT",
    "pacote": "SOT-563",
-   "tamanho": "SOT-563",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 1MHz 2.2V~5.5V 3A 3uA 500mV~5.5V Adjustable Boost Boost Built-in Yes SOT-563 DC-DC Converters ROHS",
@@ -354,11 +378,11 @@
    "situacao": "ok"
   },
   "C73018": {
-   "nome": "Conversor de tensão (chaveado) XL6019E1",
+   "nome": "Conversor ajustável (abaixa e eleva), 5A",
    "marca": "XLSEMI",
    "modelo": "XL6019E1",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 180kHz 2.5mA 5A 5V~40V Adjustable Buck-Boost Built-in SEPIC Yes TO-263-5 DC-DC Converters ROHS",
@@ -388,11 +412,11 @@
    "situacao": "ok"
   },
   "C15483": {
-   "nome": "Conversor 1.2V~5.5V (abaixa e eleva)",
+   "nome": "Conversor 1.2V~5.5V (abaixa e eleva), 3A",
    "marca": "Texas Instruments",
    "modelo": "TPS63020DSJR",
    "pacote": "VSON-14-EP(3x4)",
-   "tamanho": "VSON-14-EP(3x4)",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃@(TA) 1 1.2V~5.5V 1.8V~5.5V 2.4MHz 3A 50uA Adjustable Buck-Boost Buck-Boost Built-in Yes VSON-14-EP(3x4) DC-DC Converters ROHS",
@@ -422,11 +446,11 @@
    "situacao": "ok"
   },
   "C73012": {
-   "nome": "Conversor de tensão (chaveado) XL6008E1",
+   "nome": "Conversor ajustável (abaixa e eleva), 3A",
    "marca": "XLSEMI",
    "modelo": "XL6008E1",
    "pacote": "TO-252-5",
-   "tamanho": "TO-252-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 2.5mA 3.6V~32V 320kHz~480kHz 3A Adjustable Boost、SEPIC、Flyback、Inverting Buck-Boost Built-in No TO-252-5 DC-DC Converters ROHS",
@@ -456,7 +480,7 @@
    "situacao": "ok"
   },
   "C2992391": {
-   "nome": "Conversor 5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V (abaixa e eleva)",
    "marca": "YLPTEC",
    "modelo": "K7805-1000R3",
    "pacote": "DIP,11.5x7.6mm",
@@ -494,11 +518,11 @@
    "situacao": "ok"
   },
   "C5369649": {
-   "nome": "Conversor 5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V (abaixa e eleva)",
    "marca": "YLPTEC",
    "modelo": "K7805M-1000R3",
    "pacote": "SIP-3",
-   "tamanho": "SIP-3",
+   "tamanho": "11,6 × 8 mm",
    "montagem": "furo",
    "categoria_loja": "DC-DC Power Modules",
    "descricao": "-40℃~+85℃ 1 10.4mm 11.6mm 1A 2200uF 25mVp-p 300uA、1mA 520kHz 5V 7V~36V 8mm 94% Buck-Boost Short Circuit Protection ±3% SIP-3 DC-DC Power Modules ROHS",
@@ -532,7 +556,7 @@
    "situacao": "ok"
   },
   "C2992390": {
-   "nome": "Conversor -5V、5V (abaixa e eleva)",
+   "nome": "Módulo conversor 5V ou −5V (abaixa e eleva)",
    "marca": "YLPTEC",
    "modelo": "K7805-500R3",
    "pacote": "DIP,11.5x7.6mm",
@@ -570,11 +594,11 @@
    "situacao": "ok"
   },
   "C61063": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 2A",
    "marca": "XLSEMI",
    "modelo": "XL1509-5.0E1",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 1 150kHz 2A 2mA 4.5V~40V 5V Buck Buck Built-in Fixed No SOIC-8 DC-DC Converters ROHS",
@@ -604,11 +628,11 @@
    "situacao": "ok"
   },
   "C74192": {
-   "nome": "Conversor 1.23V~37V (abaixador)",
+   "nome": "Conversor 1.23V~37V (abaixador), 2A",
    "marca": "XLSEMI",
    "modelo": "XL1509-ADJE1",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 1 1.23V~37V 127kHz~173kHz 2A 2mA 4.5V~40V Adjustable Buck Buck Built-in No SOIC-8 DC-DC Converters ROHS",
@@ -638,11 +662,11 @@
    "situacao": "ok"
   },
   "C51661": {
-   "nome": "Conversor 1.25V~32V (abaixador)",
+   "nome": "Conversor 1.25V~32V (abaixador), 5A",
    "marca": "XLSEMI",
    "modelo": "XL4015E1",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃ 1 1.25V~32V 180kHz 5A 5mA 8V~36V Adjustable Buck Buck Built-in No TO-263-5 DC-DC Converters ROHS",
@@ -671,12 +695,46 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C479074": {
+   "nome": "Conversor ajustável (abaixador), 2A",
+   "marca": "Silergy Corp",
+   "modelo": "SY8089A1AAC",
+   "pacote": "SOT-23-5",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "-40℃~+125℃@(TA/TJ) 1 1.5MHz 2.5V~5.5V 2A 50uA Adjustable Buck Buck Built-in Yes SOT-23-5 DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+125℃@(TA/TJ)",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "Yes",
+    "Frequency - Switching": "1.5MHz",
+    "Output Type": "Adjustable",
+    "Voltage - Supply": "2.5V~5.5V",
+    "Output Current": "2A",
+    "Quiescent Current": "50uA",
+    "Features": "Output discharge、Hiccup current limiting",
+    "Switch tube (built-in/external)": "Built-in",
+    "Topology": "Buck",
+    "Output Voltage": "-",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2001171834_Silergy-Corp-SY8089A1AAC_C479074.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/dc-dc-converters_silergy-corp-sy8089a1aac_C479074.html",
+   "preco": 0.0865,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 95004,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C347421": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 3A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "LM2596S-5.0(UMW)",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TA) 1 150kHz 3A 5V 7V~40V 80uA Buck Buck Built-in Fixed No TO-263-5 DC-DC Converters ROHS",
@@ -706,11 +764,11 @@
    "situacao": "ok"
   },
   "C347423": {
-   "nome": "Conversor 1.2V~37V (abaixador)",
+   "nome": "Conversor 1.2V~37V (abaixador), 3A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "LM2596S-ADJ(UMW)",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TA) 1 1.2V~37V 150kHz 3A 40V 80uA Adjustable Buck Buck Built-in No TO-263-5 DC-DC Converters ROHS",
@@ -740,11 +798,11 @@
    "situacao": "ok"
   },
   "C2681226": {
-   "nome": "Conversor 3.3V (abaixador)",
+   "nome": "Conversor 3.3V (abaixador), 2A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "XL1509-3.3",
    "pacote": "SOP-8",
-   "tamanho": "SOP-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 150kHz 2A 2mA 3.3V 4.5V~40V Buck Buck Built-in Fixed No SOP-8 DC-DC Converters ROHS",
@@ -774,11 +832,11 @@
    "situacao": "ok"
   },
   "C194349": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2596S-5.0/TR",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃ 1 150kHz 3A 5V 5V~40V 5mA Buck Buck Built-in Fixed No TO-263-5 DC-DC Converters ROHS",
@@ -807,12 +865,46 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C78988": {
+   "nome": "Conversor ajustável (abaixador), 2A",
+   "marca": "Silergy Corp",
+   "modelo": "SY8089AAAC",
+   "pacote": "SOT-23-5",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "-40℃~+85℃@(TA) 1 1MHz 2.7V~5.5V 2A 55uA Adjustable Buck Buck Built-in Yes SOT-23-5 DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃@(TA)",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "Yes",
+    "Frequency - Switching": "1MHz",
+    "Output Type": "Adjustable",
+    "Voltage - Supply": "2.7V~5.5V",
+    "Output Current": "2A",
+    "Quiescent Current": "55uA",
+    "Features": "Overcurrent Protection、Output discharge、Protection latch、Hiccup current limiting",
+    "Switch tube (built-in/external)": "Built-in",
+    "Topology": "Buck",
+    "Output Voltage": "-",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2108261630_Silergy-Corp-SY8089AAAC_C78988.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/dc-dc-converters_silergy-corp-sy8089aaac_C78988.html",
+   "preco": 0.1504,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 34255,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C194351": {
-   "nome": "Conversor 1.2V~37V (abaixador)",
+   "nome": "Conversor 1.2V~37V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2596S-ADJ/TR",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 1.2V~37V 150kHz 3A 4.5V~40V 5mA Adjustable Buck Buck Built-in No TO-263-5 DC-DC Converters ROHS",
@@ -842,11 +934,11 @@
    "situacao": "ok"
   },
   "C347420": {
-   "nome": "Conversor 3.3V (abaixador)",
+   "nome": "Conversor 3.3V (abaixador), 3A",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "LM2596S-3.3(UMW)",
    "pacote": "TO-263-5",
-   "tamanho": "TO-263-5",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TA) 1 150kHz 3.3V 3A 40V 80uA Buck Buck Built-in Fixed No TO-263-5 DC-DC Converters ROHS",
@@ -876,11 +968,11 @@
    "situacao": "ok"
   },
   "C97253": {
-   "nome": "Conversor 760mV~7V (abaixador)",
+   "nome": "Conversor 760mV~7V (abaixador), 3A",
    "marca": "Texas Instruments",
    "modelo": "TPS563200DDCR",
    "pacote": "TSOT-23-6",
-   "tamanho": "TSOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃@(TA) 1 3A 4.5V~17V 650kHz 760mV~7V Adjustable Buck Buck Built-in Yes TSOT-23-6 DC-DC Converters ROHS",
@@ -910,11 +1002,11 @@
    "situacao": "ok"
   },
   "C15051": {
-   "nome": "Conversor 800mV~25V (abaixador)",
+   "nome": "Conversor 800mV~25V (abaixador), 3A",
    "marca": "Monolithic Power Systems",
    "modelo": "MP1584EN-LF-Z",
    "pacote": "SOIC-8-EP",
-   "tamanho": "SOIC-8-EP",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-20℃~+85℃@(TA) 1 100kHz~1.5MHz 100uA 3A 4.5V~28V 800mV~25V Adjustable Buck Buck Built-in No SOIC-8-EP DC-DC Converters ROHS",
@@ -944,7 +1036,7 @@
    "situacao": "ok"
   },
   "C22371890": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Módulo conversor 5V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "R-78E5.0-1.0",
    "pacote": "SIP,11.6x7.5mm",
@@ -982,11 +1074,11 @@
    "situacao": "ok"
   },
   "C194353": {
-   "nome": "Conversor 12V (abaixador)",
+   "nome": "Conversor 12V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2596T-12",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 12V 150kHz 40V 5mA Buck Buck Built-in Fixed No TO-220-5 DC-DC Converters ROHS",
@@ -1016,7 +1108,7 @@
    "situacao": "ok"
   },
   "C18212367": {
-   "nome": "Conversor -5V、5V (abaixador)",
+   "nome": "Módulo conversor 5V ou −5V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "R-78E5.0-0.5",
    "pacote": "SIP,11.5x7.6mm",
@@ -1054,7 +1146,7 @@
    "situacao": "ok"
   },
   "C5369648": {
-   "nome": "Conversor -12V、12V (abaixador)",
+   "nome": "Módulo conversor 12V ou −12V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "K7812-1000R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1091,12 +1183,46 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C49375228": {
+   "nome": "Conversor ajustável (abaixador), 3A",
+   "marca": "MSKSEMI",
+   "modelo": "MSMP2307DN-LF-Z",
+   "pacote": "ESOP-8",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "-40℃~+85℃ 4V~18V 500kHz Adjustable Buck Buck Built-in Yes ESOP-8 DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "Yes",
+    "Frequency - Switching": "500kHz",
+    "Voltage - Supply": "4V~18V",
+    "Output Type": "Adjustable",
+    "Output Current": "3A",
+    "Quiescent Current": "400uA",
+    "Features": "Overcurrent Protection、Light load efficient mode、Cycle-by-cycle current limiting、Hiccup current limiting",
+    "Switch tube (built-in/external)": "Built-in",
+    "Topology": "Buck",
+    "Output Voltage": "-",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C49375228.html",
+   "preco": 0.7888,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2601,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C194354": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2596T-5.0",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 150kHz 3A 40V 5V 5mA Buck Buck Built-in Fixed No TO-220-5 DC-DC Converters ROHS",
@@ -1126,7 +1252,7 @@
    "situacao": "ok"
   },
   "C5369645": {
-   "nome": "Conversor -12V、12V (abaixador)",
+   "nome": "Módulo conversor 12V ou −12V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "K7812-500R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1164,11 +1290,11 @@
    "situacao": "ok"
   },
   "C49208508": {
-   "nome": "Conversor 800mV~6V (abaixador)",
+   "nome": "Conversor 800mV~6V (abaixador), 3A",
    "marca": "MSKSEMI",
    "modelo": "MSTPS563200DDCR",
    "pacote": "SOT-23-6",
-   "tamanho": "SOT-23-6",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+85℃ 3A 4V~16V 600kHz 600uA 800mV~6V Adjustable Buck Buck Built-in Yes SOT-23-6 DC-DC Converters ROHS",
@@ -1198,11 +1324,11 @@
    "situacao": "ok"
   },
   "C194475": {
-   "nome": "Conversor 12V (abaixador)",
+   "nome": "Conversor 12V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2576T-12",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 10mA 12V 3A 40V 52kHz Buck Buck Built-in Fixed TO-220-5 DC-DC Converters ROHS",
@@ -1232,11 +1358,11 @@
    "situacao": "ok"
   },
   "C194478": {
-   "nome": "Conversor 1.2V~37V (abaixador)",
+   "nome": "Conversor 1.2V~37V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2576T-ADJ",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃ 1 1.2V~37V 3A 40V 50uA 52kHz Adjustable Buck Buck No TO-220-5 DC-DC Converters ROHS",
@@ -1266,11 +1392,11 @@
    "situacao": "ok"
   },
   "C2977089": {
-   "nome": "Conversor 3.168V~3.432V (abaixador)",
+   "nome": "Conversor 3.3V (abaixador), 3A",
    "marca": "HANSCHIP semiconductor",
    "modelo": "LM2596T-3.3G",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃ 1 10mA 150kHz 3.168V~3.432V 3A 4.5V~40V Buck Buck Built-in Fixed TO-220-5 DC-DC Converters ROHS",
@@ -1300,11 +1426,11 @@
    "situacao": "ok"
   },
   "C909661": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Módulo conversor 5V (abaixador)",
    "marca": "DEXU Electronics",
    "modelo": "K7805M-1000R3",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "11,6 × 7,5 mm",
    "montagem": "furo",
    "categoria_loja": "DC-DC Power Modules",
    "descricao": "-40℃~+85℃ 1 10.2mm 11.6mm 1A 2.4MHz 200uA 24V 3300uF 45mVp-p 5V 7.5mm 83%、93% Short Circuit Protection、Automatic fault recovery Step-down type ±1% 插件 DC-DC Power Modules ROHS",
@@ -1338,11 +1464,11 @@
    "situacao": "ok"
   },
   "C194476": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 3A",
    "marca": "HGSEMI",
    "modelo": "LM2576T-5.0",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 3A 40V 52kHz 5V 5mA Buck Buck Built-in Fixed TO-220-5 DC-DC Converters ROHS",
@@ -1372,7 +1498,7 @@
    "situacao": "ok"
   },
   "C5369643": {
-   "nome": "Conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "K7803-500R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1409,12 +1535,46 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C18921": {
+   "nome": "Conversor 925mV~20V (abaixador), 3A",
+   "marca": "Monolithic Power Systems",
+   "modelo": "MP2307DN-LF-Z",
+   "pacote": "SOIC-8N-EP-150mil",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "DC-DC Converters",
+   "descricao": "-40℃~+85℃ 1 340kHz 3A 4.75V~23V 925mV~20V Adjustable Buck Buck Built-in Yes SOIC-8N-EP-150mil DC-DC Converters ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Function": "Step-down type",
+    "Synchronous Rectifier": "Yes",
+    "Frequency - Switching": "340kHz",
+    "Output Type": "Adjustable",
+    "Voltage - Supply": "4.75V~23V",
+    "Output Current": "3A",
+    "Quiescent Current": "1.3mA",
+    "Features": "Overcurrent Protection、Adjustable soft-start、Cycle-by-cycle current limiting、External compensation",
+    "Switch tube (built-in/external)": "Built-in",
+    "Topology": "Buck",
+    "Output Voltage": "925mV~20V",
+    "Number of Outputs": "1"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2406071103_Monolithic-Power-Systems-MP2307DN-LF-Z_C18921.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/dc-dc-converters_monolithic-power-systems-mp2307dn-lf-z_C18921.html",
+   "preco": 3.7808,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1170,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C2977088": {
-   "nome": "Conversor 5V (abaixador)",
+   "nome": "Conversor 5V (abaixador), 3A",
    "marca": "HANSCHIP semiconductor",
    "modelo": "LM2596T-5.0G",
    "pacote": "TO-220-5",
-   "tamanho": "TO-220-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "-40℃~+125℃@(TJ) 1 150kHz 2mA 3A 5V 5V~40V Buck Buck Built-in Fixed No TO-220-5 DC-DC Converters ROHS",
@@ -1444,7 +1604,7 @@
    "situacao": "ok"
   },
   "C18212378": {
-   "nome": "Conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "K7803-2000R3",
    "pacote": "SIP,11.5x9mm",
@@ -1482,7 +1642,7 @@
    "situacao": "ok"
   },
   "C5369647": {
-   "nome": "Conversor 3.3V (abaixador)",
+   "nome": "Módulo conversor 3.3V (abaixador)",
    "marca": "YLPTEC",
    "modelo": "K7803-1000R3",
    "pacote": "SIP,11.5x7.6mm",
@@ -1520,11 +1680,11 @@
    "situacao": "ok"
   },
   "C5180": {
-   "nome": "Conversor 1.25V~38V (abaixador e elevador)",
+   "nome": "Conversor 1.25V~38V (abaixador e elevador), 1.5A",
    "marca": "STMicroelectronics",
    "modelo": "MC34063ECN",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "DC-DC Converters",
    "descricao": "0℃~+70℃@(TA) 1 1.25V~38V 1.5A 1.5mA 33kHz 3V~40V Adjustable Boost、Buck Buck、Boost Built-in No DIP-8 DC-DC Converters ROHS",
@@ -1554,11 +1714,11 @@
    "situacao": "ok"
   },
   "C100023": {
-   "nome": "Conversor de tensão (chaveado) MC34063ADR",
+   "nome": "Conversor ajustável (abaixador e elevador), 1.5A",
    "marca": "Texas Instruments",
    "modelo": "MC34063ADR",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "0℃~+70℃@(TA) 1 1.5A 100kHz 3V~40V Adjustable Boost、Buck、Inverting Buck、Boost Built-in No SOIC-8 DC-DC Converters ROHS",
@@ -1588,11 +1748,11 @@
    "situacao": "ok"
   },
   "C32078": {
-   "nome": "Conversor 1.25V~40V (abaixador e elevador)",
+   "nome": "Conversor 1.25V~40V (abaixador e elevador), 1.5A",
    "marca": "onsemi",
    "modelo": "MC34063ADR2G",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "DC-DC Converters",
    "descricao": "0℃~+70℃@(TA) 1 1.25V~40V 1.5A 100kHz 3V~40V Adjustable Boost、Buck Buck、Boost Built-in No SOIC-8 DC-DC Converters ROHS",

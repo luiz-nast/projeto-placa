@@ -2,20 +2,41 @@
  "categoria": "sensor_presenca",
  "nome": "Sensor de presença",
  "grupo": "Sensores",
- "explica": "Percebe gente ou bicho por perto, pra acender uma luz ou disparar um alarme. O PIR sente o calor do corpo se mexendo (o AM312 e o EKMC da Panasonic já entregam 0 ou 1 pronto; os PIR crus, como o D203S, precisam de um circuito como o do chip BISS0001), e os radares HLK-LD também percebem movimento, alguns (como o LD2410) até de quem está parado.",
- "destaques": [
-  "Sensor Type",
-  "Interface",
-  "Voltage - Supply",
-  "Current - Supply"
+ "explica": "Percebe gente ou bicho por perto, pra acender uma luz ou disparar um alarme. O PIR sente o calor do corpo se mexendo: o AM312, o AS312 e o EKMC da Panasonic já entregam 0 ou 1 pronto, e os PIR crus (D203S) precisam de um circuito, como o do chip BISS0001. Os radares (HLK-LD, Rd-03) também percebem movimento, e o LD2410 até quem está parado, falando por UART; o radar RCWL-0516 e a plaquinha PIR pronta estão em Módulo pronto.",
+ "nome_peca": [
+  "{Sensor Type}, {Interface}",
+  "{Sensor Type}",
+  "{@categoria_loja} {@modelo}"
  ],
+ "destaques": [
+  "Voltage - Supply",
+  "Current - Supply",
+  "Window Size|Length"
+ ],
+ "traducoes": {
+  "Human Body Sensing Sensor": "Sensor PIR (calor do corpo)",
+  "Human Presence Sensing": "Radar de presença humana",
+  "Human sensing": "Radar de presença humana",
+  "Radar sensing": "Radar de movimento",
+  "Sensor Modules": "Radar",
+  "Accelerometers": "Sensor de presença",
+  "Position Sensors": "Sensor de presença",
+  "Micro / motion sensing": "Radar de micromovimento",
+  "Motion sensing": "Radar de movimento",
+  "X-band radar": "Radar de movimento (banda X)",
+  "Human infrared": "Sensor PIR (calor do corpo)",
+  "Radar Sensor": "Radar",
+  "Serial port": "UART"
+ },
  "filtro": {
   "categorias_loja": [
    "Human Body Sensing Sensor",
    "Sensor Modules",
    "Accelerometers",
-   "Position Sensors"
-  ]
+   "Position Sensors",
+   "Specialized Sensors"
+  ],
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -36,24 +57,52 @@
   },
   {
    "busca": "LD2410",
-   "quantos": 2
-  },
-  {
-   "busca": "HLK-LD",
    "quantos": 3
   },
   {
    "busca": "EKMC",
    "quantos": 3
+  },
+  {
+   "busca": "AS312",
+   "quantos": 1
+  },
+  {
+   "busca": "D203B",
+   "quantos": 1
+  },
+  {
+   "busca": "SB312",
+   "quantos": 1
+  },
+  {
+   "busca": "HLK-LD",
+   "quantos": 8
+  },
+  {
+   "busca": "Rd-03",
+   "quantos": 2
+  },
+  {
+   "busca": "E54-05LD06A",
+   "quantos": 1
+  },
+  {
+   "busca": "BS612",
+   "quantos": 1
+  },
+  {
+   "busca": "PIR sensor",
+   "quantos": 6
   }
  ],
  "pecas": {
   "C404323": {
-   "nome": "Sensor de presença BISS0001",
+   "nome": "Sensor PIR (calor do corpo) BISS0001",
    "marca": "UMW(Youtai Semiconductor Co., Ltd.)",
    "modelo": "BISS0001",
    "pacote": "SOP-16",
-   "tamanho": "SOP-16",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-10℃~+70℃ 100uA 3V~5V SOP-16 Human Body Sensing Sensor ROHS",
@@ -71,14 +120,41 @@
    "minimo": 1,
    "estoque": 19506,
    "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Chip que processa o sinal do sensor PIR"
+  },
+  "C90465": {
+   "nome": "Sensor PIR (calor do corpo) AS312",
+   "marca": "Senba Sensing Tech",
+   "modelo": "AS312",
+   "pacote": "Plugin",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Human Body Sensing Sensor",
+   "descricao": "插件 Human Body Sensing Sensor ROHS",
+   "atributos": {
+    "Operating Temperature": "-30℃~+70℃",
+    "Window Size": "3x4mm",
+    "Voltage - Supply": "2.7V~3.3V",
+    "Features": "-",
+    "Window Shape": "Rectangular"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2004261131_Senba-Sensing-Tech-AS312_C90465.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/human-body-sensing-sensor_senba-sensing-tech-as312_C90465.html",
+   "preco": 0.9754,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 4002,
+   "visto": "2026-10-24",
    "situacao": "ok"
   },
   "C2887901": {
-   "nome": "Sensor de presença PIR223D-S0",
+   "nome": "Sensor PIR (calor do corpo) PIR223D-S0",
    "marca": "NEWOPTO",
    "modelo": "PIR223D-S0",
    "pacote": "TO-5",
-   "tamanho": "TO-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-20℃~+70℃ 10uA 2.7V~3.7V 4x3mm Rectangle TO-5 Human Body Sensing Sensor ROHS",
@@ -104,11 +180,11 @@
    "situacao": "ok"
   },
   "C5145437": {
-   "nome": "Sensor de presença BISS0001DRG",
+   "nome": "Sensor PIR (calor do corpo) BISS0001DRG",
    "marca": "HANSCHIP semiconductor",
    "modelo": "BISS0001DRG",
    "pacote": "SOP-16",
-   "tamanho": "SOP-16",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-10℃~+70℃ 100uA 3V~5V SOP-16 Human Body Sensing Sensor ROHS",
@@ -131,14 +207,15 @@
    "minimo": 1,
    "estoque": 1894,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Chip que processa o sinal do sensor PIR"
   },
   "C6081344": {
-   "nome": "Sensor de presença XYC-PIR223Z-S0",
+   "nome": "Sensor PIR (calor do corpo) XYC-PIR223Z-S0",
    "marca": "NEWOPTO",
    "modelo": "XYC-PIR223Z-S0",
    "pacote": "TO-5",
-   "tamanho": "TO-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-20℃~+70℃ 10uA 2.7V~3.3V 4x3mm Rectangular TO-5 Human Body Sensing Sensor ROHS",
@@ -161,14 +238,15 @@
    "minimo": 1,
    "estoque": 857,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor PIR digital (calor do corpo)"
   },
   "C78793": {
-   "nome": "Sensor de presença D203S",
+   "nome": "Sensor PIR (calor do corpo) D203S",
    "marca": "Senba Sensing Tech",
    "modelo": "D203S",
    "pacote": "TO-5-3",
-   "tamanho": "TO-5-3",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-30℃~+70℃ 2 3V~15V 3x4mm 5um~14um Rectangle TO-5-3 Human Body Sensing Sensor ROHS",
@@ -192,11 +270,11 @@
    "situacao": "ok"
   },
   "C5183132": {
-   "nome": "Sensor de presença HLK-LD2410B-P",
+   "nome": "Radar de presença humana, UART",
    "marca": "HI-LINK",
    "modelo": "HLK-LD2410B-P",
    "pacote": "-",
-   "tamanho": "",
+   "tamanho": "35 × 7 mm",
    "montagem": "módulo",
    "categoria_loja": "Sensor Modules",
    "descricao": "-40℃~+85℃ 35mm 5V 70mA Human Presence Sensing - Sensor Modules ROHS",
@@ -227,7 +305,7 @@
    "marca": "PANASONIC",
    "modelo": "EKMC1601112",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Accelerometers",
    "descricao": "插件 Accelerometers ROHS",
@@ -253,14 +331,15 @@
    "minimo": 1,
    "estoque": 331,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor PIR de movimento (Panasonic)"
   },
   "C48935078": {
-   "nome": "Sensor de presença HLK-LD020",
+   "nome": "Radar de movimento",
    "marca": "HI-LINK",
    "modelo": "HLK-LD020",
    "pacote": "-",
-   "tamanho": "",
+   "tamanho": "19 × 18 mm",
    "montagem": "módulo",
    "categoria_loja": "Sensor Modules",
    "descricao": "- Sensor Modules ROHS",
@@ -287,11 +366,11 @@
    "situacao": "ok"
   },
   "C48935080": {
-   "nome": "Sensor de presença HLK-LD2401",
+   "nome": "Radar de presença humana, I2C",
    "marca": "HI-LINK",
    "modelo": "HLK-LD2401",
    "pacote": "-",
-   "tamanho": "",
+   "tamanho": "22 × 18 mm",
    "montagem": "módulo",
    "categoria_loja": "Sensor Modules",
    "descricao": "-40℃~+85℃ 22mm 3.3V 74mA Human Presence Sensing I2C - Sensor Modules ROHS",
@@ -317,12 +396,75 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C48935079": {
+   "nome": "Radar de movimento",
+   "marca": "HI-LINK",
+   "modelo": "HLK-LD021",
+   "pacote": "-",
+   "tamanho": "18 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensor Modules",
+   "descricao": "- Sensor Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-20℃~+70℃",
+    "Length": "18mm",
+    "Sensor Type": "Motion sensing",
+    "Diameter (φD)": "-",
+    "Voltage - Supply": "5V~12V",
+    "Height": "3mm",
+    "Features": "Integrated signal conditioning",
+    "Current - Supply": "75uA",
+    "Width": "18mm",
+    "Interface": "-"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C48935079.html",
+   "preco": 1.0114,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 213,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C54334352": {
+   "nome": "Radar Rd-03L_V2",
+   "marca": "Ai-Thinker",
+   "modelo": "Rd-03L_V2",
+   "pacote": "Plugin,19x17.5mm",
+   "tamanho": "19 × 17,5 mm",
+   "montagem": "furo",
+   "categoria_loja": "Sensor Modules",
+   "descricao": "插件,19x17.5mm Sensor Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Length": "19mm",
+    "Sensor Type": "-",
+    "Diameter (φD)": "-",
+    "Voltage - Supply": "3V~3.6V",
+    "Features": "Low-power mode",
+    "Height": "-",
+    "Current - Supply": "200mA",
+    "Width": "17.5mm",
+    "Interface": "UART"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C54334352.html",
+   "preco": 4.7671,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 202,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Radar de presença humana (24 GHz), UART"
+  },
   "C6081342": {
-   "nome": "Sensor de presença XYC-PIR203Z-S0",
+   "nome": "Sensor PIR (calor do corpo) XYC-PIR203Z-S0",
    "marca": "NEWOPTO",
    "modelo": "XYC-PIR203Z-S0",
    "pacote": "TO-5",
-   "tamanho": "TO-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "TO-5 Human Body Sensing Sensor ROHS",
@@ -345,10 +487,38 @@
    "minimo": 1,
    "estoque": 199,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor PIR analógico (calor do corpo)"
+  },
+  "C389589": {
+   "nome": "Sensor PIR (calor do corpo) BS612",
+   "marca": "Senba Sensing Tech",
+   "modelo": "BS612",
+   "pacote": "Plugin",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Human Body Sensing Sensor",
+   "descricao": "-20℃~+85℃ 2.2V~3.7V 9.5uA Rectangle 插件 Human Body Sensing Sensor ROHS",
+   "atributos": {
+    "Operating Temperature": "-20℃~+85℃",
+    "Voltage - Supply": "2.2V~3.7V",
+    "Features": "-",
+    "Window Shape": "Rectangular",
+    "Current - Supply": "9.5uA"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2009101102_Senba-Sensing-Tech-BS612_C389589.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/human-body-sensing-sensor_senba-sensing-tech-bs612_C389589.html",
+   "preco": 1.0261,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 153,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Sensor PIR digital (calor do corpo)"
   },
   "C19723500": {
-   "nome": "Sensor de presença HLK-LD2410C-P",
+   "nome": "Radar de presença humana, UART",
    "marca": "HI-LINK",
    "modelo": "HLK-LD2410C-P",
    "pacote": "SMD,22x16mm",
@@ -379,11 +549,11 @@
    "situacao": "ok"
   },
   "C6081347": {
-   "nome": "Sensor de presença XYC-PIR224S-S1",
+   "nome": "Sensor PIR (calor do corpo) XYC-PIR224S-S1",
    "marca": "NEWOPTO",
    "modelo": "XYC-PIR224S-S1",
    "pacote": "TO-5",
-   "tamanho": "TO-5",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "TO-5 Human Body Sensing Sensor ROHS",
@@ -406,14 +576,15 @@
    "minimo": 1,
    "estoque": 100,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor PIR digital com sensibilidade ajustável (calor do corpo)"
   },
   "C7588226": {
    "nome": "Sensor de presença EKMC1603111",
    "marca": "PANASONIC",
    "modelo": "EKMC1603111",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Accelerometers",
    "descricao": "插件 Accelerometers ROHS",
@@ -441,12 +612,151 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C6081345": {
+   "nome": "Sensor PIR (calor do corpo) XYC-PIR244D-D0",
+   "marca": "NEWOPTO",
+   "modelo": "XYC-PIR244D-D0",
+   "pacote": "TO-5",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Human Body Sensing Sensor",
+   "descricao": "-40℃~+70℃ 1.6V~5.5V 3uA 5x3.8mm Rectangular Serial Port TO-5 Human Body Sensing Sensor ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+70℃",
+    "Window Size": "5x3.8mm",
+    "Voltage - Supply": "1.6V~5.5V",
+    "Features": "-",
+    "Window Shape": "Rectangular",
+    "Current - Supply": "3uA",
+    "Interface": "Serial Port"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2305231102_NEWOPTO-XYC-PIR244D-D0_C6081345.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/human-body-sensing-sensor_newopto-xyc-pir244d-d0_C6081345.html",
+   "preco": 1.9769,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 99,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C82756": {
+   "nome": "Sensor PIR (calor do corpo) D203B",
+   "marca": "Senba Sensing Tech",
+   "modelo": "D203B",
+   "pacote": "TO-5-3",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Human Body Sensing Sensor",
+   "descricao": "-30℃~+70℃ 2 3V~15V 5um~14um 5x3.8mm Rectangle TO-5-3 Human Body Sensing Sensor ROHS",
+   "atributos": {
+    "Operating Temperature": "-30℃~+70℃",
+    "Number of Sensitive Elements": "2",
+    "Window Size": "5x3.8mm",
+    "Voltage - Supply": "3V~15V",
+    "Operating Wavelength": "5um~14um",
+    "Features": "-",
+    "Window Shape": "Rectangle"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810121111_Senba-Sensing-Tech-D203B_C82756.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/human-body-sensing-sensor_senba-sensing-tech-d203b_C82756.html",
+   "preco": 0.6874,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 96,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C6081341": {
+   "nome": "Sensor PIR (calor do corpo) XYC-PIR203B-S0",
+   "marca": "NEWOPTO",
+   "modelo": "XYC-PIR203B-S0",
+   "pacote": "TO-5",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Human Body Sensing Sensor",
+   "descricao": "-30℃~+70℃ 2 2V~15V 4x3mm 5.5um~14um Rectangular TO-5 Human Body Sensing Sensor ROHS",
+   "atributos": {
+    "Operating Temperature": "-30℃~+70℃",
+    "Number of Sensitive Elements": "2",
+    "Window Size": "4x3mm",
+    "Voltage - Supply": "2V~15V",
+    "Operating Wavelength": "5.5um~14um",
+    "Features": "-",
+    "Window Shape": "Rectangular"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2305231102_NEWOPTO-XYC-PIR203B-S0_C6081341.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/human-body-sensing-sensor_newopto-xyc-pir203b-s0_C6081341.html",
+   "preco": 0.7054,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 92,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Sensor PIR analógico (calor do corpo)"
+  },
+  "C96133": {
+   "nome": "Sensor PIR (calor do corpo)",
+   "marca": "Senba Sensing Tech",
+   "modelo": "Human infrared sensor moduleSB312",
+   "pacote": "SIP-3",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Sensor Modules",
+   "descricao": "-20℃~+60℃ 3V~12V Human infrared SIP-3 Sensor Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-20℃~+60℃",
+    "Sensor Type": "Human infrared",
+    "Voltage - Supply": "3V~12V"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1810181624_Senba-Sensing-Tech-SB312_C96133.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/sensor-modules_senba-sensing-tech-sb312_C96133.html",
+   "preco": 2.3075,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 89,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Módulo PIR (calor do corpo)"
+  },
+  "C52160462": {
+   "nome": "Radar",
+   "marca": "Chengdu Ebyte Elec Tech",
+   "modelo": "E54-05LD06A",
+   "pacote": "SMD,18x18mm",
+   "tamanho": "18 × 18 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Specialized Sensors",
+   "descricao": "-40℃~+85℃ 1.2mm 18mm 18mm 2.6V~12V 60uA Radar Sensor SMD,18x18mm Specialized Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Length": "18mm",
+    "Sensor Type": "Radar Sensor",
+    "Voltage - Supply": "2.6V~12V",
+    "Height": "1.2mm",
+    "Current - Supply": "60uA",
+    "Width": "18mm"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C52160462.html",
+   "preco": 1.5236,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 72,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "apelido": "Radar de movimento (percebe até micromovimento)"
+  },
   "C114881": {
-   "nome": "Sensor de presença AM312",
+   "nome": "Sensor PIR (calor do corpo) AM312",
    "marca": "Senba Sensing Tech",
    "modelo": "AM312",
    "pacote": "TO-5-3",
-   "tamanho": "TO-5-3",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Human Body Sensing Sensor",
    "descricao": "-30℃~+70℃ 3x4mm Rectangle TO-5-3 Human Body Sensing Sensor ROHS",
@@ -471,12 +781,43 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C38964830": {
+   "nome": "Radar de movimento (banda X), UART",
+   "marca": "HI-LINK",
+   "modelo": "HLK-LD101V",
+   "pacote": "SMD-10P,25x20mm",
+   "tamanho": "25 × 20 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Sensor Modules",
+   "descricao": "-20℃~+60℃ 12mA 20mm 25mm 3.3V~15V Integrated signal conditioning X-band radar SMD-10P,25x20mm Sensor Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-20℃~+60℃",
+    "Length": "25mm",
+    "Sensor Type": "X-band radar",
+    "Voltage - Supply": "3.3V~15V",
+    "Diameter (φD)": "-",
+    "Height": "3mm",
+    "Features": "Integrated signal conditioning",
+    "Current - Supply": "12mA",
+    "Width": "20mm",
+    "Interface": "Serial port"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C38964830.html",
+   "preco": 1.6676,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 64,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C2684441": {
    "nome": "Sensor de presença EKMC1601111",
    "marca": "PANASONIC",
    "modelo": "EKMC1601111",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Position Sensors",
    "descricao": "-20℃~+60℃ 170uA 3V~6V 插件 Position Sensors ROHS",
@@ -502,7 +843,8 @@
    "minimo": 1,
    "estoque": 54,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Sensor PIR de movimento (Panasonic)"
   }
  }
 }

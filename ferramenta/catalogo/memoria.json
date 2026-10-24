@@ -2,14 +2,22 @@
  "categoria": "memoria",
  "nome": "Memória",
  "grupo": "Cérebros",
- "explica": "Guarda dados que não se apagam quando a placa desliga, como configurações e leituras de sensor. As EEPROM 24C (I2C, só 2 fios de sinal) guardam pouco e aguentam cerca de 1 milhão de gravações; as flash W25Q (SPI, 4 fios, só 3,3 V) guardam muito mais, pra arquivos e sons; o tamanho vem em bits (256Kbit são 32 KB).",
- "nome_peca": "Memória {Interface} de {Memory Size}",
+ "explica": "Guarda dados que não se apagam quando a placa desliga, como configurações e leituras de sensor. A EEPROM 24C (I2C, só 2 fios de sinal) guarda pouco e aguenta cerca de 1 milhão de gravações; a flash W25Q (SPI, 4 fios, só 3,3 V) guarda muito mais, pra arquivos e sons; a FRAM grava na hora e aguenta trilhões de gravações. O tamanho vem em bits: 256Kbit são 32 KB.",
+ "nome_peca": [
+  "{@categoria_loja} {Interface} de {Memory Size}",
+  "Memória {Interface} de {Memory Size}"
+ ],
  "destaques": [
   "Voltage - Supply",
-  "Write Cycle Endurance",
+  "Write Cycle Endurance|Program / Erase Cycles",
   "Clock Frequency"
  ],
  "chips": "Memory Size",
+ "traducoes": {
+  "NOR FLASH": "Flash",
+  "EEPROM": "EEPROM",
+  "FRAM": "FRAM"
+ },
  "filtro": {
   "categorias_loja": [
    "EEPROM",
@@ -25,6 +33,10 @@
   "atributos": [
    "Memory Size",
    "Interface"
+  ],
+  "estoque_minimo": 50,
+  "fora": [
+   "C613841"
   ]
  },
  "sementes": [
@@ -124,11 +136,11 @@
  ],
  "pecas": {
   "C511275": {
-   "nome": "Memória SPI de 1Kbit",
+   "nome": "EEPROM SPI de 1Kbit",
    "marca": "Microchip Tech",
    "modelo": "93LC46B-I/P",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1Kbit 2.5V~5.5V 200 Years 3MHz 6ms Built-in write enable latch (WEL)、Power-down/Power-up protection function SPI DIP-8 EEPROM ROHS",
@@ -157,11 +169,11 @@
    "situacao": "ok"
   },
   "C1348803": {
-   "nome": "Memória SPI de 1Kbit",
+   "nome": "EEPROM SPI de 1Kbit",
    "marca": "Microchip Tech",
    "modelo": "93C46B/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1Kbit 200 Years 2ms 3MHz 4.5V~5.5V Built-in write enable latch (WEL)、Power-down/Power-up protection circuit SPI SOIC-8 EEPROM ROHS",
@@ -189,45 +201,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C613841": {
-   "nome": "Memória SPI de 1Kbit",
-   "marca": "Microchip Tech",
-   "modelo": "93C46B/P",
-   "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
-   "montagem": "furo",
-   "categoria_loja": "EEPROM",
-   "descricao": "-40℃~+125℃ 1,000,000 cycles 1Kbit 200 Years 2MHz 2ms 4.5V~5.5V SPI Software write protection function、Power-down/Power-up protection circuit PDIP-8 EEPROM ROHS",
-   "atributos": {
-    "Data Retention - TDR (Year)": "200 Years",
-    "Clock Frequency": "2MHz",
-    "Operating Temperature": "-40℃~+125℃",
-    "Write Cycle Endurance": "1,000,000 cycles",
-    "Access Time": "-",
-    "Standby Current": "5uA",
-    "Memory Size": "1Kbit",
-    "Voltage - Supply": "4.5V~5.5V",
-    "Features": "Software write protection function、Power-down/Power-up protection circuit",
-    "Write Cycle Time(Tw)": "2ms",
-    "Operating Current": "2mA",
-    "Interface": "SPI"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2208151830_Microchip-Tech-93C46B-P_C613841.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/eeprom_microchip-tech-93c46b-p_C613841.html",
-   "preco": 1.139,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 18,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C7562": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "STMicroelectronics",
    "modelo": "M24C02-WMN6TP",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 2.5V~5.5V 200 Years 2Kbit 4,000,000 Cycles 400kHz 5ms I2C SOIC-8 EEPROM ROHS",
@@ -256,11 +235,11 @@
    "situacao": "ok"
   },
   "C83836": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "STMicroelectronics",
    "modelo": "M24C02-RMN6TP",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1.8V~5.5V 200 Years 2Kbit 4,000,000 Cycles 400kHz 5ms Hardware write protection function、Built-in power-on reset (POR) I2C SOIC-8 EEPROM ROHS",
@@ -289,11 +268,11 @@
    "situacao": "ok"
   },
   "C6203": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C02C-SSHM-T",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 2Kbit 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -322,11 +301,11 @@
    "situacao": "ok"
   },
   "C34807": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C02D-SSHM-T",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~3.6V 100 Years 1MHz 2Kbit 5ms Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C SOIC-8 EEPROM ROHS",
@@ -355,11 +334,11 @@
    "situacao": "ok"
   },
   "C18723548": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "XBLW",
    "modelo": "24C02N(XBLW)",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 1uA 2Kbit 2mA 5ms 900ns Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C DIP-8 EEPROM ROHS",
@@ -388,11 +367,11 @@
    "situacao": "ok"
   },
   "C434598": {
-   "nome": "Memória SPI de 2Kbit",
+   "nome": "EEPROM SPI de 2Kbit",
    "marca": "HGSEMI",
    "modelo": "AT93C56N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 10ms 2Kbit 2MHz Built-in write enable latch (WEL) SPI DIP-8 EEPROM ROHS",
@@ -418,11 +397,11 @@
    "situacao": "ok"
   },
   "C434606": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C02N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 2Kbit 5ms I2C DIP-8 EEPROM ROHS",
@@ -448,11 +427,11 @@
    "situacao": "ok"
   },
   "C8810": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C02C-PUM",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 2Kbit 5ms Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -481,11 +460,11 @@
    "situacao": "ok"
   },
   "C22469376": {
-   "nome": "Memória I2C de 2Kbit",
+   "nome": "EEPROM I2C de 2Kbit",
    "marca": "Tudi",
    "modelo": "AT24C02C-PUM-TUDI",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 0.03uA 0.28mA 0.45us 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 2Kbit 3ms Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -514,11 +493,11 @@
    "situacao": "ok"
   },
   "C434597": {
-   "nome": "Memória SPI de 4Kbit",
+   "nome": "EEPROM SPI de 4Kbit",
    "marca": "HGSEMI",
    "modelo": "AT93C66N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 10ms 2MHz 4Kbit SPI DIP-8 EEPROM ROHS",
@@ -543,11 +522,11 @@
    "situacao": "ok"
   },
   "C434604": {
-   "nome": "Memória I2C de 8Kbit",
+   "nome": "EEPROM I2C de 8Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C08N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 5ms 8Kbit I2C DIP-8 EEPROM ROHS",
@@ -573,11 +552,11 @@
    "situacao": "ok"
   },
   "C31082": {
-   "nome": "Memória I2C de 16Kbit",
+   "nome": "FRAM I2C de 16Kbit",
    "marca": "Infineon/Cypress Semicon",
    "modelo": "FM24CL16B-GTR",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "FRAM",
    "descricao": "-40℃~+85℃ 100,000,000,000,000 Cycles 151 Years 16Kbit 1MHz 2.7V~3.65V 300uA 3uA I2C SOIC-8 FRAM ROHS",
@@ -605,11 +584,11 @@
    "situacao": "ok"
   },
   "C2688461": {
-   "nome": "Memória I2C de 16Kbit",
+   "nome": "EEPROM I2C de 16Kbit",
    "marca": "HGSEMI",
    "modelo": "HG24C16N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 16Kbit 1MHz 2uA 3mA 5ms 900ns Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -638,11 +617,11 @@
    "situacao": "ok"
   },
   "C81193": {
-   "nome": "Memória I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit",
    "marca": "onsemi",
    "modelo": "CAT24C32WI-GT3",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 32Kbit 5ms I2C SOIC-8 EEPROM ROHS",
@@ -671,11 +650,11 @@
    "situacao": "ok"
   },
   "C434601": {
-   "nome": "Memória I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C32N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 10ms 32Kbit 400kHz Hardware write protection function、Noise suppression function、Page write protection function I2C DIP-8 EEPROM ROHS",
@@ -704,11 +683,11 @@
    "situacao": "ok"
   },
   "C51026308": {
-   "nome": "Memória I2C de 32Kbit",
+   "nome": "EEPROM I2C de 32Kbit",
    "marca": "GREENMICRO",
    "modelo": "AT24C32CP165",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 0.9us 1 million cycles 1.6mA 1.8V~5.5V 100 Years 10uA 1MHz 32Kbit 5ms Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -737,11 +716,11 @@
    "situacao": "ok"
   },
   "C6487": {
-   "nome": "Memória I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C64D-SSHM-T",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 5ms 64Kbit Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -770,11 +749,11 @@
    "situacao": "ok"
   },
   "C13645": {
-   "nome": "Memória I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit",
    "marca": "onsemi",
    "modelo": "CAT24C64WI-GT3",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 100 Years 1MHz 5ms 64Kbit Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C SOIC-8 EEPROM ROHS",
@@ -803,11 +782,11 @@
    "situacao": "ok"
   },
   "C18723553": {
-   "nome": "Memória I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit",
    "marca": "XBLW",
    "modelo": "24C64N(XBLW)",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 0.55us、1.2us 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 1uA 3mA 5ms 64Kbit Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C DIP-8 EEPROM ROHS",
@@ -836,11 +815,11 @@
    "situacao": "ok"
   },
   "C462786": {
-   "nome": "Memória I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C64N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 5ms 64Kbit Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -869,11 +848,11 @@
    "situacao": "ok"
   },
   "C16472": {
-   "nome": "Memória I2C de 64Kbit",
+   "nome": "EEPROM I2C de 64Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC64-I/P",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 400kHz 5ms 64Kbit Hardware write protection function、Noise suppression function I2C DIP-8 EEPROM ROHS",
@@ -902,11 +881,11 @@
    "situacao": "ok"
   },
   "C434603": {
-   "nome": "Memória I2C de 128Kbit",
+   "nome": "EEPROM I2C de 128Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C128N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 128Kbit 1MHz 5ms Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C DIP-8 EEPROM ROHS",
@@ -932,11 +911,11 @@
    "situacao": "ok"
   },
   "C6482": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C256C-SSHL-T",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.7V~5.5V 1MHz 256Kbit 40 Years 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -965,11 +944,11 @@
    "situacao": "ok"
   },
   "C79987": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "onsemi",
    "modelo": "CAT24C256WI-GT3",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 256Kbit 5ms Hardware write protection function、Noise suppression function、Built-in power-on reset (POR)、Built-in error correction code (ECC) function I2C SOIC-8 EEPROM ROHS",
@@ -998,11 +977,11 @@
    "situacao": "ok"
   },
   "C5458": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC256T-I/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 256Kbit 400kHz 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -1031,11 +1010,11 @@
    "situacao": "ok"
   },
   "C2987263": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "HANSCHIP semiconductor",
    "modelo": "HX24LC256BDRG",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 256Kbit 5ms I2C SOIC-8 EEPROM ROHS",
@@ -1064,11 +1043,11 @@
    "situacao": "ok"
   },
   "C45273903": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "FRAM I2C de 256Kbit",
    "marca": "RAMXEED/FUJITSU",
    "modelo": "MB85RC256VPNF-G-AMERE2",
    "pacote": "SOP-8-150mil",
-   "tamanho": "SOP-8-150mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "FRAM",
    "descricao": "SOP-8-150mil FRAM ROHS",
@@ -1096,11 +1075,11 @@
    "situacao": "ok"
   },
   "C51026307": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "GREENMICRO",
    "modelo": "AT24C256CP073",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 0.55us、0.9us 1 million cycles 1.6mA 1.8V~5.5V 100 Years 10uA 1MHz 256Kbit 5ms Hardware write protection function、Noise suppression function、Page write protection function I2C DIP-8 EEPROM ROHS",
@@ -1129,11 +1108,11 @@
    "situacao": "ok"
   },
   "C7432372": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "HGSEMI",
    "modelo": "HG24C256CN",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+105℃ 1.7V~5.5V 100 Years 1MHz 1mA 1uA 2,000,000 Cycles 256Kbit 5ms 900ns Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C DIP-8 EEPROM ROHS",
@@ -1162,11 +1141,11 @@
    "situacao": "ok"
   },
   "C434602": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "HGSEMI",
    "modelo": "AT24C256N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 256Kbit 5ms Hardware write protection function、Noise suppression function、Built-in power-on reset (POR) I2C DIP-8 EEPROM ROHS",
@@ -1195,11 +1174,11 @@
    "situacao": "ok"
   },
   "C84670": {
-   "nome": "Memória SPI de 256Kbit",
+   "nome": "EEPROM SPI de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "25LC256-I/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 10MHz 2.5V~5.5V 200 Years 256Kbit 5ms SPI SOIC-8 EEPROM ROHS",
@@ -1228,11 +1207,11 @@
    "situacao": "ok"
   },
   "C615210": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC256-E/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+125℃ 1,000,000 cycles 2.5V~5.5V 200 Years 256Kbit 400kHz 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -1261,11 +1240,11 @@
    "situacao": "ok"
   },
   "C159741": {
-   "nome": "Memória SPI de 256Kbit",
+   "nome": "EEPROM SPI de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "25LC256T-E/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+125℃ 1,000,000 cycles 10MHz 2.5V~5.5V 200 Years 256Kbit 5ms Hardware write protection function、Built-in power-on reset (POR)、Built-in write enable latch (WEL)、Power-down/Power-up protection circuit SPI SOIC-8 EEPROM ROHS",
@@ -1294,11 +1273,11 @@
    "situacao": "ok"
   },
   "C411624": {
-   "nome": "Memória I2C de 256Kbit",
+   "nome": "EEPROM I2C de 256Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC256-I/P",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 256Kbit 400kHz 5ms Hardware write protection function、Noise suppression function I2C PDIP-8 EEPROM ROHS",
@@ -1327,11 +1306,11 @@
    "situacao": "ok"
   },
   "C12371": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "Microchip Tech",
    "modelo": "AT24C512C-SSHD-T",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1MHz 2.5V~5.5V 40 Years 512Kbit 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -1360,11 +1339,11 @@
    "situacao": "ok"
   },
   "C79986": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "onsemi",
    "modelo": "CAT24C512WI-GT3",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 1.8V~5.5V 100 Years 1MHz 512Kbit 5ms I2C SOIC-8 EEPROM ROHS",
@@ -1393,11 +1372,11 @@
    "situacao": "ok"
   },
   "C52088": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC512T-I/SN",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 400kHz 512Kbit 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
@@ -1426,11 +1405,11 @@
    "situacao": "ok"
   },
   "C18091": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC512T-I/SM",
    "pacote": "SOIC-8-208mil",
-   "tamanho": "SOIC-8-208mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 400kHz 512Kbit 5ms Hardware write protection function、Noise suppression function I2C SOIC-8-208mil EEPROM ROHS",
@@ -1459,11 +1438,11 @@
    "situacao": "ok"
   },
   "C2902482": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "HGSEMI",
    "modelo": "HG24C512N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1.8V~5.5V 100,000 cycles 10ms 1MHz 3mA 4.5us 40 Years 512Kbit 6uA Hardware write protection function、Noise suppression function、Software write protection function、Page write protection function I2C DIP-8 EEPROM ROHS",
@@ -1492,11 +1471,11 @@
    "situacao": "ok"
   },
   "C41410983": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "Tudi",
    "modelo": "24LC512-I/P-TUDI",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 3mA 3uA 400kHz 512Kbit 5ms 900ns Hardware write protection function、Noise suppression function、Page write protection function I2C DIP-8 EEPROM ROHS",
@@ -1525,11 +1504,11 @@
    "situacao": "ok"
   },
   "C42048": {
-   "nome": "Memória I2C de 512Kbit",
+   "nome": "EEPROM I2C de 512Kbit",
    "marca": "Microchip Tech",
    "modelo": "24LC512-I/P",
    "pacote": "PDIP-8-300mil",
-   "tamanho": "PDIP-8-300mil",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 400kHz 512Kbit 5ms Hardware write protection function、Noise suppression function I2C PDIP-8-300mil EEPROM ROHS",
@@ -1558,11 +1537,11 @@
    "situacao": "ok"
   },
   "C613693": {
-   "nome": "Memória I2C de 1Mbit",
+   "nome": "EEPROM I2C de 1Mbit",
    "marca": "Microchip Tech",
    "modelo": "24LC1025-I/P",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "EEPROM",
    "descricao": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 400kHz 5ms Hardware write protection function、Noise suppression function I2C PDIP-8 EEPROM ROHS",
@@ -1591,11 +1570,11 @@
    "situacao": "ok"
   },
   "C2456211": {
-   "nome": "Memória SPI de 16Mbit",
+   "nome": "Flash SPI de 16Mbit",
    "marca": "Winbond Elec",
    "modelo": "W25Q16JVSNIQ",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "NOR FLASH",
    "descricao": "-40℃~+85℃ 100,000 cycles 10uA 120ms@(32KB) 133MHz 16Mbit 2.7V~3.6V 20 Years 400us SPI SOIC-8 NOR FLASH ROHS",
@@ -1624,11 +1603,11 @@
    "situacao": "ok"
   },
   "C179173": {
-   "nome": "Memória SPI de 32Mbit",
+   "nome": "Flash SPI de 32Mbit",
    "marca": "Winbond Elec",
    "modelo": "W25Q32JVSSIQ",
    "pacote": "SOIC-8-208mil",
-   "tamanho": "SOIC-8-208mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "NOR FLASH",
    "descricao": "-40℃~+85℃ 100,000 cycles 133MHz 1uA 2.7V~3.6V 20 Years 32Mbit 3ms SPI SOIC-8-208mil NOR FLASH ROHS",
@@ -1657,11 +1636,11 @@
    "situacao": "ok"
   },
   "C179171": {
-   "nome": "Memória SPI de 64Mbit",
+   "nome": "Flash SPI de 64Mbit",
    "marca": "Winbond Elec",
    "modelo": "W25Q64JVSSIQ",
    "pacote": "SOIC-8-208mil",
-   "tamanho": "SOIC-8-208mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "NOR FLASH",
    "descricao": "-40℃~+85℃ 100,000 cycles 10uA 133MHz 150ms@(64KB) 2.7V~3.6V 20 Years 3ms 64Mbit SPI SOIC-8-208mil NOR FLASH ROHS",
@@ -1690,11 +1669,11 @@
    "situacao": "ok"
   },
   "C97521": {
-   "nome": "Memória SPI de 128Mbit",
+   "nome": "Flash SPI de 128Mbit",
    "marca": "Winbond Elec",
    "modelo": "W25Q128JVSIQ",
    "pacote": "SOIC-8-208mil",
-   "tamanho": "SOIC-8-208mil",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "NOR FLASH",
    "descricao": "-40℃~+85℃ 100,000 cycles 120ms@(32KB) 128Mbit 133MHz 1uA 2.7V~3.6V 20 Years 3ms Power-on reset、Hardware write protection、Software write protection、Write enable latch、Absolute write protection SPI SOIC-8-208mil NOR FLASH ROHS",

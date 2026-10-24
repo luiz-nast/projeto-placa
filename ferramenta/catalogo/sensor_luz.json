@@ -2,25 +2,49 @@
  "categoria": "sensor_luz",
  "nome": "Sensor de luz",
  "grupo": "Sensores",
- "explica": "Percebe quanta luz chega nele. O LDR é um resistor que cai de valor no claro (junto com outro resistor vira tensão no pino analógico); fototransistor e fotodiodo respondem bem mais rápido, mas os de 940 nm (a maioria aqui) enxergam mesmo é o infravermelho, a luz invisível do controle remoto. Pra luz do dia servem o LDR, o TEPT/TEMT e os chips (BH1750, VEML7700, TCS34725), que já dão a luz em lux ou a cor por I2C.",
- "nome_peca": "LDR (fotorresistor) {Cell Resistance @ Illuminance}",
- "destaques": [
-  "Cell Resistance @ Illuminance",
-  "Dark Resistance",
-  "Wavelength - Peak",
-  "Peak Wavelength",
-  "Spectral Range",
-  "Viewing Angle",
-  "Measurement Type",
-  "Interface",
-  "Voltage - Supply"
+ "explica": "Percebe quanta luz chega nele. O LDR é um resistor que cai de valor no claro (com outro resistor vira tensão no pino analógico); fototransistor e fotodiodo são bem mais rápidos, mas os de 940 nm enxergam mesmo é o infravermelho, a luz invisível do controle remoto. Pra luz do dia servem o LDR, o TEPT/TEMT e os chips I2C (BH1750, VEML7700, TCS34725, que dão a claridade em lux ou a cor), e o MAX30102 acende luz no dedo pra medir batimento e oxigênio (ele pede 1,8 V além dos 3,3 V).",
+ "nome_peca": [
+  "LDR (fotorresistor) {Cell Resistance @ Illuminance}",
+  "{@categoria_loja}, pico em {Peak Wavelength}",
+  "Sensor de {Measurement Type} {Interface}, até {Photoperceptivity}",
+  "Sensor de {Measurement Type} {Interface}",
+  "Sensor de {Measurement Type}",
+  "{@categoria_loja} {Interface}",
+  "{@categoria_loja} {@modelo}"
  ],
+ "destaques": [
+  "Peak Wavelength|Wavelength - Peak",
+  "Dark Resistance|Spectral Range|Photoperceptivity|Current - Collector(Ic)",
+  "Interface|Viewing Angle",
+  "Voltage - Supply|Collector - Emitter Voltage VCEO|Voltage - DC Reverse(Vr)"
+ ],
+ "traducoes": {
+  "Phototransistors": "Fototransistor",
+  "Photodiodes": "Fotodiodo",
+  "Photoresistors": "LDR (fotorresistor)",
+  "Ambient Light Sensors": "Sensor de luz",
+  "Heart Rate Sensors": "Sensor de batimento e oxigênio no sangue",
+  "Light Intensity": "luz ambiente",
+  "Color Recognition": "cor (RGB)",
+  "940nm": "940 nm (infravermelho)",
+  "900nm": "900 nm (infravermelho)",
+  "925nm": "925 nm (infravermelho)",
+  "950nm": "950 nm (infravermelho)",
+  "850nm": "850 nm (infravermelho)",
+  "880nm": "880 nm (infravermelho)",
+  "570nm": "570 nm (luz visível)",
+  "560nm": "560 nm (luz visível)",
+  "550nm": "550 nm (luz visível)",
+  "540nm": "540 nm (luz visível)",
+  "630nm": "630 nm (luz visível)"
+ },
  "filtro": {
   "categorias_loja": [
    "Photoresistors",
    "Phototransistors",
    "Photodiodes",
-   "Ambient Light Sensors"
+   "Ambient Light Sensors",
+   "Heart Rate Sensors"
   ],
   "pacotes": [
    "Plugin",
@@ -28,12 +52,20 @@
    "1206",
    "SMD-4P",
    "SMD-6P",
+   "SMD-8P",
    "USON",
    "DFN-6",
+   "VDFN",
    "SOIC-8",
    "OPLGA",
    "LGA-8",
-   "0603"
+   "0603",
+   "OESIP"
+  ],
+  "estoque_minimo": 50,
+  "fora": [
+   "C144871",
+   "C3008864"
   ]
  },
  "sementes": [
@@ -122,6 +154,22 @@
    "quantos": 2
   },
   {
+   "busca": "VEML6030",
+   "quantos": 2
+  },
+  {
+   "busca": "LTR-303ALS",
+   "quantos": 1
+  },
+  {
+   "busca": "LTR-329",
+   "quantos": 1
+  },
+  {
+   "busca": "VCNL4040",
+   "quantos": 1
+  },
+  {
    "busca": "OPT3001",
    "quantos": 1
   },
@@ -156,11 +204,15 @@
   {
    "busca": "TEPT5700",
    "quantos": 1
+  },
+  {
+   "busca": "MAX30102",
+   "quantos": 1
   }
  ],
  "pecas": {
   "C5134": {
-   "nome": "Sensor de luz PT333-3B",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PT333-3B",
    "pacote": "Plugin,D=5mm",
@@ -190,11 +242,11 @@
    "situacao": "ok"
   },
   "C78960": {
-   "nome": "Sensor de luz BH1750FVI-TR",
+   "nome": "Sensor de luz ambiente I2C, até 65.535klx",
    "marca": "ROHM Semicon",
    "modelo": "BH1750FVI-TR",
    "pacote": "WSOF-6",
-   "tamanho": "WSOF-6",
+   "tamanho": "2,6 × 1,6 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 2.4V~3.6V 65.535klx I2C Light Intensity WSOF-6 Ambient Light Sensors ROHS",
@@ -227,7 +279,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5506（4-7K）",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.5 150V 30ms 30ms 4kΩ~7kΩ 500kΩ 540nm 插件,P=3mm Photoresistors ROHS",
@@ -252,7 +304,7 @@
    "situacao": "ok"
   },
   "C182237": {
-   "nome": "Sensor de luz PD204-6B/L3",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PD204-6B/L3",
    "pacote": "Plugin,D=3mm",
@@ -284,7 +336,7 @@
    "marca": "Senba Sensing Tech",
    "modelo": "GL5516",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.5 150V 30ms 30ms 500kΩ 540nm 5kΩ~10kΩ 插件,P=3mm Photoresistors ROHS",
@@ -313,7 +365,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5528(10-20)",
    "pacote": "Plugin,P=3.4mm",
-   "tamanho": "Plugin,P=3.4mm",
+   "tamanho": "5,1 × 4,3 mm",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.65 150V 1MΩ 2.4mm 3.4mm 4.3mm 5.1mm 540nm 8kΩ~20kΩ 插件,P=3.4mm Photoresistors ROHS",
@@ -340,7 +392,7 @@
    "situacao": "ok"
   },
   "C5133": {
-   "nome": "Sensor de luz PT204-6B",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PT204-6B",
    "pacote": "Plugin,D=3mm",
@@ -370,11 +422,11 @@
    "situacao": "ok"
   },
   "C85128": {
-   "nome": "Sensor de luz BPW34",
+   "nome": "Fotodiodo, pico em 900 nm (infravermelho)",
    "marca": "Vishay Intertech",
    "modelo": "BPW34",
    "pacote": "Plugin,P=5.1mm",
-   "tamanho": "Plugin,P=5.1mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photodiodes",
    "descricao": "-40℃~+100℃ 215mW 2nA 430nm~1100nm 60V 900nm ±65° 插件,P=5.1mm Photodiodes ROHS",
@@ -399,11 +451,11 @@
    "situacao": "ok"
   },
   "C56876": {
-   "nome": "Sensor de luz PD438B",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PD438B",
    "pacote": "Plugin,P=2.54mm",
-   "tamanho": "Plugin,P=2.54mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photodiodes",
    "descricao": "-40℃~+85℃ 32V 400nm~1100nm 5nA 940nm 插件,P=2.54mm Photodiodes ROHS",
@@ -427,7 +479,7 @@
    "situacao": "ok"
   },
   "C95402": {
-   "nome": "Sensor de luz PD333-3C-H0-L2",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PD333-3C-H0-L2",
    "pacote": "Plugin,D=5mm",
@@ -458,7 +510,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5516(5-10)",
    "pacote": "Plugin,P=3.4mm",
-   "tamanho": "Plugin,P=3.4mm",
+   "tamanho": "5,1 × 4,3 mm",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.6 150V 2.4mm 200kΩ 3.4mm 4.3mm 5.1mm 540nm 5kΩ~10kΩ 插件,P=3.4mm Photoresistors ROHS",
@@ -485,7 +537,7 @@
    "situacao": "ok"
   },
   "C98114": {
-   "nome": "Sensor de luz PT204-6C",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PT204-6C",
    "pacote": "Plugin,D=3mm",
@@ -514,8 +566,41 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C364577": {
+   "nome": "Sensor de luz ambiente I2C, até 64klx",
+   "marca": "Lite-On",
+   "modelo": "LTR-303ALS-01",
+   "pacote": "DFN-6(2x2)",
+   "tamanho": "2 × 2 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Ambient Light Sensors",
+   "descricao": "-30℃~+70℃ 0.7mm 16bit 2.4V~3.6V 2mm 2mm 64klx I2C Light Intensity Low power/sleep mode、Spectral correction/filtering、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation DFN-6(2x2) Ambient Light Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-30℃~+70℃",
+    "Measurement Type": "Light Intensity",
+    "Detection color": "-",
+    "Length": "2mm",
+    "Voltage - Supply": "2.4V~3.6V",
+    "Resolution(Bits)": "16bit",
+    "Photoperceptivity": "64klx",
+    "Quiescent Current": "-",
+    "Features": "Low power/sleep mode、Spectral correction/filtering、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation",
+    "Height": "0.7mm",
+    "Width": "2mm",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Lite-On-LTR-303ALS-01_C364577.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/ambient-light-sensors_lite-on-ltr-303als-01_C364577.html",
+   "preco": 0.5466,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 14606,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C264280": {
-   "nome": "Sensor de luz PD204-6B",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PD204-6B",
    "pacote": "Plugin,D=3mm",
@@ -543,7 +628,7 @@
    "situacao": "ok"
   },
   "C369188": {
-   "nome": "Sensor de luz PT334-6B",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PT334-6B",
    "pacote": "Plugin,D=5mm",
@@ -573,7 +658,7 @@
    "situacao": "ok"
   },
   "C841506": {
-   "nome": "Sensor de luz DY-FPD4134C-A3",
+   "nome": "Sensor de luz ambiente",
    "marca": "TONYU",
    "modelo": "DY-FPD4134C-A3",
    "pacote": "Plugin,D=5mm",
@@ -601,7 +686,7 @@
    "situacao": "ok"
   },
   "C841503": {
-   "nome": "Sensor de luz DY-FPD204-6B/L3",
+   "nome": "Sensor de luz ambiente",
    "marca": "TONYU",
    "modelo": "DY-FPD204-6B/L3",
    "pacote": "Plugin,D=3mm",
@@ -627,8 +712,74 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C142526": {
+   "nome": "Sensor de luz ambiente I2C, até 6.553klx",
+   "marca": "Vishay Intertech",
+   "modelo": "VCNL4040M3OE",
+   "pacote": "SMD-8P",
+   "tamanho": "4 × 2 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Ambient Light Sensors",
+   "descricao": "-40℃~+85℃ 1.1mm 16bit 2.5V~3.6V 2mm 300uA 4mm 6.553klx I2C Light Intensity Spectral correction/filtering、Interrupt/event trigger、Built-in temperature compensation SMD-8P Ambient Light Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Measurement Type": "Light Intensity",
+    "Detection color": "-",
+    "Length": "4mm",
+    "Voltage - Supply": "2.5V~3.6V",
+    "Resolution(Bits)": "16bit",
+    "Quiescent Current": "300uA",
+    "Photoperceptivity": "6.553klx",
+    "Features": "Low power/sleep mode、Spectral correction/filtering、Interrupt/event trigger、Built-in temperature compensation",
+    "Height": "1.1mm",
+    "Width": "2mm",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811090420_Vishay-Intertech-VCNL4040M3OE_C142526.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/ambient-light-sensors_vishay-intertech-vcnl4040m3oe_C142526.html",
+   "preco": 1.6087,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 11664,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C132182": {
+   "nome": "Sensor de luz ambiente I2C, até 120klx",
+   "marca": "Vishay Intertech",
+   "modelo": "VEML6030",
+   "pacote": "SMD-6P,2x2mm",
+   "tamanho": "2 × 2 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Ambient Light Sensors",
+   "descricao": "-25℃~+85℃ 0.87mm 120klx 16bit 2.5V~3.6V 2mm 2mm I2C Light Intensity SMD-6P,2x2mm Ambient Light Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Measurement Type": "Light Intensity",
+    "Detection color": "-",
+    "Length": "2mm",
+    "Voltage - Supply": "2.5V~3.6V",
+    "Resolution(Bits)": "16bit",
+    "Photoperceptivity": "120klx",
+    "Quiescent Current": "-",
+    "Features": "Low power/sleep mode、Spectral correction/filtering、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation",
+    "Height": "0.87mm",
+    "Width": "2mm",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810010414_Vishay-Intertech-VEML6030_C132182.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/ambient-light-sensors_vishay-intertech-veml6030_C132182.html",
+   "preco": 0.725,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 10922,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C95399": {
-   "nome": "Sensor de luz PD333-3B/H0/L2",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Everlight Elec",
    "modelo": "PD333-3B/H0/L2",
    "pacote": "Plugin,D=5mm",
@@ -660,7 +811,7 @@
    "marca": "Senba Sensing Tech",
    "modelo": "GL5528",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.6 10kΩ~20kΩ 150V 1MΩ 30ms 30ms 540nm 插件,P=3mm Photoresistors ROHS",
@@ -685,7 +836,7 @@
    "situacao": "ok"
   },
   "C841505": {
-   "nome": "Sensor de luz DY-FPD333B-A5",
+   "nome": "Sensor de luz ambiente",
    "marca": "TONYU",
    "modelo": "DY-FPD333B-A5",
    "pacote": "Plugin,D=5mm",
@@ -716,7 +867,7 @@
    "marca": "Senba Sensing Tech",
    "modelo": "GL5537-1",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.6 150V 20kΩ~30kΩ 20ms 2MΩ 30ms 540nm 插件,P=3mm Photoresistors ROHS",
@@ -741,11 +892,11 @@
    "situacao": "ok"
   },
   "C1850416": {
-   "nome": "Sensor de luz VEML7700-TT",
+   "nome": "Sensor de luz ambiente I2C, até 120klx",
    "marca": "Vishay Intertech",
    "modelo": "VEML7700-TT",
    "pacote": "SMD-4P",
-   "tamanho": "SMD-4P",
+   "tamanho": "6,8 × 2,35 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-25℃~+85℃ 120klx 16bit 2.35mm 2.5V~3.6V 3mm 6.8mm I2C Light Intensity Low power/sleep mode、Spectral correction/filtering、High dynamic range measurement、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation SMD-4P Ambient Light Sensors ROHS",
@@ -773,12 +924,45 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C284894": {
+   "nome": "Sensor de luz ambiente I2C, até 64klx",
+   "marca": "Lite-On",
+   "modelo": "LTR-329ALS-01",
+   "pacote": "VDFN-4",
+   "tamanho": "2 × 2 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Ambient Light Sensors",
+   "descricao": "-30℃~+70℃ 16bit 2.4V~3.6V 64klx I2C Light Intensity VDFN-4 Ambient Light Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-30℃~+70℃",
+    "Measurement Type": "Light Intensity",
+    "Detection color": "-",
+    "Length": "2mm",
+    "Voltage - Supply": "2.4V~3.6V",
+    "Resolution(Bits)": "16bit",
+    "Quiescent Current": "5uA",
+    "Photoperceptivity": "64klx",
+    "Features": "Low power/sleep mode、Spectral correction/filtering、Adjustable gain control、Built-in temperature compensation",
+    "Height": "-",
+    "Width": "2mm",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121535_Lite-On-LTR-329ALS-01_C284894.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/ambient-light-sensors_lite-on-ltr-329als-01_C284894.html",
+   "preco": 0.6203,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 6954,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C94098": {
-   "nome": "Sensor de luz TEMT6000X01",
+   "nome": "Sensor de luz ambiente",
    "marca": "Vishay Intertech",
    "modelo": "TEMT6000X01",
    "pacote": "1206",
-   "tamanho": "1206",
+   "tamanho": "4 × 2 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+100℃ 1.05mm 2mm 3nA 4mm Light Intensity 1206 Ambient Light Sensors ROHS",
@@ -811,7 +995,7 @@
    "marca": "Senba Sensing Tech",
    "modelo": "GL5539",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.8 10MΩ 150V 20ms 30ms 50kΩ~100kΩ 540nm 插件,P=3mm Photoresistors ROHS",
@@ -836,11 +1020,11 @@
    "situacao": "ok"
   },
   "C141763": {
-   "nome": "Sensor de luz TEPT5700",
+   "nome": "Sensor de luz ambiente",
    "marca": "Vishay Intertech",
    "modelo": "TEPT5700",
    "pacote": "Plugin,P=2.54mm",
-   "tamanho": "Plugin,P=2.54mm",
+   "tamanho": "5,7 × 5,4 mm",
    "montagem": "furo",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 3nA Light Intensity 插件,P=2.54mm Ambient Light Sensors ROHS",
@@ -869,7 +1053,7 @@
    "situacao": "ok"
   },
   "C3210871": {
-   "nome": "Sensor de luz LTR-4206E",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "Lite-On",
    "modelo": "LTR-4206E",
    "pacote": "Plugin,D=3mm",
@@ -899,7 +1083,7 @@
    "situacao": "ok"
   },
   "C883176": {
-   "nome": "Sensor de luz PT334-6B-52",
+   "nome": "Fototransistor PT334-6B-52",
    "marca": "Everlight Elec",
    "modelo": "PT334-6B-52",
    "pacote": "Plugin,D=5mm",
@@ -919,11 +1103,11 @@
    "situacao": "ok"
   },
   "C504893": {
-   "nome": "Sensor de luz VEML7700-TR",
+   "nome": "Sensor de luz ambiente I2C, até 120klx",
    "marca": "Vishay Intertech",
    "modelo": "VEML7700-TR",
    "pacote": "SMD-4P",
-   "tamanho": "SMD-4P",
+   "tamanho": "6,8 × 2,35 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-25℃~+85℃ 120klx 16bit 2.35mm 2.5V~3.6V 3mm 6.8mm I2C Light Intensity Low power/sleep mode、Spectral correction/filtering、High dynamic range measurement、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation SMD-4P Ambient Light Sensors ROHS",
@@ -952,11 +1136,11 @@
    "situacao": "ok"
   },
   "C90462": {
-   "nome": "Sensor de luz OPT3001DNPR",
+   "nome": "Sensor de luz ambiente I2C, até 83klx",
    "marca": "Texas Instruments",
    "modelo": "OPT3001DNPR",
    "pacote": "USON-6-EP(2.1x2.1)",
-   "tamanho": "USON-6-EP(2.1x2.1)",
+   "tamanho": "2 × 2 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 0.65mm 1.8V~3.6V 1.8uA 2mm 2mm 83klx I2C Light Intensity USON-6-EP(2.1x2.1) Ambient Light Sensors ROHS",
@@ -984,12 +1168,45 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C2655119": {
+   "nome": "Sensor de luz ambiente I2C, até 120klx",
+   "marca": "Vishay Intertech",
+   "modelo": "VEML6030-GS15",
+   "pacote": "SMD-6P",
+   "tamanho": "2 × 2 mm",
+   "montagem": "superfície",
+   "categoria_loja": "Ambient Light Sensors",
+   "descricao": "-25℃~+85℃ 2.5V~3.6V Low power/sleep mode、Spectral correction/filtering、High dynamic range measurement、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation SMD-6P Ambient Light Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-25℃~+85℃",
+    "Measurement Type": "Light Intensity",
+    "Detection color": "-",
+    "Length": "2mm",
+    "Voltage - Supply": "2.5V~3.6V",
+    "Resolution(Bits)": "16bit",
+    "Photoperceptivity": "120klx",
+    "Quiescent Current": "-",
+    "Features": "Low power/sleep mode、Spectral correction/filtering、Adjustable gain control、Interrupt/event trigger、Built-in temperature compensation",
+    "Height": "0.87mm",
+    "Width": "2mm",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2106080034_Vishay-Intertech-VEML6030-GS15_C2655119.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/ambient-light-sensors_vishay-intertech-veml6030-gs15_C2655119.html",
+   "preco": 0.6072,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2765,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C47416518": {
-   "nome": "Sensor de luz DYWH-ALS-PT19-315C/4T",
+   "nome": "Sensor de luz ambiente",
    "marca": "TONYU",
    "modelo": "DYWH-ALS-PT19-315C/4T",
    "pacote": "0603",
-   "tamanho": "0603",
+   "tamanho": "1,7 × 0,8 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 0.6mm 0.8mm 1.7mm 2.5V~5.5V Light Intensity 0603 Ambient Light Sensors ROHS",
@@ -1018,11 +1235,11 @@
    "situacao": "ok"
   },
   "C78465": {
-   "nome": "Sensor de luz VEML6040A3OG",
+   "nome": "Sensor de cor (RGB) I2C, até 16.496klx",
    "marca": "Vishay Intertech",
    "modelo": "VEML6040A3OG",
    "pacote": "OPLGA-4(1.3x2)",
-   "tamanho": "OPLGA-4(1.3x2)",
+   "tamanho": "2 × 1,25 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 1.25mm 16.496klx 16bit 1mm 2.5V~3.6V 2mm Color Recognition I2C Red, Green, Blue, White OPLGA-4(1.3x2) Ambient Light Sensors ROHS",
@@ -1051,7 +1268,7 @@
    "situacao": "ok"
   },
   "C118288": {
-   "nome": "Sensor de luz BPV10NF",
+   "nome": "Fotodiodo, pico em 940 nm (infravermelho)",
    "marca": "Vishay Intertech",
    "modelo": "BPV10NF",
    "pacote": "Plugin,D=5mm",
@@ -1084,7 +1301,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5549（100-150K）",
    "pacote": "Plugin,P=3.4mm",
-   "tamanho": "Plugin,P=3.4mm",
+   "tamanho": "5,1 × 4,3 mm",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.8 150V 2.4mm 20MΩ 3.4mm 4.3mm 5.1mm 540nm 80kΩ~150kΩ 插件,P=3.4mm Photoresistors ROHS",
@@ -1111,11 +1328,11 @@
    "situacao": "ok"
   },
   "C132178": {
-   "nome": "Sensor de luz TEPT4400",
+   "nome": "Sensor de luz ambiente",
    "marca": "Vishay Intertech",
    "modelo": "TEPT4400",
    "pacote": "Plugin,P=2.54mm",
-   "tamanho": "Plugin,P=2.54mm",
+   "tamanho": "3,2 × 3 mm",
    "montagem": "furo",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+85℃ 3nA Light Intensity 插件,P=2.54mm Ambient Light Sensors ROHS",
@@ -1144,7 +1361,7 @@
    "situacao": "ok"
   },
   "C2984663": {
-   "nome": "Sensor de luz TEPT5600",
+   "nome": "Fototransistor, pico em 570 nm (luz visível)",
    "marca": "Vishay Intertech",
    "modelo": "TEPT5600",
    "pacote": "Plugin,D=5mm",
@@ -1178,7 +1395,7 @@
    "marca": "Senba Sensing Tech",
    "modelo": "GL5537-2",
    "pacote": "Plugin,P=3mm",
-   "tamanho": "Plugin,P=3mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.7 150V 20ms 30kΩ~50kΩ 30ms 3MΩ 540nm 插件,P=3mm Photoresistors ROHS",
@@ -1207,7 +1424,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5539(40-50)",
    "pacote": "Plugin,P=3.4mm",
-   "tamanho": "Plugin,P=3.4mm",
+   "tamanho": "5,1 × 4,3 mm",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.7 10MΩ 150V 2.4mm 3.4mm 30kΩ~90kΩ 4.3mm 5.1mm 540nm 插件,P=3.4mm Photoresistors ROHS",
@@ -1238,7 +1455,7 @@
    "marca": "JCHL(Shenzhen Jing Chuang He Li Tech)",
    "modelo": "GL5549(80-100)",
    "pacote": "Plugin,P=3.4mm",
-   "tamanho": "Plugin,P=3.4mm",
+   "tamanho": "5,1 × 4,3 mm",
    "montagem": "furo",
    "categoria_loja": "Photoresistors",
    "descricao": "-30℃~+70℃ 0.8 150V 2.4mm 20MΩ 3.4mm 4.3mm 5.1mm 540nm 80kΩ~150kΩ 插件,P=3.4mm Photoresistors ROHS",
@@ -1265,7 +1482,7 @@
    "situacao": "ok"
   },
   "C118301": {
-   "nome": "Sensor de luz TEFT4300",
+   "nome": "Fototransistor, pico em 925 nm (infravermelho)",
    "marca": "Vishay Intertech",
    "modelo": "TEFT4300",
    "pacote": "Plugin,D=3mm",
@@ -1295,11 +1512,11 @@
    "situacao": "ok"
   },
   "C92501": {
-   "nome": "Sensor de luz TCS3200D-TR",
+   "nome": "Sensor de cor (RGB)",
    "marca": "AMS",
    "modelo": "TCS3200D-TR",
    "pacote": "SOIC-8",
-   "tamanho": "SOIC-8",
+   "tamanho": "6,2 × 5 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-40℃~+70℃ 1.75mm 100nA 2.7V~5.5V 5mm 6.2mm Color Recognition Low power/sleep mode、Adjustable gain control Red, green, blue SOIC-8 Ambient Light Sensors ROHS",
@@ -1328,7 +1545,7 @@
    "situacao": "ok"
   },
   "C396683": {
-   "nome": "Sensor de luz DY-PT333-3B",
+   "nome": "Fototransistor, pico em 940 nm (infravermelho)",
    "marca": "TONYU",
    "modelo": "DY-PT333-3B",
    "pacote": "Plugin,D=5mm",
@@ -1358,11 +1575,11 @@
    "situacao": "ok"
   },
   "C2649486": {
-   "nome": "Sensor de luz AS7341-DLGM",
+   "nome": "Sensor de cor (RGB) I2C",
    "marca": "AMS",
    "modelo": "AS7341-DLGM",
    "pacote": "TFLGA-8",
-   "tamanho": "TFLGA-8",
+   "tamanho": "3,1 × 2 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-30℃~+70℃ 1.7V~2V 210uA Color Recognition I2C TFLGA-8 Ambient Light Sensors ROHS",
@@ -1390,12 +1607,39 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C6454833": {
+   "nome": "Sensor de batimento e oxigênio no sangue I2C",
+   "marca": "Analog Devices Inc./Maxim Integrated",
+   "modelo": "MAX30102EFD+T",
+   "pacote": "OESIP-14",
+   "tamanho": "",
+   "montagem": "superfície",
+   "categoria_loja": "Heart Rate Sensors",
+   "descricao": "-40℃~+85℃ 1.2mA 1.7V~2V 18bit I2C OESIP-14 Heart Rate Sensors ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Voltage - Supply": "1.7V~2V",
+    "Resolution(Bits)": "18bit",
+    "Features": "Integrated ambient light cancellation (ALC)、Built-in temperature sensor",
+    "Current - Supply": "1.2mA",
+    "Interface": "I2C"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2305231205_Analog-Devices-Inc--Maxim-Integrated-MAX30102EFD-T_C6454833.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/heart-rate-sensors_analog-devices-inc-maxim-integrated-max30102efd-t_C6454833.html",
+   "preco": 14.7105,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 358,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C3000801": {
-   "nome": "Sensor de luz BPW34S",
+   "nome": "Fotodiodo, pico em 900 nm (infravermelho)",
    "marca": "Vishay Intertech",
    "modelo": "BPW34S",
    "pacote": "Plugin,P=5.1mm",
-   "tamanho": "Plugin,P=5.1mm",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Photodiodes",
    "descricao": "插件,P=5.1mm Photodiodes ROHS",
@@ -1420,11 +1664,11 @@
    "situacao": "ok"
   },
   "C2649485": {
-   "nome": "Sensor de luz TCS34727FN",
+   "nome": "Sensor de cor (RGB) I2C",
    "marca": "AMS",
    "modelo": "TCS34727FN",
    "pacote": "DFN-6(2x2.4)",
-   "tamanho": "DFN-6(2x2.4)",
+   "tamanho": "2,4 × 2 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-30℃~+70℃ 16bit 2.7V~3.3V Color Recognition I2C Red, Green, Blue DFN-6(2x2.4) Ambient Light Sensors ROHS",
@@ -1453,11 +1697,11 @@
    "situacao": "ok"
   },
   "C2649487": {
-   "nome": "Sensor de luz TCS34725FN",
+   "nome": "Sensor de cor (RGB) I2C",
    "marca": "AMS",
    "modelo": "TCS34725FN",
    "pacote": "SMD-6P",
-   "tamanho": "SMD-6P",
+   "tamanho": "2 × 2,4 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-30℃~+70℃ 16bit 2.7V~3.6V 235uA Color Recognition I2C Red, Green, Blue, Transparent SMD-6P Ambient Light Sensors ROHS",
@@ -1486,11 +1730,11 @@
    "situacao": "ok"
   },
   "C176812": {
-   "nome": "Sensor de luz TSL25911FN",
+   "nome": "Sensor de luz ambiente I2C",
    "marca": "AMS",
    "modelo": "TSL25911FN",
    "pacote": "DFN-6(2x2.2)",
-   "tamanho": "DFN-6(2x2.2)",
+   "tamanho": "2,4 × 2 mm",
    "montagem": "superfície",
    "categoria_loja": "Ambient Light Sensors",
    "descricao": "-30℃~+70℃ 2.7V~3.6V I2C Light Intensity DFN-6(2x2.2) Ambient Light Sensors ROHS",

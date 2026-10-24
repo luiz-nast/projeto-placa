@@ -2,7 +2,7 @@
  "categoria": "pilha",
  "nome": "Suporte de pilha e bateria",
  "grupo": "Energia",
- "explica": "Segura a pilha ou bateria na placa, com pinos pra soldar: o + e o − dela viram dois furos. Escolha pelo tamanho da pilha (a loja chama a AA de 'No. 5'); suportes de AAA e o clipe da bateria de 9 V estão em Porta-pilhas.",
+ "explica": "Segura a pilha ou bateria na placa, com pinos de furo pra soldar: o + e o − dela viram dois furos. Aqui só entra suporte que a loja diz que é de furo; escolha pelo tamanho da pilha (a loja chama a AA de 'No. 5'). Caixinhas e clipes em que a loja não diz como se prendem (os de AAA, por exemplo) e o encaixe da bateria de 9 V, que vai no fio, estão em Porta-pilhas.",
  "destaques": [
   "Battery Type",
   "Connector Type",
@@ -15,7 +15,8 @@
   ],
   "atributos": [
    "Battery Type"
-  ]
+  ],
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -41,7 +42,7 @@
    "marca": "HanElectricity",
    "modelo": "BH-18650-3",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "-40℃~+80℃ 18650 Battery holder Plugin Button And Strip Battery Connector ROHS",
@@ -65,7 +66,7 @@
    "marca": "MYOUNG",
    "modelo": "BH-18650-A6AJ042",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
@@ -89,7 +90,7 @@
    "marca": "MYOUNG",
    "modelo": "BH-18650-A6AJ037",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
@@ -113,7 +114,7 @@
    "marca": "MYOUNG",
    "modelo": "BH-18650-A6AJ041",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
@@ -137,7 +138,7 @@
    "marca": "HanElectricity",
    "modelo": "BH-18650-2",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "-10℃~+100℃ 18650 Battery holder Nickel Plugin Button And Strip Battery Connector ROHS",
@@ -162,7 +163,7 @@
    "marca": "LAILAN",
    "modelo": "LAIL-CR1220-DIP180-B01-1BJ",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "Plugin Button And Strip Battery Connector ROHS",
@@ -240,7 +241,7 @@
    "marca": "Lian Xin Technology",
    "modelo": "XDBS-CR2032-5",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "-55℃~+85℃ Battery base CR2032 Phosphor bronze Plugin Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -266,7 +267,7 @@
    "marca": "LOTES",
    "modelo": "AAA-BAT-029-K01",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "Battery base CR2032 插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-",
@@ -290,7 +291,7 @@
    "marca": "HOAUC",
    "modelo": "HYCW-BS-5-1-CR2032",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -315,7 +316,7 @@
    "marca": "LAILAN",
    "modelo": "LAIL-CR2032-MO-03",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "Plugin Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-25℃~+85℃",
@@ -341,7 +342,7 @@
    "marca": "HOAUC",
    "modelo": "HYCW-BS-2-1-CR2032-2",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -366,7 +367,7 @@
    "marca": "LOTES",
    "modelo": "AAA-BAT-038-K01",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "Battery base CR2032 Phosphor bronze 插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-",
@@ -391,7 +392,7 @@
    "marca": "XUNPU",
    "modelo": "BS-0202-DK-0B",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "-25℃~+85℃ Battery base CR2032 Phosphor bronze Tin Plugin Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-25℃~+85℃",
@@ -417,7 +418,7 @@
    "marca": "HOAUC",
    "modelo": "HYCW-BS-6-2-CR2032",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "descricao": "插件 Button And Strip Battery Connector ROHS",
    "atributos": {
     "Operating Temperature": "-55℃~+85℃",
@@ -443,7 +444,7 @@
    "marca": "HanElectricity",
    "modelo": "BH-AA05-1",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Button And Strip Battery Connector",
    "descricao": "Battery holder Nickel No. 5 Plugin Button And Strip Battery Connector ROHS",

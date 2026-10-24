@@ -2,12 +2,12 @@
  "categoria": "esp32",
  "nome": "Módulo Wi-Fi",
  "grupo": "Cérebros",
- "explica": "Os ESP32 e ESP8266: um cérebro com Wi-Fi (a maioria também com Bluetooth) numa plaquinha pronta de soldar, com chip, memória e antena juntos. Liga em 3,3 V (5 V queima) com uma fonte que aguente uns 500 mA nos picos; no modelo, N8 quer dizer 8 MB pro programa e o U (como em 32UE ou 1U) quer dizer antena de fora, num conectorzinho.",
+ "explica": "Os ESP32 e ESP8266 em plaquinha pronta de soldar (chip, memória e antena juntos): um cérebro com Wi-Fi, quase todos com Bluetooth (o ESP8266 e o S2 não têm). No modelo, N4/N8/N16 é a flash do programa (4, 8 ou 16 MB), R2/R8 é PSRAM, memória extra pra imagem e som (2 ou 8 MB), U (IE no WROVER) quer dizer antena de fora, num conectorzinho, e H4 é a versão pra alta temperatura (até 105 °C) com 4 MB de flash. Liga em 3,3 V (5 V queima), com fonte que aguente uns 500 mA nos picos; o ESP32 clássico (WROOM-32, WROVER) e o ESP8266 não têm USB: pra gravar, a placa precisa de um conversor USB-serial (como o CH340) e do circuito de auto-reset (2 transistores que mexem no reset e no IO0), enquanto C3, S3 e C6 têm USB próprio.",
  "destaques": [
   "Utilized IC / Part",
-  "Wireless Standard",
-  "Interface Type",
-  "Antenna Type"
+  "Antenna Type",
+  "Voltage - Supply",
+  "Operating Temperature"
  ],
  "filtro": {
   "montagem": [
@@ -19,9 +19,7 @@
    "RF Modules",
    "Bluetooth Modules"
   ],
-  "atributos": [
-   "Voltage - Supply"
-  ]
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -30,7 +28,7 @@
   },
   {
    "busca": "ESP32-WROOM-32UE",
-   "quantos": 2
+   "quantos": 4
   },
   {
    "busca": "ESP32-WROOM-32D",
@@ -70,7 +68,7 @@
   },
   {
    "busca": "ESP32-C6-MINI-1",
-   "quantos": 1
+   "quantos": 3
   },
   {
    "busca": "ESP32-PICO-MINI-02",
@@ -95,6 +93,18 @@
   {
    "busca": "ESP-01",
    "quantos": 3
+  },
+  {
+   "busca": "ESP32-S3-WROOM-1U",
+   "quantos": 4
+  },
+  {
+   "busca": "ESP32-S3-MINI-1U",
+   "quantos": 1
+  },
+  {
+   "busca": "ESP32-WROVER-IE",
+   "quantos": 2
   }
  ],
  "pecas": {
@@ -190,7 +200,7 @@
    "preco": 5.1795,
    "moeda": "USD",
    "minimo": 1,
-   "estoque": 32274,
+   "estoque": 32266,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -357,7 +367,7 @@
    "marca": "Espressif Systems",
    "modelo": "ESP32-S3-MINI-1-N8",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-104.5dBm -40℃~+85℃ 2.4GHz 20.5dBm 330mA 3V~3.6V 97mA Bluetooth5.0 ESP32-S3FN8 Chip On-board PCB Antenna UART、SPI、I2C、I2S、USB SMD WiFi Modules ROHS",
@@ -516,7 +526,7 @@
    "marca": "Espressif Systems",
    "modelo": "ESP32-C3-WROOM-02U-N4",
    "pacote": "SMD-19P",
-   "tamanho": "SMD-19P",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-40℃~+105℃ -98dBm 2.4GHz 20.5dBm 345mA 3V~3.6V 82mA Bluetooth5.0 ESP32-C3 Chip UART、SPI、I2C、I2S、JTAG、USB SMD-19P WiFi Modules ROHS",
@@ -670,6 +680,36 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C3013944": {
+   "nome": "Módulo Wi-Fi ESP32-S3-WROOM-1U-N8R2",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-S3-WROOM-1U-N8R2",
+   "pacote": "SMD,19.2x18mm",
+   "tamanho": "19,2 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-103.5dBm -40℃~+85℃ 2.4GHz 20.5dBm 355mA 3V~3.6V 95mA ESP32-S3 UART、SPI、I2C、I2S、USB SMD,19.2x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Sensitivity": "-103.5dBm",
+    "Output Power": "20.5dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-S3",
+    "Interface Type": "UART、SPI、I2C、I2S、USB",
+    "Send  Current": "355mA",
+    "Receive  Current": "95mA"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206281830_Espressif-Systems-ESP32-S3-WROOM-1U-N8R2_C3013944.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-s3-wroom-1u-n8r2_C3013944.html",
+   "preco": 5.0797,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 4699,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C2973667": {
    "nome": "Módulo Wi-Fi ESP32-WROVER-E-N8R8",
    "marca": "Espressif Systems",
@@ -731,6 +771,37 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 3975,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C2980298": {
+   "nome": "Módulo Wi-Fi ESP32-S3-WROOM-1U-N16",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-S3-WROOM-1U-N16",
+   "pacote": "SMD,19.2x18mm",
+   "tamanho": "19,2 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-103.5dBm -40℃~+85℃ 2.4GHz 20.5dBm 355mA 3V~3.6V 95mA Bluetooth5.0 ESP32-S3 UART、SPI、I2C、GPIO、I2S、USB SMD,19.2x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Sensitivity": "-103.5dBm",
+    "Output Power": "20.5dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-S3",
+    "Interface Type": "UART、SPI、I2C、GPIO、I2S、USB",
+    "Send  Current": "355mA",
+    "Wireless Standard": "Bluetooth5.0",
+    "Receive  Current": "95mA"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206281830_Espressif-Systems-ESP32-S3-WROOM-1U-N16_C2980298.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-s3-wroom-1u-n16_C2980298.html",
+   "preco": 5.2826,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 3702,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -900,7 +971,7 @@
    "marca": "Espressif Systems",
    "modelo": "ESP32-S3-MINI-1-N4R2",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-103.5dBm -40℃~+85℃ 2.4GHz 20.5dBm 355mA 3V~3.6V 95mA Bluetooth5.0 ESP32-S3 On-board PCB Antenna UART、SPI、I2C、GPIO、I2S、USB SMD WiFi Modules ROHS",
@@ -990,12 +1061,43 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C701345": {
+   "nome": "Módulo Wi-Fi ESP32-WROOM-32UE-N8",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-WROOM-32UE-N8",
+   "pacote": "SMD,19.2x18mm",
+   "tamanho": "19,2 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-40℃~+85℃ -92dBm 112mA 2.4GHz 20dBm 239mA 3V~3.6V Bluetooth4.2 ESP32-DOWD-V3、ESP32-DOWDR2-V3 UART、SDIO、SPI、I2C、GPIO、ADC、I2S、DAC、Ethernet、TWAI SMD,19.2x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Sensitivity": "-92dBm",
+    "Output Power": "20dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-DOWD-V3、ESP32-DOWDR2-V3",
+    "Interface Type": "UART、SDIO、SPI、I2C、GPIO、ADC、I2S、DAC、Ethernet、TWAI",
+    "Send  Current": "239mA",
+    "Receive  Current": "112mA",
+    "Wireless Standard": "Bluetooth4.2"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2410301607_Espressif-Systems-ESP32-WROOM-32UE-N8_C701345.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-wroom-32ue-n8_C701345.html",
+   "preco": 4.6182,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 2527,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C3013906": {
    "nome": "Módulo Wi-Fi ESP32-S2-MINI-2-N4",
    "marca": "Espressif Systems",
    "modelo": "ESP32-S2-MINI-2-N4",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-40℃~+105℃ -97dBm 19.5dBm 2.4GHz 310mA 3V~3.6V 63mA ESP32-S2FH4 Chip On-board PCB Antenna UART、SPI、I2C、I2S、USB SMD WiFi Modules ROHS",
@@ -1053,12 +1155,71 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C701351": {
+   "nome": "Módulo Wi-Fi ESP32-WROVER-IE-N8R8",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-WROVER-IE-N8R8",
+   "pacote": "SMD,31.4x18mm",
+   "tamanho": "31,4 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-40℃~+85℃ -97dBm 2.4GHz 20.5dBm 3V~3.6V Bluetooth4.2 ESP32-D0WD-V3 UART、SDIO、SPI、I2C、GPIO、I2S SMD,31.4x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Sensitivity": "-97dBm",
+    "Output Power": "20.5dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-D0WD-V3",
+    "Interface Type": "UART、SDIO、SPI、I2C、GPIO、I2S",
+    "Wireless Standard": "Bluetooth4.2"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Espressif-Systems-ESP32-WROVER-IE-N8R8_C701351.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-wrover-ie-n8r8_C701351.html",
+   "preco": 5.6263,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1595,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C701352": {
+   "nome": "Módulo Wi-Fi ESP32-WROVER-IE-N16R8",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-WROVER-IE-N16R8",
+   "pacote": "SMD,31.4x18mm",
+   "tamanho": "31,4 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-40℃~+85℃ -97dBm 2.4GHz 20.5dBm 3V~3.6V Bluetooth4.2 ESP32-D0WD-V3 IPEX interface UART、SDIO、SPI、I2C、GPIO SMD,31.4x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Antenna Type": "IPEX interface",
+    "Operating Temperature": "-40℃~+85℃",
+    "Sensitivity": "-97dBm",
+    "Output Power": "20.5dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-D0WD-V3",
+    "Interface Type": "UART、SDIO、SPI、I2C、GPIO",
+    "Wireless Standard": "Bluetooth4.2"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2007301109_Espressif-Systems-ESP32-WROVER-IE-N16R8_C701352.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-wrover-ie-n16r8_C701352.html",
+   "preco": 5.3612,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 1541,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C3013939": {
    "nome": "Módulo Wi-Fi ESP32-PICO-MINI-02U-N8R2",
    "marca": "Espressif Systems",
    "modelo": "ESP32-PICO-MINI-02U-N8R2",
    "pacote": "SMD-53P",
-   "tamanho": "SMD-53P",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-40℃~+85℃ -97dBm 111mA 19.5dBm 2.4GHz 368mA 3V~3.6V Bluetooth4.2 ESP32-PICO-V3-02 Chip UART、SDIO、SPI、I2C、I2S SMD-53P WiFi Modules ROHS",
@@ -1118,6 +1279,26 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C6553337": {
+   "nome": "Módulo Wi-Fi ESP32-C6-MINI-1-H4",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-C6-MINI-1-H4",
+   "pacote": "SMD,16.6x13.2mm",
+   "tamanho": "16,6 × 13,2 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "SMD,16.6x13.2mm WiFi Modules ROHS",
+   "atributos": {},
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404191519_Espressif-Systems-ESP32-C6-MINI-1-H4_C6553337.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/new-arrivals_espressif-systems-esp32-c6-mini-1-h4_C6553337.html",
+   "preco": 4.4349,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 969,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C2911374": {
    "nome": "Módulo Wi-Fi ESP32-C3-MINI-1U-N4",
    "marca": "Espressif Systems",
@@ -1154,7 +1335,7 @@
    "marca": "Espressif Systems",
    "modelo": "ESP32-C6-WROOM-1-N4",
    "pacote": "SMD-28P",
-   "tamanho": "SMD-28P",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-40℃~+85℃ -99.2dBm 2.4GHz 20.5dBm 382mA 3V~3.6V 78mA ESP32-C6 Chip On-board PCB Antenna UART、SPI、I2C、I2S SMD-28P WiFi Modules ROHS",
@@ -1186,7 +1367,7 @@
    "marca": "Ai-Thinker",
    "modelo": "ESP-01S",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-20℃~+70℃ -90dBm 16dBm 170mA 2.4GHz 3V~3.6V 56mA 802.11b/g/n、TCP、IP ESP8266 Chip Over-the-air (OTA) update UART 插件 WiFi Modules ROHS",
@@ -1211,6 +1392,68 @@
    "moeda": "USD",
    "minimo": 1,
    "estoque": 651,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C2980299": {
+   "nome": "Módulo Wi-Fi ESP32-S3-MINI-1U-N8",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-S3-MINI-1U-N8",
+   "pacote": "VFQFN-56-EP",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-40℃~+105℃ -98.4dBm 1.8V~3.6V、3V~3.6V 2.4GHz 21dBm 340mA 88mA Bluetooth5.0 ESP32-S3 UART、SDIO、SPI、I2C、I2S、JTAG、USB VFQFN-56-EP WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+105℃",
+    "Sensitivity": "-98.4dBm",
+    "Output Power": "21dBm",
+    "Voltage - Supply": "1.8V~3.6V、3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-S3",
+    "Interface Type": "UART、SDIO、SPI、I2C、I2S、JTAG、USB",
+    "Receive  Current": "88mA",
+    "Send  Current": "340mA",
+    "Wireless Standard": "Bluetooth5.0"
+   },
+   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2411121055_Espressif-Systems-ESP32-S3-MINI-1U-N8_C2980299.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-s3-mini-1u-n8_C2980299.html",
+   "preco": 4.9095,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 644,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C3013937": {
+   "nome": "Módulo Wi-Fi ESP32-WROOM-32UE-H4",
+   "marca": "Espressif Systems",
+   "modelo": "ESP32-WROOM-32UE-H4",
+   "pacote": "SMD,19.2x18mm",
+   "tamanho": "19,2 × 18 mm",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi Modules",
+   "descricao": "-40℃~+105℃ -97dBm 112mA 19.5dBm 2.4GHz 239mA 3V~3.6V Bluetooth4.2 ESP32-DOWD-V3、ESP32-DOWDR2-V3 UART、SDIO、SPI、I2C、GPIO SMD,19.2x18mm WiFi Modules ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+105℃",
+    "Sensitivity": "-97dBm",
+    "Output Power": "19.5dBm",
+    "Voltage - Supply": "3V~3.6V",
+    "Frequency": "2.4GHz",
+    "Utilized IC / Part": "ESP32-DOWD-V3、ESP32-DOWDR2-V3",
+    "Interface Type": "UART、SDIO、SPI、I2C、GPIO",
+    "Send  Current": "239mA",
+    "Receive  Current": "112mA",
+    "Wireless Standard": "Bluetooth4.2"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/wifi-modules_espressif-systems-esp32-wroom-32ue-h4_C3013937.html",
+   "preco": 4.1518,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 603,
    "visto": "2026-10-24",
    "situacao": "ok"
   },
@@ -1251,7 +1494,7 @@
    "marca": "Espressif Systems",
    "modelo": "ESP8684-MINI-1-H4X",
    "pacote": "SMD-61",
-   "tamanho": "SMD-61",
+   "tamanho": "",
    "montagem": "módulo",
    "categoria_loja": "WiFi Modules",
    "descricao": "SMD-61 WiFi Modules ROHS",
@@ -1283,7 +1526,7 @@
    "marca": "Ai-Thinker",
    "modelo": "ESP-01",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "WiFi Modules",
    "descricao": "-20℃~+85℃ -90dBm 16dBm 2.4GHz 20mA 300mA 3V~3.6V 802.11b/g/n ESP8266 Chip Over-the-air (OTA) update UART 插件 WiFi Modules ROHS",

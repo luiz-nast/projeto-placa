@@ -1,16 +1,22 @@
 {
  "categoria": "motor",
- "nome": "Motor de vibração",
+ "nome": "Motor",
  "grupo": "Movimento",
- "explica": "O motorzinho que faz a placa tremer, como o celular no silencioso: tem um peso fora do centro no eixo. Puxa mais corrente do que um pino aguenta: liga por um transistor, com um diodo em paralelo com o motor.",
- "nome_peca": "Motor de vibração {Voltage Rating}, {Current Rating}",
+ "explica": "Faz a coisa mexer: o servo vai até um ângulo e para, o de passo anda em passinhos exatos, o DC com redução gira devagar e com força (roda de robô); tem também bomba d'água, ventoinha e o de vibração do celular. Motor puxa mais corrente do que um pino aguenta: o pino só manda o sinal, e a força vem de uma fonte própria por um driver (ponte H, ULN2003, A4988) ou transistor; o servo já tem o driver dentro e só precisa da fonte. Ligue o GND da fonte no GND da placa.",
+ "nome_peca": [
+  "Motor {Type} {Voltage Rating}, {Current Rating}",
+  "Motor {Type}"
+ ],
  "destaques": [
   "Type",
   "Voltage Rating",
   "Current Rating",
-  "Mounting Type"
+  "Rated Speed|Torque|Vazão"
  ],
  "chips": "Type",
+ "traducoes": {
+  "Cylindrical DC Motor": "de vibração cilíndrico (DC)"
+ },
  "filtro": {
   "categorias_loja": [
    "Vibration Motors"
@@ -64,7 +70,7 @@
  ],
  "pecas": {
   "C2894731": {
-   "nome": "Motor de vibração 2.7V, 85mA",
+   "nome": "Motor de vibração cilíndrico (DC) 2.7V, 85mA",
    "marca": "KOTL",
    "modelo": "Z3OC1T8219731",
    "pacote": "-",
@@ -92,11 +98,11 @@
    "situacao": "ok"
   },
   "C41348533": {
-   "nome": "Motor de vibração 2.7V, 85mA",
+   "nome": "Motor de vibração cilíndrico (DC) 2.7V, 85mA",
    "marca": "LEADER",
    "modelo": "LD-SM-430",
    "pacote": "-",
-   "tamanho": "",
+   "tamanho": "4 × 3 mm",
    "montagem": "não informado",
    "categoria_loja": "Vibration Motors",
    "descricao": "-20℃~+60℃ 11mm 14000rpm 2.7V 3mm 4mm 85mA CW、CCW Cylindrical DC Motor Surface Mount - Vibration Motors ROHS",
@@ -124,7 +130,7 @@
    "situacao": "ok"
   },
   "C2836756": {
-   "nome": "Motor de vibração 3V, 90mA",
+   "nome": "Motor de vibração cilíndrico (DC) 3V, 90mA",
    "marca": "KOTL",
    "modelo": "Z4TH3B0791626",
    "pacote": "-",
@@ -152,7 +158,7 @@
    "situacao": "ok"
   },
   "C2894723": {
-   "nome": "Motor de vibração 3V, 250mA",
+   "nome": "Motor de vibração cilíndrico (DC) 3V, 250mA",
    "marca": "KOTL",
    "modelo": "Z7AL2B1690002",
    "pacote": "-",
@@ -179,7 +185,7 @@
    "situacao": "ok"
   },
   "C2894724": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração cilíndrico (DC) 3V, 80mA",
    "marca": "KOTL",
    "modelo": "Z4TL2B1242655",
    "pacote": "-",
@@ -206,7 +212,7 @@
    "situacao": "ok"
   },
   "C2894732": {
-   "nome": "Motor de vibração 1.3V, 80mA",
+   "nome": "Motor de vibração cilíndrico (DC) 1.3V, 80mA",
    "marca": "KOTL",
    "modelo": "Z6CL2A008049W",
    "pacote": "-",
@@ -234,7 +240,7 @@
    "situacao": "ok"
   },
   "C2992359": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração cilíndrico 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM04084521-B1",
    "pacote": "-",
@@ -262,7 +268,7 @@
    "situacao": "ok"
   },
   "C4153650": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração cilíndrico 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM0408442015",
    "pacote": "-",
@@ -289,8 +295,289 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "robocore:mini-motor-dc-3-6v": {
+   "nome": "Mini motor DC 130, 3 a 6 V (sem redução)",
+   "marca": "genérico",
+   "modelo": "130",
+   "pacote": "com terminais",
+   "tamanho": "20 x 15 x 38 mm",
+   "montagem": "fio",
+   "categoria_loja": "Robótica / Automação",
+   "descricao": "Mini motor DC ideal para diversas aplicações.",
+   "atributos": {
+    "Type": "DC",
+    "Voltage Rating": "3 a 6 V",
+    "Current Rating": "0,9 A (3 V) a 1,2 A (6 V) sem carga",
+    "Rated Speed": "~10.000 rpm (3 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/robotica-automacao/mini-motor-dc-3-6v",
+   "preco": 3.15,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 551,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1321/images/1321_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/motor-dc/motor-dc-3-6v-dc130-10000rpm-4656.html",
+     "preco": 4.26,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:mini-motor-dc": {
+   "nome": "Mini motor DC 3 a 6 V, 5.000 a 10.000 rpm",
+   "marca": "Eletrogate",
+   "modelo": "Mini motor DC 3-6V",
+   "pacote": "com terminais",
+   "tamanho": "20MM(L) X 15MM(A) X 38MM(C)",
+   "montagem": "fio",
+   "categoria_loja": "Motores DC",
+   "descricao": "O Mini Motor DC 3-6V é um atuador eletromecânico voltado à geração de movimento rotativo.",
+   "atributos": {
+    "Type": "DC",
+    "Voltage Rating": "3 a 6 V",
+    "Current Rating": "~150 mA (3 V) a ~200 mA (6 V) sem carga",
+    "Rated Speed": "~5.000 rpm (3 V) a ~10.000 rpm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mini-motor-dc",
+   "preco": 2.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/1941431669db977161.jpg"
+  },
+  "robocore:motor-dc-3-6v-com-caixa-de-reducao-e-eixo-duplo": {
+   "nome": "Motor DC amarelo (TT) com redução e eixo duplo",
+   "marca": "genérico",
+   "modelo": "TT 48:1",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores e Caixas de Redução",
+   "descricao": "O motor ideal para seu primeiro robô.",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "3 a 6 V (recomendado 4,5 V)",
+    "Current Rating": "190 mA sem carga; 1,2 A travado (6 V)",
+    "Rated Speed": "140 rpm (4,5 V, sem carga)",
+    "Torque": "800 gf.cm"
+   },
+   "datasheet": "https://cdn.sparkfun.com/datasheets/Robotics/DG01D.jpg",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/motor-caixas-de-reducao/motor-dc-3-6v-com-caixa-de-reducao-e-eixo-duplo",
+   "preco": 7.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 1140,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/676/images/676_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/motor-dc-3-6v-com-caixa-de-reducao-e-eixo-duplo",
+     "preco": 9.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/motor-dc/motor-dc-3-6v-200rpm-com-caixa-de-reducao-e-eixo-duplo-481--3161.html",
+     "preco": 7.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/motor-dc-3-6v-com-caixa-de-reducao-e-eixo-duplo.html",
+     "preco": 9.26,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:micro-motor-dc-12v-n20-com-caixa-de-reducao-3v100rpm-6v200rpm-12v400rpm-3366": {
+   "nome": "Micro motor N20 com redução, 3 a 12 V (100 a 400 rpm)",
+   "marca": "Usinainfo",
+   "modelo": "N20 150:1",
+   "pacote": "com terminais",
+   "tamanho": "36x12x10mm",
+   "montagem": "fio",
+   "categoria_loja": "Motor DC",
+   "descricao": "O Micro Motor DC 12V com caixa de redução é um motor extremamente compacto e de extrema funcionalidade usado por hobistas e projetistas para os mais diversos projetos robóticos e domóticos.",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "3 a 12 V",
+    "Current Rating": "30 mA (3 V) a 150 mA (12 V) no pico",
+    "Rated Speed": "100 rpm (3 V), 200 rpm (6 V), 400 rpm (12 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/motor-dc/micro-motor-dc-12v-n20-com-caixa-de-reducao-3v100rpm-6v200rpm-12v400rpm-3366.html",
+   "preco": 47.63,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 4,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1022131-large_default/micro-motor-dc-12v-n20-com-caixa-de-reducao-3v100rpm-6v200rpm-12v400rpm.jpg"
+  },
+  "robocore:micro-motor-com-caixa-de-reducao-6v-500rpm": {
+   "nome": "Micro motor com redução 6 V 500 rpm (35x10x12 mm)",
+   "marca": "genérico",
+   "modelo": "Micro motor 6V 500RPM",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores e Caixas de Redução",
+   "descricao": "Este motor em miniatura (35 x 10 x 12 mm) possui alta qualidade e ótima potência para suas dimensões.",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "3 a 9 V",
+    "Current Rating": "1,6 A travado (6 V)",
+    "Torque": "0,86 kgf.cm travado (6 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/motor-caixas-de-reducao/micro-motor-com-caixa-de-reducao-6v-500rpm",
+   "preco": 29.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 2,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/150/images/150_1_H.png"
+  },
+  "eletrogate:mini-motor-redutor-dc-6v-n20-1001-150rpm": {
+   "nome": "Micro motor N20 com redução, 6 V 150 rpm",
+   "marca": "Eletrogate",
+   "modelo": "N20 100:1",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores DC",
+   "descricao": "O Motor DC 6V com Caixa de Redução, é um motor compacto que pode ser fácilmente aplicado em projetos como: robôs e fechaduras elétricas.",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "6 V",
+    "Rated Speed": "150 rpm"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mini-motor-redutor-dc-6v-n20-1001-150rpm",
+   "preco": 34.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40133559/64c3301ca9.jpg"
+  },
+  "eletrogate:mini-motor-redutor-dc-6v-n20-2001-100rpm": {
+   "nome": "Micro motor N20 com redução, 6 V 100 rpm",
+   "marca": "Eletrogate",
+   "modelo": "N20 200:1",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores DC",
+   "descricao": "O Motor DC 6V com Caixa de Redução, é um motor compacto que pode ser fácilmente aplicado em projetos como: robôs e fechaduras elétricas.",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "6 V",
+    "Rated Speed": "100 rpm"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mini-motor-redutor-dc-6v-n20-2001-100rpm",
+   "preco": 39.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40132377/7bfabf9d04.jpg"
+  },
+  "eletrogate:motor-dc-3-6v-com-caixa-de-reducao-e-fios-soldados": {
+   "nome": "Motor DC amarelo (TT) com redução e fios soldados",
+   "marca": "Eletrogate",
+   "modelo": "TT 1:48 fios soldados",
+   "pacote": "com fios",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores e Rodas",
+   "descricao": "Conhecidos como motores TT, são ideais para projetos de robótica graças ao seu baixo consumo e principalmente à caixa de redução acoplada, que garante rotações no eixo de saída entre 90 e 200 rpm (a depender da tensão utilizada).",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "3 a 6 V",
+    "Rated Speed": "90 rpm (3 V) a 200 rpm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/motor-dc-3-6v-com-caixa-de-reducao-e-fios-soldados",
+   "preco": 14.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/396843469/8fbf172f22e74e80aeeafd3165d8c9bb-to0i23cryc.jpg"
+  },
+  "eletrogate:motor-dc-3-6v-com-caixa-de-reducao-em-angulo": {
+   "nome": "Motor DC amarelo (TT) com redução em ângulo de 90°",
+   "marca": "Eletrogate",
+   "modelo": "TT 48:1 em ângulo",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores DC",
+   "descricao": "O Motor DC 3-6V com Caixa de Redução se diferencia dos demais motores por possuir caixa de redução em ângulo de 90°, tornando se assim um produto de extrema funcionalidade utilizado por hobistas e projetistas para o…",
+   "atributos": {
+    "Type": "DC com redução",
+    "Voltage Rating": "3 a 6 V",
+    "Current Rating": "200 mA sem carga; 2 A travado (6 V)",
+    "Rated Speed": "65 rpm (3 V, sem carga)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/motor-dc-3-6v-com-caixa-de-reducao-em-angulo",
+   "preco": 12.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/57783102/e156e34863.jpg",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/motor-caixas-de-reducao/motor-dc-3-6v-com-caixa-de-reducao-em-angulo",
+     "preco": 15.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/motor-dc/motor-dc-3-6v-90-200rpm-com-caixa-de-reducao-em-l-481-4976.html",
+     "preco": 20.24,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
   "C2895081": {
-   "nome": "Motor de vibração 3V, 85mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 85mA",
    "marca": "LEADER",
    "modelo": "LCM0720A3134F",
    "pacote": "-",
@@ -322,7 +609,7 @@
    "situacao": "ok"
   },
   "C2759984": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1027A2445F",
    "pacote": "-",
@@ -354,7 +641,7 @@
    "situacao": "ok"
   },
   "C7528806": {
-   "nome": "Motor de vibração 3V, 70mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 70mA",
    "marca": "LEADER",
    "modelo": "LCM1027B3605F",
    "pacote": "-",
@@ -383,7 +670,7 @@
    "situacao": "ok"
   },
   "C2759985": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1034A3039F",
    "pacote": "-",
@@ -412,7 +699,7 @@
    "situacao": "ok"
   },
   "C2891560": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1020A2945F",
    "pacote": "-",
@@ -441,7 +728,7 @@
    "situacao": "ok"
   },
   "C54781113": {
-   "nome": "Motor de vibração 2.5V, 85mA",
+   "nome": "Motor de vibração chato (moeda) 2.5V, 85mA",
    "marca": "LEADER",
    "modelo": "LCM1034S4493F",
    "pacote": "-",
@@ -467,7 +754,7 @@
    "situacao": "ok"
   },
   "C2839832": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1030A3097F",
    "pacote": "-",
@@ -499,7 +786,7 @@
    "situacao": "ok"
   },
   "C2759983": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM0834A1195F",
    "pacote": "-",
@@ -528,7 +815,7 @@
    "situacao": "ok"
   },
   "C5121589": {
-   "nome": "Motor de vibração 3.7V, 70mA",
+   "nome": "Motor de vibração chato (moeda) 3.7V, 70mA",
    "marca": "LEADER",
    "modelo": "LCM1234A3319F",
    "pacote": "-",
@@ -557,7 +844,7 @@
    "situacao": "ok"
   },
   "C22359894": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1027A3670F",
    "pacote": "-",
@@ -585,7 +872,7 @@
    "situacao": "ok"
   },
   "C2942347": {
-   "nome": "Motor de vibração 3V, 85mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 85mA",
    "marca": "LEADER",
    "modelo": "LCM0720A3176F",
    "pacote": "-",
@@ -613,7 +900,7 @@
    "situacao": "ok"
   },
   "C22391990": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM1034A3811F",
    "pacote": "-",
@@ -642,7 +929,7 @@
    "situacao": "ok"
   },
   "C2682302": {
-   "nome": "Motor de vibração 3V, 80mA",
+   "nome": "Motor de vibração chato (moeda) 3V, 80mA",
    "marca": "LEADER",
    "modelo": "LCM0820A2908F",
    "pacote": "-",
@@ -671,7 +958,7 @@
    "situacao": "ok"
   },
   "C7424783": {
-   "nome": "Motor de vibração 3.7V, 100mA",
+   "nome": "Motor de vibração chato (moeda) 3.7V, 100mA",
    "marca": "LEADER",
    "modelo": "LCM1234A3523F",
    "pacote": "-",
@@ -698,6 +985,594 @@
    "estoque": 20,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "robocore:mini-bomba-de-agua-submersivel-3v": {
+   "nome": "Mini bomba d'água submersa 3 V",
+   "marca": "genérico",
+   "modelo": "Mini bomba 3V",
+   "pacote": "com fios",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Atuadores",
+   "descricao": "Esta mini bomba é perfeita para quem precisa mantê-la debaixo da água.",
+   "atributos": {
+    "Type": "bomba d'água",
+    "Voltage Rating": "3 V",
+    "Vazão": "até 120 L/h"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/atuador/mini-bomba-de-agua-submersivel-3v",
+   "preco": 8.5,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 241,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1428/images/1428_1_H.png"
+  },
+  "usinainfo:mini-bomba-de-agua-12v-rs385-2lmin-2814": {
+   "nome": "Mini bomba d'água 12 V RS-385 (por sucção)",
+   "marca": "Usinainfo",
+   "modelo": "RS385",
+   "pacote": "com terminais",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Bombinha de Água e Ar",
+   "descricao": "A Mini Bomba de Água 12V RS385 foi criada especialmente para o desenvolvimento de projetos de prototipagem, incluido automação residencial (domótica) e prototipos robóticos baseados em plataformas microcontroladoras, entre elas,…",
+   "atributos": {
+    "Type": "bomba d'água",
+    "Voltage Rating": "12 V (9 a 15 V)",
+    "Current Rating": "0,6 A sem carga; ~2 A na máxima eficiência",
+    "Vazão": "~1,5 a 2 L/min, sobe até 3 m"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=159",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/bombinha-de-agua-e-ar/mini-bomba-de-agua-12v-rs385-2lmin-2814.html",
+   "preco": 27.06,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 40,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1017396-large_default/mini-bomba-de-agua-12v-rs385-2lmin.jpg",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/atuador/mini-bomba-de-agua-12v-rs-385",
+     "preco": 28.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/mini-bomba-de-agua-motor-dc-rs-385",
+     "preco": 29.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/mini-bomba-de-agua-12v-rs-385.html",
+     "preco": 42.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:mini-bomba-submersa-5v-p-agua": {
+   "nome": "Mini bomba d'água submersa JT100 (3 a 5 V)",
+   "marca": "Eletrogate",
+   "modelo": "JT100",
+   "pacote": "com fios",
+   "tamanho": "43,5x23x30 mm",
+   "montagem": "fio",
+   "categoria_loja": "Bombas",
+   "descricao": "Para quem está desenvolvendo algum projeto que envolva circulação de água, seja automação residencial, experimentos com Arduino, Raspberry Pi ou sistemas de resfriamento, a Mini Bomba Submersível para Água é simplesmente perfeita.",
+   "atributos": {
+    "Type": "bomba d'água",
+    "Voltage Rating": "3 a 5 V",
+    "Current Rating": "até ~1,5 A",
+    "Vazão": "~1 a 1,5 L/min, sobe até 1 m"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mini-bomba-submersa-5v-p-agua",
+   "preco": 9.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414037be85cd504e.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/bombinha-de-agua-e-ar/mini-bomba-de-agua-submersa-3v-5v-jt100-15lmin-4927.html",
+     "preco": 14.25,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:mini-bomba-submersa-ponta-inclinada": {
+   "nome": "Mini bomba d'água submersa, saída inclinada",
+   "marca": "Eletrogate",
+   "modelo": "Mini bomba ponta inclinada",
+   "pacote": "com fios",
+   "tamanho": "43,5x23x30mm",
+   "montagem": "fio",
+   "categoria_loja": "Bombas",
+   "descricao": "A Mini Bomba de Água Submersa foi criada especialmente para o desenvolvimento de projetos de prototipagem, incluindo automação residencial (domótica) e protótipos robóticos baseados em plataformas microcontroladoras, entre elas,…",
+   "atributos": {
+    "Type": "bomba d'água",
+    "Voltage Rating": "2,5 a 6 V",
+    "Current Rating": "~200 mA",
+    "Vazão": "~1 a 1,5 L/min, sobe até 1 m"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mini-bomba-submersa-ponta-inclinada",
+   "preco": 10.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/56548155/a569e36c84.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/mini-bomba-de-agua-submersivel-3-a-6v-ponta-inclinada.html",
+     "preco": 17.19,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "robocore:motor-de-passo-nema17-4kgf": {
+   "nome": "Motor de passo NEMA 17 17HS4401 (4,2 kgf.cm, 1,7 A)",
+   "marca": "genérico",
+   "modelo": "17HS4401 (JK42HS40-1704)",
+   "pacote": "com fios (4)",
+   "tamanho": "",
+   "montagem": "fio",
+   "categoria_loja": "Motores e Caixas de Redução",
+   "descricao": "O motor de passo NEMA 17 - 4,2 kgf.cm modelo JK42HS40-1704 é uma solução que oferece o melhor custo x benefício quando se necessita de movimentação com posicio",
+   "atributos": {
+    "Type": "de passo",
+    "Current Rating": "1,7 A por fase",
+    "Torque": "4,2 kgf.cm"
+   },
+   "datasheet": "https://ecksteinimg.de/Datasheet/Schrittmotor/JK42HS40-1004A/JK42HS40-1004AC.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/motor-caixas-de-reducao/motor-de-passo-nema17-4kgf",
+   "preco": 69.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 17,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1411/images/1411_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/nema-17-4-2-kgf-1-7-a",
+     "preco": 79.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/motor-de-passo-nema-17-4-kgf-17a",
+     "preco": 99.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:motor-de-passo-modulo-de-controle-driver-uln2003": {
+   "nome": "Motor de passo 28BYJ-48 com driver ULN2003",
+   "marca": "Eletrogate",
+   "modelo": "ULN2003",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Drivers",
+   "descricao": "Motor de Passo de 5v com 5 vias de alimentação e 4 fases.",
+   "atributos": {
+    "Type": "de passo",
+    "Voltage Rating": "5 V",
+    "Torque": "até 2,2 kgf.cm"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/motor-de-passo-modulo-de-controle-driver-uln2003",
+   "preco": 18.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414405e3929cd33d.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/motor-de-passo/motor-de-passo-28byj-48-driver-uln2003-2535.html",
+     "preco": 17.33,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/motor-de-passo-drive-uln2003.html",
+     "preco": 19.63,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/motor-caixas-de-reducao/motor-de-passo-com-driver-uln2003",
+     "preco": 16.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:motor-de-passo-nema-17-13-kgfcm-1a": {
+   "nome": "Motor de passo NEMA 17 fino (1,3 kgf.cm, 1 A)",
+   "marca": "Eletrogate",
+   "modelo": "42BYGH23-A-21DH",
+   "pacote": "com fios",
+   "tamanho": "42 mm x 42 mm x 23 mm",
+   "montagem": "fio",
+   "categoria_loja": "Motores de Passo",
+   "descricao": "Motor de Passo NEMA 17 42BYGH23 A 21DH é uma solução que oferece o melhor custo-benefício quando se necessita de um motor compacto e leve que proporcione movimentação com posicionamento preciso.",
+   "atributos": {
+    "Type": "de passo",
+    "Voltage Rating": "4,8 V",
+    "Current Rating": "1 A",
+    "Torque": "13 N.cm (1,3 kgf.cm)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/motor-de-passo-nema-17-13-kgfcm-1a",
+   "preco": 64.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/370715796/510knvp1qsl-5gxhbdd5gu.jpg"
+  },
+  "usinainfo:modulo-motor-vibracall-mv50-para-arduino-e-projetos-5486": {
+   "nome": "Módulo motor de vibração MV50 (3 a 5 V)",
+   "marca": "Usinainfo",
+   "modelo": "MV50",
+   "pacote": "módulo",
+   "tamanho": "~23x21x5mm",
+   "montagem": "módulo",
+   "categoria_loja": "Motor DC",
+   "descricao": "O Módulo Motor Vibracall MV50 é uma excelente opção para utilização no desenvolvimento de projetos com microcontroladores Arduino , apresentando resultados práticos e satisfatórios.",
+   "atributos": {
+    "Type": "de vibração (módulo)",
+    "Voltage Rating": "3 a 5,3 V",
+    "Current Rating": "60 mA",
+    "Rated Speed": "9000 rpm"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/motor-dc/modulo-motor-vibracall-mv50-para-arduino-e-projetos-5486.html",
+   "preco": 11.35,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 102,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1021004-large_default/modulo-motor-vibracall-mv50-para-arduino-e-projetos.jpg"
+  },
+  "robocore:micro-servo-9g-sg90-towerpro": {
+   "nome": "Micro servo SG90",
+   "marca": "TowerPro",
+   "modelo": "SG90",
+   "pacote": "com fios",
+   "tamanho": "23x12.1x21.4mm",
+   "montagem": "fio",
+   "categoria_loja": "Atuadores",
+   "descricao": "Este é o 9g SG90 Micro Servo, um dos micro servos de melhor custo x benefício disponíveis.",
+   "atributos": {
+    "Type": "servo",
+    "Voltage Rating": "4,8 a 6 V",
+    "Torque": "1,5 kgf.cm (4,8 V), 1,7 kgf.cm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/atuador/micro-servo-9g-sg90-towerpro",
+   "preco": 13.67,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 403,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/788/images/788_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/micro-servo-9g-sg90-towerpro",
+     "preco": 15.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/servo-motores/micro-servo-motor-9g-tower-pro-sg90-180-18kgfcm-original-8575.html",
+     "preco": 33.82,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/micro-servo-9g-sg90-tower-pro.html",
+     "preco": 21.07,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:micro-servo-9g-tower-pro-mg90s-180-22kgfcm-de-posicao-com-engrenagens-metalicas-3628": {
+   "nome": "Micro servo MG90S (engrenagem de metal)",
+   "marca": "Tower Pro",
+   "modelo": "MG90S",
+   "pacote": "com fios",
+   "tamanho": "~32x12,2x32mm",
+   "montagem": "fio",
+   "categoria_loja": "Servo Motores",
+   "descricao": "O Micro Servo Motor 9g MG90S é um motor muito utilizado em aplicações para robótica, nos sistemas microcontroladores, como, por exemplo, Arduino , PIC e AVR.",
+   "atributos": {
+    "Type": "servo",
+    "Voltage Rating": "4,2 a 6 V",
+    "Current Rating": "100 mA parado, 750 mA com carga",
+    "Torque": "1,8 kgf.cm (4,8 V), 2,2 kgf.cm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/servo-motores/micro-servo-9g-tower-pro-mg90s-180-22kgfcm-de-posicao-com-engrenagens-metalicas-3628.html",
+   "preco": 40.37,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 19,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019987-large_default/micro-servo-9g-tower-pro-mg90s-180-22kgfcm-de-posicao-com-engrenagens-metalicas.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/micro-servo-towerpro-mg90s-metalico-t-rex",
+     "preco": 22.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:servo-towerpro-mg996r": {
+   "nome": "Servo forte MG996R (engrenagem de metal)",
+   "marca": "Eletrogate",
+   "modelo": "MG996R",
+   "pacote": "com fios",
+   "tamanho": "40 x 19 x 43mm",
+   "montagem": "fio",
+   "categoria_loja": "Servo Motor",
+   "descricao": "Para quem está procurando um servo motor de alta performance, compacto e extremamente robusto, destaca-se o Servo Motor MG996R 180° da Tower Pro.",
+   "atributos": {
+    "Type": "servo",
+    "Voltage Rating": "4,8 a 7,2 V",
+    "Current Rating": "500 a 900 mA; 2,5 A travado",
+    "Torque": "9,4 kgf.cm (4,8 V), 11 kgf.cm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/servo-towerpro-mg996r",
+   "preco": 46.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/33972432/7070104fb9.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/servo-motores/servo-motor-mg996r-tower-pro-180-11kgfcm-de-posicao-com-engrenagens-metalicas-4850.html",
+     "preco": 67.98,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/atuador/servo-towerpro-mg996r-metalico",
+     "preco": 55.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/servo-mg996r-180-graus.html",
+     "preco": 45.8,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:micro-servo-motor-9g-sg90-360-16kgfcm-rotacao-continua-8508": {
+   "nome": "Micro servo SG90 de giro contínuo (360°)",
+   "marca": "Diy More",
+   "modelo": "SG90 360°",
+   "pacote": "com fios",
+   "tamanho": "32x12,6x30mm",
+   "montagem": "fio",
+   "categoria_loja": "Servo Motores",
+   "descricao": "O Micro Servo Motor 9g SG90 360° 1.6Kgf.cm Rotação Contínua é um componente eletrônico utilizado principalmente em projetos de robótica, automação e modelismo.",
+   "atributos": {
+    "Type": "servo de giro contínuo",
+    "Voltage Rating": "3 a 6 V",
+    "Current Rating": "100 mA parado, 750 mA com carga",
+    "Torque": "1,2 kgf.cm (4,8 V), 1,6 kgf.cm (6 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/servo-motores/micro-servo-motor-9g-sg90-360-16kgfcm-rotacao-continua-8508.html",
+   "preco": 26.29,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 49,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1031849-large_default/micro-servo-motor-9g-sg90-360-16kgfcm-rotacao-continua.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/micro-servo-9g-sg90-towerpro-360",
+     "preco": 15.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:mini-cooler-5v-25x25mm-para-esc-e-projetos-4408": {
+   "nome": "Mini ventoinha 5 V 25x25 mm",
+   "marca": "Usinainfo",
+   "modelo": "Cooler 5V 25x25x10",
+   "pacote": "com fios (conector JST 2 pinos)",
+   "tamanho": "25x25x10mm",
+   "montagem": "fio",
+   "categoria_loja": "Coolers para PC",
+   "descricao": "O Mini Cooler 5V 25x25mm é muito utilizado para instalação em cases de pequenos sistemas microcontroladores, como Raspberry Pi, por exemplo, onde nos últimos tempos vem também sendo muito empregado no desenvolvimento de pequenos…",
+   "atributos": {
+    "Type": "ventoinha",
+    "Voltage Rating": "5 V",
+    "Current Rating": "30 a 60 mA"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/coolers-para-pc/mini-cooler-5v-25x25mm-para-esc-e-projetos-4408.html",
+   "preco": 16.97,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 58,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1032086-large_default/mini-cooler-5v-25x25mm-para-esc-e-projetos.jpg"
+  },
+  "usinainfo:cooler-pc-40x40mm-fan-12v-3041": {
+   "nome": "Ventoinha 12 V 40x40 mm",
+   "marca": "Usinainfo",
+   "modelo": "Cooler 12V 40x40x10",
+   "pacote": "com fios",
+   "tamanho": "40x40x10mm",
+   "montagem": "fio",
+   "categoria_loja": "Coolers para PC",
+   "descricao": "O Cooler PC 40mm Fan 12V como é conhecido popularmente, é muito utilizado para substituições em microcomputadores, entretanto, nos últimos tempos vem também sendo muito empregado no desenvolvimento de pequenos projetos com…",
+   "atributos": {
+    "Type": "ventoinha",
+    "Voltage Rating": "12 V",
+    "Current Rating": "0,09 A"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/coolers-para-pc/cooler-pc-40x40mm-fan-12v-3041.html",
+   "preco": 16.39,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 25,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1023540-large_default/cooler-pc-40x40mm-fan-12v.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/cooler-12vdc-40x40x10mm.html",
+     "preco": 10.12,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:cooler-5v-30x30mm-para-raspberry-pi-4938": {
+   "nome": "Ventoinha 5 V 30x30 mm",
+   "marca": "Usinainfo",
+   "modelo": "Cooler 5V 30x30x10",
+   "pacote": "com fios (conector JST 2 pinos)",
+   "tamanho": "30x30x10mm",
+   "montagem": "fio",
+   "categoria_loja": "Coolers para PC",
+   "descricao": "O Cooler 5V 30x30mm é muito utilizado para instalação em cases de pequenos sistemas microcontroladores, como Raspberry Pi , por exemplo, onde nos últimos tempos vem também sendo muito empregado no desenvolvimento de pequenos…",
+   "atributos": {
+    "Type": "ventoinha",
+    "Voltage Rating": "5 V",
+    "Current Rating": "0,2 A"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/coolers-para-pc/cooler-5v-30x30mm-para-raspberry-pi-4938.html",
+   "preco": 15.36,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 21,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1016528-large_default/cooler-5v-30x30mm-para-raspberry-pi.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/cooler-ventoinha-dc-5v-30x30x10mm",
+     "preco": 12.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/cooler-para-raspberry-pi.html",
+     "preco": 12.93,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:cooler-ventoinha-dc-12v-60x60x10mm": {
+   "nome": "Ventoinha 12 V 60x60 mm",
+   "marca": "Eletrogate",
+   "modelo": "Cooler 12V 60x60x10",
+   "pacote": "com fios (2 pinos)",
+   "tamanho": "60 x 60 x 10mm",
+   "montagem": "fio",
+   "categoria_loja": "Acessórios e Ferramentas",
+   "descricao": "Cooler Ventoinha DC - 12V - 60x60x10mm.",
+   "atributos": {
+    "Type": "ventoinha",
+    "Voltage Rating": "12 V",
+    "Current Rating": "180 mA"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/cooler-ventoinha-dc-12v-60x60x10mm",
+   "preco": 10.64,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/257106863/cooler-6-p1ccmj1opk.jpg"
   }
  }
 }

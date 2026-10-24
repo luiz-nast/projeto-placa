@@ -11,6 +11,11 @@
   "Voltage Rating"
  ],
  "chips": "Connector Type",
+ "traducoes": {
+  "Type-C": "tipo C",
+  "Type-A": "tipo A",
+  "Type-B": "tipo B"
+ },
  "filtro": {
   "montagem": [
    "furo",
@@ -47,7 +52,8 @@
     "Side insertion",
     "Surface Mount, Right Angle"
    ]
-  }
+  },
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -111,7 +117,7 @@
    "marca": "SHOU HAN",
    "modelo": "MicroXNJ",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1.8A 2,000 cycles 30V 5.7mm 5P Black Female Micro-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS",
@@ -146,7 +152,7 @@
    "marca": "SHOU HAN",
    "modelo": "MICRO 180 ZB",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1.8A 3,000 Cycles 30V 5P 5mm Black Female Micro-B Through Hole USB 2.0 Plugin USB Connectors ROHS",
@@ -181,7 +187,7 @@
    "marca": "SHOU HAN",
    "modelo": "MicroQTJ",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+85℃ 1 1.8A 3,000 Cycles 30V 5.85mm 5P Black Female Micro-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS",
@@ -216,7 +222,7 @@
    "marca": "SHOU HAN",
    "modelo": "MICRO 180 JB",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1A 3,000 Cycles 30V 5.61mm 5P Black Female Micro-B Through Hole USB 2.0 Plugin USB Connectors ROHS",
@@ -251,7 +257,7 @@
    "marca": "XUNPU",
    "modelo": "MU-106-ARW",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1.5A 5.05mm 5P Black Female Micro-B Through Hole USB 2.0 插件 USB Connectors ROHS",
@@ -285,7 +291,7 @@
    "marca": "Korean Hroparts Elec",
    "modelo": "U-D-M5DD-Y-2",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "1 1A 30V 5,000 times 5P 7.65mm Female Micro-B Through Hole USB 2.0 插件 USB Connectors ROHS",
@@ -317,7 +323,7 @@
    "marca": "SHOU HAN",
    "modelo": "MINI 5PTP",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1A 3,000 Cycles 30V 5P 9.2mm Black Female Mini-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS",
@@ -352,7 +358,7 @@
    "marca": "TE Connectivity",
    "modelo": "1734753-1",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+60℃ 1 1A 30V 5P Black Female Mini-B Through Hole USB 2.0 插件 USB Connectors ROHS",
@@ -383,7 +389,7 @@
    "marca": "Hanbo Electronic",
    "modelo": "MINI-501",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "1 5P 9.2mm Female Mini-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS",
@@ -413,7 +419,7 @@
    "marca": "SHOU HAN",
    "modelo": "MINI5P 180 T",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 1A 3,000 Cycles 30V 5P 9.5mm Black Female Mini-B Through Hole USB 2.0 Plugin USB Connectors ROHS",
@@ -448,7 +454,7 @@
    "marca": "SHOU HAN",
    "modelo": "MINI 5PTP-GZ",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 1A 3,000 Cycles 30V 5P 9.3mm Black Female Mini-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS",
@@ -483,7 +489,7 @@
    "marca": "Jing Extension of the Electronic Co.",
    "modelo": "920-462A2021Y10102",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "1 13mm 2A 500V 5P Black Female Mini-B Through Hole USB 2.0 插件 USB Connectors ROHS",
@@ -510,11 +516,11 @@
    "situacao": "ok"
   },
   "C456018": {
-   "nome": "Conector USB Type-A 4P, a 90°",
+   "nome": "Conector USB tipo A 4P, a 90°",
    "marca": "SHOU HAN",
    "modelo": "AF 90 WJDG",
    "pacote": "Push-Pull",
-   "tamanho": "Push-Pull",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 1.5A 14mm 30V 4P 5 thousand cycles Female Right Angle Type-A USB 2.0 White Push-Pull USB Connectors ROHS",
@@ -545,11 +551,11 @@
    "situacao": "ok"
   },
   "C456019": {
-   "nome": "Conector USB Type-A 4P, a 90°",
+   "nome": "Conector USB tipo A 4P, a 90°",
    "marca": "SHOU HAN",
    "modelo": "AF 90 ZJWG",
    "pacote": "Push-Pull",
-   "tamanho": "Push-Pull",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 1.5A 13.7mm 30V 4P 5 thousand cycles Female Right Angle Type-A USB 2.0 White Push-Pull USB Connectors ROHS",
@@ -580,11 +586,11 @@
    "situacao": "ok"
   },
   "C6332181": {
-   "nome": "Conector USB Type-A 4P, a 90°",
+   "nome": "Conector USB tipo A 4P, a 90°",
    "marca": "SHOU HAN",
    "modelo": "AF 90 ZJWG ZB",
    "pacote": "Push-Pull",
-   "tamanho": "Push-Pull",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 1.5A 13.7mm 30V 4P 5 thousand cycles Female Right Angle Type-A USB 2.0 White Push-Pull USB Connectors ROHS",
@@ -615,11 +621,11 @@
    "situacao": "ok"
   },
   "C55553058": {
-   "nome": "Conector USB Type-A 4P, de furo",
+   "nome": "Conector USB tipo A 4P, de furo",
    "marca": "LAILAN",
    "modelo": "LAIL-TYPE-A-4P-03Y-ZC",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "Plugin USB Connectors ROHS",
@@ -645,11 +651,11 @@
    "situacao": "ok"
   },
   "C55553059": {
-   "nome": "Conector USB Type-A 4P, de furo",
+   "nome": "Conector USB tipo A 4P, de furo",
    "marca": "LAILAN",
    "modelo": "LAIL-TYPE-A-4P-06Y-ZC",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "Plugin USB Connectors ROHS",
@@ -676,11 +682,11 @@
    "situacao": "ok"
   },
   "C55553055": {
-   "nome": "Conector USB Type-A 4P, a 90°",
+   "nome": "Conector USB tipo A 4P, a 90°",
    "marca": "LAILAN",
    "modelo": "LAIL-TYPE-A-4P-04Y-WC",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "Plugin USB Connectors ROHS",
@@ -707,11 +713,11 @@
    "situacao": "ok"
   },
   "C18077687": {
-   "nome": "Conector USB Type-A 4P, de superfície a 90°",
+   "nome": "Conector USB tipo A 4P, de superfície a 90°",
    "marca": "Bossie",
    "modelo": "BX-TYPE-A-MWT4P",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+70℃ 1 1.5A 13.5mm 30V 4P 5,000 cycles Female Surface Mount, Right Angle Type-A USB 2.0 White SMD USB Connectors ROHS",
@@ -740,11 +746,11 @@
    "situacao": "ok"
   },
   "C53207796": {
-   "nome": "Conector USB Type-A 4P, encaixe lateral",
+   "nome": "Conector USB tipo A 4P, encaixe lateral",
    "marca": "JXTCONN",
    "modelo": "Type-A-AF90",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+70℃ 1 1.5A 19.4mm 30V 4P Female Right Angle Type-A USB 2.0 White 插件 USB Connectors ROHS",
@@ -772,11 +778,11 @@
    "situacao": "ok"
   },
   "C18077685": {
-   "nome": "Conector USB Type-A 4P, encaixe lateral",
+   "nome": "Conector USB tipo A 4P, encaixe lateral",
    "marca": "Bossie",
    "modelo": "BX-TYPE-A-MCC4P",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+70℃ 1 1.5A 19.4mm 30V 4P Female Side insertion Type-A USB 2.0 White Plugin USB Connectors ROHS",
@@ -804,11 +810,11 @@
    "situacao": "ok"
   },
   "C720550": {
-   "nome": "Conector USB Type-B 4P, de furo",
+   "nome": "Conector USB tipo B 4P, de furo",
    "marca": "XUNPU",
    "modelo": "USB-B12-BRW",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-20℃~+70℃ 1 1.5A 16.1mm 30V 4P 5,000 cycles Female Through Hole Type-B USB 2.0 White 插件 USB Connectors ROHS",
@@ -837,11 +843,11 @@
    "situacao": "ok"
   },
   "C498174": {
-   "nome": "Conector USB Type-B 4P, de furo",
+   "nome": "Conector USB tipo B 4P, de furo",
    "marca": "SOFNG",
    "modelo": "USB-B02",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-35℃~+75℃ 1 16.1mm 24V 250mA 4P Female Through Hole Type-B USB 2.0 插件 USB Connectors ROHS",
@@ -868,11 +874,11 @@
    "situacao": "ok"
   },
   "C53207788": {
-   "nome": "Conector USB Type-B 4P, a 90°",
+   "nome": "Conector USB tipo B 4P, a 90°",
    "marca": "JXTCONN",
    "modelo": "USB-B01",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "插件 USB Connectors ROHS",
@@ -900,11 +906,11 @@
    "situacao": "ok"
   },
   "C456012": {
-   "nome": "Conector USB Type-C 6P, de superfície a 90°",
+   "nome": "Conector USB tipo C 6P, de superfície a 90°",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 6P",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+85℃ 1 3,000 Cycles 3A 5V 6.8mm 6P Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -935,11 +941,11 @@
    "situacao": "ok"
   },
   "C165948": {
-   "nome": "Conector USB Type-C 16P, de superfície a 90°",
+   "nome": "Conector USB tipo C 16P, de superfície a 90°",
    "marca": "Korean Hroparts Elec",
    "modelo": "TYPE-C-31-M-12",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -967,11 +973,11 @@
    "situacao": "ok"
   },
   "C709357": {
-   "nome": "Conector USB Type-C 16P, de superfície a 90°",
+   "nome": "Conector USB tipo C 16P, de superfície a 90°",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-TYPE-C-16P",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-40℃~+85℃ 1 10,000 cycles 16P 30V 3A 7.81mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -999,11 +1005,11 @@
    "situacao": "ok"
   },
   "C3151746": {
-   "nome": "Conector USB Type-C 14P, de furo",
+   "nome": "Conector USB tipo C 14P, de furo",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 14PLC-H10.0",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 10 thousand cycles 10mm 14P 20V 3A Black Female Through Hole Type-C USB 2.0 Plugin USB Connectors ROHS",
@@ -1034,11 +1040,11 @@
    "situacao": "ok"
   },
   "C3151747": {
-   "nome": "Conector USB Type-C 16P, de furo",
+   "nome": "Conector USB tipo C 16P, de furo",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 16PLC-H10.0",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 10 thousand cycles 10mm 16P 20V 3A Black Female Through Hole Type-C USB 3.1 Plugin USB Connectors ROHS",
@@ -1069,11 +1075,11 @@
    "situacao": "ok"
   },
   "C5187475": {
-   "nome": "Conector USB Type-C 14P, encaixe lateral",
+   "nome": "Conector USB tipo C 14P, encaixe lateral",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 14P CC-2.6",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 10 thousand cycles 14P 14mm 20V 3A Black Female Side insertion Type-C Plugin USB Connectors ROHS",
@@ -1104,11 +1110,11 @@
    "situacao": "ok"
   },
   "C2858272": {
-   "nome": "Conector USB Type-C 6P, de furo",
+   "nome": "Conector USB tipo C 6P, de furo",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 6P LC6.8(073)",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 3A 5 thousand cycles 5V 6.8mm 6P Black Female Through Hole Type-C Plugin USB Connectors ROHS",
@@ -1139,11 +1145,11 @@
    "situacao": "ok"
   },
   "C5156601": {
-   "nome": "Conector USB Type-C 6P, de furo",
+   "nome": "Conector USB tipo C 6P, de furo",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 6PLCH10.0 073",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 10mm 20V 3A 5 thousand cycles 6P Black Female Through Hole Type-C USB 3.1 Plugin USB Connectors ROHS",
@@ -1174,11 +1180,11 @@
    "situacao": "ok"
   },
   "C5187470": {
-   "nome": "Conector USB Type-C 6P, de furo",
+   "nome": "Conector USB tipo C 6P, de furo",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 6P LCH10.0",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+80℃ 1 10mm 3A 5 thousand cycles 5V 6P Black Female Through Hole Type-C USB 3.1 Plugin USB Connectors ROHS",
@@ -1209,11 +1215,11 @@
    "situacao": "ok"
   },
   "C5187473": {
-   "nome": "Conector USB Type-C 6P, encaixe lateral",
+   "nome": "Conector USB tipo C 6P, encaixe lateral",
    "marca": "SHOU HAN",
    "modelo": "TYPE-C 6P CC",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+85℃ 1 13.5mm 20V 3A 5 thousand cycles 6P Black Female Side insertion Type-C Plugin USB Connectors ROHS",
@@ -1244,11 +1250,11 @@
    "situacao": "ok"
   },
   "C709355": {
-   "nome": "Conector USB Type-C 6P, de superfície a 90°",
+   "nome": "Conector USB tipo C 6P, de superfície a 90°",
    "marca": "Shenzhen Kinghelm Elec",
    "modelo": "KH-TYPE-C-6P",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 10,000 cycles 5A 5V 6.8mm 6P Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -1276,11 +1282,11 @@
    "situacao": "ok"
   },
   "C53207801": {
-   "nome": "Conector USB Type-C 16P, de superfície a 90°",
+   "nome": "Conector USB tipo C 16P, de superfície a 90°",
    "marca": "JXTCONN",
    "modelo": "TYPE-C-16PIN",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-40℃~+85℃ 1 10000 times 16P 20V 3A 7.35mm Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -1309,11 +1315,11 @@
    "situacao": "ok"
   },
   "C7463258": {
-   "nome": "Conector USB Type-C 16P, de furo",
+   "nome": "Conector USB tipo C 16P, de furo",
    "marca": "Korean Hroparts Elec",
    "modelo": "TYPE-C-31-D-09",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-25℃~+85℃ 1 10,000 cycles 16P 5A 6.5mm Female Through Hole Type-C 插件 USB Connectors ROHS",
@@ -1339,11 +1345,11 @@
    "situacao": "ok"
   },
   "C5337088": {
-   "nome": "Conector USB Type-C 16P, de superfície a 90°",
+   "nome": "Conector USB tipo C 16P, de superfície a 90°",
    "marca": "Korean Hroparts Elec",
    "modelo": "TYPE-C-31-M-12A",
    "pacote": "SMD",
-   "tamanho": "SMD",
+   "tamanho": "",
    "montagem": "superfície",
    "categoria_loja": "USB Connectors",
    "descricao": "-30℃~+85℃ 1 10,000 cycles 16P 20V 6A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
@@ -1374,11 +1380,11 @@
    "situacao": "ok"
   },
   "C49118456": {
-   "nome": "Conector USB Type-C 14P, de furo",
+   "nome": "Conector USB tipo C 14P, de furo",
    "marca": "JUSHUO",
    "modelo": "JS14H-TYPE-C017-H100",
    "pacote": "Plugin",
-   "tamanho": "Plugin",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "USB Connectors",
    "descricao": "-40℃~+85℃ 1 10,000 Cycles 10.5mm 14P 20V 5A Black Female Harpoon pin Through Hole Type-C USB 2.0 Plugin USB Connectors ROHS",

@@ -2,13 +2,35 @@
  "categoria": "circuito_integrado",
  "nome": "Circuito integrado",
  "grupo": "Semicondutores",
- "explica": "Um circuito inteiro dentro de uma pecinha preta cheia de pernas (o DIP, que dá pra encaixar num soquete). Cada modelo faz uma coisa: o 555 pisca e marca tempo, o LM358 amplifica sinal, o 74HC595 dá mais saídas pro ESP32, o L293D e o ULN2003 ligam motor.",
+ "explica": "Um circuito inteiro numa pecinha preta cheia de pernas (o DIP, de furo, que encaixa num soquete), e o nome diz o que cada um faz: o timer 555 pisca e marca tempo, o amplificador operacional aumenta um sinal fraco, o registrador de deslocamento 74HC595 dá mais saídas pro ESP32. Cuidado com a tensão: o ESP32 trabalha em 3,3 V, e um chip ligado em 5 V pode mandar 5 V de volta num pino dele e queimá-lo (no meio vai um conversor de nível, que tem categoria própria).",
+ "nome_peca": [
+  "{@categoria_loja} {@modelo}"
+ ],
  "destaques": [
-  "Voltage - Supply",
-  "Single supply",
-  "Single Supply",
+  "Voltage - Supply|Single supply|Single Supply|Dual Supply",
+  "Logic Type|Function",
   "Output Current"
  ],
+ "traducoes": {
+  "555 Timers / Counters": "Timer",
+  "Operational Amplifier": "Amplificador operacional",
+  "FET Input Amplifiers": "Amplificador operacional (entrada FET)",
+  "Precision Op Amps": "Amplificador operacional de precisão",
+  "Comparators": "Comparador",
+  "Logic Gates": "Porta lógica",
+  "Inverters": "Porta inversora",
+  "Flip Flops": "Flip-flop",
+  "Counters, Dividers": "Contador",
+  "Shift Registers": "Registrador de deslocamento",
+  "Signal Switches, Multiplexers, Decoders": "Decodificador",
+  "Analog Switches, Multiplexers": "Chave analógica (multiplexador)",
+  "Buffers, Drivers, Receivers, Transceivers": "Buffer",
+  "Translators, Level Shifters": "Conversor de nível",
+  "I/O Expanders": "Expansor de pinos",
+  "Digital Tube Drivers": "Driver de display",
+  "LED Drivers": "Driver de LED",
+  "RS232 ICs": "Conversor RS-232"
+ },
  "filtro": {
   "pacotes": [
    "DIP",
@@ -19,13 +41,20 @@
   "fora": [
    "C12340",
    "C18723576",
+   "C20612516",
+   "C2890491",
    "C411624",
    "C434589",
    "C434590",
+   "C434596",
+   "C51026315",
+   "C510561",
+   "C53055900",
    "C75528",
    "C90448",
    "C93000"
-  ]
+  ],
+  "estoque_minimo": 50
  },
  "sementes": [
   {
@@ -62,10 +91,6 @@
   },
   {
    "busca": "NE5532",
-   "quantos": 2
-  },
-  {
-   "busca": "LM386",
    "quantos": 2
   },
   {
@@ -153,22 +178,6 @@
    "quantos": 1
   },
   {
-   "busca": "ULN2003",
-   "quantos": 2
-  },
-  {
-   "busca": "ULN2803",
-   "quantos": 1
-  },
-  {
-   "busca": "L293D",
-   "quantos": 2
-  },
-  {
-   "busca": "L298N",
-   "quantos": 2
-  },
-  {
    "busca": "MAX7219",
    "quantos": 1
   },
@@ -185,29 +194,25 @@
    "quantos": 1
   },
   {
-   "busca": "MCP3008",
-   "quantos": 1
-  },
-  {
    "busca": "MAX232",
    "quantos": 2
   },
   {
-   "busca": "DS1307",
-   "quantos": 2
+   "busca": "MCP6002-I/P",
+   "quantos": 1
   },
   {
-   "busca": "24LC256",
-   "quantos": 1
+   "busca": "MCP6004",
+   "quantos": 2
   }
  ],
  "pecas": {
   "C46749": {
-   "nome": "Circuito integrado NE555P",
+   "nome": "Timer NE555P",
    "marca": "Texas Instruments",
    "modelo": "NE555P",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "555 Timers / Counters",
    "descricao": "0℃~+70℃ 100kHz 10mA 4.5V~16V DIP-8 555 Timers / Counters ROHS",
@@ -230,11 +235,11 @@
    "situacao": "ok"
   },
   "C19708138": {
-   "nome": "Circuito integrado NE555N(XBLW)",
+   "nome": "Timer NE555N(XBLW)",
    "marca": "XBLW",
    "modelo": "NE555N(XBLW)",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "555 Timers / Counters",
    "descricao": "0℃~+70℃ 1 200mA 4.5V~15V Reset function、Shutdown control DIP-8 555 Timers / Counters ROHS",
@@ -256,11 +261,11 @@
    "situacao": "ok"
   },
   "C725320": {
-   "nome": "Circuito integrado LM324N",
+   "nome": "Amplificador operacional LM324N",
    "marca": "HGSEMI",
    "modelo": "LM324N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-16V~-1.5V、1.5V~16V -40℃~+85℃ 1.5V~30V 250nA 35mA 4 50nA 600uA 7uV/℃ 80dB 9mV DIP-14 Operational Amplifier ROHS",
@@ -293,11 +298,11 @@
    "situacao": "ok"
   },
   "C398063": {
-   "nome": "Circuito integrado NE555N",
+   "nome": "Timer NE555N",
    "marca": "HGSEMI",
    "modelo": "NE555N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "555 Timers / Counters",
    "descricao": "0℃~+70℃ DIP-8 555 Timers / Counters ROHS",
@@ -320,11 +325,11 @@
    "situacao": "ok"
   },
   "C99439": {
-   "nome": "Circuito integrado LM311N/NOPB",
+   "nome": "Comparador LM311N/NOPB",
    "marca": "Texas Instruments",
    "modelo": "LM311N/NOPB",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Comparators",
    "descricao": "0℃~+70℃ 1 200ns 250nA 36V 5V~36V 6nA 7.5mA 7.5mV Built-in hysteresis、Enable/shutdown function TTL、CMOS ±15V PDIP-8 Comparators ROHS",
@@ -356,11 +361,11 @@
    "situacao": "ok"
   },
   "C96504": {
-   "nome": "Circuito integrado CD4093BE",
+   "nome": "Porta lógica CD4093BE",
    "marca": "Texas Instruments",
    "modelo": "CD4093BE",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-55℃~+125℃ 130ns@15V,50pF 2 3.4mA 3.4mA 3.6V~10.8V 3V~18V 4 4.95V~5V、9.95V~10V、14.95V~15V 4000B Series 4uA 50mV NAND Gate DIP-14 Logic Gates ROHS",
@@ -394,11 +399,11 @@
    "situacao": "ok"
   },
   "C7236": {
-   "nome": "Circuito integrado TL072CP",
+   "nome": "Amplificador operacional (entrada FET) TL072CP",
    "marca": "Texas Instruments",
    "modelo": "TL072CP",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "FET Input Amplifiers",
    "descricao": "-15V~15V 0℃~+70℃ 1.4mA 100pA 13V/us 18nV/√Hz@1kHz 18uV/℃ 2 3MHz 3mV 65pA 70dB Short-Circuit  Protection、Built-in compensation、Latch-up suppression PDIP-8 FET Input Amplifiers ROHS",
@@ -431,11 +436,11 @@
    "situacao": "ok"
   },
   "C22451408": {
-   "nome": "Circuito integrado UA741CP(XBLW)",
+   "nome": "Amplificador operacional UA741CP(XBLW)",
    "marca": "XBLW",
    "modelo": "UA741CP(XBLW)",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-22V~22V 0℃~+70℃ 1 1.7mA 200nA 25mA 500V/ms 6mV 800nA 96dB DIP-8 Operational Amplifier ROHS",
@@ -468,11 +473,11 @@
    "situacao": "ok"
   },
   "C5209": {
-   "nome": "Circuito integrado LM393P",
+   "nome": "Comparador LM393P",
    "marca": "Texas Instruments",
    "modelo": "LM393P",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Comparators",
    "descricao": "-18V~-2V、2V~18V 0℃~+70℃ 1.3us 2 25nA 2V~36V 2mV 36V 400uA 5nA ESD protection Open-drain TTL、CMOS PDIP-8 Comparators ROHS",
@@ -504,11 +509,11 @@
    "situacao": "ok"
   },
   "C5326": {
-   "nome": "Circuito integrado NE5532P",
+   "nome": "Amplificador operacional NE5532P",
    "marca": "Texas Instruments",
    "modelo": "NE5532P",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-15V~15V 0℃~+70℃ 100dB 10MHz 150nA 16mA 1uA 2 38mA 4mV 5nV/√Hz@1kHz 5uV/℃ 9V/us Built-in compensation PDIP-8 Operational Amplifier ROHS",
@@ -541,11 +546,11 @@
    "situacao": "ok"
   },
   "C83405": {
-   "nome": "Circuito integrado LM358N/NOPB",
+   "nome": "Amplificador operacional LM358N/NOPB",
    "marca": "Texas Instruments",
    "modelo": "LM358N/NOPB",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-16V~-1.5V、1.5V~16V 0℃~+70℃ 1MHz 1mA 2 2mV 3V~32V 40mA 45nA 5nA 65dB 7uV/℃ Built-in compensation PDIP-8 Operational Amplifier ROHS",
@@ -578,11 +583,11 @@
    "situacao": "ok"
   },
   "C53199171": {
-   "nome": "Circuito integrado LM3914-DIP-18",
+   "nome": "Driver de LED LM3914-DIP-18",
    "marca": "DDF",
    "modelo": "LM3914-DIP-18",
    "pacote": "DIP-18",
-   "tamanho": "DIP-18",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "LED Drivers",
    "descricao": "0℃~+70℃ DIP-18 LED Drivers ROHS",
@@ -612,11 +617,11 @@
    "situacao": "ok"
   },
   "C18723505": {
-   "nome": "Circuito integrado SN74HC14N(XBLW)",
+   "nome": "Porta inversora SN74HC14N(XBLW)",
    "marca": "XBLW",
    "modelo": "SN74HC14N(XBLW)",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Inverters",
    "descricao": "-40℃~+125℃ 100mV 12ns 2V~6V 2uA 4.5V 4mA 6 74HC Noise suppression function Schmitt trigger DIP-14 Inverters ROHS",
@@ -647,11 +652,11 @@
    "situacao": "ok"
   },
   "C5203": {
-   "nome": "Circuito integrado CD4066BE",
+   "nome": "Chave analógica (multiplexador) CD4066BE",
    "marca": "Texas Instruments",
    "modelo": "CD4066BE",
    "pacote": "PDIP-14",
-   "tamanho": "PDIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Analog Switches, Multiplexers",
    "descricao": "-55℃~+125℃ 125Ω 15ns 1:1 3V~18V 40MHz PDIP-14 Analog Switches, Multiplexers ROHS",
@@ -679,11 +684,11 @@
    "situacao": "ok"
   },
   "C2907": {
-   "nome": "Circuito integrado SN74HC14N",
+   "nome": "Porta inversora SN74HC14N",
    "marca": "Texas Instruments",
    "modelo": "SN74HC14N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Inverters",
    "descricao": "-40℃~+85℃ 1 1.5V~4.2V 21ns@6V,50pF 2V~6V 2uA 300mV~1.2V 5.2mA 5.2mA 6 74HC Schmitt trigger 噪声抑制功能 DIP-14 Inverters ROHS",
@@ -714,11 +719,11 @@
    "situacao": "ok"
   },
   "C2987282": {
-   "nome": "Circuito integrado NE5532N",
+   "nome": "Amplificador operacional NE5532N",
    "marca": "HGSEMI",
    "modelo": "NE5532N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-22V~22V 0℃~+70℃ 100dB 10MHz 11V/us 2 5.5mA 500nA 5mV 5nA 8nV/√Hz@1kHz DIP-8 Operational Amplifier ROHS",
@@ -751,11 +756,11 @@
    "situacao": "ok"
   },
   "C51898328": {
-   "nome": "Circuito integrado CD4017BED",
+   "nome": "Contador CD4017BED",
    "marca": "GREENMICRO",
    "modelo": "CD4017BED",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Counters, Dividers",
    "descricao": "-40℃~+85℃ 1 11MHz 3V~18V 500mW 85ns Asynchronous CD4000 Divide-by-10 Reset function、Static operation、Low-power mode Rising Edge Up Counter DIP-16 Counters, Dividers ROHS",
@@ -786,11 +791,11 @@
    "situacao": "ok"
   },
   "C5327": {
-   "nome": "Circuito integrado CD4511BE",
+   "nome": "Driver de display CD4511BE",
    "marca": "Texas Instruments",
    "modelo": "CD4511BE",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Digital Tube Drivers",
    "descricao": "-55℃~+125℃ 3V~18V 40nA DIP-16 Digital Tube Drivers ROHS",
@@ -816,41 +821,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C434596": {
-   "nome": "Circuito integrado DS1307N",
-   "marca": "HGSEMI",
-   "modelo": "DS1307N",
-   "pacote": "DIP-8",
-   "tamanho": "DIP-8",
-   "montagem": "furo",
-   "categoria_loja": "Real Time Clocks",
-   "descricao": "0℃~+70℃ 1.5mA 300nA 4.5V~5.5V External I2C No DIP-8 Real Time Clocks ROHS",
-   "atributos": {
-    "Alarm Output": "No",
-    "Operating Temperature": "0℃~+70℃",
-    "Voltage - Supply": "4.5V~5.5V",
-    "crystal oscillator": "External",
-    "Features": "Backup power management and battery charging、InsideSRAM/NVRAM、Programmable clock output",
-    "Current - Supply": "1.5mA",
-    "Quiescent Current(Iq)": "300nA",
-    "Interface": "I2C"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_HGSEMI-DS1307N_C434596.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/real-time-clocks_hgsemi-ds1307n_C434596.html",
-   "preco": 0.4615,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 2168,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C507175": {
-   "nome": "Circuito integrado 74HC595N",
+   "nome": "Registrador de deslocamento 74HC595N",
    "marca": "HGSEMI",
    "modelo": "74HC595N",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Shift Registers",
    "descricao": "-40℃~+85℃ 100ns@5V,50pF 10MHz 3.2V~6V 74HC Series 8 Asynchronous clear function、Output enable Serial-to-Parallel Tri-State DIP-16 Shift Registers ROHS",
@@ -876,11 +852,11 @@
    "situacao": "ok"
   },
   "C725324": {
-   "nome": "Circuito integrado LM339N",
+   "nome": "Comparador LM339N",
    "marca": "HGSEMI",
    "modelo": "LM339N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Comparators",
    "descricao": "-16V~-1.5V、1.5V~16V 0℃~+70℃ 1.3us 25nA 2mV 36V 3V~32V 5nA 800uA Four channels TTL、CMOS DIP-14 Comparators ROHS",
@@ -911,11 +887,11 @@
    "situacao": "ok"
   },
   "C5226": {
-   "nome": "Circuito integrado CD4011BE",
+   "nome": "Porta lógica CD4011BE",
    "marca": "Texas Instruments",
    "modelo": "CD4011BE",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-55℃~+125℃ 1.5V~4V 1uA 2 3.4mA 3.4mA 3.5V~11V 3V~18V 4 4.95V、9.95V、14.95V 4000B Series 50mV 90ns@15V,50pF NAND Gate DIP-14 Logic Gates ROHS",
@@ -946,45 +922,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C20612516": {
-   "nome": "Circuito integrado LM386N(XBLW)",
-   "marca": "XBLW",
-   "modelo": "LM386N(XBLW)",
-   "pacote": "DIP-8",
-   "tamanho": "DIP-8",
-   "montagem": "furo",
-   "categoria_loja": "Audio Amplifiers",
-   "descricao": "0.2% 0℃~+70℃ 1-Channel 4V~12V 4mA 50dB 700mWx1@8Ω Class AB DIP-8 Audio Amplifiers ROHS",
-   "atributos": {
-    "Power Supply Rejection Ratio (PSRR)": "50dB",
-    "Operating Temperature": "0℃~+70℃",
-    "Total Harmonic Distortion + Noise (THD+N)": "0.2%",
-    "Output Power": "700mWx1@8Ω",
-    "Efficiency": "-",
-    "Voltage - Supply": "4V~12V",
-    "Number of Inputs": "-",
-    "Quiescent Current": "4mA",
-    "Features": "-",
-    "Class": "Class AB",
-    "Speaker Channels": "1-Channel",
-    "Signal-to-Noise Ratio": "-"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401261514_XBLW-LM386N-XBLW_C20612516.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/audio-amplifiers_xblw-lm386n-xblw_C20612516.html",
-   "preco": 0.1342,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 2054,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C71104": {
-   "nome": "Circuito integrado LM393L-D08-T",
+   "nome": "Comparador LM393L-D08-T",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM393L-D08-T",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Comparators",
    "descricao": "-18V~-1V、1V~18V -20℃~+85℃ 1mV 2 2V~36V 350ns 36V 5nA 65nA 800uA DTL、TTL、CMOS DIP-8 Comparators ROHS",
@@ -1014,41 +957,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C51026315": {
-   "nome": "Circuito integrado DS1307N309",
-   "marca": "GREENMICRO",
-   "modelo": "DS1307N309",
-   "pacote": "DIP-8",
-   "tamanho": "DIP-8",
-   "montagem": "furo",
-   "categoria_loja": "Real Time Clocks",
-   "descricao": "-40℃~+85℃ 1.5mA 10nA 4.5V~5.5V Backup power management and battery charging、InsideSRAM/NVRAM、Programmable clock output、Power-off retention of registers External I2C No DIP-8 Real Time Clocks ROHS",
-   "atributos": {
-    "Alarm Output": "No",
-    "Operating Temperature": "-40℃~+85℃",
-    "Voltage - Supply": "4.5V~5.5V",
-    "crystal oscillator": "External",
-    "Features": "Backup power management and battery charging、InsideSRAM/NVRAM、Programmable clock output、Power-off retention of registers",
-    "Current - Supply": "1.5mA",
-    "Quiescent Current(Iq)": "10nA",
-    "Interface": "I2C"
-   },
-   "datasheet": "",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/C51026315.html",
-   "preco": 0.2228,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 1975,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C53155525": {
-   "nome": "Circuito integrado HG74HC32N",
+   "nome": "Porta lógica HG74HC32N",
    "marca": "HGSEMI",
    "modelo": "HG74HC32N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-40℃~+85℃ 1.5V、3.15V、4.2V 1.9V、3.98V、4.4V、5.48V、5.9V 100mV、260mV 15ns@6V,50pF 2 2V~6V 2uA 4 5.2mA 5.2mA 500mV、1.35V、1.8V 74HC OR Gate TTL compatible CMOS DIP-14 Logic Gates ROHS",
@@ -1082,11 +996,11 @@
    "situacao": "ok"
   },
   "C71098": {
-   "nome": "Circuito integrado LM324L-D14-T",
+   "nome": "Amplificador operacional LM324L-D14-T",
    "marca": "UTC(Unisonic Tech)",
    "modelo": "LM324L-D14-T",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-20℃~+85℃ 250nA 3V~40V 4 40mA 50nA 5mV 700uA 75dB Built-in compensation DIP-14 Operational Amplifier ROHS",
@@ -1119,11 +1033,11 @@
    "situacao": "ok"
   },
   "C110329": {
-   "nome": "Circuito integrado TL072IP",
+   "nome": "Amplificador operacional (entrada FET) TL072IP",
    "marca": "Texas Instruments",
    "modelo": "TL072IP",
    "pacote": "PDIP-8",
-   "tamanho": "PDIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "FET Input Amplifiers",
    "descricao": "-15V~-5V、5V~15V -40℃~+85℃ 1.4mA 100dB 13V/us 18nV/√Hz@1kHz 18uV/℃ 2 3MHz 3mV 5pA 65pA Short-Circuit  Protection、Built-in compensation、Latch-up suppression PDIP-8 FET Input Amplifiers ROHS",
@@ -1156,11 +1070,11 @@
    "situacao": "ok"
   },
   "C18723495": {
-   "nome": "Circuito integrado SN74HC00N(XBLW)",
+   "nome": "Porta lógica SN74HC00N(XBLW)",
    "marca": "XBLW",
    "modelo": "SN74HC00N(XBLW)",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-40℃~+105℃ 1.5V、3.15V、4.2V 150mV 2 2.1V 2V~6V 2uA 4 4.5V 4mA 74HC 7ns NAND Gate DIP-14 Logic Gates ROHS",
@@ -1192,11 +1106,11 @@
    "situacao": "ok"
   },
   "C507188": {
-   "nome": "Circuito integrado 74HC138N",
+   "nome": "Decodificador 74HC138N",
    "marca": "HGSEMI",
    "modelo": "74HC138N",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Signal Switches, Multiplexers, Decoders",
    "descricao": "-40℃~+85℃ 160uA 25mA 2V~6V 3/8 35ns@6.0V,50pF 4mA 74HC Decoder Reverse function Single Supply DIP-16 Signal Switches, Multiplexers, Decoders ROHS",
@@ -1224,11 +1138,11 @@
    "situacao": "ok"
   },
   "C2860250": {
-   "nome": "Circuito integrado MAX232EIN",
+   "nome": "Conversor RS-232 MAX232EIN",
    "marca": "Texas Instruments",
    "modelo": "MAX232EIN",
    "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "RS232 ICs",
    "descricao": "-40℃~+85℃ 2 2 250Kbps 4.5V~5.5V 8mA Transceiver Yes ±15kV PDIP-16 RS232 ICs ROHS",
@@ -1255,11 +1169,11 @@
    "situacao": "ok"
   },
   "C5200": {
-   "nome": "Circuito integrado CD4051BE",
+   "nome": "Chave analógica (multiplexador) CD4051BE",
    "marca": "Texas Instruments",
    "modelo": "CD4051BE",
    "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Analog Switches, Multiplexers",
    "descricao": "-55℃~+125℃ 125Ω 20MHz 3V~20V 450ns 8 8:1 PDIP-16 Analog Switches, Multiplexers ROHS",
@@ -1287,11 +1201,11 @@
    "situacao": "ok"
   },
   "C133542": {
-   "nome": "Circuito integrado TL074CN",
+   "nome": "Amplificador operacional (entrada FET) TL074CN",
    "marca": "Texas Instruments",
    "modelo": "TL074CN",
    "pacote": "PDIP-14",
-   "tamanho": "PDIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "FET Input Amplifiers",
    "descricao": "-15V~15V -40℃~+85℃ 1.4mA 100dB 13V/us 18nV/√Hz@1kHz 18uV/℃ 3MHz 3mV 5pA 65pA Four channels Short-Circuit  Protection、Built-in compensation、Latch-up suppression PDIP-14 FET Input Amplifiers ROHS",
@@ -1324,11 +1238,11 @@
    "situacao": "ok"
   },
   "C434517": {
-   "nome": "Circuito integrado NE556N",
+   "nome": "Timer NE556N",
    "marca": "HGSEMI",
    "modelo": "NE556N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "555 Timers / Counters",
    "descricao": "0℃~+70℃ 4.5V~16V DIP-14 555 Timers / Counters ROHS",
@@ -1351,11 +1265,11 @@
    "situacao": "ok"
   },
   "C398073": {
-   "nome": "Circuito integrado PCF8574P",
+   "nome": "Expansor de pinos PCF8574P",
    "marca": "HGSEMI",
    "modelo": "PCF8574P",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "I/O Expanders",
    "descricao": "-40℃~+85℃ 100kHz 10uA 2.5V~6V 25mA 300uA 8 8 Cascade and address expansion、Built-in LED driver I2C Interrupt Output Quasi-bidirectional output DIP-16 I/O Expanders ROHS",
@@ -1384,11 +1298,11 @@
    "situacao": "ok"
   },
   "C5199": {
-   "nome": "Circuito integrado CD4013BE",
+   "nome": "Flip-flop CD4013BE",
    "marca": "Texas Instruments",
    "modelo": "CD4013BE",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Flip Flops",
    "descricao": "-55℃~+125℃ 1 2 20ns 24MHz 2ns 3V~18V 4000B Series 4uA 5pF 6.8mA 6.8mA 90ns@15V,50pF Asynchronous Complementary type D-Type Rising Edge Set and Reset DIP-14 Flip Flops ROHS",
@@ -1423,11 +1337,11 @@
    "situacao": "ok"
   },
   "C20613262": {
-   "nome": "Circuito integrado CD4017CN",
+   "nome": "Contador CD4017CN",
    "marca": "HGSEMI",
    "modelo": "CD4017CN",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Counters, Dividers",
    "descricao": "-40℃~+85℃ 3V~15V 5 5.5MHz 500mW 85ns Asynchronous Divide-by-10 Rising Edge DIP-16 Counters, Dividers ROHS",
@@ -1457,11 +1371,11 @@
    "situacao": "ok"
   },
   "C507192": {
-   "nome": "Circuito integrado 74HC04N",
+   "nome": "Porta inversora 74HC04N",
    "marca": "HGSEMI",
    "modelo": "74HC04N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Inverters",
    "descricao": "-40℃~+85℃ 1.5V、3.15V、4.2V 1.9V、4.4V、5.9V 100mV 2V~6V 40uA 4mA 4mA 500mV、1.35V、1.8V 6 74HC 9ns@4.5V,50pF DIP-14 Inverters ROHS",
@@ -1492,11 +1406,11 @@
    "situacao": "ok"
   },
   "C398072": {
-   "nome": "Circuito integrado PCF8574AP",
+   "nome": "Expansor de pinos PCF8574AP",
    "marca": "HGSEMI",
    "modelo": "PCF8574AP",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "I/O Expanders",
    "descricao": "-40℃~+85℃ 100kHz 10uA 2.5V~6V 25mA 300uA 8 8 Cascade and address expansion、Built-in LED driver I2C Interrupt Output Quasi-bidirectional output DIP-16 I/O Expanders ROHS",
@@ -1525,11 +1439,11 @@
    "situacao": "ok"
   },
   "C353147": {
-   "nome": "Circuito integrado MAX232N",
+   "nome": "Conversor RS-232 MAX232N",
    "marca": "Texas Instruments",
    "modelo": "MAX232N",
    "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "RS232 ICs",
    "descricao": "0℃~+70℃ 120Kbps 2 2 4.5V~5.5V Transceiver PDIP-16 RS232 ICs ROHS",
@@ -1556,11 +1470,11 @@
    "situacao": "ok"
   },
   "C47148931": {
-   "nome": "Circuito integrado CD4060AN",
+   "nome": "Contador CD4060AN",
    "marca": "HGSEMI",
    "modelo": "CD4060AN",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Counters, Dividers",
    "descricao": "-40℃~+85℃ 100ns@15V,50pF 12MHz 14 3V~15V Asynchronous Binary Counter CD4000 Falling Edge Reset function DIP-16 Counters, Dividers ROHS",
@@ -1591,11 +1505,11 @@
    "situacao": "ok"
   },
   "C2909": {
-   "nome": "Circuito integrado SN74HC165N",
+   "nome": "Registrador de deslocamento SN74HC165N",
    "marca": "Texas Instruments",
    "modelo": "SN74HC165N",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Shift Registers",
    "descricao": "-40℃~+125℃ 1 26ns@6V,50pF 2V~6V 4mA 62MHz 74HC 8 Complementary type Parallel or Serial to Serial DIP-16 Shift Registers ROHS",
@@ -1627,11 +1541,11 @@
    "situacao": "ok"
   },
   "C507182": {
-   "nome": "Circuito integrado 74HC245N",
+   "nome": "Buffer 74HC245N",
    "marca": "HGSEMI",
    "modelo": "74HC245N",
    "pacote": "DIP-20",
-   "tamanho": "DIP-20",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Buffers, Drivers, Receivers, Transceivers",
    "descricao": "-40℃~+85℃ 1 160uA 2V~6V 7.8mA 7.8mA 74 Series 8 9ns@4.5V,50pF Bidirectional Output enable Tri-State DIP-20 Buffers, Drivers, Receivers, Transceivers ROHS",
@@ -1661,11 +1575,11 @@
    "situacao": "ok"
   },
   "C725329": {
-   "nome": "Circuito integrado TLC555N",
+   "nome": "Timer TLC555N",
    "marca": "HGSEMI",
    "modelo": "TLC555N",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "555 Timers / Counters",
    "descricao": "-40℃~+85℃ 1 30uA 4.5V~15V DIP-8 555 Timers / Counters ROHS",
@@ -1687,11 +1601,11 @@
    "situacao": "ok"
   },
   "C5116331": {
-   "nome": "Circuito integrado 74HC08N",
+   "nome": "Porta lógica 74HC08N",
    "marca": "HGSEMI",
    "modelo": "74HC08N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-40℃~+85℃ 1.5V、3.15V、4.2V 1.9V、4.4V、5.9V 18ns@4.5V,50pF 2 260mV 2V~6V 2uA 4 5.2mA 5.2mA 500mV、1.35V、1.8V 74HC Series AND Gate DIP-14 Logic Gates ROHS",
@@ -1723,11 +1637,11 @@
    "situacao": "ok"
   },
   "C51912176": {
-   "nome": "Circuito integrado CD4026BE(XBLW)",
+   "nome": "Contador CD4026BE(XBLW)",
    "marca": "XBLW",
    "modelo": "CD4026BE(XBLW)",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Counters, Dividers",
    "descricao": "-40℃~+125℃ 1 12MHz 216ns 3V~15V Asynchronous CD4000 Divide-by-10 Reset function Rising Edge Synchronous Up Counter DIP-16 Counters, Dividers ROHS",
@@ -1757,12 +1671,86 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C36533688": {
+   "nome": "Amplificador operacional MCP6004-I/P-TUDI",
+   "marca": "Tudi",
+   "modelo": "MCP6004-I/P-TUDI",
+   "pacote": "DIP-14",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Operational Amplifier",
+   "descricao": "-3V~-900mV、900mV~3V -40℃~+125℃ 1.8V~5.5V 125uA 1MHz 1pA 1pA 2.7uV/℃ 27nV/√Hz@1kHz 4 5.6mV 70dB 800V/ms 84mA Built-in compensation Rail-to-Rail Input, Rail-to-Rail Output DIP-14 Operational Amplifier ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+125℃",
+    "Vos - Input Offset Voltage": "5.6mV",
+    "Input Offset Current(Ios)": "1pA",
+    "Output Current": "84mA",
+    "Input Offset Voltage Drift(Vos TC)": "2.7uV/℃",
+    "Slew Rate": "800V/ms",
+    "Gain Bandwidth Product": "1MHz",
+    "Single supply": "1.8V~5.5V",
+    "Common Mode Rejection Ratio(CMRR)": "70dB",
+    "Rail to Rail": "Rail-to-Rail Input, Rail-to-Rail Output",
+    "Number of Channels": "4",
+    "Input Voltage Noise Density": "27nV/√Hz@1kHz",
+    "Quiescent Current": "125uA",
+    "Features": "Built-in compensation",
+    "Ib - Input Bias Current": "1pA",
+    "Dual Supply": "-3V~-900mV、900mV~3V"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C36533688.html",
+   "preco": 0.3421,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 624,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
+  "C53055899": {
+   "nome": "Amplificador operacional MCP6004-I/P-HX",
+   "marca": "ZHHXDZ",
+   "modelo": "MCP6004-I/P-HX",
+   "pacote": "DIP-14",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Operational Amplifier",
+   "descricao": "-40℃~+85℃ 1.8V~6V 100uA 1MHz 1pA 1pA 23mA 28nV/√Hz@1kHz 2uV/℃ 4 4.5mV 600V/ms 76dB ESD protection Rail-to-Rail Input, Rail-to-Rail Output DIP-14 Operational Amplifier ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Vos - Input Offset Voltage": "4.5mV",
+    "Input Offset Current(Ios)": "1pA",
+    "Output Current": "23mA",
+    "Input Offset Voltage Drift(Vos TC)": "2uV/℃",
+    "Slew Rate": "600V/ms",
+    "Gain Bandwidth Product": "1MHz",
+    "Single supply": "1.8V~6V",
+    "Common Mode Rejection Ratio(CMRR)": "76dB",
+    "Rail to Rail": "Rail-to-Rail Input, Rail-to-Rail Output",
+    "Number of Channels": "4",
+    "Input Voltage Noise Density": "28nV/√Hz@1kHz",
+    "Quiescent Current": "100uA",
+    "Features": "ESD protection",
+    "Ib - Input Bias Current": "1pA",
+    "Dual Supply": "-"
+   },
+   "datasheet": "",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/C53055899.html",
+   "preco": 0.4321,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 607,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C53374683": {
-   "nome": "Circuito integrado HG74HC00N",
+   "nome": "Porta lógica HG74HC00N",
    "marca": "HGSEMI",
    "modelo": "HG74HC00N",
    "pacote": "DIP-14",
-   "tamanho": "DIP-14",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Logic Gates",
    "descricao": "-40℃~+85℃ 1.5V、3.15V、4.2V 1.9V、3.84V、4.4V、5.34V、5.9V 100mV、330mV 2 20ns@6V,50pF 2V~6V 4 500mV、1.35V、1.8V 74HC NAND Gate DIP-14 Logic Gates ROHS",
@@ -1794,11 +1782,11 @@
    "situacao": "ok"
   },
   "C78711": {
-   "nome": "Circuito integrado SN74HC595N",
+   "nome": "Registrador de deslocamento SN74HC595N",
    "marca": "Texas Instruments",
    "modelo": "SN74HC595N",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Shift Registers",
    "descricao": "-40℃~+85℃ 1 26ns@6V,50pF 29MHz 2V~6V 6mA 74HC 8 Serial-to-Serial or Parallel Tri-State DIP-16 Shift Registers ROHS",
@@ -1829,45 +1817,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C510561": {
-   "nome": "Circuito integrado LM386N",
-   "marca": "HTC Korea TAEJIN Tech",
-   "modelo": "LM386N",
-   "pacote": "DIP-8",
-   "tamanho": "DIP-8",
-   "montagem": "furo",
-   "categoria_loja": "Audio Amplifiers",
-   "descricao": "0.2% 0℃~+70℃ 1-Channel 4V~12V 4mA 700mWx1@8Ω、325mWx1@8Ω ESD protection DIP-8 Audio Amplifiers ROHS",
-   "atributos": {
-    "Power Supply Rejection Ratio (PSRR)": "-",
-    "Operating Temperature": "0℃~+70℃",
-    "Total Harmonic Distortion + Noise (THD+N)": "0.2%",
-    "Output Power": "700mWx1@8Ω、325mWx1@8Ω",
-    "Efficiency": "-",
-    "Voltage - Supply": "4V~12V",
-    "Number of Inputs": "-",
-    "Quiescent Current": "4mA",
-    "Features": "ESD Protection",
-    "Class": "-",
-    "Speaker Channels": "1-Channel",
-    "Signal-to-Noise Ratio": "-"
-   },
-   "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2004111632_HTC-Korea-TAEJIN-Tech-LM386N_C510561.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/audio-amplifiers_htc-korea-taejin-tech-lm386n_C510561.html",
-   "preco": 0.3455,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 570,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C5444305": {
-   "nome": "Circuito integrado XD74HC165",
+   "nome": "Registrador de deslocamento XD74HC165",
    "marca": "XINLUDA",
    "modelo": "XD74HC165",
    "pacote": "DIP-16",
-   "tamanho": "DIP-16",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Shift Registers",
    "descricao": "-40℃~+85℃ 28ns@6V,50pF 2V~6V 35MHz 500mW 74HC 8 Parallel-to-Serial DIP-16 Shift Registers ROHS",
@@ -1895,12 +1850,49 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
+  "C640394": {
+   "nome": "Amplificador operacional MCP6002-I/P",
+   "marca": "Microchip Tech",
+   "modelo": "MCP6002-I/P",
+   "pacote": "PDIP-8",
+   "tamanho": "",
+   "montagem": "furo",
+   "categoria_loja": "Operational Amplifier",
+   "descricao": "-40℃~+85℃ 1.8V~6V 100uA 1MHz 1pA 1pA 2 23mA 28nV/√Hz@1kHz 2uV/℃ 4.5mV 600V/ms 76dB ESD protection Rail-to-Rail Input, Rail-to-Rail Output PDIP-8 Operational Amplifier ROHS",
+   "atributos": {
+    "Operating Temperature": "-40℃~+85℃",
+    "Vos - Input Offset Voltage": "4.5mV",
+    "Input Offset Current(Ios)": "1pA",
+    "Output Current": "23mA",
+    "Input Offset Voltage Drift(Vos TC)": "2uV/℃",
+    "Slew Rate": "600V/ms",
+    "Gain Bandwidth Product": "1MHz",
+    "Single supply": "1.8V~6V",
+    "Common Mode Rejection Ratio(CMRR)": "76dB",
+    "Rail to Rail": "Rail-to-Rail Input, Rail-to-Rail Output",
+    "Number of Channels": "2",
+    "Input Voltage Noise Density": "28nV/√Hz@1kHz",
+    "Quiescent Current": "100uA",
+    "Features": "ESD Protection",
+    "Ib - Input Bias Current": "1pA",
+    "Dual Supply": "-"
+   },
+   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210171830_Microchip-Tech-MCP6002-I-P_C640394.pdf",
+   "loja": "LCSC",
+   "link": "https://www.lcsc.com/product-detail/operational-amplifier_microchip-tech-mcp6002-i-p_C640394.html",
+   "preco": 1.3305,
+   "moeda": "USD",
+   "minimo": 1,
+   "estoque": 246,
+   "visto": "2026-10-24",
+   "situacao": "ok"
+  },
   "C5213": {
-   "nome": "Circuito integrado LM358P",
+   "nome": "Amplificador operacional LM358P",
    "marca": "Texas Instruments",
    "modelo": "LM358P",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-16V~-1.5V、1.5V~16V 0℃~+70℃ 2 20nA 2nA 300V/ms 30mA 3V~32V 3mV 40nV/√Hz@1kHz 700kHz 700uA 7uV/℃ 80dB DIP-8 Operational Amplifier ROHS",
@@ -1933,11 +1925,11 @@
    "situacao": "ok"
   },
   "C647352": {
-   "nome": "Circuito integrado MCP23017-E/SP",
+   "nome": "Expansor de pinos MCP23017-E/SP",
    "marca": "Microchip Tech",
    "modelo": "MCP23017-E/SP",
    "pacote": "SPDIP-28",
-   "tamanho": "SPDIP-28",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "I/O Expanders",
    "descricao": "-40℃~+125℃ 1.7MHz 1.8V~5.5V 16 3uA 600mV 8 8mA I2C Interrupt Output Reset function、Cascading and address extension SPDIP-28 I/O Expanders ROHS",
@@ -1967,11 +1959,11 @@
    "situacao": "ok"
   },
   "C163528": {
-   "nome": "Circuito integrado LM358AP",
+   "nome": "Amplificador operacional LM358AP",
    "marca": "Texas Instruments",
    "modelo": "LM358AP",
    "pacote": "DIP-8",
-   "tamanho": "DIP-8",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Operational Amplifier",
    "descricao": "-16V~-1.5V、1.5V~16V 0℃~+70℃ 2 20mA 20nA 300V/ms 3V~32V 3mV 40nV/√Hz@1kHz 50nA 700kHz 700uA 7uV/℃ 80dB DIP-8 Operational Amplifier ROHS",
@@ -2003,50 +1995,12 @@
    "visto": "2026-10-24",
    "situacao": "ok"
   },
-  "C2890491": {
-   "nome": "Circuito integrado MCP3008-I/P",
-   "marca": "Microchip Tech",
-   "modelo": "MCP3008-I/P",
-   "pacote": "PDIP-16",
-   "tamanho": "PDIP-16",
-   "montagem": "furo",
-   "categoria_loja": "Analog to Digital Converters (ADC)",
-   "descricao": "-40℃~+85℃ 1.35MHz~3.6MHz 10 1LSB 2.7V~5.5V 200kHz 5nA 61dB 8 Multiplexers SAR SPI Yes PDIP-16 Analog to Digital Converters (ADC) ROHS",
-   "atributos": {
-    "Clock Frequency": "1.35MHz~3.6MHz",
-    "Operating Temperature": "-40℃~+85℃",
-    "Clock/Oscillator": "External",
-    "Programmable Gain": "-",
-    "differential input": "Yes",
-    "DNL (LSB)": "0.25LSB",
-    "Signal-to-Noise Ratio": "61dB",
-    "Integral non - linearity": "1LSB",
-    "Voltage - Supply": "2.7V~5.5V",
-    "Quiescent Current (Iq)": "5nA",
-    "ADC architecture": "SAR",
-    "Sampling Rate": "200kHz",
-    "Features": "Multiplexers",
-    "number of channels": "8",
-    "Voltage Reference": "External",
-    "Resolution (Bits)": "10",
-    "Interface": "SPI"
-   },
-   "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109100930_Microchip-Tech-MCP3008-I-P_C2890491.pdf",
-   "loja": "LCSC",
-   "link": "https://www.lcsc.com/product-detail/analog-to-digital-converters-adc_microchip-tech-mcp3008-i-p_C2890491.html",
-   "preco": 4.6526,
-   "moeda": "USD",
-   "minimo": 1,
-   "estoque": 54,
-   "visto": "2026-10-24",
-   "situacao": "ok"
-  },
   "C29160": {
-   "nome": "Circuito integrado MAX7219CNG+",
+   "nome": "Driver de display MAX7219CNG+",
    "marca": "Analog Devices Inc./Maxim Integrated",
    "modelo": "MAX7219CNG+",
    "pacote": "DIP-24-300mil",
-   "tamanho": "DIP-24-300mil",
+   "tamanho": "",
    "montagem": "furo",
    "categoria_loja": "Digital Tube Drivers",
    "descricao": "0℃~+70℃ 10MHz 30mA 4V~5.5V 8 Segment x 8 Digit Adjustable Glow、Common Cathode DIP-24-300mil Digital Tube Drivers ROHS",

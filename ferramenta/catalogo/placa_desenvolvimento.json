@@ -2,7 +2,7 @@
  "categoria": "placa_desenvolvimento",
  "nome": "Placa pronta",
  "grupo": "Cérebros",
- "explica": "Um cérebro já montado numa plaquinha com USB, regulador e pinos: liga no computador e já programa (Arduino, MicroPython). Serve pra testar a ideia antes de desenhar a placa, ou pra ir inteira em cima da sua placa, soldada por barra de pinos nos furos das bordas.",
+ "explica": "Um cérebro já montado numa plaquinha com USB, regulador e pinos: liga no computador e já programa (Arduino, MicroPython). Serve pra testar a ideia antes de desenhar a placa, ou pra ir inteira em cima da sua placa, soldada por barra de pinos. Cuidado com a tensão dos pinos: ESP32, ESP8266 e Raspberry Pi Pico trabalham com 3,3 V (5 V num pino pode queimar o chip); Uno, Nano e Mega trabalham com 5 V.",
  "nome_peca": "Placa pronta com {Utilized IC / Part}",
  "destaques": [
   "Utilized IC / Part",
@@ -174,7 +174,39 @@
    "minimo": 1,
    "estoque": 725,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/raspberry-pi-pico",
+     "preco": 39.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placa-raspberry-pi/raspberry-pi-pico-rp2040-com-micro-usb-8372.html",
+     "preco": 76.4,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/placa-raspberry-pi/raspberry-pi-pico",
+     "preco": 39.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/raspberry-pi-pico.html",
+     "preco": 45.55,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C7203003": {
    "nome": "Placa pronta Raspberry Pi Pico W",
@@ -194,7 +226,33 @@
    "minimo": 1,
    "estoque": 706,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placa-raspberry-pi/raspberry-pi-pico-w-com-wifi-e-bluetooth-8780.html",
+     "preco": 148.17,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/placa-raspberry-pi/raspberry-pi-pico-w",
+     "preco": 61.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/raspberry-pi-pico-w",
+     "preco": 81.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C41407547": {
    "nome": "Placa pronta Raspberry Pi Pico 2",
@@ -214,7 +272,148 @@
    "minimo": 1,
    "estoque": 447,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/placa-raspberry-pi/raspberry-pi-pico-2",
+     "preco": 62.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "robocore:placa-nano-v3-com-cabo-usb-para-arduino": {
+   "nome": "Nano V3 mini USB (compatível com Arduino)",
+   "marca": "genérico",
+   "modelo": "Nano V3",
+   "pacote": "módulo",
+   "tamanho": "17,6mm x 43,2mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "A Placa Nano V3 é uma pequena versão das placas da tecnologia Arduino, parecida com o Arduino UNO, pois também possui um chip ATMega328P ou ATmega328PB, mas n",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328P",
+    "Voltage - Supply": "5 V (entrada de 7 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-arduino/placa-nano-v3-com-cabo-usb-para-arduino",
+   "preco": 28.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 437,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1048/images/1048_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/arduino-nano-r3-compativel-cabo-mini-usb.html",
+     "preco": 35.68,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-nano-v3-compativel-arduino-cabo-usb-3630.html",
+     "preco": 38.34,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/nano-v3-0-cabo-usb-para-arduino",
+     "preco": 39.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "robocore:esp32-wifi-bluetooth": {
+   "nome": "ESP32 com Wi-Fi e Bluetooth (25 pinos de uso)",
+   "marca": "genérico",
+   "modelo": "ESP32 Wi-Fi + Bluetooth",
+   "pacote": "módulo",
+   "tamanho": "54 x 29 x 13 mm (c x l x a - com barra de pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "O módulo ESP32 traz consigo o microprocessador Xtensa® Dual-Core 32-bit LX6, com um clock máximo de 240MHz, memória RAM de 520 KBytes e Flash de 4MB.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6 dual core)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2 LE",
+    "Voltage - Supply": "4,5 a 9 V (tem regulador pra 3,3 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/esp32-wifi-bluetooth",
+   "preco": 42.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 371,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1013/images/1013_1_H.png"
+  },
+  "robocore:raspberry-pi-pico-2-w": {
+   "nome": "Raspberry Pi Pico 2 W",
+   "marca": "Raspberry Pi",
+   "modelo": "Raspberry Pi Pico 2 W",
+   "pacote": "módulo",
+   "tamanho": "21 x 51 x 3 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "Conheça a Raspberry Pi Pico 2 W, a placa que possui a última geração de microcontroladores da Raspberry Pi, o RP2350.",
+   "atributos": {
+    "Utilized IC / Part": "RP2350",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5.2",
+    "Voltage - Supply": "5 V pelo micro USB"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-raspberry-pi/raspberry-pi-pico-2-w",
+   "preco": 89.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 355,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3334/images/3334_1_H.png"
+  },
+  "usinainfo:esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340-8770": {
+   "nome": "ESP32 DevKit 30 pinos (USB-C)",
+   "marca": "Usinainfo",
+   "modelo": "ESP32 30 pinos USB-C",
+   "pacote": "módulo",
+   "tamanho": "~54x29x5mm; (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Placa ESP32 DevKit V1 de 30 pinos com ESP-WROOM-32D, USB-C, conversor CH340, 25 GPIO, flash de 4MB, Wi-Fi e Bluetooth 4.2.",
+   "atributos": {
+    "Utilized IC / Part": "ESP-WROOM-32D",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "5 V pelo USB-C; pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340-8770.html",
+   "preco": 54.95,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 330,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035737-large_default/esp32-wifi-e-bluetooth-com-usb-c-30-pinos-e-ch340.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos-ch340-usb-c",
+     "preco": 42.5,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C20467913": {
    "nome": "Placa pronta com ESP32-S3",
@@ -264,7 +463,49 @@
    "estoque": 183,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Placa pronta XIAO RP2350"
+   "apelido": "Placa pronta XIAO RP2350",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/seeed-studio/seeed-studio-xiao-rp2350",
+     "preco": 79.0,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "robocore:programador-para-esp32-cam": {
+   "nome": "Gravador USB pra ESP32-CAM",
+   "marca": "genérico",
+   "modelo": "ESP32-CAM-MB",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "Chegou a hora de programar o ESP32-CAM sem a necessidade de fazer ligações em protoboard.",
+   "atributos": {
+    "Utilized IC / Part": "CH340 (conversor USB-serial)",
+    "Voltage - Supply": "5 V pelo micro USB"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/programador-para-esp32-cam",
+   "preco": 9.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 173,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3082/images/3082_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/programador-usb-esp32-cam-mb-micro-usb-para-placa-ai-thinker-esp32-cam-8968.html",
+     "preco": 22.66,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
   },
   "C608041": {
    "nome": "Placa pronta 102010328",
@@ -331,6 +572,39 @@
    "situacao": "ok",
    "apelido": "Placa pronta XIAO ESP32-S3"
   },
+  "robocore:placa-uno-r3": {
+   "nome": "Uno R3 (compatível com Arduino)",
+   "marca": "genérico",
+   "modelo": "Uno R3",
+   "pacote": "módulo",
+   "tamanho": "5,3 cm x 6,8 cm x 1,0 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "Precisando testar o conceito de uma placa UNO R3 baseada nas placas Arduino em seu projeto?",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328",
+    "Voltage - Supply": "5 V (entrada de 7 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-arduino/placa-uno-r3",
+   "preco": 53.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 152,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1351/images/1351_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-uno-r3-compativel-arduino-cabo-usb-3513.html",
+     "preco": 86.79,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
   "C22751548": {
    "nome": "Placa pronta LCKFB-DWX-CW32F030C8T6",
    "marca": "LCSC-boards",
@@ -350,6 +624,40 @@
    "estoque": 136,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "robocore:esp32-cam-esp32-com-camera": {
+   "nome": "ESP32-CAM com câmera OV2640",
+   "marca": "genérico",
+   "modelo": "ESP32-CAM",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "Este é a ESP32-CAM, uma placa muito pequena que une o poderoso módulo ESP32 com uma câmera OV2640 ou OV3660 e um slot para cartão MicroSD.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6 dual core)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2 LE"
+   },
+   "datasheet": "https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/esp32-cam-esp32-com-camera",
+   "preco": 79.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 128,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/1205/images/1205_1_H.png",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-esp32-cam-com-camera-ov2640-2mp",
+     "preco": 99.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C18212168": {
    "nome": "Placa pronta com ESP32-C3",
@@ -378,7 +686,77 @@
    "minimo": 1,
    "estoque": 121,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/seeed-studio/seeed-studio-xiao-esp32c3",
+     "preco": 59.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:esp32-s3-devkitc-1-n8r2-8mb-flash-com-wifi-e-bluetooth-com-usb-c-8679": {
+   "nome": "ESP32-S3 DevKitC-1 N8R2",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-S3-DevKitC-1 N8R2",
+   "pacote": "módulo",
+   "tamanho": "~64x27x4,5mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O ESP32-S3 DevKitC-1 conta com o microprocessador Xtensa 32-Bits LX7 que apresenta baixo consumo de energia, além de se destacar pela presença de dois núcleos de CPU (processador dual core).",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-S3-WROOM-1 (N8R2)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE",
+    "Voltage - Supply": "5 V pelo USB-C; 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-s3-devkitc-1-n8r2-8mb-flash-com-wifi-e-bluetooth-com-usb-c-8679.html",
+   "preco": 69.08,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 115,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1034219-large_default/esp32-s3-devkitc-1-n8r2-8mb-flash-com-wifi-e-bluetooth-com-usb-c.jpg"
+  },
+  "usinainfo:esp32-wroom-32u-devkitc-v4-com-wifi-bluetooth-e-cp2102-7077": {
+   "nome": "ESP32 DevKitC V4 WROOM-32U, 38 pinos (antena externa)",
+   "marca": "Diy More",
+   "modelo": "ESP32-WROOM-32U DevKitC V4",
+   "pacote": "módulo",
+   "tamanho": "~48x28x5mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "DevKitC V4 com módulo ESP32-WROOM-32U, 38 pinos, CP2102 e conector IPEX para antena externa.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-WROOM-32U",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "5 V pelo USB; pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=623",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-wroom-32u-devkitc-v4-com-wifi-bluetooth-e-cp2102-7077.html",
+   "preco": 59.85,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 115,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1034382-large_default/esp32-wroom-32u-devkitc-v4-com-wifi-bluetooth-e-cp2102.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-wifi-bluetooth-esp32-wroom-32u-ipex",
+     "preco": 56.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C48405120": {
    "nome": "Placa pronta 102010672",
@@ -461,7 +839,78 @@
    "minimo": 1,
    "estoque": 105,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Raspberry Pi Pico H",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/placa-raspberry-pi/raspberry-pi-pico-h",
+     "preco": 44.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:esp32-c6-super-mini-4mb-wi-fi-6-ble-zigbee-thread-usb-c-9162": {
+   "nome": "ESP32-C6 Super Mini",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-C6 Super Mini",
+   "pacote": "módulo",
+   "tamanho": "~28x19x5mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "ESP32-C6 Super Mini compacta com processador RISC-V, USB-C, flash de 4MB, Wi-Fi e Bluetooth.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-C6 (C6FH4)",
+    "Wireless Standard": "Wi-Fi 6 2,4 GHz, Bluetooth 5 LE, Zigbee e Thread",
+    "Voltage - Supply": "5 V pelo USB-C; pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-c6-super-mini-4mb-wi-fi-6-ble-zigbee-thread-usb-c-9162.html",
+   "preco": 54.84,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 86,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1036217-large_default/esp32-c6-super-mini-4mb-wi-fi-6-ble-zigbee-thread-usb-c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/placa-super-mini-esp32-c6-esp32-c6fh4",
+     "preco": 94.4,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:esp32-devkitc-v4-wroom-32d-38-pinos-cp2102-micro-usb-8682": {
+   "nome": "ESP32 DOIT DevKitC V4 WROOM-32D, 38 pinos",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-WROOM-32D DevKitC V4",
+   "pacote": "módulo",
+   "tamanho": "~56x28x5mm (sem pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "DOIT DevKitC V4 com ESP32-WROOM-32D, conversor CP2102, flash de 4MB, Wi-Fi 2,4GHz, Bluetooth 4.2 e processador Xtensa LX6 dual core.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-WROOM-32D",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "3,3 a 5 V (pino 5V); pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-devkitc-v4-wroom-32d-38-pinos-cp2102-micro-usb-8682.html",
+   "preco": 65.95,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 80,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035276-large_default/esp32-devkitc-v4-wroom-32d-38-pinos-cp2102-micro-usb.jpg"
   },
   "C27675191": {
    "nome": "Placa pronta 113991254",
@@ -482,7 +931,17 @@
    "estoque": 68,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Placa pronta XIAO ESP32-C6"
+   "apelido": "Placa pronta XIAO ESP32-C6",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/seeed-studio/seeed-studio-xiao-esp32c6",
+     "preco": 69.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C19189484": {
    "nome": "Placa pronta A000005",
@@ -502,7 +961,8 @@
    "minimo": 1,
    "estoque": 61,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Placa Arduino compacta que encaixa na protoboard (A000005)"
   },
   "C17401557": {
    "nome": "Placa pronta 102010469",
@@ -525,7 +985,17 @@
    "estoque": 58,
    "visto": "2026-10-24",
    "situacao": "ok",
-   "apelido": "Placa pronta XIAO nRF52840 Sense"
+   "apelido": "Placa pronta XIAO nRF52840 Sense",
+   "outras_lojas": [
+    {
+     "loja": "RoboCore",
+     "link": "https://www.robocore.net/seeed-studio/seeed-studio-xiao-nrf52840-sense",
+     "preco": 199.99,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C5350143": {
    "nome": "Placa pronta RP2040-Zero",
@@ -545,7 +1015,143 @@
    "minimo": 1,
    "estoque": 52,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placa-raspberry-pi/rp2040-zero-raspberry-pi-pico-com-usb-c-9077.html",
+     "preco": 26.85,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "usinainfo:esp32-wroom-32e-wifi-e-bluetooth-38-pinos-com-cp2102-9109": {
+   "nome": "ESP32 DevKit WROOM-32E, 38 pinos",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-WROOM-32E 38 pinos",
+   "pacote": "módulo",
+   "tamanho": "52x28x5mm; (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "DevKit ESP32-WROOM-32E ECO V3 com 38 pinos, CP2102, Micro USB, 32 GPIO, Wi-Fi, Bluetooth e alimentação por USB ou pino Vin.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-WROOM-32E",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "3,3 V ou 5 V (Vin ou micro USB); pinos em 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-wroom-32e-wifi-e-bluetooth-38-pinos-com-cp2102-9109.html",
+   "preco": 68.64,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 52,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035741-large_default/esp32-wroom-32e-wifi-e-bluetooth-38-pinos-com-cp2102.jpg"
+  },
+  "usinainfo:placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c-8732": {
+   "nome": "Nano V3 (compatível com Arduino) USB-C",
+   "marca": "Usinainfo",
+   "modelo": "Nano V3",
+   "pacote": "módulo",
+   "tamanho": "44x18,5x6,4mm (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Placas Arduino Compatível",
+   "descricao": "Nano V3 compatível com Arduino, microcontrolador ATmega328P, conexão USB-C, conversor CH340C e clock de 16MHz.",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328P (CH340C)",
+    "Voltage - Supply": "5 V (entrada de 7 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c-8732.html",
+   "preco": 32.56,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 50,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1033998-large_default/placa-nano-v3-compativel-arduino-com-usb-c-5v-16mhz-ch340c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/placa-nano-v30-com-conector-usb-tipo-c",
+     "preco": 34.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:placa-pro-micro-atmega32u4-compativel-arduino-3674": {
+   "nome": "Pro Micro ATmega32U4 (compatível com Arduino)",
+   "marca": "genérico",
+   "modelo": "Pro Micro",
+   "pacote": "módulo",
+   "tamanho": "33x18x3mm; (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "Placas Arduino Compatível",
+   "descricao": "Pro Micro compacta com ATmega32U4, operação em 5V, clock de 16MHz e conexão Micro USB.",
+   "atributos": {
+    "Utilized IC / Part": "ATmega32U4",
+    "Voltage - Supply": "5 V (entrada de 5 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-pro-micro-atmega32u4-compativel-arduino-3674.html",
+   "preco": 69.19,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 38,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1019518-large_default/placa-pro-micro-atmega32u4-compativel-arduino.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/arduino-pro-micro-atmega32u4-5v",
+     "preco": 55.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "usinainfo:placa-uno-r4-wifi-compativel-arduino-com-matriz-de-led-e-entrada-usb-c-8799": {
+   "nome": "Uno R4 WiFi (compatível com Arduino)",
+   "marca": "Usinainfo",
+   "modelo": "Uno R4 WiFi",
+   "pacote": "módulo",
+   "tamanho": "68,6x53,4x15mm (padrão Arduino UNO)",
+   "montagem": "módulo",
+   "categoria_loja": "Placas Arduino Compatível",
+   "descricao": "Uno R4 WiFi com RA4M1 Cortex-M4 a 48MHz, ESP32-S3 para Wi-Fi, matriz de LED, RTC, USB-C, 256KB de flash e comunicação UART, SPI, I2C e CAN.",
+   "atributos": {
+    "Utilized IC / Part": "Renesas RA4M1 + ESP32-S3-MINI-1-N8",
+    "Wireless Standard": "Wi-Fi e Bluetooth (pelo ESP32-S3)",
+    "Voltage - Supply": "5 V pelo USB-C (P4: 6 a 24 V)"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-uno-r4-wifi-compativel-arduino-com-matriz-de-led-e-entrada-usb-c-8799.html",
+   "preco": 148.72,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 28,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1034292-large_default/placa-uno-r4-wifi-compativel-arduino-com-matriz-de-led-e-entrada-usb-c.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/placa-uno-r4-wifi",
+     "preco": 159.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
   },
   "C20068939": {
    "nome": "Placa pronta LCKFB-GD32E230C8T6",
@@ -566,6 +1172,49 @@
    "estoque": 24,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "usinainfo:nodemcu-v3-esp8266-esp-12e-ch340-micro-usb-4420": {
+   "nome": "NodeMCU ESP8266 V3",
+   "marca": "Wemos",
+   "modelo": "ESP8266 NodeMCU V3",
+   "pacote": "módulo",
+   "tamanho": "57x31x5mm (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "NodeMCU V3 com ESP8266 ESP-12E, Wi-Fi, conversor CH340 ou FT232 e conexão Micro USB.",
+   "atributos": {
+    "Utilized IC / Part": "ESP8266 (ESP-12E)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz",
+    "Voltage - Supply": "5 a 9 V; pinos em 3,3 V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1039",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp8266/nodemcu-v3-esp8266-esp-12e-ch340-micro-usb-4420.html",
+   "preco": 36.25,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 24,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035644-large_default/nodemcu-v3-esp8266-esp-12e-ch340-micro-usb.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Eletrogate",
+     "link": "https://www.eletrogate.com/modulo-wifi-esp8266-nodemcu-v3-lolin",
+     "preco": 29.9,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/produto/modulo-esp8266-nodemcu-esp-12e-com-wifi-v3.html",
+     "preco": 33.2,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
   },
   "C22392413": {
    "nome": "Placa pronta ABX00053",
@@ -594,6 +1243,56 @@
    "visto": "2026-10-24",
    "situacao": "ok",
    "apelido": "Placa pronta Arduino Nano RP2040 Connect"
+  },
+  "usinainfo:heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102-8437": {
+   "nome": "ESP32 com LoRa e tela OLED (Heltec V3)",
+   "marca": "Heltec",
+   "modelo": "Heltec LoRa 32 V3",
+   "pacote": "módulo",
+   "tamanho": "~47x8mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "Heltec WiFi LoRa 32 V3 com ESP32-S3, rádio SX1262 em 868/915MHz, OLED de 0,96”, USB-C, CP2102 e conector para bateria de lítio.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-S3FN8 + LoRa SX1262",
+    "Wireless Standard": "Wi-Fi 2,4 GHz, Bluetooth 5 e LoRa 868/915 MHz",
+    "Voltage - Supply": "5 V pelo USB-C ou bateria de lítio 3,7 V; pinos em 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102-8437.html",
+   "preco": 288.86,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 20,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1032933-large_default/heltec-esp32-v3-lora-wifi-32-sx1262-868915mhz-com-display-oled-com-usb-c-e-cp2102.jpg"
+  },
+  "usinainfo:esp32-c6-devkitc-1-4mb-wi-fi-6-ble-zigbee-thread-usb-c-ch343-8754": {
+   "nome": "ESP32-C6 DevKitC-1 (4 MB)",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-C6-DevKitC-1",
+   "pacote": "módulo",
+   "tamanho": "53 x 28 x 5mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "ESP32-C6-DevKitC-1 com módulo C6-WROOM-1, USB-C duplo, CH343, flash de 4MB e até 21 GPIO.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-C6-WROOM-1",
+    "Wireless Standard": "Wi-Fi 6 2,4 GHz, Bluetooth 5 LE, Zigbee e Thread",
+    "Voltage - Supply": "5 V pelo USB-C; 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-c6-devkitc-1-4mb-wi-fi-6-ble-zigbee-thread-usb-c-ch343-8754.html",
+   "preco": 97.63,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 19,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1037407-large_default/esp32-c6-devkitc-1-4mb-wi-fi-6-ble-zigbee-thread-usb-c-ch343.jpg"
   },
   "C20110268": {
    "nome": "Placa pronta SC0919",
@@ -625,7 +1324,8 @@
    "minimo": 1,
    "estoque": 17,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Raspberry Pi Pico WH"
   },
   "C20627271": {
    "nome": "Placa pronta ABX00027",
@@ -648,6 +1348,31 @@
    "situacao": "ok",
    "apelido": "Placa pronta Arduino Nano 33 IoT"
   },
+  "usinainfo:esp32-cam-com-camera-ov3660-3mp-ch340-e-programador-usb-c-integrado-9101": {
+   "nome": "ESP32-CAM com câmera OV3660 (3 MP) e USB-C",
+   "marca": "Usinainfo",
+   "modelo": "ESP32-CAM-CH340 OV3660",
+   "pacote": "módulo",
+   "tamanho": "49x27x10mm (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "ESP32-CAM com câmera OV3660, conversor CH340 e programador USB-C integrado.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6 dual core)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2 LE",
+    "Voltage - Supply": "5 V"
+   },
+   "datasheet": "",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp32/esp32-cam-com-camera-ov3660-3mp-ch340-e-programador-usb-c-integrado-9101.html",
+   "preco": 162.03,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 10,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://www.usinainfo.com.br/1035734-large_default/esp32-cam-com-camera-ov3660-3mp-ch340-e-programador-usb-c-integrado.jpg"
+  },
   "C22392566": {
    "nome": "Placa pronta ABX00092",
    "marca": "Arduino",
@@ -668,7 +1393,8 @@
    "minimo": 1,
    "estoque": 8,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Arduino Nano ESP32 (ABX00092)"
   },
   "C2764098": {
    "nome": "Placa pronta NODEMCU(12F)",
@@ -725,6 +1451,30 @@
    "estoque": 6,
    "visto": "2026-10-24",
    "situacao": "ok"
+  },
+  "robocore:arduino-uno-r4-minima": {
+   "nome": "Arduino Uno R4 Minima (original)",
+   "marca": "Arduino",
+   "modelo": "Arduino Uno R4 Minima",
+   "pacote": "módulo",
+   "tamanho": "53,34 x 68,85 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "Produto original Arduino. Fabricado na Itália.",
+   "atributos": {
+    "Utilized IC / Part": "Renesas RA4M1",
+    "Voltage - Supply": "5 V (entrada de 6 a 24 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-arduino/arduino-uno-r4-minima",
+   "preco": 157.8,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 6,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3272/images/3272_1_H.png"
   },
   "C21303176": {
    "nome": "Placa pronta ABX00028",
@@ -795,7 +1545,8 @@
    "minimo": 1,
    "estoque": 2,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Placa Arduino de baixo consumo, banda estreita (ABX00019)"
   },
   "C21668258": {
    "nome": "Placa pronta ABX00083",
@@ -815,7 +1566,508 @@
    "minimo": 1,
    "estoque": 2,
    "visto": "2026-10-24",
-   "situacao": "ok"
+   "situacao": "ok",
+   "apelido": "Arduino Nano ESP32 (ABX00083)"
+  },
+  "bau:placa-devkitc-1-esp32-s3-n16r8": {
+   "nome": "ESP32-S3 DevKitC-1 N16R8",
+   "marca": "genérico",
+   "modelo": "ESP32-S3 N16R8",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "A DevKitC-1 com ESP32-S3 N16R8 é a placa de referência para desenvolver com o S3 na configuração de maior memória: 16 MB de flash em Quad SPI e 8 MB de PSRAM em Octal SPI.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-S3-WROOM-1 (N16R8)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE",
+    "Voltage - Supply": "5 V pelo USB-C; 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/placa-devkitc-1-esp32-s3-n16r8",
+   "preco": 150.88,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403421999/_p_l_placa_devkitc-1_esp32-s3_n16r8_-_16mb_flash_-s6vrfiuh5m.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-s3-devkitc-1-n16r8-16mb-flash-com-wifi-e-bluetooth-com-usb-c-9361.html",
+     "preco": 68.93,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "bau:placa-devkitm-1-esp32-c3": {
+   "nome": "ESP32-C3 DevKitM-1 (Espressif)",
+   "marca": "genérico",
+   "modelo": "ESP32-C3-DevKitM-1",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "A DevKitM-1 é a placa de desenvolvimento oficial da Espressif para o ESP32-C3, e essa procedência conta: o layout, a alimentação e o roteamento da antena seguem exatamente a referência do fabricante, que é o mesmo material usado…",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-C3FN4",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/placa-devkitm-1-esp32-c3",
+   "preco": 78.4,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403421983/_1___1_14_2-vx04rne37e.jpg"
+  },
+  "bau:placa-esp32-s3-zero-esp32-s3fh4r2": {
+   "nome": "ESP32-S3 Zero",
+   "marca": "genérico",
+   "modelo": "ESP32-S3 Zero",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "A ESP32-S3 Zero coloca o desempenho do S3 num formato mínimo.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-S3FH4R2",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE",
+    "Voltage - Supply": "3,3 V (alimentação e pinos)"
+   },
+   "datasheet": "",
+   "loja": "Baú da Eletrônica",
+   "link": "https://www.baudaeletronica.com.br/placa-esp32-s3-zero-esp32-s3fh4r2",
+   "preco": 99.2,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://cdn.awsli.com.br/800x800/2599/2599375/produto/403422001/_p_l_placa_esp32-s3_zero_-_esp32-s3fh4r2_1-picu8lwfkj.jpg"
+  },
+  "eletrogate:esp32-c3-mini-tipo-c": {
+   "nome": "ESP32-C3 Super Mini",
+   "marca": "Eletrogate",
+   "modelo": "ESP32-C3",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O ESP32-C3 Mini é uma poderosa placa de desenvolvimento baseada no chip ESP32-C3 , que combina conectividade Wi-Fi e Bluetooth 5.0 (BLE) com um desempenho excelente e consumo otimizado.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-C3",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 5 LE",
+    "Voltage - Supply": "5 V pelo USB-C; pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/esp32-c3-mini-tipo-c",
+   "preco": 42.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/362806708/_p_l_placa_super_mini_-_esp32_c3_1-8inbgqiu8j.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-c3-super-mini-com-wifi-e-bluetooth-com-usb-c-8967.html",
+     "preco": 31.46,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    },
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/placa-super-mini-esp32-c3",
+     "preco": 55.36,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:mega-2560-r3-ch340-cabo-usb-para-arduino": {
+   "nome": "Mega 2560 R3 (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Mega 2560",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O Mega 2560 é a Placa Arduino perfeita para quem procura fazer Projetos mais elaborados, que necessitam de um número maior de entradas e saídas.",
+   "atributos": {
+    "Utilized IC / Part": "ATmega2560 (CH340)",
+    "Voltage - Supply": "5 V (entrada de 7 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/mega-2560-r3-ch340-cabo-usb-para-arduino",
+   "preco": 149.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/39925871/3dab8e5d13.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-mega-2560-r3-compativel-arduino-cabo-usb-3629.html",
+     "preco": 185.13,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:modulo-wifi-esp32-38-pinos-usb-tipo-c": {
+   "nome": "ESP32 DevKit 38 pinos USB-C",
+   "marca": "Eletrogate",
+   "modelo": "ESP32-WROOM-32D 38 pinos USB-C",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O módulo ESP32 é um módulo Wi Fi de alta performance, com um baixíssimo consumo de energia.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-WROOM-32D",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "5 V (pino 5V ou USB-C); pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wifi-esp32-38-pinos-usb-tipo-c",
+   "preco": 54.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/362703776/fasgsadtgagdfs-npqog66er6.png",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32s-nodemcu-iot-com-wifi-e-bluetooth-38-pinos-com-usb-c-e-cp2102-8796.html",
+     "preco": 57.53,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-wifi-esp32-bluetooth-30-pinos": {
+   "nome": "ESP32 DevKit 30 pinos (micro USB)",
+   "marca": "Eletrogate",
+   "modelo": "ESP32 30 pinos",
+   "pacote": "módulo",
+   "tamanho": "49 x 25,5 x 7 mm",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O módulo ESP32 É um módulo Wi Fi de alta performance, com um baixíssimo consumo de energia.",
+   "atributos": {
+    "Utilized IC / Part": "ESP-WROOM-32",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "4,5 a 9 V no Vin; pinos em 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos",
+   "preco": 54.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/40224659/491fa7b39e.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32-nodemcu-iot-com-wifi-e-bluetooth-30-pinos-com-cp2102-5147.html",
+     "preco": 65.78,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:modulo-wifi-esp32s-bluetooth-38-pinos": {
+   "nome": "ESP32 DevKit 38 pinos",
+   "marca": "Eletrogate",
+   "modelo": "ESP32s 38 pinos",
+   "pacote": "módulo",
+   "tamanho": "51 x 27.5 x 5MM",
+   "montagem": "módulo",
+   "categoria_loja": "ESP32",
+   "descricao": "O módulo ESP32 é um módulo Wi Fi de alta performance, com um baixíssimo consumo de energia.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32-WROOM-32D",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2",
+    "Voltage - Supply": "4,5 a 12 V no Vin; pinos em 3,3 V (não tolera 5 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/modulo-wifi-esp32s-bluetooth-38-pinos",
+   "preco": 54.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/27424373/a0a030cedc.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/esp32/esp32s-nodemcu-iot-com-wifi-e-bluetooth-38-pinos-com-cp2102-5346.html",
+     "preco": 54.95,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:placa-de-desenvolvimento-stm32f103c8t6-arm-stm32": {
+   "nome": "STM32 Blue Pill (STM32F103C8T6)",
+   "marca": "Eletrogate",
+   "modelo": "STM32F103C8T6",
+   "pacote": "módulo",
+   "tamanho": "5,3 cm x 2,2 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O STM32F103C8T6 é projetado para fornecer uma plataforma de baixo custo, que ainda atenda aos Desenvolvedores mais exigentes.",
+   "atributos": {
+    "Utilized IC / Part": "STM32F103C8T6 (ARM Cortex-M3)",
+    "Voltage - Supply": "2,0 a 3,6 V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/placa-de-desenvolvimento-stm32f103c8t6-arm-stm32",
+   "preco": 24.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/194141819f8e6d7bc7.jpg"
+  },
+  "eletrogate:pro-mini-atmega328p-5v-16mhz": {
+   "nome": "Pro Mini 5 V (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Pro Mini",
+   "pacote": "módulo",
+   "tamanho": "33 x 18 x 6mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "A Placa Pro Mini é um microcontrolador baseado no ATMega328p que opera a 16MHz e 5V.",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328P",
+    "Voltage - Supply": "5 V (entrada de 5 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/pro-mini-atmega328p-5v-16mhz",
+   "preco": 26.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/19414329/pro-mini-atmega328p-5v-16mhz-664e5e78.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Usinainfo",
+     "link": "https://www.usinainfo.com.br/placas-arduino-compativel/placa-pro-mini-atmega328-compativel-arduino-3107.html",
+     "preco": 34.65,
+     "moeda": "BRL",
+     "visto": "2026-10-24"
+    }
+   ]
+  },
+  "eletrogate:uno-r3-smd-ch340": {
+   "nome": "Uno R3 SMD (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Uno R3",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O Arduino Uno SMD é uma versão econômica do mais conhecido Arduino Uno R3 , onde apresenta exatamente a mesma pinagem, bem como performance de funcionamento já que também conta com o Microcontrolador Atmega328 .",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328 (CH340)",
+    "Voltage - Supply": "5 V (entrada de 7 a 9 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/uno-r3-smd-ch340",
+   "preco": 44.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/34855708/untitled-1-4cj6t8j8h6.jpg"
+  },
+  "eletrogate:uno-r3-smd-ch340-conector-usb-tipo-c": {
+   "nome": "Uno R3 SMD USB-C (compatível com Arduino)",
+   "marca": "Eletrogate",
+   "modelo": "Uno R3 SMD CH340 USB-C",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "O Arduino Uno SMD é uma versão econômica do mais conhecido Arduino Uno R3 , onde apresenta exatamente a mesma pinagem, bem como performance de funcionamento já que também conta com o Microcontrolador Atmega328 .",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328 (CH340)",
+    "Voltage - Supply": "5 V (entrada de 7 a 9 V)"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/uno-r3-smd-ch340-conector-usb-tipo-c",
+   "preco": 42.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/359741699/placa-uno-smd-usb-c-compativel-arduino-cabo-usb-ku9040xb7u.jpg",
+   "outras_lojas": [
+    {
+     "loja": "Baú da Eletrônica",
+     "link": "https://www.baudaeletronica.com.br/arduino-uno-atmega328-smd-tipo-c-compativel",
+     "preco": 49.26,
+     "moeda": "BRL",
+     "visto": "2026-10-24",
+     "situacao": "sem estoque"
+    }
+   ]
+  },
+  "eletrogate:wemos-d1-mini-pro-wifi-esp8266": {
+   "nome": "Wemos D1 Mini ESP8266",
+   "marca": "Eletrogate",
+   "modelo": "D1 Mini",
+   "pacote": "módulo",
+   "tamanho": "34,2 x 25,2 x 3,5mm (sem os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "A Placa WeMos D1 Mini, é compatível com o Arduino, mas é controlada pelo módulo ESP8266, oferecendo conectividade Wi Fi nativa, sendo uma ótima opção para projetos IoT (Internet das Coisas).",
+   "atributos": {
+    "Utilized IC / Part": "ESP8266",
+    "Wireless Standard": "Wi-Fi",
+    "Voltage - Supply": "pinos em 3,3 V"
+   },
+   "datasheet": "",
+   "loja": "Eletrogate",
+   "link": "https://www.eletrogate.com/wemos-d1-mini-pro-wifi-esp8266",
+   "preco": 32.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": null,
+   "visto": "2026-10-24",
+   "situacao": "ok",
+   "foto": "https://cdn.awsli.com.br/800x800/468/468162/produto/102632531/73bd6984e9.jpg"
+  },
+  "robocore:arduino-uno-r3": {
+   "nome": "Arduino Uno R3 (original, feito na Itália)",
+   "marca": "Arduino",
+   "modelo": "Arduino UNO R3",
+   "pacote": "módulo",
+   "tamanho": "5,3 cm x 6,8 cm x 1,0 cm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "Este produto é original da Itália.",
+   "atributos": {
+    "Utilized IC / Part": "ATmega328",
+    "Voltage - Supply": "5 V (entrada de 7 a 12 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-arduino/arduino-uno-r3",
+   "preco": 249.0,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/120/images/120_1_H.png"
+  },
+  "robocore:arduino-uno-r4-wifi": {
+   "nome": "Arduino Uno R4 WiFi (original)",
+   "marca": "Arduino",
+   "modelo": "Arduino Uno R4 WiFi",
+   "pacote": "módulo",
+   "tamanho": "53,34 x 68,85 mm",
+   "montagem": "módulo",
+   "categoria_loja": "Placas",
+   "descricao": "Produto original Arduino. Fabricado na Itália.",
+   "atributos": {
+    "Utilized IC / Part": "Renesas RA4M1 + ESP32-S3",
+    "Wireless Standard": "Wi-Fi e Bluetooth (pelo ESP32-S3)",
+    "Voltage - Supply": "5 V (entrada de 6 a 24 V)"
+   },
+   "datasheet": "",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/placa-arduino/arduino-uno-r4-wifi",
+   "preco": 239.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3271/images/3271_1_H.png"
+  },
+  "robocore:esp32-cam-com-gravador-integrado": {
+   "nome": "ESP32-CAM com gravador USB integrado",
+   "marca": "genérico",
+   "modelo": "ESP32-CAM com gravador",
+   "pacote": "módulo",
+   "tamanho": "",
+   "montagem": "módulo",
+   "categoria_loja": "WiFi",
+   "descricao": "A placa mais querida para fazer projetos com câmera e ESP32 em sua mais nova versão: agora acompanhada de um gravador integrado.",
+   "atributos": {
+    "Utilized IC / Part": "ESP32 (Xtensa LX6 dual core)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz e Bluetooth 4.2 LE"
+   },
+   "datasheet": "https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf",
+   "loja": "RoboCore",
+   "link": "https://www.robocore.net/wifi/esp32-cam-com-gravador-integrado",
+   "preco": 79.9,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://d229kd5ey79jzj.cloudfront.net/3069/images/3069_1_H.png"
+  },
+  "usinainfo:nodemcu-v3-esp8266-esp-12e-iot-wifi-com-usb-c-8791": {
+   "nome": "NodeMCU ESP8266 V3 USB-C",
+   "marca": "Usinainfo",
+   "modelo": "NodeMCU V3 USB-C",
+   "pacote": "módulo",
+   "tamanho": "57x31x5mm (ignorando-se os pinos)",
+   "montagem": "módulo",
+   "categoria_loja": "ESP8266",
+   "descricao": "NodeMCU V3 com ESP8266 ESP-12E, conexão USB-C, conversor CH340 e Wi-Fi 2,4GHz.",
+   "atributos": {
+    "Utilized IC / Part": "ESP8266 (ESP-12E)",
+    "Wireless Standard": "Wi-Fi 2,4 GHz",
+    "Voltage - Supply": "5 a 9 V; pinos em 3,3 V"
+   },
+   "datasheet": "https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=1039",
+   "loja": "Usinainfo",
+   "link": "https://www.usinainfo.com.br/esp8266/nodemcu-v3-esp8266-esp-12e-iot-wifi-com-usb-c-8791.html",
+   "preco": 39.16,
+   "moeda": "BRL",
+   "minimo": 1,
+   "estoque": 0,
+   "visto": "2026-10-24",
+   "situacao": "sem estoque",
+   "foto": "https://www.usinainfo.com.br/1034504-large_default/nodemcu-v3-esp8266-esp-12e-iot-wifi-com-usb-c.jpg"
   }
  }
 }
